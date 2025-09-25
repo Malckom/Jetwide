@@ -7,7 +7,7 @@
     <script>
         // Redirect to one page by default
         window.onload = function() {
-            window.location.href = "./pages/homepage.html";
+            window.location.href = "./public/homepage.html?v=" + Date.now();
         }
     </script>
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fjetwides1340back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
@@ -20,7 +20,7 @@
             <div class="mt-4">
                  <p class="text-text-secondary">If you are not redirected automatically, please choose a page:</p>
                 <div class="mt-2 space-y-2">
-                        <a href="./pages/homepage.html" class="block px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-hover transition-colors">Homepage</a>
+                        <a href="./public/homepage.html" class="block px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-hover transition-colors" onclick="this.href='./public/homepage.html?v=' + Date.now()">Homepage</a>
                     </div>
             </div>
         </div>

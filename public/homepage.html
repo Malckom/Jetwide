@@ -6,1283 +6,162 @@
   <meta name="description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa processing, and car hire services. Expert guidance and 24/7 support." />
   <meta name="keywords" content="Kenya safari, travel packages, visa processing, car hire, international travel, Maasai Mara, Amboseli, Mount Kenya" />
   
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Jetwide Travel & Safari | Kenya's Leading Tour & Travel Company" />
   <meta property="og:description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa processing, and car hire services." />
   
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../assets/styles.css?v=9&t=1727283400">
+  
+  <!-- Auto Cache-Busting Script -->
+  <script>
+    // Function to add cache-busting parameters to all images
+    function bustImageCache() {
+      const timestamp = new Date().getTime();
+      const images = document.querySelectorAll('img');
+      
+      images.forEach(img => {
+        const src = img.src;
+        const separator = src.includes('?') ? '&' : '?';
+        
+        // Remove existing cache-busting parameters
+        const baseSrc = src.split('?')[0];
+        
+        // Add new timestamp
+        img.src = baseSrc + '?cb=' + timestamp;
+      });
+    }
+    
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', bustImageCache);
+    
+    // Run every time the page becomes visible (tab switching)
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) {
+        bustImageCache();
+      }
+    });
+    
+    // Force reload images every 30 seconds (for development)
+    setInterval(bustImageCache, 30000);
+    
+    // Add keyboard shortcut F9 to manually refresh images
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F9') {
+        e.preventDefault();
+        bustImageCache();
+        console.log('Images refreshed manually with F9');
+      }
+    });
+    
+    // Additional: Force browser to never cache images from assets folder
+    if ('serviceWorker' in navigator) {
+      // Simple cache prevention for development
+      const originalFetch = window.fetch;
+      window.fetch = function(...args) {
+        const url = args[0];
+        if (typeof url === 'string' && url.includes('/assets/images/')) {
+          const separator = url.includes('?') ? '&' : '?';
+          args[0] = url + separator + 'nocache=' + Date.now();
+        }
+        return originalFetch.apply(this, args);
+      };
+    }
+  </script>
+  
+  <!-- Development Helper: Floating Refresh Button -->
   <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Work Sans', Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #ffffff;
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    button {
-      cursor: pointer;
+    .dev-refresh-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #ff6b6b;
+      color: white;
       border: none;
-      background: none;
-      font-family: inherit;
-    }
-    
-    /* Layout components */
-    .container {
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-    
-    @media (min-width: 640px) {
-      .container {
-        padding: 0 24px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .container {
-        padding: 0 32px;
-      }
-    }
-    
-    .flex-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    
-    .flex-col {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .justify-center {
-      justify-content: center;
-    }
-    
-    .justify-between {
-      justify-content: space-between;
-    }
-    
-    .items-center {
-      align-items: center;
-    }
-    
-    .text-center {
-      text-align: center;
-    }
-    
-    .w-full {
-      width: 100%;
-    }
-    
-    /* Header styles */
-    .header-top {
-      background-color: #d4af37;
-      padding: 4px 42px;
-      font-size: 12px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      color: #000000;
-    }
-    
-    .header-main {
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_rectangle_3.png');
-      background-size: cover;
-      background-position: center;
-      padding: 12px 76px;
-    }
-    
-    .logo {
-      width: 174px;
-      height: 50px;
-    }
-    
-    .nav-menu {
-      display: none;
-      gap: 38px;
-    }
-    
-    .nav-menu a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-    
-    .nav-menu a:hover {
-      color: #d4af37;
-    }
-    
-    @media (min-width: 1024px) {
-      .nav-menu {
-        display: flex;
-      }
-    }
-    
-    /* Hero section */
-    .hero-section {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/images/img_rectangle_3.png');
-      background-size: cover;
-      background-position: center;
-      padding: 196px 56px;
-      text-align: center;
-      color: #ffffff;
-      margin-top: -86px;
-    }
-    
-    .hero-title {
-      font-size: 28px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      line-height: 1.2;
-      text-transform: uppercase;
-      margin-bottom: 34px;
-    }
-    
-    @media (min-width: 640px) {
-      .hero-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .hero-title {
-        font-size: 40px;
-        line-height: 48px;
-      }
-    }
-    
-    .hero-subtitle {
-      font-size: 14px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-      margin-bottom: 52px;
-    }
-    
-    @media (min-width: 768px) {
-      .hero-subtitle {
-        font-size: 16px;
-      }
-    }
-    
-    .hero-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: center;
-    }
-    
-    @media (min-width: 640px) {
-      .hero-buttons {
-        flex-direction: row;
-        justify-content: center;
-        gap: 24px;
-      }
-    }
-    
-    .btn-primary {
-      background-color: #d4af37;
-      color: #ffffff;
-      padding: 16px 34px;
-      border-radius: 28px;
-      border: 1px solid #000000;
-      font-size: 15px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      transition: all 0.3s ease;
-    }
-    
-    .btn-primary:hover {
-      background-color: #b8941f;
-      transform: translateY(-2px);
-    }
-    
-    .btn-secondary {
-      background-color: #abff35;
-      color: #ffffff;
-      padding: 16px 30px;
-      border-radius: 28px;
-      border: 1px solid #000000;
-      font-size: 15px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      transition: all 0.3s ease;
-    }
-    
-    .btn-secondary:hover {
-      background-color: #95e620;
-      transform: translateY(-2px);
-    }
-    
-    /* Destinations section */
-    .destinations-scroll {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin: 8px 0;
-    }
-    
-    .destinations-container {
-      display: flex;
-      min-width: max-content;
-      gap: 20px;
-      padding: 0 20px;
-    }
-    
-    .destination-item {
-      position: relative;
-      min-width: 300px;
-      height: 214px;
-      border: 1px solid #000000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .destination-text {
-      font-size: 80px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      line-height: 1;
-      color: #f2f0ee;
-    }
-    
-    @media (min-width: 640px) {
-      .destination-text {
-        font-size: 100px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .destination-text {
-        font-size: 153px;
-        line-height: 228px;
-      }
-    }
-    
-    /* Special offers section */
-    .special-offers {
-      padding: 156px 48px 0;
-      position: relative;
-    }
-    
-    .offers-title {
-      font-size: 32px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.3;
-      color: #000000;
-      text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    
-    @media (min-width: 768px) {
-      .offers-title {
-        font-size: 40px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .offers-title {
-        font-size: 48px;
-        line-height: 63px;
-      }
-    }
-    
-    .offers-content {
-      background: linear-gradient(90deg, #d4af37 0%, rgba(0,115,170,0.11) 100%);
-      border-radius: 24px;
-      padding: 32px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    
-    .offers-subtitle {
-      font-size: 24px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 800;
-      line-height: 1.4;
-      color: #333333;
-      margin-bottom: 32px;
-    }
-    
-    @media (min-width: 768px) {
-      .offers-subtitle {
-        font-size: 28px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .offers-subtitle {
-        font-size: 32px;
-        line-height: 44px;
-      }
-    }
-    
-    .offers-description {
-      font-size: 16px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-      color: #000000;
-      margin-bottom: 24px;
-    }
-    
-    @media (min-width: 768px) {
-      .offers-description {
-        font-size: 18px;
-        line-height: 26px;
-      }
-    }
-    
-    .btn-contact {
-      background-color: #f98b02;
-      color: #ffffff;
-      padding: 8px 34px;
-      border-radius: 22px;
-      font-size: 18px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      line-height: 28px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    
-    .btn-contact:hover {
-      background-color: #e67a00;
-      transform: translateY(-2px);
-    }
-    
-    /* Popular destinations */
-    .popular-destinations {
-      padding: 12px 48px;
-    }
-    
-    .section-title {
-      font-size: 28px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.3;
-      color: #000000;
-      text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    
-    @media (min-width: 768px) {
-      .section-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .section-title {
-        font-size: 40px;
-        line-height: 53px;
-      }
-    }
-    
-    .destinations-slider {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-    .destinations-grid {
-      display: flex;
-      gap: 30px;
-      min-width: max-content;
-      padding: 0 20px;
-    }
-    
-    .destination-card {
-      background-color: rgba(255,255,255,0.9);
-      border-radius: 8px;
-      overflow: hidden;
-      min-width: 266px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    
-    .destination-card:hover {
-      transform: translateY(-4px);
-    }
-    
-    .destination-image {
-      width: 100%;
-      height: 212px;
-      object-fit: cover;
-    }
-    
-    .destination-info {
-      padding: 16px 24px;
-    }
-    
-    .destination-location {
-      font-size: 14px;
-      font-family: 'Grape Nuts', cursive;
-      font-weight: 400;
-      line-height: 18px;
-      color: #000000;
-      margin-bottom: 8px;
-    }
-    
-    .destination-price {
-      font-size: 20px;
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 500;
-      line-height: 24px;
-      color: #000000;
-      text-align: right;
-    }
-    
-    .price-per-person {
-      font-size: 6px;
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 500;
-      line-height: 8px;
-      color: #000000;
-    }
-    
-    .destination-description {
-      font-size: 10px;
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 500;
-      line-height: 11px;
-      color: #000000;
-      margin-top: 8px;
-    }
-    
-    /* International destinations */
-    .international-section {
-      background-color: #d4af37;
-      padding: 12px;
-      text-align: center;
-      color: #ffffff;
-    }
-    
-    .international-title {
-      font-size: 28px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.3;
-      color: #000000;
-      text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      margin-bottom: 22px;
-    }
-    
-    @media (min-width: 768px) {
-      .international-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .international-title {
-        font-size: 40px;
-        line-height: 53px;
-      }
-    }
-    
-    .international-description {
-      font-size: 15px;
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-      color: #ffffff;
-      max-width: 920px;
-      margin: 0 auto;
-    }
-    
-    @media (min-width: 768px) {
-      .international-description {
-        font-size: 17px;
-        line-height: 27px;
-      }
-    }
-    
-    /* Special offers themed holidays */
-    .themed-holidays {
-      padding: 158px 56px;
-    }
-    
-    .themed-title {
-      font-size: 24px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      line-height: 1.3;
-      color: #333333;
-      text-align: center;
-      margin-bottom: 38px;
-    }
-    
-    @media (min-width: 768px) {
-      .themed-title {
-        font-size: 28px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .themed-title {
-        font-size: 32px;
-        line-height: 43px;
-      }
-    }
-    
-    .themed-slider {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-    .themed-grid {
-      display: flex;
-      gap: 64px;
-      min-width: max-content;
-      padding: 0 20px;
-    }
-    
-    .themed-card {
-      min-width: 330px;
-      text-align: center;
-    }
-    
-    .themed-image {
-      width: 100%;
-      height: 404px;
-      object-fit: cover;
-      border-radius: 24px;
-      margin-bottom: 16px;
-    }
-    
-    .themed-card-title {
-      font-size: 20px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 700;
-      line-height: 1.4;
-      color: #333333;
-      margin-bottom: 12px;
-    }
-    
-    @media (min-width: 768px) {
-      .themed-card-title {
-        font-size: 24px;
-        line-height: 33px;
-      }
-    }
-    
-    .themed-price-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    
-    .price-from {
-      font-size: 16px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      line-height: 25px;
-      color: rgba(51,51,51,0.8);
-    }
-    
-    @media (min-width: 768px) {
-      .price-from {
-        font-size: 18px;
-      }
-    }
-    
-    .price-amount {
-      font-size: 20px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 800;
-      line-height: 1.4;
-      color: #f98b02;
-    }
-    
-    @media (min-width: 768px) {
-      .price-amount {
-        font-size: 24px;
-        line-height: 33px;
-      }
-    }
-    
-    .themed-details {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    
-    .detail-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    
-    .detail-icon {
-      width: 24px;
-      height: 24px;
-    }
-    
-    .detail-text {
-      font-size: 14px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      line-height: 22px;
-      color: #f98b02;
-    }
-    
-    @media (min-width: 768px) {
-      .detail-text {
-        font-size: 16px;
-      }
-    }
-    
-    .themed-description {
-      font-size: 16px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 400;
-      line-height: 1.4;
-      color: #333333;
-      text-align: left;
-    }
-    
-    @media (min-width: 768px) {
-      .themed-description {
-        font-size: 18px;
-        line-height: 26px;
-      }
-    }
-    
-    /* Services section */
-    .services-section {
-      padding: 56px;
-    }
-    
-    .services-intro {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-    
-    .services-subtitle {
-      font-size: 18px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      line-height: 25px;
-      color: #0e3d4d;
-      margin-bottom: 6px;
-    }
-    
-    @media (min-width: 768px) {
-      .services-subtitle {
-        font-size: 20px;
-      }
-    }
-    
-    .services-title {
-      font-size: 32px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.3;
-      color: #0e3d4d;
-    }
-    
-    @media (min-width: 768px) {
-      .services-title {
-        font-size: 40px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .services-title {
-        font-size: 48px;
-        line-height: 63px;
-      }
-    }
-    
-    .services-content {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
-    }
-    
-    @media (min-width: 1024px) {
-      .services-content {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    
-    .services-image {
-      width: 100%;
-      max-width: 514px;
-      height: auto;
-      border-radius: 20px;
-    }
-    
-    .services-info {
-      flex: 1;
-      max-width: 600px;
-    }
-    
-    .service-item {
-      margin-bottom: 40px;
-    }
-    
-    .service-icon {
-      width: 42px;
-      height: 42px;
-      margin-bottom: 8px;
-    }
-    
-    .service-title {
-      font-size: 28px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      line-height: 1.4;
-      color: #0e3d4d;
-      margin-bottom: 8px;
-    }
-    
-    @media (min-width: 768px) {
-      .service-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .service-title {
-        font-size: 40px;
-        line-height: 54px;
-      }
-    }
-    
-    .service-description {
-      font-size: 20px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      line-height: 1.5;
-      color: #0e3d4d;
-      margin-bottom: 20px;
-    }
-    
-    @media (min-width: 768px) {
-      .service-description {
-        font-size: 22px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .service-description {
-        font-size: 25px;
-        line-height: 30px;
-      }
-    }
-    
-    .service-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #0e3d4d;
-      text-decoration: underline;
-      font-size: 18px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      line-height: 25px;
-      transition: color 0.3s ease;
-    }
-    
-    .service-link:hover {
-      color: #d4af37;
-    }
-    
-    @media (min-width: 768px) {
-      .service-link {
-        font-size: 20px;
-      }
-    }
-    
-    .service-arrow {
-      width: 24px;
-      height: 24px;
-    }
-    
-    /* Statistics section */
-    .stats-section {
-      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../assets/images/img_gradient.png');
-      background-size: cover;
-      background-position: center;
-      padding: 56px 132px 12px;
-      position: relative;
-    }
-    
-    .stats-container {
-      display: flex;
-      flex-direction: column;
-      gap: 78px;
-      align-items: center;
-    }
-    
-    @media (min-width: 1024px) {
-      .stats-container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    
-    .stats-intro {
-      text-align: center;
-      max-width: 344px;
-    }
-    
-    .stats-title {
-      font-size: 28px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      line-height: 1.1;
-      color: #42403d;
-    }
-    
-    @media (min-width: 768px) {
-      .stats-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .stats-title {
-        font-size: 40px;
-        line-height: 44px;
-      }
-    }
-    
-    .stat-item {
-      text-align: center;
-      min-width: 124px;
-    }
-    
-    .stat-number {
-      font-size: 48px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      line-height: 1;
-      color: #42403d;
-      margin-bottom: 8px;
-    }
-    
-    @media (min-width: 768px) {
-      .stat-number {
-        font-size: 56px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .stat-number {
-        font-size: 64px;
-      }
-    }
-    
-    .stat-label {
-      font-size: 15px;
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #9b9b9c;
-    }
-    
-    @media (min-width: 768px) {
-      .stat-label {
-        font-size: 17px;
-        line-height: 25px;
-      }
-    }
-    
-    /* CTA section */
-    .cta-section {
-      padding: 26px 56px 18px;
-      text-align: center;
-    }
-    
-    .cta-content {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      max-width: 832px;
-      margin: 0 auto;
-    }
-    
-    @media (min-width: 1024px) {
-      .cta-content {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    
-    .cta-title {
-      font-size: 28px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.3;
-      color: #000000;
-      text-align: left;
-    }
-    
-    @media (min-width: 768px) {
-      .cta-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .cta-title {
-        font-size: 36px;
-        line-height: 47px;
-      }
-    }
-    
-    .btn-cta {
-      background-color: #d4af37;
-      color: #141841;
-      padding: 12px 50px 12px 34px;
-      border: 2px solid #cbf32e;
-      border-radius: 22px;
-      font-size: 16px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      line-height: 20px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-    
-    .btn-cta:hover {
-      background-color: #b8941f;
-      transform: translateY(-2px);
-    }
-    
-    .btn-icon {
-      width: 16px;
-      height: 16px;
-    }
-    
-    /* Footer */
-    .footer {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 60px 24px 8px;
-    }
-    
-    .footer-top {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    
-    @media (min-width: 1024px) {
-      .footer-top {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
-    
-    .footer-logo {
-      width: 342px;
-      height: 82px;
-    }
-    
-    .newsletter-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: center;
-      max-width: 400px;
-      width: 100%;
-    }
-    
-    @media (min-width: 640px) {
-      .newsletter-form {
-        flex-direction: row;
-      }
-    }
-    
-    .newsletter-input {
-      flex: 1;
-      padding: 18px 12px 12px;
-      border: none;
-      border-radius: 30px;
-      font-size: 17px;
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      line-height: 25px;
-      color: #aaaaaa;
-    }
-    
-    .newsletter-button {
-      width: 86px;
-      height: 48px;
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    
-    @media (min-width: 640px) {
-      .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .footer-content {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 60px;
-      }
-    }
-    
-    .footer-section h3 {
-      font-size: 18px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 800;
-      line-height: 28px;
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-    
-    @media (min-width: 768px) {
-      .footer-section h3 {
-        font-size: 20px;
-      }
-    }
-    
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .footer-section li {
-      margin-bottom: 12px;
-    }
-    
-    .footer-section a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 16px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      line-height: 25px;
-      transition: color 0.3s ease;
-    }
-    
-    .footer-section a:hover {
-      color: #d4af37;
-    }
-    
-    @media (min-width: 768px) {
-      .footer-section a {
-        font-size: 18px;
-      }
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .contact-icon {
-      width: 24px;
-      height: 24px;
-    }
-    
-    .contact-text {
-      font-size: 16px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      line-height: 1.4;
-      color: #ffffff;
-    }
-    
-    @media (min-width: 768px) {
-      .contact-text {
-        font-size: 18px;
-        line-height: 26px;
-      }
-    }
-    
-    .social-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-    
-    .social-icon {
+      border-radius: 50%;
       width: 50px;
       height: 50px;
-      transition: transform 0.3s ease;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
     }
     
-    .social-icon:hover {
+    .dev-refresh-btn:hover {
+      background: #ff5252;
       transform: scale(1.1);
     }
     
-    .footer-bottom {
-      background-color: #ffb000;
-      padding: 36px;
-      text-align: center;
-    }
-    
-    .footer-bottom p {
-      font-size: 14px;
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      line-height: 21px;
-      color: #84827f;
-    }
-    
-    /* Interactive states */
-    .destination-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    
-    .themed-card:hover {
-      transform: translateY(-2px);
-    }
-    
-    .btn-primary:active {
-      transform: scale(0.98);
-    }
-    
-    .btn-secondary:active {
-      transform: scale(0.98);
-    }
-    
-    /* Responsive media queries */
-    @media (max-width: 639px) {
-      .header-top {
-        padding: 4px 16px;
-        font-size: 10px;
-      }
-      
-      .header-main {
-        padding: 12px 16px;
-      }
-      
-      .hero-section {
-        padding: 100px 16px;
-      }
-      
-      .special-offers {
-        padding: 80px 16px 0;
-      }
-      
-      .popular-destinations {
-        padding: 12px 16px;
-      }
-      
-      .themed-holidays {
-        padding: 80px 16px;
-      }
-      
-      .services-section {
-        padding: 32px 16px;
-      }
-      
-      .stats-section {
-        padding: 32px 16px 12px;
-      }
-      
-      .cta-section {
-        padding: 26px 16px 18px;
-      }
-      
-      .footer {
-        padding: 40px 16px 8px;
-      }
-    }
-    
-    @media (min-width: 640px) and (max-width: 767px) {
-      .hero-title {
-        font-size: 32px;
-      }
-      
-      .section-title {
-        font-size: 32px;
-      }
-    }
-    
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .hero-title {
-        font-size: 36px;
-      }
-      
-      .section-title {
-        font-size: 36px;
-      }
+    .dev-refresh-btn:active {
+      transform: scale(0.95);
     }
   </style>
+
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fjetwides1340back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
 </head>
 <body>
+  <!-- Development Helper: Manual Image Refresh Button -->
+  <button class="dev-refresh-btn" onclick="manualRefresh()" title="Click to refresh all images (or press F9)">
+    🔄
+  </button>
+  
+  <!-- Refresh indicator -->
+  <div id="refresh-indicator" style="position: fixed; top: 80px; right: 20px; background: #4CAF50; color: white; padding: 10px; border-radius: 5px; display: none; z-index: 9999;">
+    Images Refreshed! ✅
+  </div>
+  
+  <script>
+    function manualRefresh() {
+      bustImageCache();
+      const indicator = document.getElementById('refresh-indicator');
+      indicator.style.display = 'block';
+      setTimeout(() => {
+        indicator.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
   <!-- Header -->
   <header>
     <!-- Top header bar -->
     <div class="header-top">
       <div class="container">
-        <div class="flex-row justify-between">
-          <div class="flex-row" style="gap: 18px;">
-            <img src="../assets/images/img_ic_baseline_phone.svg" alt="Phone" width="24" height="24" />
-            <span>0700 368 676</span>
+        <div class="header-top-content">
+          <!-- Contact Info -->
+          <div class="header-contact">
+            <div class="contact-item">
+              <img src="../assets/images/phone-call.png?v=5" alt="Phone" width="16" height="16" />
+              <span>0748 538 311</span>
+            </div>
+            <div class="contact-item">
+              <img src="../assets/images/email.png?v=5" alt="Email" width="16" height="16" />
+              <span>safaris@jetwide.org</span>
+            </div>
+            <div class="contact-item desktop-only">
+              <img src="../assets/images/location.png?v=5" alt="Location" width="16" height="16" />
+              <span>Westlands Square 2nd Floor</span>
+            </div>
+            <div class="contact-item desktop-only">
+              <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
+            </div>
           </div>
-          <div class="flex-row" style="gap: 48px;">
-            <span>info@jetwide.org</span>
-            <span>Westlands Square 2nd Floor</span>
-            <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
-          </div>
-          <div class="flex-row" style="gap: 10px;">
-            <img src="../assets/images/img_logos_whatsapp_icon.png" alt="WhatsApp" width="22" height="22" />
-            <img src="../assets/images/img_group.png" alt="Social" width="22" height="22" />
-            <img src="../assets/images/img_vector.svg" alt="Social" width="22" height="22" />
-            <img src="../assets/images/img_vector_red_800.svg" alt="Social" width="22" height="22" />
-            <img src="../assets/images/img_devicon_twitter.svg" alt="Twitter" width="22" height="22" />
-            <img src="../assets/images/img_group_blue_800.svg" alt="Social" width="22" height="22" />
-            <img src="../assets/images/img_logos_youtube_icon.svg" alt="YouTube" width="22" height="14" />
+          
+          <!-- Social Media -->
+          <div class="header-social">
+            <img src="../assets/images/whatsapp.png?v=5" alt="WhatsApp" width="18" height="18" />
+            <img src="../assets/images/facebook.png?v=5" alt="Facebook" width="18" height="18" />
+            <img src="../assets/images/instagram.png?v=5" alt="Instagram" width="18" height="18" />
+            <img src="../assets/images/twitter.png?v=5" alt="Twitter" width="18" height="18" />
+            <img src="../assets/images/linkedin.png?v=5" alt="LinkedIn" width="18" height="18" />
+            <img src="../assets/images/pinterest.png?v=5" alt="Pinterest" width="18" height="18" />
+            <img src="../assets/images/youtube.png?v=5" alt="YouTube" width="18" height="18" />
           </div>
         </div>
       </div>
@@ -1292,7 +171,7 @@
     <div class="header-main">
       <div class="container">
         <div class="flex-row justify-between">
-          <img src="../assets/images/img_logo_small_webp.png" alt="Jetwide Logo" class="logo" />
+          <img src="../assets/images/Logo.png" alt="Jetwide Logo" class="logo" />
           <nav class="nav-menu">
             <a href="#home">Home</a>
             <a href="#tours">Tours & Safaris</a>
@@ -1320,6 +199,21 @@
   <!-- Destinations Scroll -->
   <section class="destinations-scroll">
     <div class="destinations-container">
+      <!-- First set of destinations -->
+      <div class="destination-item">
+        <span class="destination-text" style="color: #84827f;">Beach</span>
+      </div>
+      <div class="destination-item">
+        <span class="destination-text" style="color: #f2f0ee;">Mount Kilimanjaro</span>
+      </div>
+      <div class="destination-item">
+        <span class="destination-text" style="color: #f2f0ee;">Amboseli</span>
+      </div>
+      <div class="destination-item">
+        <span class="destination-text" style="color: #42403d;">Maasai Mara</span>
+      </div>
+      
+      <!-- Duplicate set for seamless loop -->
       <div class="destination-item">
         <span class="destination-text" style="color: #84827f;">Beach</span>
       </div>
@@ -1338,12 +232,16 @@
   <!-- Special Offers Section -->
   <section class="special-offers">
     <h2 class="offers-title">2025 SPECIAL OFFERS</h2>
-    <div class="offers-content">
-      <h3 class="offers-subtitle">OUR SPECIAL OFFERS</h3>
-      <p class="offers-description">Lorem Ipsum is simply dummy text of the printing and typesetting text ever since the 1500s.</p>
-      <a href="#contact" class="btn-contact">Contact Us</a>
+    <div class="special-offers-container">
+      <div class="offers-content">
+        <h3 class="offers-subtitle">OUR SPECIAL OFFERS</h3>
+        <p class="offers-description">Lorem Ipsum is simply dummy text of the printing and typesetting text ever since the 1500s.</p>
+        <a href="#contact" class="btn-contact">Contact Us</a>
+      </div>
+      <div class="offers-image">
+        <img src="../assets/images/Girrafe.jpg" alt="Giraffe" class="giraffe-image" />
+      </div>
     </div>
-    <img src="../assets/images/img_smiley_woman_ch.png" alt="Happy traveler" style="position: absolute; right: 364px; top: 50%; transform: translateY(-50%); width: 176px; height: 338px;" />
   </section>
 
   <!-- Popular Destinations -->
@@ -1352,7 +250,7 @@
     <div class="destinations-slider">
       <div class="destinations-grid">
         <div class="destination-card">
-          <img src="../assets/images/img_rectangle_55.png" alt="Maasai Mara" class="destination-image" />
+          <img src="../assets/images/Angama-Mara.png" alt="Maasai Mara" class="destination-image" />
           <div class="destination-info">
             <div class="flex-row justify-between">
               <span class="destination-location">Maasai Mara</span>
@@ -1555,7 +453,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-top">
-      <img src="../assets/images/img_footer_logo.png" alt="Jetwide Footer Logo" class="footer-logo" />
+      <img src="../assets/images/Logo.png" alt="Jetwide Logo" class="footer-logo" />
       <div class="newsletter-form">
         <input type="email" placeholder="Enter your email address" class="newsletter-input" />
         <img src="../assets/images/img_paperplane_png.png" alt="Subscribe" class="newsletter-button" />
@@ -1595,23 +493,25 @@
         <div class="footer-section">
           <h3>Contacts</h3>
           <div class="contact-item">
-            <img src="../assets/images/img_ci_location.svg" alt="Location" class="contact-icon" />
+            <img src="../assets/images/location.png" alt="Location" class="contact-icon" />
             <span class="contact-text">Westlands Square<br />2nd Floor</span>
           </div>
           <div class="contact-item">
-            <img src="../assets/images/img_clarity_phone_handset_solid.svg" alt="Phone" class="contact-icon" />
+            <img src="../assets/images/phone-call.png" alt="Phone" class="contact-icon" />
             <span class="contact-text">0700 368 676 | 0714 534 677| 0748 538 311</span>
           </div>
           <div class="contact-item">
-            <img src="../assets/images/img_fluent_mail_16_filled.svg" alt="Email" class="contact-icon" />
+            <img src="../assets/images/email.png" alt="Email" class="contact-icon" />
             <span class="contact-text">info@jetwide.org<br />safaris@jetwide.org</span>
           </div>
           
           <h3 style="margin-top: 20px;">Social Media</h3>
           <div class="social-links">
-            <img src="../assets/images/img_ant_design_twit.svg" alt="Twitter" class="social-icon" />
-            <img src="../assets/images/img_entypo_social_f.svg" alt="Facebook" class="social-icon" />
-            <img src="../assets/images/img_ant_design_twit_orange_600.svg" alt="Instagram" class="social-icon" />
+            <img src="../assets/images/twitter.png" alt="Twitter" class="social-icon" />
+            <img src="../assets/images/facebook.png" alt="Facebook" class="social-icon" />
+            <img src="../assets/images/instagram.png" alt="Instagram" class="social-icon" />
+            <img src="../assets/images/linkedin.png" alt="LinkedIn" class="social-icon" />
+            <img src="../assets/images/youtube.png" alt="YouTube" class="social-icon" />
           </div>
         </div>
       </div>
