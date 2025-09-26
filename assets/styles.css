@@ -1,4 +1,8 @@
-/* Reset and base styles */
+/* ========================================
+   JETWIDE TRAVEL & SAFARI - MAIN STYLESHEET
+   ======================================== */
+
+/* ---- RESET AND BASE STYLES ---- */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +29,7 @@ button {
   font-family: inherit;
 }
 
-/* Layout components */
+/* ---- LAYOUT UTILITY COMPONENTS ---- */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -75,7 +79,11 @@ button {
   width: 100%;
 }
 
-/* Header styles */
+/* ========================================
+   HOMEPAGE STYLES
+   ======================================== */
+
+/* ---- HEADER SECTION ---- */
 .header-top {
   background-color: #d4af37;
   padding: 8px 24px;
@@ -214,7 +222,7 @@ button {
   }
 }
 
-/* Hero section */
+/* ---- HERO SECTION ---- */
 .hero-section {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/main-header.jpeg');
   background-size: cover;
@@ -318,7 +326,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* Destinations section */
+/* ---- ANIMATED DESTINATIONS SCROLL ---- */
 .destinations-scroll {
   overflow: hidden;
   margin: 8px 0;
@@ -532,7 +540,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* Popular destinations */
+/* ---- POPULAR DESTINATIONS SECTION ---- */
 .popular-destinations {
   padding: 12px 48px;
 }
@@ -832,7 +840,7 @@ button {
   }
 }
 
-/* Services section */
+/* ---- SERVICES SECTION ---- */
 .services-section {
   padding: 56px;
 }
@@ -988,120 +996,144 @@ button {
 
 /* Statistics section */
 .stats-section {
-background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/img_gradient.png');
-background-size: cover;
-background-position: center;
-padding: 56px 132px 12px;
-position: relative;
-}
-
-.stats-container {
-display: flex;
-flex-direction: column;
-gap: 78px;
-align-items: center;
-}
-
-@media (min-width: 1024px) {
-.stats-container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start; /* Changed from default to align items properly */
-}
-}
-
-.stats-intro {
-text-align: center;
-max-width: 344px;
-}
-
-@media (min-width: 1024px) {
-.stats-intro {
-  text-align: left; /* Left align on desktop */
-  flex: 1; /* Allow it to take available space */
-}
-}
-
-.stats-title {
-font-size: 28px;
-font-family: 'Oswald', sans-serif;
-font-weight: 500;
-line-height: 1.1;
-color: #42403d;
-margin: 0; /* Remove default margins */
+  background: linear-gradient(135deg, #D4AF37, #F4E4A6, #E6D372);
+  padding: 60px 40px;
+  position: relative;
+  min-height: 200px;
 }
 
 @media (min-width: 768px) {
+  .stats-section {
+    padding: 80px 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-section {
+    padding: 100px 80px;
+  }
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .stats-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+}
+
+.stats-intro {
+  text-align: center;
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .stats-intro {
+    text-align: left;
+    max-width: 400px;
+  }
+}
+
 .stats-title {
   font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2c2c2c;
+  margin: 0;
 }
+
+@media (min-width: 768px) {
+  .stats-title {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1024px) {
-.stats-title {
-  font-size: 40px;
-  line-height: 44px;
-  white-space: nowrap; /* Prevent text from wrapping */
-}
+  .stats-title {
+    font-size: 48px;
+    line-height: 1.1;
+  }
 }
 
-/* New container for the statistics items */
 .stats-items {
-display: flex;
-gap: 60px; /* Space between stat items */
-justify-content: center;
-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .stats-items {
+    flex-direction: row;
+    gap: 60px;
+  }
 }
 
 @media (min-width: 1024px) {
-.stats-items {
-  justify-content: flex-end; /* Align to right on desktop */
-  width: auto; /* Reset width */
-  gap: 80px; /* Larger gap on desktop */
-}
+  .stats-items {
+    gap: 80px;
+  }
 }
 
 .stat-item {
-text-align: center;
-min-width: 124px;
+  text-align: center;
+  min-width: 200px;
 }
 
 .stat-number {
-font-size: 48px;
-font-family: 'Oswald', sans-serif;
-font-weight: 700;
-line-height: 1;
-color: #42403d;
-margin-bottom: 8px;
-display: block;
+  font-size: 64px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  display: block;
 }
 
 @media (min-width: 768px) {
-.stat-number {
-  font-size: 56px;
-}
+  .stat-number {
+    font-size: 72px;
+  }
 }
 
 @media (min-width: 1024px) {
-.stat-number {
-  font-size: 64px;
-}
+  .stat-number {
+    font-size: 80px;
+  }
 }
 
 .stat-label {
-font-size: 15px;
-font-family: 'Jost', sans-serif;
-font-weight: 400;
-line-height: 1.5;
-color: #9b9b9c;
-display: block;
+  font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 @media (min-width: 768px) {
-.stat-label {
-  font-size: 17px;
-  line-height: 25px;
+  .stat-label {
+    font-size: 15px;
+  }
 }
+
+@media (min-width: 1024px) {
+  .stat-label {
+    font-size: 16px;
+  }
 }
 
 /* CTA section */
@@ -1175,63 +1207,120 @@ display: block;
   height: 16px;
 }
 
-/* Footer */
+/* ---- FOOTER SECTION ---- */
 .footer {
-  background-color: #000000;
+  background-color: #1a1a1a;
   color: #ffffff;
-  padding: 60px 24px 8px;
+  padding: 40px 20px 8px;
 }
 
-.footer-top {
+.footer-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
-  margin-bottom: 60px;
 }
 
-@media (min-width: 1024px) {
-  .footer-top {
+@media (min-width: 768px) {
+  .footer-content-wrapper {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
   }
 }
 
+.footer-logo-section {
+  flex-shrink: 0;
+}
+
 .footer-logo {
-  width: 342px;
-  height: 82px;
+  height: 60px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .footer-logo {
+    height: 70px;
+  }
+}
+
+.newsletter-section {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .newsletter-section {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .newsletter-form {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
   align-items: center;
-  max-width: 400px;
+  background-color: #2a2a2a;
+  border-radius: 50px;
+  padding: 8px 8px 8px 20px;
+  gap: 10px;
   width: 100%;
-}
-
-@media (min-width: 640px) {
-  .newsletter-form {
-    flex-direction: row;
-  }
+  max-width: 400px;
 }
 
 .newsletter-input {
   flex: 1;
-  padding: 18px 12px 12px;
+  background: transparent;
   border: none;
-  border-radius: 30px;
-  font-size: 17px;
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  line-height: 25px;
-  color: #aaaaaa;
+  outline: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  color: #ffffff;
+  min-width: 0;
+}
+
+.newsletter-input::placeholder {
+  color: #888;
 }
 
 .newsletter-button {
-  width: 86px;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.newsletter-button:hover {
+  background: linear-gradient(135deg, #5a6578, #3d4758);
+  transform: translateY(-1px);
+}
+
+.newsletter-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.newsletter-text {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .newsletter-text {
+    display: inline;
+  }
 }
 
 .footer-content {
@@ -1373,7 +1462,10 @@ display: block;
   transform: scale(0.98);
 }
 
-/* Responsive media queries */
+/* ========================================
+   HOMEPAGE RESPONSIVE DESIGN
+   ======================================== */
+
 @media (max-width: 639px) {
   .header-top {
     padding: 4px 16px;
@@ -1434,5 +1526,529 @@ display: block;
   
   .section-title {
     font-size: 36px;
+  }
+}
+
+/* ========================================
+   VISA SERVICES PAGE STYLES
+   ======================================== */
+
+/* ---- VISA PAGE HERO SECTION ---- */
+.visa-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../images/main-header.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 120px 0 80px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.visa-hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.visa-hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.contact-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-btn:hover {
+  background: white;
+  color: #333;
+}
+
+/* ---- VISA PAGE CONTENT SECTIONS ---- */
+.planning-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.planning-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ---- IMPORTANT NOTICE BANNER ---- */
+.important-notice {
+  background: #1a365d;
+  color: white;
+  padding: 30px 0;
+  position: relative;
+}
+
+.important-notice::before {
+  content: '⚠️';
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+
+.notice-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.notice-title {
+  color: #ffd700;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.notice-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.consult-btn {
+  background: #ffd700;
+  color: #1a365d;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+  margin-top: 20px;
+}
+
+/* ---- VISA CARDS GRID ---- */
+.visa-intro {
+  text-align: center;
+  padding: 80px 0 40px;
+}
+
+.visa-intro-title {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.visa-main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+.visa-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visa-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.visa-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.visa-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+
+.visa-card-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.visa-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.visa-types {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ---- COUNTRY DETAILS SECTIONS ---- */
+.country-section {
+  padding: 60px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.country-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1a365d;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.country-details {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+}
+
+.detail-item {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #1a365d;
+}
+
+.detail-title {
+  font-weight: bold;
+  color: #1a365d;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.detail-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-list li {
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.detail-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* ---- HOW IT WORKS SECTION ---- */
+.how-it-works {
+  background: #1a1a1a;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.how-title {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-family: 'Brush Script MT', cursive;
+  color: #ffd700;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-step {
+  text-align: left;
+}
+
+.step-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffd700;
+  font-size: 1.1rem;
+}
+
+.step-description {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ---- WHY CHOOSE US SECTION ---- */
+.why-choose-us {
+  padding: 80px 0;
+  background: white;
+}
+
+.why-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: #1a365d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.benefit-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a365d;
+}
+
+.benefit-text {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---- FAQ SECTION ---- */
+.faq-section {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  padding: 20px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-answer {
+  padding: 0 25px 20px;
+  color: #666;
+  line-height: 1.6;
+  display: none;
+}
+
+.faq-toggle {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+/* ---- CONTACT AND CTA SECTIONS ---- */
+.contact-section {
+  background: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-address {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-cta {
+  background: #ffd700;
+  color: #1a365d;
+  padding: 15px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.contact-cta:hover {
+  background: #ffed4e;
+  transform: translateY(-2px);
+}
+
+/* ---- INTERACTIVE COMPONENTS ---- */
+.chat-widget {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.chat-widget:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+}
+
+.service-packages-btn {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.packages-btn {
+  background: #28a745;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.packages-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   VISA PAGE RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* VISA Page Mobile Adjustments */
+  .visa-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .visa-main-title {
+    font-size: 2rem;
+  }
+  
+  .visa-cards-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px 40px;
+  }
+  
+  .country-title {
+    font-size: 1.8rem;
+  }
+  
+  .how-title {
+    font-size: 2rem;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .consult-btn {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 20px auto 0;
   }
 }

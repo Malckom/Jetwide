@@ -6,59 +6,123 @@
   <meta name="description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa processing, and car hire services. Expert guidance and 24/7 support." />
   <meta name="keywords" content="Kenya safari, travel packages, visa processing, car hire, international travel, Maasai Mara, Amboseli, Mount Kenya" />
   
-  <!-- Cache Control -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <!-- PERMANENT CACHE PREVENTION SOLUTION -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0, s-maxage=0, proxy-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Expires" content="-1">
+  <meta name="cache-control" content="no-cache">
+  <meta name="expires" content="0">
+  <meta name="last-updated" content="2025-09-25T15:30:00Z">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Jetwide Travel & Safari | Kenya's Leading Tour & Travel Company" />
-  <meta property="og:description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa processing, and car hire services." />
+  <meta property="og:description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa solutions, and car hire services." />
   
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="../assets/styles.css?v=9&t=1727283400">
-  
-  <!-- Auto Cache-Busting Script -->
+  <!-- Dynamic CSS with timestamp -->
   <script>
-    // Function to add cache-busting parameters to all images
-    function bustImageCache() {
-      const timestamp = new Date().getTime();
-      const images = document.querySelectorAll('img');
+    // Generate unique timestamp for CSS
+    const cssTimestamp = new Date().getTime();
+    const randomId = Math.random().toString(36).substring(7);
+    document.write('<link rel="stylesheet" href="../assets/styles.css?v=' + cssTimestamp + '&nocache=' + randomId + '&update=' + Date.now() + '">');
+  </script>
+  
+  <!-- PERMANENT NO-CACHE SOLUTION -->
+  <script>
+    // BULLETPROOF Cache Prevention System
+    (function() {
+      'use strict';
       
-      images.forEach(img => {
-        const src = img.src;
-        const separator = src.includes('?') ? '&' : '?';
+      // 1. Override ALL fetch requests to add cache-busting
+      const originalFetch = window.fetch;
+      window.fetch = function(...args) {
+        let url = args[0];
+        if (typeof url === 'string') {
+          const separator = url.includes('?') ? '&' : '?';
+          url += separator + 'nocache=' + Date.now() + '&rand=' + Math.random();
+          args[0] = url;
+        }
+        return originalFetch.apply(this, args);
+      };
+      
+      // 2. Override XMLHttpRequest for any AJAX requests
+      const originalXHROpen = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function(method, url, ...rest) {
+        if (typeof url === 'string') {
+          const separator = url.includes('?') ? '&' : '?';
+          url += separator + 'nocache=' + Date.now() + '&rand=' + Math.random();
+        }
+        return originalXHROpen.call(this, method, url, ...rest);
+      };
+      
+      // 3. Dynamic Image Loading with Permanent Cache-Busting
+      function permanentImageRefresh() {
+        const timestamp = Date.now();
+        const random = Math.random();
         
-        // Remove existing cache-busting parameters
-        const baseSrc = src.split('?')[0];
+        // Get ALL images on the page
+        document.querySelectorAll('img').forEach(img => {
+          const originalSrc = img.getAttribute('data-original-src') || img.src;
+          
+          // Store original src if not already stored
+          if (!img.hasAttribute('data-original-src')) {
+            img.setAttribute('data-original-src', originalSrc.split('?')[0]);
+          }
+          
+          // Generate new cache-busted URL
+          const baseSrc = img.getAttribute('data-original-src');
+          img.src = baseSrc + '?t=' + timestamp + '&r=' + random + '&cb=' + performance.now();
+        });
         
-        // Add new timestamp
-        img.src = baseSrc + '?cb=' + timestamp;
+        console.log('🔄 All images refreshed at', new Date().toLocaleTimeString());
+      }
+      
+      // 4. Run on every possible event
+      document.addEventListener('DOMContentLoaded', permanentImageRefresh);
+      window.addEventListener('load', permanentImageRefresh);
+      window.addEventListener('focus', permanentImageRefresh);
+      document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) permanentImageRefresh();
       });
-    }
-    
-    // Run on page load
-    document.addEventListener('DOMContentLoaded', bustImageCache);
-    
-    // Run every time the page becomes visible (tab switching)
-    document.addEventListener('visibilitychange', function() {
-      if (!document.hidden) {
-        bustImageCache();
+      
+      // 5. Continuous refresh every 5 seconds (development mode)
+      setInterval(permanentImageRefresh, 5000);
+      
+      // 6. Immediate refresh - multiple triggers
+      setTimeout(permanentImageRefresh, 100);
+      setTimeout(permanentImageRefresh, 500);
+      setTimeout(permanentImageRefresh, 1000);
+      
+      // 7. Manual refresh shortcuts
+      window.refreshImages = permanentImageRefresh;
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'F9' || (e.ctrlKey && e.key === 'r')) {
+          e.preventDefault();
+          permanentImageRefresh();
+          alert('🔄 Images force-refreshed!');
+        }
+      });
+      
+      // 8. Prevent browser cache for future requests
+      if ('serviceWorker' in navigator) {
+        // Disable all caching for this domain
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.transferSize === 0 && entry.decodedBodySize > 0) {
+              console.log('⚠️ Resource served from cache, refreshing...');
+              setTimeout(permanentImageRefresh, 100);
+            }
+          }
+        });
+        observer.observe({entryTypes: ['resource']});
       }
-    });
-    
-    // Force reload images every 30 seconds (for development)
-    setInterval(bustImageCache, 30000);
-    
-    // Add keyboard shortcut F9 to manually refresh images
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'F9') {
-        e.preventDefault();
-        bustImageCache();
-        console.log('Images refreshed manually with F9');
-      }
-    });
+      
+      // 9. Page refresh helper
+      window.forcePageRefresh = function() {
+        window.location.reload(true);
+      };
+      
+    })();
     
     // Additional: Force browser to never cache images from assets folder
     if ('serviceWorker' in navigator) {
@@ -119,12 +183,22 @@
   
   <script>
     function manualRefresh() {
-      bustImageCache();
+      // Use the permanent refresh system
+      if (window.refreshImages) {
+        window.refreshImages();
+      }
+      
+      // Auto force refresh for immediate updates
+      window.location.reload(true);
+      return;
+      
+      // Show indicator
       const indicator = document.getElementById('refresh-indicator');
+      indicator.innerHTML = 'All Resources Refreshed! ✅';
       indicator.style.display = 'block';
       setTimeout(() => {
         indicator.style.display = 'none';
-      }, 2000);
+      }, 3000);
     }
   </script>
 
@@ -171,7 +245,7 @@
     <div class="header-main">
       <div class="container">
         <div class="flex-row justify-between">
-          <img src="../assets/images/Logo.png" alt="Jetwide Logo" class="logo" />
+          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
           <nav class="nav-menu">
             <a href="#home">Home</a>
             <a href="#tours">Tours & Safaris</a>
@@ -201,30 +275,44 @@
     <div class="destinations-container">
       <!-- First set of destinations -->
       <div class="destination-item">
-        <span class="destination-text" style="color: #84827f;">Beach</span>
+        <span class="destination-text" style="color: #84827f;">Beach Adventures</span>
       </div>
       <div class="destination-item">
-        <span class="destination-text" style="color: #f2f0ee;">Mount Kilimanjaro</span>
+        <span class="destination-text" style="color: #f2f0ee;">Mountain Climbing</span>
       </div>
       <div class="destination-item">
-        <span class="destination-text" style="color: #f2f0ee;">Amboseli</span>
+        <span class="destination-text" style="color: #f2f0ee;">Cruises</span>
       </div>
       <div class="destination-item">
-        <span class="destination-text" style="color: #42403d;">Maasai Mara</span>
+        <span class="destination-text" style="color: #42403d;">Bush Safaris</span>
       </div>
       
       <!-- Duplicate set for seamless loop -->
       <div class="destination-item">
-        <span class="destination-text" style="color: #84827f;">Beach</span>
+        <span class="destination-text" style="color: #84827f;">Beach Adventures</span>
       </div>
       <div class="destination-item">
-        <span class="destination-text" style="color: #f2f0ee;">Mount Kilimanjaro</span>
+        <span class="destination-text" style="color: #f2f0ee;">Mountain Climbing</span>
       </div>
       <div class="destination-item">
-        <span class="destination-text" style="color: #f2f0ee;">Amboseli</span>
+        <span class="destination-text" style="color: #f2f0ee;">Cruises</span>
       </div>
       <div class="destination-item">
-        <span class="destination-text" style="color: #42403d;">Maasai Mara</span>
+        <span class="destination-text" style="color: #42403d;">Bush Safaris</span>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="destination-item">
+        <span class="destination-text" style="color: #84827f;">Beach Adventures</span>
+      </div>
+      <div class="destination-item">
+        <span class="destination-text" style="color: #f2f0ee;">Mountain Climbing</span>
+      </div>
+      <div class="destination-item">
+        <span class="destination-text" style="color: #f2f0ee;">Cruises</span>
+      </div>
+      <div class="destination-item">
+        <span class="destination-text" style="color: #42403d;">Bush Safaris</span>
       </div>
     </div>
   </section>
@@ -256,13 +344,13 @@
               <span class="destination-location">Maasai Mara</span>
               <span class="destination-price">$199</span>
             </div>
-            <span class="price-per-person">per Person</span>
+            <span class="price-per-person">Per Person</span>
             <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         
         <div class="destination-card">
-          <img src="../assets/images/img_rectangle_58.png" alt="Amboseli" class="destination-image" />
+          <img src="../assets/images/Amboseli.jpg" alt="Amboseli" class="destination-image" />
           <div class="destination-info">
             <div class="flex-row justify-between">
               <span class="destination-location">Amboseli</span>
@@ -274,7 +362,7 @@
         </div>
         
         <div class="destination-card">
-          <img src="../assets/images/img_rectangle_61.png" alt="Nakuru" class="destination-image" />
+          <img src="../assets/images/Nakuru.jpg" alt="Nakuru" class="destination-image" />
           <div class="destination-info">
             <div class="flex-row justify-between">
               <span class="destination-location">Nakuru</span>
@@ -286,7 +374,7 @@
         </div>
         
         <div class="destination-card">
-          <img src="../assets/images/img_rectangle_63.png" alt="Mt. Kenya" class="destination-image" />
+          <img src="../assets/images/Mt.Kenya.jpg" alt="Mt. Kenya" class="destination-image" />
           <div class="destination-info">
             <div class="flex-row justify-between">
               <span class="destination-location">Mt. Kenya</span>
@@ -311,15 +399,15 @@
     <div class="flex-row justify-between items-center" style="margin-bottom: 38px;">
       <h2 class="themed-title">Special Offers & Themed Holidays</h2>
       <div class="flex-row" style="gap: 20px;">
-        <button><img src="../assets/images/img_icon_left_arrow.svg" alt="Previous" width="50" height="50" /></button>
-        <button><img src="../assets/images/img_icon_right_arrow.svg" alt="Next" width="50" height="50" /></button>
+        <button><img src="../assets/images/arrow-left.png" alt="Previous" width="50" height="50" /></button>
+        <button><img src="../assets/images/arrow-right.png" alt="Next" width="50" height="50" /></button>
       </div>
     </div>
     
     <div class="themed-slider">
       <div class="themed-grid">
         <div class="themed-card">
-          <img src="../assets/images/img_rectangle_16.png" alt="Romantic Holidays" class="themed-image" />
+          <img src="../assets/images/Romantic.jpg" alt="Romantic Holidays" class="themed-image" />
           <h3 class="themed-card-title">Romantic Holidays</h3>
           <div class="themed-price-row">
             <span class="price-from">from</span>
@@ -327,11 +415,11 @@
           </div>
           <div class="themed-details">
             <div class="detail-item">
-              <img src="../assets/images/img_system_uicons_calendar_month.svg" alt="Calendar" class="detail-icon" />
+              <img src="../assets/images/calender.png" alt="Calendar" class="detail-icon" />
               <span class="detail-text">EVERY DAY</span>
             </div>
             <div class="detail-item">
-              <img src="../assets/images/img_icon_private_tours.svg" alt="Group" class="detail-icon" />
+              <img src="../assets/images/group.png" alt="Group" class="detail-icon" />
               <span class="detail-text">3-10 PP</span>
             </div>
           </div>
@@ -339,7 +427,7 @@
         </div>
         
         <div class="themed-card">
-          <img src="../assets/images/img_rectangle_16_404x330.png" alt="Festive Season Deals" class="themed-image" />
+          <img src="../assets/images/Festive-season.jpg" alt="Festive Season Deals" class="themed-image" />
           <h3 class="themed-card-title">Festive Season Deals</h3>
           <div class="themed-price-row">
             <span class="price-from">from</span>
@@ -347,11 +435,11 @@
           </div>
           <div class="themed-details">
             <div class="detail-item">
-              <img src="../assets/images/img_system_uicons_calendar_month.svg" alt="Calendar" class="detail-icon" />
+              <img src="../assets/images/calender.png" alt="Calendar" class="detail-icon" />
               <span class="detail-text">MONDAY</span>
             </div>
             <div class="detail-item">
-              <img src="../assets/images/img_icon_private_tours.svg" alt="Group" class="detail-icon" />
+              <img src="../assets/images/group.png" alt="Group" class="detail-icon" />
               <span class="detail-text">10-30 PP</span>
             </div>
           </div>
@@ -359,7 +447,7 @@
         </div>
         
         <div class="themed-card">
-          <img src="../assets/images/img_rectangle_16_1.png" alt="Corporate & Team Building" class="themed-image" />
+          <img src="../assets/images/team-building.jpg" alt="Corporate & Team Building" class="themed-image" />
           <h3 class="themed-card-title">Corporate & Team Building</h3>
           <div class="themed-price-row">
             <span class="price-from">from</span>
@@ -367,11 +455,11 @@
           </div>
           <div class="themed-details">
             <div class="detail-item">
-              <img src="../assets/images/img_system_uicons_calendar_month.svg" alt="Calendar" class="detail-icon" />
+              <img src="../assets/images/calender.png" alt="Calendar" class="detail-icon" />
               <span class="detail-text">TO BE DECIDED</span>
             </div>
             <div class="detail-item">
-              <img src="../assets/images/img_icon_private_tours.svg" alt="Group" class="detail-icon" />
+              <img src="../assets/images/group.png" alt="Group" class="detail-icon" />
               <span class="detail-text">10-50 PP</span>
             </div>
           </div>
@@ -388,31 +476,31 @@
       <h2 class="services-title">Lets us worry about your plans,<br />Just get packed</h2>
       <a href="#trip" class="btn-cta">
         Take a Trip
-        <img src="../assets/images/img_arrowright02round.svg" alt="Arrow" class="btn-icon" />
+        <img src="../assets/images/arrow-right.png" alt="Arrow" class="btn-icon" />
       </a>
     </div>
     
     <div class="services-content">
-      <img src="../assets/images/img_rectangle_10.png" alt="Travel services" class="services-image" />
+      <img src="../assets/images/Travel-Services.jpg" alt="Travel services" class="services-image" />
       
       <div class="services-info">
         <div class="service-item">
-          <img src="../assets/images/img_policecar.svg" alt="Passport" class="service-icon" />
+          <img src="../assets/images/passport_icon.png" alt="Passport" class="service-icon" />
           <h3 class="service-title">Apply for Passport</h3>
           <p class="service-description">Lorem ipsum dolor sit amet consecteur fin dren</p>
           <a href="#passport" class="service-link">
             Lets Go
-            <img src="../assets/images/img_arrowright_teal_900.svg" alt="Arrow" class="service-arrow" />
+            <img src="../assets/images/arrow-right.png" alt="Arrow" class="service-arrow" />
           </a>
         </div>
         
         <div class="service-item">
-          <img src="../assets/images/img_bed.svg" alt="Car hire" class="service-icon" />
+          <img src="../assets/images/car_icon.png" alt="Car hire" class="service-icon" />
           <h3 class="service-title">Hire a Car</h3>
           <p class="service-description">Lorem ipsum dolor sit amet consecteur fin dren</p>
           <a href="#car-hire" class="service-link">
             Lets Go
-            <img src="../assets/images/img_arrowright_teal_900.svg" alt="Arrow" class="service-arrow" />
+            <img src="../assets/images/arrow-right.png" alt="Arrow" class="service-arrow" />
           </a>
         </div>
       </div>
@@ -426,17 +514,18 @@
         <h2 class="stats-title">A Unique Story in<br />Every Number</h2>
       </div>
       
-      <div class="stat-item">
-        <div class="stat-number">100+</div>
-        <p class="stat-label">VISA Issued</p>
-      </div>
-      
-      <div class="stat-item">
-        <div class="stat-number">200+</div>
-        <p class="stat-label">People we have helped get jobs<br />domestically & internationally</p>
+      <div class="stats-items">
+        <div class="stat-item">
+          <div class="stat-number">100+</div>
+          <p class="stat-label">VISA Issued</p>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <p class="stat-label">People we have helped get jobs<br />domestically & internationally</p>
+        </div>
       </div>
     </div>
-    <img src="../assets/images/img_bird_webp.png" alt="Bird" style="position: absolute; top: 0; right: 10%; width: 154px; height: 234px;" />
   </section>
 
   <!-- CTA Section -->
@@ -445,18 +534,26 @@
       <h2 class="cta-title">Ready to go?<br />Give us a quick call</h2>
       <a href="#contact" class="btn-cta">
         Contact us
-        <img src="../assets/images/img_arrowright02round.svg" alt="Arrow" class="btn-icon" />
+        <img src="../assets/images/arrow-right.png" alt="Arrow" class="btn-icon" />
       </a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-top">
-      <img src="../assets/images/Logo.png" alt="Jetwide Logo" class="footer-logo" />
-      <div class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" class="newsletter-input" />
-        <img src="../assets/images/img_paperplane_png.png" alt="Subscribe" class="newsletter-button" />
+    <div class="footer-content-wrapper">
+      <div class="footer-logo-section">
+        <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
+      </div>
+      
+      <div class="newsletter-section">
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input" />
+          <button type="submit" class="newsletter-button">
+            <img src="../assets/images/paperplane_icon.png" alt="Subscribe" class="newsletter-icon" />
+            <span class="newsletter-text">Send</span>
+          </button>
+        </div>
       </div>
     </div>
     
