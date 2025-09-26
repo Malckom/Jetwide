@@ -6,202 +6,14 @@
   <meta name="description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa processing, and car hire services. Expert guidance and 24/7 support." />
   <meta name="keywords" content="Kenya safari, travel packages, visa processing, car hire, international travel, Maasai Mara, Amboseli, Mount Kenya" />
   
-  <!-- PERMANENT CACHE PREVENTION SOLUTION -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0, s-maxage=0, proxy-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="-1">
-  <meta name="cache-control" content="no-cache">
-  <meta name="expires" content="0">
-  <meta name="last-updated" content="2025-09-25T15:30:00Z">
-  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Jetwide Travel & Safari | Kenya's Leading Tour & Travel Company" />
   <meta property="og:description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa solutions, and car hire services." />
   
-  <!-- Dynamic CSS with timestamp -->
-  <script>
-    // Generate unique timestamp for CSS
-    const cssTimestamp = new Date().getTime();
-    const randomId = Math.random().toString(36).substring(7);
-    document.write('<link rel="stylesheet" href="../assets/styles.css?v=' + cssTimestamp + '&nocache=' + randomId + '&update=' + Date.now() + '">');
-  </script>
-  
-  <!-- PERMANENT NO-CACHE SOLUTION -->
-  <script>
-    // BULLETPROOF Cache Prevention System
-    (function() {
-      'use strict';
-      
-      // 1. Override ALL fetch requests to add cache-busting
-      const originalFetch = window.fetch;
-      window.fetch = function(...args) {
-        let url = args[0];
-        if (typeof url === 'string') {
-          const separator = url.includes('?') ? '&' : '?';
-          url += separator + 'nocache=' + Date.now() + '&rand=' + Math.random();
-          args[0] = url;
-        }
-        return originalFetch.apply(this, args);
-      };
-      
-      // 2. Override XMLHttpRequest for any AJAX requests
-      const originalXHROpen = XMLHttpRequest.prototype.open;
-      XMLHttpRequest.prototype.open = function(method, url, ...rest) {
-        if (typeof url === 'string') {
-          const separator = url.includes('?') ? '&' : '?';
-          url += separator + 'nocache=' + Date.now() + '&rand=' + Math.random();
-        }
-        return originalXHROpen.call(this, method, url, ...rest);
-      };
-      
-      // 3. Dynamic Image Loading with Permanent Cache-Busting
-      function permanentImageRefresh() {
-        const timestamp = Date.now();
-        const random = Math.random();
-        
-        // Get ALL images on the page
-        document.querySelectorAll('img').forEach(img => {
-          const originalSrc = img.getAttribute('data-original-src') || img.src;
-          
-          // Store original src if not already stored
-          if (!img.hasAttribute('data-original-src')) {
-            img.setAttribute('data-original-src', originalSrc.split('?')[0]);
-          }
-          
-          // Generate new cache-busted URL
-          const baseSrc = img.getAttribute('data-original-src');
-          img.src = baseSrc + '?t=' + timestamp + '&r=' + random + '&cb=' + performance.now();
-        });
-        
-        console.log('🔄 All images refreshed at', new Date().toLocaleTimeString());
-      }
-      
-      // 4. Run on every possible event
-      document.addEventListener('DOMContentLoaded', permanentImageRefresh);
-      window.addEventListener('load', permanentImageRefresh);
-      window.addEventListener('focus', permanentImageRefresh);
-      document.addEventListener('visibilitychange', function() {
-        if (!document.hidden) permanentImageRefresh();
-      });
-      
-      // 5. Continuous refresh every 5 seconds (development mode)
-      setInterval(permanentImageRefresh, 5000);
-      
-      // 6. Immediate refresh - multiple triggers
-      setTimeout(permanentImageRefresh, 100);
-      setTimeout(permanentImageRefresh, 500);
-      setTimeout(permanentImageRefresh, 1000);
-      
-      // 7. Manual refresh shortcuts
-      window.refreshImages = permanentImageRefresh;
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'F9' || (e.ctrlKey && e.key === 'r')) {
-          e.preventDefault();
-          permanentImageRefresh();
-          alert('🔄 Images force-refreshed!');
-        }
-      });
-      
-      // 8. Prevent browser cache for future requests
-      if ('serviceWorker' in navigator) {
-        // Disable all caching for this domain
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.transferSize === 0 && entry.decodedBodySize > 0) {
-              console.log('⚠️ Resource served from cache, refreshing...');
-              setTimeout(permanentImageRefresh, 100);
-            }
-          }
-        });
-        observer.observe({entryTypes: ['resource']});
-      }
-      
-      // 9. Page refresh helper
-      window.forcePageRefresh = function() {
-        window.location.reload(true);
-      };
-      
-    })();
-    
-    // Additional: Force browser to never cache images from assets folder
-    if ('serviceWorker' in navigator) {
-      // Simple cache prevention for development
-      const originalFetch = window.fetch;
-      window.fetch = function(...args) {
-        const url = args[0];
-        if (typeof url === 'string' && url.includes('/assets/images/')) {
-          const separator = url.includes('?') ? '&' : '?';
-          args[0] = url + separator + 'nocache=' + Date.now();
-        }
-        return originalFetch.apply(this, args);
-      };
-    }
-  </script>
-  
-  <!-- Development Helper: Floating Refresh Button -->
-  <style>
-    .dev-refresh-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 9999;
-      background: #ff6b6b;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-    }
-    
-    .dev-refresh-btn:hover {
-      background: #ff5252;
-      transform: scale(1.1);
-    }
-    
-    .dev-refresh-btn:active {
-      transform: scale(0.95);
-    }
-  </style>
-
-<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fjetwides1340back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
-  <!-- Development Helper: Manual Image Refresh Button -->
-  <button class="dev-refresh-btn" onclick="manualRefresh()" title="Click to refresh all images (or press F9)">
-    🔄
-  </button>
-  
-  <!-- Refresh indicator -->
-  <div id="refresh-indicator" style="position: fixed; top: 80px; right: 20px; background: #4CAF50; color: white; padding: 10px; border-radius: 5px; display: none; z-index: 9999;">
-    Images Refreshed! ✅
-  </div>
-  
-  <script>
-    function manualRefresh() {
-      // Use the permanent refresh system
-      if (window.refreshImages) {
-        window.refreshImages();
-      }
-      
-      // Auto force refresh for immediate updates
-      window.location.reload(true);
-      return;
-      
-      // Show indicator
-      const indicator = document.getElementById('refresh-indicator');
-      indicator.innerHTML = 'All Resources Refreshed! ✅';
-      indicator.style.display = 'block';
-      setTimeout(() => {
-        indicator.style.display = 'none';
-      }, 3000);
-    }
-  </script>
-
   <!-- Header -->
   <header>
     <!-- Top header bar -->
@@ -244,16 +56,21 @@
     <!-- Main header -->
     <div class="header-main">
       <div class="container">
-        <div class="flex-row justify-between">
-          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
-          <nav class="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#tours">Tours & Safaris</a>
-            <a href="#visa">VISA Processing</a>
-            <a href="#services">Other Services</a>
-            <a href="#about">About Us</a>
-          </nav>
-        </div>
+        <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+        <nav class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#tours">Tours & Safaris</a>
+          <a href="visa-services.html">VISA Processing</a>
+          <div class="dropdown">
+            <a href="#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="car-hire.html" class="dropdown-item">Car Hire Services</a>
+              <a href="#job-placement" class="dropdown-item">Job Placement Services</a>
+              <a href="#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
+            </div>
+          </div>
+          <a href="#about">About Us</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -563,7 +380,7 @@
           <h3>Services</h3>
           <ul>
             <li><a href="#tours">Tours & Safaris</a></li>
-            <li><a href="#visa">Passport & VISA Processing</a></li>
+            <li><a href="visa-services.html">Passport & VISA Processing</a></li>
             <li><a href="#car-hire">Car-hire services</a></li>
             <li><a href="#recruitment">Recruitment & Job Placements</a></li>
             <li><a href="#airline">Airline Bookings</a></li>
@@ -575,7 +392,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#tours">Tours & Safaris</a></li>
-            <li><a href="#visa">VISA Processing</a></li>
+            <li><a href="visa-services.html">VISA Processing</a></li>
           </ul>
         </div>
         
@@ -618,5 +435,51 @@
       <p>Powered By Malckom</p>
     </div>
   </footer>
+
+  <script>
+    // Dropdown functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        
+        // Toggle dropdown on click
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+          
+          // Close other dropdowns
+          dropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove('active');
+            }
+          });
+        });
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+        }
+      });
+      
+      // Handle dropdown items click
+      const dropdownItems = document.querySelectorAll('.dropdown-item');
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          // You can add navigation logic here for each service
+          console.log('Clicked service:', this.textContent);
+          
+          // Close dropdown after selection
+          const dropdown = this.closest('.dropdown');
+          dropdown.classList.remove('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html> 

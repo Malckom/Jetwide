@@ -50,18 +50,23 @@
     <!-- Main header -->
     <div class="header-main">
       <div class="container">
-        <div class="flex-row justify-between">
-          <a href="../New/index.html">
-            <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
-          </a>
-          <nav class="nav-menu">
-            <a href="../New/index.html">Home</a>
-            <a href="#tours">Tours & Safaris</a>
-            <a href="visa-services.html" class="active">VISA Processing</a>
-            <a href="#services">Other Services</a>
-            <a href="#about">About Us</a>
-          </nav>
-        </div>
+        <a href="homepage.html">
+          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+        </a>
+        <nav class="nav-menu">
+          <a href="homepage.html">Home</a>
+          <a href="#tours">Tours & Safaris</a>
+          <a href="visa-services.html" class="active">VISA Processing</a>
+          <div class="dropdown">
+            <a href="#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="car-hire.html" class="dropdown-item">Car Hire Services</a>
+              <a href="#job-placement" class="dropdown-item">Job Placement Services</a>
+              <a href="#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
+            </div>
+          </div>
+          <a href="#about">About Us</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -368,20 +373,63 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content-wrapper">
-      <div class="footer-logo-section">
-        <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
-      </div>
-      
-      <div class="newsletter-section">
-        <div class="newsletter-form">
-          <input type="email" placeholder="Enter your email address" class="newsletter-input" />
-          <button type="submit" class="newsletter-button">
-            <img src="../assets/images/paperplane_icon.png" alt="Subscribe" class="newsletter-icon" />
-            <span class="newsletter-text">Send</span>
-          </button>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-section company-info">
+          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
+          <p class="company-description">
+            Your trusted partner for safaris, travel & visa solutions in Kenya. 
+            Experience the best of East Africa with our expert guidance.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="#tours">Tours & Safaris</a></li>
+            <li><a href="visa-services.html">Passport & VISA Processing</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-section">
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#safaris">Safari Tours</a></li>
+            <li><a href="visa-services.html">VISA Processing</a></li>
+            <li><a href="car-hire.html">Car Hire Services</a></li>
+            <li><a href="#travel">Travel Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-section newsletter">
+          <h4 class="footer-title">Stay Updated</h4>
+          <p class="newsletter-text">Subscribe to get special offers & travel tips</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+          <div class="social-links">
+            <img src="../assets/images/twitter.png" alt="Twitter" class="social-icon" />
+            <img src="../assets/images/facebook.png" alt="Facebook" class="social-icon" />
+            <img src="../assets/images/instagram.png" alt="Instagram" class="social-icon" />
+            <img src="../assets/images/linkedin.png" alt="LinkedIn" class="social-icon" />
+            <img src="../assets/images/youtube.png" alt="YouTube" class="social-icon" />
+          </div>
         </div>
       </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Powered By Malckom</p>
+    </div>
+  </footer>
     </div>
     
     <div class="container">
@@ -480,6 +528,35 @@
           });
         }
       });
+    });
+
+    // Dropdown functionality
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      
+      // Toggle dropdown on click
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+        
+        // Close other dropdowns
+        dropdowns.forEach(otherDropdown => {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('active');
+          }
+        });
+      });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
     });
   </script>
 </body>
