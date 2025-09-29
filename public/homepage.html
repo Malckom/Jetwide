@@ -24,15 +24,15 @@
           <div class="header-contact">
             <div class="contact-item">
               <img src="../assets/images/phone-call.png?v=5" alt="Phone" width="16" height="16" />
-              <span>0748 538 311</span>
+              <a href="tel:+254748538311">0748 538 311</a>
             </div>
             <div class="contact-item">
               <img src="../assets/images/email.png?v=5" alt="Email" width="16" height="16" />
-              <span>safaris@jetwide.org</span>
+              <a href="mailto:safaris@jetwide.org">safaris@jetwide.org</a>
             </div>
             <div class="contact-item desktop-only">
               <img src="../assets/images/location.png?v=5" alt="Location" width="16" height="16" />
-              <span>Westlands Square 2nd Floor</span>
+              <a href="https://maps.google.com/?q=Westlands+Square+2nd+Floor+Nairobi" target="_blank">Westlands Square 2nd Floor</a>
             </div>
             <div class="contact-item desktop-only">
               <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
@@ -57,6 +57,14 @@
     <div class="header-main">
       <div class="container">
         <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
         <nav class="nav-menu">
           <a href="#home">Home</a>
           <a href="#tours">Tours & Safaris</a>
@@ -75,15 +83,52 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero-section">
-    <div class="container">
-      <h1 class="hero-title">Your Trusted Partner for Safaris, Travel & Visa Solutions</h1>
-      <p class="hero-subtitle">Book your next adventure, secure your visa, or hire a car — all with Jetwide.</p>
-      <div class="hero-buttons">
-        <a href="#book" class="btn-primary">Book NOW</a>
-        <a href="#whatsapp" class="btn-secondary">Whatsapp us</a>
+    <!-- Slideshow Background -->
+    <div class="hero-slideshow">
+      <div class="hero-slide active" data-bg="../assets/images/Majestic_mara.jpg">
+        <!-- Placeholder for Maasai Mara safari image -->
       </div>
+      <div class="hero-slide" data-bg="../assets/images/tropical_beaches.jpg">
+        <!-- Placeholder for coastal/beach travel image -->
+      </div>
+      <div class="hero-slide" data-bg="../assets/images/Mount_Kenya.jpg">
+        <!-- Placeholder for Mount Kenya adventure image -->
+      </div>
+      <div class="hero-slide" data-bg="../assets/images/Kilimanjaro_Elephants.jpg">
+        <!-- Placeholder for Amboseli elephants image -->
+      </div>
+      <div class="hero-slide" data-bg="../assets/images/Safari_sunset.jpg">
+        <!-- Placeholder for safari sunset image -->
+      </div>
+    </div>
+    
+    <!-- Hero Content Overlay -->
+    <div class="hero-overlay">
+      <div class="container">
+        <h1 class="hero-title">Your Trusted Partner for Safaris, Travel & Visa Solutions</h1>
+        <p class="hero-subtitle">Book your next adventure, secure your visa, or hire a car — all with Jetwide.</p>
+        <div class="hero-buttons">
+          <a href="#book" class="btn-primary">Book NOW</a>
+          <a href="https://wa.me/254748538311" class="btn-secondary">Whatsapp us</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slideshow Navigation -->
+    <div class="hero-nav">
+      <button class="hero-nav-btn prev" aria-label="Previous slide">&lt;</button>
+      <button class="hero-nav-btn next" aria-label="Next slide">&gt;</button>
+    </div>
+    
+    <!-- Slideshow Indicators -->
+    <div class="hero-indicators">
+      <button class="hero-indicator active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-indicator" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero-indicator" data-slide="3" aria-label="Slide 4"></button>
+      <button class="hero-indicator" data-slide="4" aria-label="Slide 5"></button>
     </div>
   </section>
 
@@ -479,6 +524,18 @@
           dropdown.classList.remove('active');
         });
       });
+    });
+  </script>
+  
+  <!-- Dynamic Content JavaScript -->
+  <script src="../dynamic-content.js"></script>
+  
+  <!-- Initialize Slideshow -->
+  <script>
+    // Initialize the website functionality when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Jetwide Website features
+      const website = new JetwideWebsite();
     });
   </script>
 </body>
