@@ -75,6 +75,9 @@ class JetwideContentManager {
             const bgImage = slide.getAttribute('data-bg');
             if (bgImage) {
                 slide.style.backgroundImage = `url(${bgImage})`;
+                slide.style.backgroundSize = 'cover';
+                slide.style.backgroundPosition = 'center';
+                slide.style.backgroundRepeat = 'no-repeat';
             }
         });
 
@@ -168,21 +171,48 @@ class JetwideContentManager {
             }
         });
 
-        // Touch/swipe support for mobile
+        // Enhanced touch/swipe support for mobile
         let startX = 0;
+        let startY = 0;
         let endX = 0;
+        let endY = 0;
+        let isScrolling = null;
 
         if (heroSection) {
             heroSection.addEventListener('touchstart', (e) => {
-                startX = e.changedTouches[0].screenX;
-            });
+                startX = e.changedTouches[0].clientX;
+                startY = e.changedTouches[0].clientY;
+                isScrolling = null;
+            }, { passive: true });
+
+            heroSection.addEventListener('touchmove', (e) => {
+                // Only handle if we have a touch start
+                if (startX === 0 && startY === 0) return;
+                
+                endX = e.changedTouches[0].clientX;
+                endY = e.changedTouches[0].clientY;
+                
+                // Determine if scrolling test has run - one time test
+                if (isScrolling === null) {
+                    isScrolling = Math.abs(endY - startY) > Math.abs(endX - startX);
+                }
+                
+                // If we're swiping horizontally, prevent default to stop page scroll
+                if (!isScrolling) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
 
             heroSection.addEventListener('touchend', (e) => {
-                endX = e.changedTouches[0].screenX;
-                const diff = startX - endX;
+                // Don't act if we're scrolling vertically
+                if (isScrolling) return;
                 
-                if (Math.abs(diff) > 50) { // Minimum swipe distance
-                    if (diff > 0) {
+                const diffX = startX - endX;
+                const diffY = startY - endY;
+                
+                // Minimum swipe distance and ensure horizontal swipe
+                if (Math.abs(diffX) > 50 && Math.abs(diffY) < 100) {
+                    if (diffX > 0) {
                         nextSlide(); // Swipe left = next slide
                     } else {
                         prevSlide(); // Swipe right = previous slide
@@ -190,12 +220,40 @@ class JetwideContentManager {
                     stopSlideshow();
                     setTimeout(startSlideshow, 1000);
                 }
-            });
+                
+                // Reset values
+                startX = 0;
+                startY = 0;
+                endX = 0;
+                endY = 0;
+                isScrolling = null;
+            }, { passive: true });
         }
 
-        // Initialize slideshow
-        startSlideshow();
-        console.log('🎬 Hero slideshow initialized with', slides.length, 'slides');
+        // Initialize slideshow with delay for mobile
+        setTimeout(() => {
+            startSlideshow();
+            console.log('🎬 Hero slideshow initialized with', slides.length, 'slides');
+        }, 100);
+        
+        // Force image loading on mobile devices
+        setTimeout(() => {
+            slides.forEach((slide, index) => {
+                const bgImage = slide.getAttribute('data-bg');
+                if (bgImage) {
+                    // Pre-load images for better performance
+                    const img = new Image();
+                    img.onload = () => {
+                        slide.style.backgroundImage = `url(${bgImage})`;
+                        slide.style.backgroundSize = 'cover';
+                        slide.style.backgroundPosition = 'center';
+                        slide.style.backgroundRepeat = 'no-repeat';
+                        slide.style.backgroundAttachment = 'scroll';
+                    };
+                    img.src = bgImage;
+                }
+            });
+        }, 200);
     }
 
     // Initialize car hire functionality
@@ -256,12 +314,17 @@ class JetwideContentManager {
             });
         });
 
-        // Logo click handler
+        // Logo click handler - WordPress compatible
         const logo = document.querySelector('.logo');
         if (logo && logo.parentElement.tagName === 'A') {
             logo.parentElement.addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = '/New/index.html';
+                window.location.href = '/';
+            });
+        } else if (logo) {
+            logo.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = '/';
             });
         }
     }

@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VISA Services - Simple, Guided, Reliable | Jetwide Travel & Safari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <!-- iOS specific meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Visa Services — Simple, Guided, Reliable | Jetwide Travel & Safari</title>
   <meta name="description" content="Professional VISA processing services for UK, Schengen, UAE, US, Canada and more. Expert guidance, document preparation, and appointment support." />
+  <meta name="keywords" content="Kenya visa services, UK visa, Schengen visa, US visa, Canada visa, UAE visa, passport services, embassy appointments" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Visa Services — Simple, Guided, Reliable | Jetwide Travel & Safari" />
+  <meta property="og:description" content="We assist our clients in the visa and passport application process and make sure it runs smoothly. Whether for tourism, study, family, or business." />
+  
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
@@ -18,15 +29,15 @@
           <div class="header-contact">
             <div class="contact-item">
               <img src="../assets/images/phone-call.png?v=5" alt="Phone" width="16" height="16" />
-              <a href="tel:+254748538311">0748 538 311</a>
+              <span>0748 538 311</span>
             </div>
             <div class="contact-item">
               <img src="../assets/images/email.png?v=5" alt="Email" width="16" height="16" />
-              <a href="mailto:safaris@jetwide.org">safaris@jetwide.org</a>
+              <span>safaris@jetwide.org</span>
             </div>
             <div class="contact-item desktop-only">
               <img src="../assets/images/location.png?v=5" alt="Location" width="16" height="16" />
-              <a href="https://maps.google.com/?q=Westlands+Square+2nd+Floor+Nairobi" target="_blank">Westlands Square 2nd Floor</a>
+              <span>Westlands Square 2nd Floor</span>
             </div>
             <div class="contact-item desktop-only">
               <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
@@ -50,9 +61,15 @@
     <!-- Main header -->
     <div class="header-main">
       <div class="container">
-        <a href="../index.html">
-          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
-        </a>
+        <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
         <nav class="nav-menu">
           <a href="../index.html">Home</a>
           <a href="../index.html#tours">Tours & Safaris</a>
@@ -61,11 +78,11 @@
             <a href="#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-menu">
               <a href="car-hire.html" class="dropdown-item">Car Hire Services</a>
-              <a href="#job-placement" class="dropdown-item">Job Placement Services</a>
-              <a href="#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
+              <a href="../index.html#job-placement" class="dropdown-item">Job Placement Services</a>
+              <a href="../index.html#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
             </div>
           </div>
-          <a href="#about">About Us</a>
+          <a href="../index.html#about">About Us</a>
         </nav>
       </div>
     </div>
@@ -73,363 +90,379 @@
 
   <!-- Hero Section -->
   <section class="visa-hero">
-    <div class="container">
-      <h1 class="visa-hero-title">VISA SERVICES — SIMPLE, GUIDED, RELIABLE</h1>
-      <p class="visa-hero-subtitle">
-        We assist our Clients in the Visa Application process and make sure it runs smoothly. Tourist, business, study & family 
-        visas made easier for Kenyan travelers.
-      </p>
-      <a href="#contact" class="contact-btn">
-        📞 Contact Us
-      </a>
+    <div class="visa-hero-bg">
+      <img src="../assets/images/UK-visa.jpg" alt="Visa Services" class="visa-hero-image" />
+      <div class="visa-hero-overlay"></div>
     </div>
-  </section>
-
-  <!-- Planning Section -->
-  <section class="planning-section">
     <div class="container">
-      <p class="planning-text">
-        Planning a holiday, business trip, studies, or a family visit abroad? Jetwide's Visa Desk helps you choose the right visa, prepare documents correctly, book appointments, and avoid common mistakes. We don't issue visas—embassies/consulates decide—but we make the process clear, organized, and stress-free.
-      </p>
-    </div>
-  </section>
-
-  <!-- Important Notice -->
-  <section class="important-notice">
-    <div class="container">
-      <div class="notice-content">
-        <div class="notice-title">IMPORTANT</div>
-        <div class="notice-text">Government Embassies/VFS fees are paid directly to official channels.</div>
-        <div class="notice-text">Jetwide service fees are separate and cover consultation, document guidance, appointment support, and interview prep (where applicable).</div>
-        <div class="notice-text">Processing times vary by country and season; we'll advise current ranges once consulted.</div>
-        <a href="#consult" class="consult-btn">BOOK A 30-MIN CONSULT</a>
-        <div style="clear: both;"></div>
+      <div class="visa-hero-content">
+        <h1 class="visa-hero-title">Visa Services — Simple, Guided, Reliable</h1>
+        <p class="visa-hero-subtitle">We assist our clients in the visa and passport application process and make sure it runs smoothly. Whether for tourism, study, family, or business, Jetwide simplifies the process for Kenyan travelers.</p>
+        <div class="visa-hero-actions">
+          <a href="tel:+254748538311" class="visa-cta-btn">📞 Contact Us Today</a>
+          <a href="https://wa.me/254748538311" class="visa-cta-btn secondary">💬 WhatsApp Us</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Visa Cards Section -->
-  <section class="visa-intro">
+  <!-- Main Content -->
+  <main class="visa-main">
     <div class="container">
-      <p class="visa-intro-title">Smooth Visas for All Your Travels</p>
-      <h2 class="visa-main-title">GET A VISA FOR</h2>
       
-      <div class="visa-cards-grid">
-        <!-- UK Card -->
-        <div class="visa-card">
-          <img src="../assets/images/UK-visa.jpg?v=5" alt="United Kingdom" class="visa-card-image" />
-          <div class="visa-card-content">
-            <h3 class="visa-card-title">United Kingdom (UK)</h3>
-            <div class="visa-types">Tourist | Visit | Business | Study</div>
-          </div>
-        </div>
-
-        <!-- Schengen Card -->
-        <div class="visa-card">
-          <img src="../assets/images/Shengchen-visa.jpg?v=5" alt="Schengen Europe" class="visa-card-image" />
-          <div class="visa-card-content">
-            <h3 class="visa-card-title">Schengen (Europe)</h3>
-            <div class="visa-types">Tourist | Visit | Business</div>
-          </div>
-        </div>
-
-        <!-- UAE Card -->
-        <div class="visa-card">
-          <img src="../assets/images/UAE-visa.jpg?v=5" alt="UAE Dubai" class="visa-card-image" />
-          <div class="visa-card-content">
-            <h3 class="visa-card-title">UAE (Dubai)</h3>
-            <div class="visa-types">Tourist | Visit | Business</div>
-          </div>
-        </div>
-
-        <!-- United States Card -->
-        <div class="visa-card">
-          <img src="../assets/images/USA-visa.jpg?v=5" alt="United States" class="visa-card-image" />
-          <div class="visa-card-content">
-            <h3 class="visa-card-title">United States</h3>
-            <div class="visa-types">B1/B2 (Tourist/Business) | F-1 (Study) | Others</div>
-          </div>
-        </div>
-
-        <!-- Canada Card -->
-        <div class="visa-card">
-          <img src="../assets/images/Canada-visa.jpg?v=5" alt="Canada" class="visa-card-image" />
-          <div class="visa-card-content">
-            <h3 class="visa-card-title">Canada</h3>
-            <div class="visa-types">Visitor | Study | Work (Guidance)</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Packages Button -->
-      <div class="service-packages-btn">
-        <a href="#packages" class="packages-btn">
-          See Service Packages →
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detailed Country Sections -->
-  <section class="container">
-    <!-- UK Section -->
-    <div class="country-section">
-      <h3 class="country-title">UNITED KINGDOM (UK) — TOURIST | VISIT | BUSINESS | STUDY</h3>
-      <div class="country-details">
-        <div class="detail-item">
-          <div class="detail-title">Checklist:</div>
-          <div class="detail-text">Passport (6+ months), photos, online form, itinerary, proof of funds, accommodation, employer/student letters, invitation (if any), tupe guidance, form help, document review, biometrics appointment support, interview tips.</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">Timeline:</div>
-          <div class="detail-text">Standard & priority options vary by season.</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">What we do:</div>
-          <div class="detail-text">Visa type guidance, form help, document review, biometrics appointment support, interview tips.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Schengen Section -->
-    <div class="country-section">
-      <h3 class="country-title">SCHENGEN (EUROPE) — TOURIST | VISIT | BUSINESS</h3>
-      <div class="country-details">
-        <div class="detail-item">
-          <div class="detail-title">Checklist:</div>
-          <div class="detail-text">Schengen form, passport, photos, travel insurance (€ €30,000), flights, accommodation, bank statements, employment/student proof, cover letter.</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">Embassy choice:</div>
-          <div class="detail-text">Apply via country of main destination/longest stay.</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">What we do:</div>
-          <div class="detail-text">Consulate routing, forms, insurance guidance, VFS appointment support, interview prep.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- UAE Section -->
-    <div class="country-section">
-      <h3 class="country-title">UAE (DUBAI) — TOURIST | VISIT | BUSINESS</h3>
-      <div class="country-details">
-        <div class="detail-item">
-          <div class="detail-title">Notes:</div>
-          <div class="detail-text">Multiple durations (e.g., 30/60/90 days), single/multiple-entry options.</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">What we do:</div>
-          <div class="detail-text">Eligibility confirmation, document prep, submission through approved channels, status follow-up. Often no in-person interview required.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- United States Section -->
-    <div class="country-section">
-      <h3 class="country-title">UNITED STATES — B1/B2 (TOURIST/BUSINESS) | F-1 (STUDY) | OTHERS</h3>
-      <div class="country-details">
-        <div class="detail-item">
-          <div class="detail-title">Notes:</div>
-          <div class="detail-text">Multiple durations (e.g., 30/60/90 days), single/multiple-entry options.</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">What we do:</div>
-          <div class="detail-text">Eligibility confirmation, document prep, submission through approved channels, status follow-up. Often no in-person interview required.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Canada Section -->
-    <div class="country-section">
-      <h3 class="country-title">CANADA — VISITOR | STUDY | WORK (GUIDANCE)</h3>
-      <div class="country-details">
-        <div class="detail-item">
-          <div class="detail-title">Submission:</div>
-          <div class="detail-text">Many categories are online; biometrics & passport handling via VAC (VFS).</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-title">What we do:</div>
-          <div class="detail-text">Category guidance, IRCC account support, checklist & documents, biometrics/appointment support.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works Section -->
-  <section class="how-it-works">
-    <div class="container">
-      <h2 class="how-title">How it works</h2>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-title">• Pre-Check & Consult —</div>
-          <div class="step-description">We confirm the correct visa type and give you a tailored checklist.</div>
-        </div>
-        <div class="process-step">
-          <div class="step-title">• Document Prep —</div>
-          <div class="step-description">Forms, photos, itinerary, proof of funds, insurance, invitations (if any).</div>
-        </div>
-        <div class="process-step">
-          <div class="step-title">• Submission & Appointment —</div>
-          <div class="step-description">Embassy/consulate/VFS submission or online portal; biometrics where required.</div>
-        </div>
-        <div class="process-step">
-          <div class="step-title">• Decision & Passport —</div>
-          <div class="step-description">We guide tracking & collection. Outcome is at the sole discretion of the issuing authority.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="why-choose-us">
-    <div class="container">
-      <h2 class="why-title">Why Choose Us?</h2>
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-icon">🌍</div>
-          <div class="benefit-title">Local team, global routes:</div>
-          <div class="benefit-text">Daily support for UK, Schengen, UAE, U.S., Canada & more.</div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">⏰</div>
-          <div class="benefit-title">Clear timelines & expectations:</div>
-          <div class="benefit-text">Real estimates: we share current processing realities.</div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">📋</div>
-          <div class="benefit-title">Error-free documentation:</div>
-          <div class="benefit-text">We help you avoid common mistakes that cause delays/rejections.</div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">💬</div>
-          <div class="benefit-title">Interview support (where applicable):</div>
-          <div class="benefit-text">Mock Q&A and documentation rehearsal.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact-info">
-        <a href="#contact" class="contact-cta">CONTACT US</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container">
-      <div class="faq-container">
-        <h2 class="faq-title">FAQs</h2>
+      <!-- Planning Section -->
+      <section class="visa-section">
+        <h2 class="visa-section-title">Planning Your Next Trip?</h2>
+        <p class="visa-section-intro">Travelling abroad can be stressful, especially when navigating strict embassy requirements. Jetwide's Visa Desk helps you:</p>
         
-        <div class="faq-item">
-          <button class="faq-question">
-            Is a visa guaranteed?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            No. Decisions are made by the embassy/consulate. Our role is to help you submit a complete, well-organized application.
+        <div class="visa-services-grid">
+          <div class="visa-service-card">
+            <div class="visa-service-icon">✓</div>
+            <h3>Choose the right visa type</h3>
+            <p>Tourist, study, business, family</p>
+          </div>
+          <div class="visa-service-card">
+            <div class="visa-service-icon">✓</div>
+            <h3>Prepare and review all required documents</h3>
+            <p>Complete documentation assistance</p>
+          </div>
+          <div class="visa-service-card">
+            <div class="visa-service-icon">✓</div>
+            <h3>Book embassy/VFS appointments</h3>
+            <p>Secure your appointment slots</p>
+          </div>
+          <div class="visa-service-card">
+            <div class="visa-service-icon">✓</div>
+            <h3>Receive interview preparation support</h3>
+            <p>If required for your application</p>
           </div>
         </div>
+        
+        <div class="visa-disclaimer">
+          <p><strong>We do not issue visas</strong> — embassies and consulates make the final decision — but our role is to make the journey clear, organized, and stress-free.</p>
+        </div>
+      </section>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            How long does it take?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Processing times vary by destination, season, and visa type. We provide current estimates during consultation.
+      <!-- Important Information -->
+      <section class="visa-section">
+        <div class="visa-important-info">
+          <h2 class="visa-section-title">⚠️ Important Information</h2>
+          <div class="visa-info-cards">
+            <div class="visa-info-card">
+              <h4>Embassy/VFS/Government Fees</h4>
+              <p>Paid directly to official channels.</p>
+            </div>
+            <div class="visa-info-card">
+              <h4>Jetwide Service Fees</h4>
+              <p>Separate fees covering consultation, document preparation, appointment booking, and interview coaching.</p>
+            </div>
+            <div class="visa-info-card">
+              <h4>Processing Times</h4>
+              <p>Vary by country and season — we'll share realistic timelines during consultation.</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="faq-item">
-          <button class="faq-question">
-            Do you book appointments?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes, we assist with appointment booking and guide you through the entire process from start to finish.
+      <!-- Get a Visa For Section -->
+      <section class="visa-section">
+        <h2 class="visa-section-title">Get a Visa For</h2>
+        
+        <div class="visa-countries-grid">
+          
+          <!-- UK Visa -->
+          <div class="visa-country-card">
+            <div class="visa-country-header">
+              <img src="../assets/images/UK-visa.jpg" alt="UK Visa" class="visa-country-image" />
+              <div class="visa-country-overlay">
+                <h3 class="visa-country-title">United Kingdom (UK)</h3>
+                <p class="visa-country-types">Tourist | Visit | Study | Business</p>
+              </div>
+            </div>
+            <div class="visa-country-content">
+              <div class="visa-checklist">
+                <h4>Checklist:</h4>
+                <p>Valid passport, photos, proof of funds, itinerary, invitation (if applicable), employer/student letters.</p>
+              </div>
+              <div class="visa-role">
+                <h4>Our Role:</h4>
+                <p>Visa type guidance, form support, document review, biometrics appointment booking, interview prep.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Contact Info -->
-      <div class="contact-info" style="margin-top: 60px;">
-        <div class="contact-title">Visit us: Westlands Square, 2nd Floor — Nairobi</div>
-        <div style="margin: 20px 0;">
-          <div style="background: #f0f0f0; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-            <strong>Do you have more questions?</strong><br>
-            Prefer WhatsApp? Tap to chat for quick pre-checks and appointment support.
+          <!-- Schengen Europe -->
+          <div class="visa-country-card">
+            <div class="visa-country-header">
+              <img src="../assets/images/Shengchen-visa.jpg" alt="Schengen Visa" class="visa-country-image" />
+              <div class="visa-country-overlay">
+                <h3 class="visa-country-title">Schengen Europe</h3>
+                <p class="visa-country-types">Tourist | Visit | Business</p>
+              </div>
+            </div>
+            <div class="visa-country-content">
+              <div class="visa-checklist">
+                <h4>Checklist:</h4>
+                <p>Application form, passport, travel insurance (€30,000+), flight & hotel bookings, bank statements, cover letter.</p>
+              </div>
+              <div class="visa-role">
+                <h4>Our Role:</h4>
+                <p>Embassy routing, document guidance, VFS appointment support, interview preparation.</p>
+              </div>
+            </div>
           </div>
-          <a href="https://wa.me/254748538311" class="contact-cta" style="background: #25D366;">WhatsApp Us</a>
+
+          <!-- UAE/Dubai -->
+          <div class="visa-country-card">
+            <div class="visa-country-header">
+              <img src="../assets/images/UAE-visa.jpg" alt="UAE Visa" class="visa-country-image" />
+              <div class="visa-country-overlay">
+                <h3 class="visa-country-title">UAE / Dubai</h3>
+                <p class="visa-country-types">Tourist | Visit | Business</p>
+              </div>
+            </div>
+            <div class="visa-country-content">
+              <div class="visa-options">
+                <h4>Options:</h4>
+                <p>30/60/90 days, single or multiple entry.</p>
+              </div>
+              <div class="visa-role">
+                <h4>Our Role:</h4>
+                <p>Eligibility confirmation, online submission through approved channels, tracking & updates.</p>
+              </div>
+              <div class="visa-notes">
+                <h4>Notes:</h4>
+                <p>No embassy interview required — eVisa issued electronically.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- United States -->
+          <div class="visa-country-card">
+            <div class="visa-country-header">
+              <img src="../assets/images/USA-visa.jpg" alt="USA Visa" class="visa-country-image" />
+              <div class="visa-country-overlay">
+                <h3 class="visa-country-title">United States</h3>
+                <p class="visa-country-types">B1/B2 Tourist/Business | F-1 Study</p>
+              </div>
+            </div>
+            <div class="visa-country-content">
+              <div class="visa-checklist">
+                <h4>Checklist:</h4>
+                <p>DS-160 form, passport, financial proof, itinerary, SEVIS (for students).</p>
+              </div>
+              <div class="visa-role">
+                <h4>Our Role:</h4>
+                <p>Form assistance, MRV fee and appointment booking, interview prep.</p>
+              </div>
+              <div class="visa-notes">
+                <h4>Notes:</h4>
+                <p>Interview mandatory at US Embassy Nairobi — we help you prepare confidently.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canada -->
+          <div class="visa-country-card">
+            <div class="visa-country-header">
+              <img src="../assets/images/Canada-visa.jpg" alt="Canada Visa" class="visa-country-image" />
+              <div class="visa-country-overlay">
+                <h3 class="visa-country-title">Canada</h3>
+                <p class="visa-country-types">Visitor | Study | Work</p>
+              </div>
+            </div>
+            <div class="visa-country-content">
+              <div class="visa-checklist">
+                <h4>Checklist:</h4>
+                <p>Passport, forms via IRCC portal, biometrics, financial proof, invitation letters (if required).</p>
+              </div>
+              <div class="visa-role">
+                <h4>Our Role:</h4>
+                <p>IRCC portal support, checklist preparation, VAC/VFS handling.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <a href="#contact" class="contact-cta">Contact us →</a>
+      </section>
+
+      <!-- Passport Services -->
+      <section class="visa-section">
+        <h2 class="visa-section-title">Passport Services</h2>
+        <p class="visa-section-intro">Jetwide also assists with:</p>
+        
+        <div class="passport-services">
+          <div class="passport-service-item">
+            <div class="passport-service-icon">📖</div>
+            <h4>New passport applications</h4>
+          </div>
+          <div class="passport-service-item">
+            <div class="passport-service-icon">🔄</div>
+            <h4>Renewals and replacements</h4>
+          </div>
+          <div class="passport-service-item">
+            <div class="passport-service-icon">🚨</div>
+            <h4>Lost/damaged passport re-issuance</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="visa-section">
+        <h2 class="visa-section-title">How It Works</h2>
+        
+        <div class="visa-process">
+          <div class="visa-process-step">
+            <div class="visa-process-number">1</div>
+            <div class="visa-process-content">
+              <h4>Pre-Check & Consult</h4>
+              <p>Confirm the correct visa type and requirements.</p>
+            </div>
+          </div>
+          <div class="visa-process-step">
+            <div class="visa-process-number">2</div>
+            <div class="visa-process-content">
+              <h4>Document Preparation</h4>
+              <p>Forms, photos, insurance, funds, invitations.</p>
+            </div>
+          </div>
+          <div class="visa-process-step">
+            <div class="visa-process-number">3</div>
+            <div class="visa-process-content">
+              <h4>Submission & Appointment</h4>
+              <p>Embassy/VFS/online systems, biometrics.</p>
+            </div>
+          </div>
+          <div class="visa-process-step">
+            <div class="visa-process-number">4</div>
+            <div class="visa-process-content">
+              <h4>Decision & Passport</h4>
+              <p>Guidance on tracking and collection.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Jetwide -->
+      <section class="visa-section">
+        <h2 class="visa-section-title">🌟 Why Choose Jetwide?</h2>
+        
+        <div class="why-choose-grid">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">🌍</div>
+            <h4>Local expertise, global routes</h4>
+            <p>UK, Europe, USA, Canada, UAE, and more</p>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">⏱️</div>
+            <h4>Clear timelines & real expectations</h4>
+            <p>No false promises, realistic processing times</p>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">✅</div>
+            <h4>Error-free documentation support</h4>
+            <p>Avoid costly errors with professional guidance</p>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">🎭</div>
+            <h4>Mock interview coaching</h4>
+            <p>Where required for your application</p>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">🤝</div>
+            <h4>Personalized assistance</h4>
+            <p>Every step of the way</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class="visa-section">
+        <h2 class="visa-section-title">❓ FAQs</h2>
+        
+        <div class="visa-faqs">
+          <div class="visa-faq-item">
+            <div class="visa-faq-question">
+              <h4>Is a visa guaranteed?</h4>
+              <span class="visa-faq-toggle">+</span>
+            </div>
+            <div class="visa-faq-answer">
+              <p>No. Embassies/consulates make the final decision. Our role is to maximize your chances by submitting accurate and complete applications.</p>
+            </div>
+          </div>
+          
+          <div class="visa-faq-item">
+            <div class="visa-faq-question">
+              <h4>How long does it take?</h4>
+              <span class="visa-faq-toggle">+</span>
+            </div>
+            <div class="visa-faq-answer">
+              <p>Varies by country — UK (2–6 weeks), Schengen (15–21 days), US (depends on appointment availability), Canada (varies).</p>
+            </div>
+          </div>
+          
+          <div class="visa-faq-item">
+            <div class="visa-faq-question">
+              <h4>Do you book appointments?</h4>
+              <span class="visa-faq-toggle">+</span>
+            </div>
+            <div class="visa-faq-answer">
+              <p>Yes — we help secure your slot at embassies, consulates, or VFS centers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Contact CTA Section -->
+  <section class="visa-contact-cta">
+    <div class="container">
+      <div class="visa-contact-content">
+        <h2 class="visa-contact-title">📞 Ready to Apply?</h2>
+        <div class="visa-contact-grid">
+          <div class="visa-contact-item">
+            <div class="visa-contact-icon">📞</div>
+            <h4>Call us:</h4>
+            <a href="tel:+254748538311">+254 748 538 311</a>
+          </div>
+          <div class="visa-contact-item">
+            <div class="visa-contact-icon">✉️</div>
+            <h4>Email:</h4>
+            <a href="mailto:info@jetwide.org">info@jetwide.org</a>
+          </div>
+          <div class="visa-contact-item">
+            <div class="visa-contact-icon">📍</div>
+            <h4>Visit:</h4>
+            <p>Westlands Square, 2nd Floor, Nairobi</p>
+          </div>
+          <div class="visa-contact-item">
+            <div class="visa-contact-icon">💬</div>
+            <h4>WhatsApp:</h4>
+            <a href="https://wa.me/254748538311" class="visa-whatsapp-btn">WhatsApp Us Now</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- Company Info -->
-        <div class="footer-section company-info">
-          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
-          <p class="company-description">
-            Your trusted partner for safaris, travel & visa solutions in Kenya. 
-            Experience the best of East Africa with our expert guidance.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-section">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#tours">Tours & Safaris</a></li>
-            <li><a href="visa-services.html">Passport & VISA Processing</a></li>
-            <li><a href="../index.html#about">About Us</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div class="footer-section">
-          <h4 class="footer-title">Our Services</h4>
-          <ul class="footer-links">
-            <li><a href="#safaris">Safari Tours</a></li>
-            <li><a href="visa-services.html">VISA Processing</a></li>
-            <li><a href="car-hire.html">Car Hire Services</a></li>
-            <li><a href="#travel">Travel Packages</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="footer-section newsletter">
-          <h4 class="footer-title">Stay Updated</h4>
-          <p class="newsletter-text">Subscribe to get special offers & travel tips</p>
-          <div class="newsletter-form">
-            <input type="email" placeholder="Enter your email" class="newsletter-input" />
-            <button type="submit" class="newsletter-btn">Subscribe</button>
-          </div>
-          <div class="social-links">
-            <img src="../assets/images/twitter.png" alt="Twitter" class="social-icon" />
-            <img src="../assets/images/facebook.png" alt="Facebook" class="social-icon" />
-            <img src="../assets/images/instagram.png" alt="Instagram" class="social-icon" />
-            <img src="../assets/images/linkedin.png" alt="LinkedIn" class="social-icon" />
-            <img src="../assets/images/youtube.png" alt="YouTube" class="social-icon" />
-          </div>
+    <div class="footer-content-wrapper">
+      <div class="footer-logo-section">
+        <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
+      </div>
+      
+      <div class="newsletter-section">
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input" />
+          <button type="submit" class="newsletter-button">
+            <img src="../assets/images/paperplane_icon.png" alt="Subscribe" class="newsletter-icon" />
+            <span class="newsletter-text">Send</span>
+          </button>
         </div>
       </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>Powered By Malckom</p>
-    </div>
-  </footer>
     </div>
     
     <div class="container">
@@ -437,19 +470,19 @@
         <div class="footer-section">
           <h3>Services</h3>
           <ul>
-            <li><a href="../New/index.html#tours">Tours & Safaris</a></li>
+            <li><a href="../index.html#tours">Tours & Safaris</a></li>
             <li><a href="visa-services.html">Passport & VISA Processing</a></li>
-            <li><a href="../New/index.html#car-hire">Car-hire services</a></li>
-            <li><a href="../New/index.html#recruitment">Recruitment & Job Placements</a></li>
-            <li><a href="../New/index.html#airline">Airline Bookings</a></li>
+            <li><a href="car-hire.html">Car-hire services</a></li>
+            <li><a href="../index.html#recruitment">Recruitment & Job Placements</a></li>
+            <li><a href="../index.html#airline">Airline Bookings</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
           <h3>Home</h3>
           <ul>
-            <li><a href="../New/index.html">Home</a></li>
-            <li><a href="../New/index.html#tours">Tours & Safaris</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#tours">Tours & Safaris</a></li>
             <li><a href="visa-services.html">VISA Processing</a></li>
           </ul>
         </div>
@@ -494,24 +527,83 @@
     </div>
   </footer>
 
-  <!-- Chat Widget -->
-  <a href="https://wa.me/254748538311" class="chat-widget">💬 WhatsApp Us</a>
-
+  <!-- JavaScript -->
   <script>
-    // FAQ Toggle Functionality
-    document.querySelectorAll('.faq-question').forEach(question => {
+    // Mobile menu toggle functionality
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileToggle && navMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close mobile menu when clicking on menu links
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          mobileToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    }
+
+    // Dropdown menu functionality
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      
+      if (toggle) {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+          
+          // Close other dropdowns
+          dropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove('active');
+            }
+          });
+        });
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
+
+    // FAQ functionality
+    document.querySelectorAll('.visa-faq-question').forEach(question => {
       question.addEventListener('click', () => {
         const faqItem = question.parentElement;
         const isActive = faqItem.classList.contains('active');
         
         // Close all FAQ items
-        document.querySelectorAll('.faq-item').forEach(item => {
+        document.querySelectorAll('.visa-faq-item').forEach(item => {
           item.classList.remove('active');
+          const toggle = item.querySelector('.visa-faq-toggle');
+          if (toggle) toggle.textContent = '+';
         });
         
         // Open clicked item if it wasn't active
         if (!isActive) {
           faqItem.classList.add('active');
+          const toggle = question.querySelector('.visa-faq-toggle');
+          if (toggle) toggle.textContent = '−';
         }
       });
     });
@@ -528,35 +620,6 @@
           });
         }
       });
-    });
-
-    // Dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    dropdowns.forEach(dropdown => {
-      const toggle = dropdown.querySelector('.dropdown-toggle');
-      
-      // Toggle dropdown on click
-      toggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
-        
-        // Close other dropdowns
-        dropdowns.forEach(otherDropdown => {
-          if (otherDropdown !== dropdown) {
-            otherDropdown.classList.remove('active');
-          }
-        });
-      });
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.dropdown')) {
-        dropdowns.forEach(dropdown => {
-          dropdown.classList.remove('active');
-        });
-      }
     });
   </script>
 </body>

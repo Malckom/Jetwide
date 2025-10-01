@@ -1,7 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <!-- iOS specific meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
   <title>Jetwide Travel & Safari | Kenya's Leading Tour & Travel Company</title>
   <meta name="description" content="Book your next adventure with Jetwide - Kenya's trusted partner for safaris, travel packages, visa processing, and car hire services. Expert guidance and 24/7 support." />
   <meta name="keywords" content="Kenya safari, travel packages, visa processing, car hire, international travel, Maasai Mara, Amboseli, Mount Kenya" />
@@ -15,7 +20,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header> 
+  <header>
     <!-- Top header bar -->
     <div class="header-top">
       <div class="container">
@@ -66,15 +71,7 @@
         </button>
         
         <nav class="nav-menu">
-          <div class="dropdown">
-            <a href="#home" class="dropdown-toggle">Home <span class="dropdown-arrow">▼</span></a>
-            <div class="dropdown-menu">
-              <a href="index.html" class="dropdown-item">Homepage</a>
-              <a href="#destinations" class="dropdown-item">Popular Destinations</a>
-              <a href="#special-offers" class="dropdown-item">Special Offers</a>
-              <a href="#about" class="dropdown-item">About Us</a>
-            </div>
-          </div>
+          <a href="#home">Home</a>
           <a href="#tours">Tours & Safaris</a>
           <a href="pages/visa-services.html">VISA Processing</a>
           <div class="dropdown">
@@ -85,7 +82,7 @@
               <a href="#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
             </div>
           </div>
-          <a href="#contact">Contact</a>
+          <a href="#about">About Us</a>
         </nav>
       </div>
     </div>
@@ -187,90 +184,160 @@
     </div>
   </section>
 
-  <!-- Special Offers Section -->
-  <section class="special-offers">
-    <h2 class="offers-title">2025 SPECIAL OFFERS</h2>
-    <div class="special-offers-container">
-      <div class="offers-content">
-        <h3 class="offers-subtitle">OUR SPECIAL OFFERS</h3>
-        <p class="offers-description">Lorem Ipsum is simply dummy text of the printing and typesetting text ever since the 1500s.</p>
-        <a href="#contact" class="btn-contact">Contact Us</a>
+  <!-- 2025 Special Offers Section -->
+  <section class="seasonal-specials">
+    <div class="container">
+      <h2 class="section-title">2025 Special Offers (Highlight Deals)</h2>
+      <h3 class="section-subtitle">Our Seasonal Travel Specials</h3>
+      
+      <div class="specials-grid">
+        <!-- Maasai Mara Migration Safari -->
+        <div class="special-card">
+          <img src="assets/images/Majestic_mara.jpg" alt="Maasai Mara Migration Safari" class="special-image" />
+          <div class="special-content">
+            <h4 class="special-title">Maasai Mara Migration Safari</h4>
+            <p class="special-price">From <span class="price-highlight">$232</span></p>
+            <p class="special-description">Witness the Great Migration in Africa's most famous game reserve</p>
+          </div>
+        </div>
+
+        <!-- Coastal Getaway -->
+        <div class="special-card">
+          <img src="assets/images/tropical_beaches.jpg" alt="Coastal Getaway" class="special-image" />
+          <div class="special-content">
+            <h4 class="special-title">Coastal Getaway (Mombasa/Diani)</h4>
+            <p class="special-price">From <span class="price-highlight">$154</span></p>
+            <p class="special-description">Relax on pristine white sand beaches along Kenya's coast</p>
+          </div>
+        </div>
+
+        <!-- Dubai City Tour -->
+        <div class="special-card">
+          <img src="assets/images/UAE-visa.jpg" alt="Dubai City of Gold Tour" class="special-image" />
+          <div class="special-content">
+            <h4 class="special-title">Dubai City of Gold Tour</h4>
+            <p class="special-price">From <span class="price-highlight">$695</span></p>
+            <p class="special-description">Experience luxury and adventure in the jewel of the Middle East</p>
+          </div>
+        </div>
+
+        <!-- South Africa Adventure -->
+        <div class="special-card">
+          <img src="assets/images/Safari_sunset.jpg" alt="South Africa Cape Town Adventure" class="special-image" />
+          <div class="special-content">
+            <h4 class="special-title">South Africa Cape Town Adventure</h4>
+            <p class="special-price">From <span class="price-highlight">$928</span></p>
+            <p class="special-description">Discover the beauty of the Mother City and wine regions</p>
+          </div>
+        </div>
       </div>
-      <div class="offers-image">
-        <img src="assets/images/Girrafe.jpg" alt="Giraffe" class="giraffe-image" />
+
+      <!-- CTA Button -->
+      <div class="specials-cta">
+        <a href="#offers" class="btn-view-offers">View All Offers →</a>
       </div>
     </div>
   </section>
 
   <!-- Popular Destinations -->
   <section class="popular-destinations">
-    <h2 class="section-title">Popular Destinations</h2>
-    <div class="destinations-slider">
-      <div class="destinations-grid">
-        <div class="destination-card">
-          <img src="assets/images/Angama-Mara.png" alt="Maasai Mara" class="destination-image" />
-          <div class="destination-info">
-            <div class="flex-row justify-between">
-              <span class="destination-location">Maasai Mara</span>
-              <span class="destination-price">$199</span>
+    <div class="container">
+      <h2 class="section-title">Popular Destinations</h2>
+      
+      <!-- Kenya Safaris Section -->
+      <div class="destinations-category">
+        <h3 class="category-title">Kenya Safaris:</h3>
+        <div class="destinations-grid">
+          <div class="destination-card">
+            <img src="assets/images/Majestic_mara.jpg" alt="Maasai Mara Safari" class="destination-image" />
+            <div class="destination-info">
+              <div class="destination-header">
+                <h4 class="destination-location">Maasai Mara</h4>
+                <span class="destination-price">From KSh 29,999</span>
+              </div>
+              <p class="destination-description">Experience the Great Migration and Big Five in Africa's most famous game reserve</p>
             </div>
-            <span class="price-per-person">Per Person</span>
-            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </div>
-        
-        <div class="destination-card">
-          <img src="assets/images/Amboseli.jpg" alt="Amboseli" class="destination-image" />
-          <div class="destination-info">
-            <div class="flex-row justify-between">
-              <span class="destination-location">Amboseli</span>
-              <span class="destination-price">$249</span>
+          
+          <div class="destination-card">
+            <img src="assets/images/Amboseli.jpg" alt="Amboseli National Park" class="destination-image" />
+            <div class="destination-info">
+              <div class="destination-header">
+                <h4 class="destination-location">Amboseli</h4>
+                <span class="destination-price">From KSh 24,999</span>
+              </div>
+              <p class="destination-description">Witness elephants against the backdrop of Mount Kilimanjaro's snow-capped peaks</p>
             </div>
-            <span class="price-per-person">per Person</span>
-            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </div>
-        
-        <div class="destination-card">
-          <img src="assets/images/Nakuru.jpg" alt="Nakuru" class="destination-image" />
-          <div class="destination-info">
-            <div class="flex-row justify-between">
-              <span class="destination-location">Nakuru</span>
-              <span class="destination-price">$299</span>
+          
+          <div class="destination-card">
+            <img src="assets/images/Nakuru.jpg" alt="Lake Nakuru National Park" class="destination-image" />
+            <div class="destination-info">
+              <div class="destination-header">
+                <h4 class="destination-location">Lake Nakuru</h4>
+                <span class="destination-price">From KSh 19,999</span>
+              </div>
+              <p class="destination-description">Famous for flamingos, rhinos, and tree-climbing lions in the Rift Valley</p>
             </div>
-            <span class="price-per-person">per Person</span>
-            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </div>
-        
-        <div class="destination-card">
-          <img src="assets/images/Mt.Kenya.jpg" alt="Mt. Kenya" class="destination-image" />
-          <div class="destination-info">
-            <div class="flex-row justify-between">
-              <span class="destination-location">Mt. Kenya</span>
-              <span class="destination-price">$239</span>
+          
+          <div class="destination-card">
+            <img src="assets/images/Mount_Kenya.jpg" alt="Mt. Kenya Trekking" class="destination-image" />
+            <div class="destination-info">
+              <div class="destination-header">
+                <h4 class="destination-location">Mt. Kenya Treks</h4>
+                <span class="destination-price">From KSh 23,999</span>
+              </div>
+              <p class="destination-description">Conquer Africa's second-highest peak with breathtaking alpine scenery</p>
             </div>
-            <span class="price-per-person">per Person</span>
-            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- International Destinations -->
-  <section class="international-section">
-    <h2 class="international-title">International Destinations</h2>
-    <p class="international-description">Kenya's leading tour & travel company—book international packages with transparent pricing, visa guidance, and 24/7 trip support.</p>
+      <!-- International Packages Section -->
+      <div class="international-category">
+        <h3 class="category-title">International Packages:</h3>
+        <div class="international-destinations">
+          <div class="international-item">
+            <span class="destination-name">Dubai</span>
+          </div>
+          <div class="international-separator">•</div>
+          <div class="international-item">
+            <span class="destination-name">Malaysia</span>
+          </div>
+          <div class="international-separator">•</div>
+          <div class="international-item">
+            <span class="destination-name">South Africa</span>
+          </div>
+          <div class="international-separator">•</div>
+          <div class="international-item">
+            <span class="destination-name">Zanzibar</span>
+          </div>
+          <div class="international-separator">•</div>
+          <div class="international-item">
+            <span class="destination-name">Mauritius</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="destinations-cta">
+        <a href="#destinations" class="btn-discover-more">Discover More Destinations →</a>
+      </div>
+    </div>
   </section>
 
   <!-- Special Offers & Themed Holidays -->
   <section class="themed-holidays">
     <div class="flex-row justify-between items-center" style="margin-bottom: 38px;">
       <h2 class="themed-title">Special Offers & Themed Holidays</h2>
-      <div class="flex-row" style="gap: 20px;">
-        <button><img src="assets/images/arrow-left.png" alt="Previous" width="50" height="50" /></button>
-        <button><img src="assets/images/arrow-right.png" alt="Next" width="50" height="50" /></button>
+      <div class="themed-nav-buttons" style="gap: 20px;">
+        <button class="themed-nav-btn themed-prev-btn" aria-label="Previous themed deal">
+          <img src="assets/images/arrow-left.png" alt="Previous" width="50" height="50" />
+        </button>
+        <button class="themed-nav-btn themed-next-btn" aria-label="Next themed deal">
+          <img src="assets/images/arrow-right.png" alt="Next" width="50" height="50" />
+        </button>
       </div>
     </div>
     
@@ -278,121 +345,163 @@
       <div class="themed-grid">
         <div class="themed-card">
           <img src="assets/images/Romantic.jpg" alt="Romantic Holidays" class="themed-image" />
-          <h3 class="themed-card-title">Romantic Holidays</h3>
-          <div class="themed-price-row">
-            <span class="price-from">from</span>
-            <span class="price-amount">120k</span>
-          </div>
-          <div class="themed-details">
-            <div class="detail-item">
-              <img src="assets/images/calender.png" alt="Calendar" class="detail-icon" />
-              <span class="detail-text">EVERY DAY</span>
+          <div class="themed-card-content">
+            <h3 class="themed-card-title">Romantic Holidays</h3>
+            <div class="themed-price-row">
+              <span class="price-from">from</span>
+              <span class="price-amount">120k</span>
             </div>
-            <div class="detail-item">
-              <img src="assets/images/group.png" alt="Group" class="detail-icon" />
-              <span class="detail-text">3-10 PP</span>
+            <div class="themed-details">
+              <div class="detail-item">
+                <img src="assets/images/calender.png" alt="Calendar" class="detail-icon" />
+                <span class="detail-text">EVERY DAY</span>
+              </div>
+              <div class="detail-item">
+                <img src="assets/images/group.png" alt="Group" class="detail-icon" />
+                <span class="detail-text">3-10 PP</span>
+              </div>
             </div>
+            <p class="themed-description">A tour of the city and its surroundings led by a professional guide ...</p>
           </div>
-          <p class="themed-description">A tour of the city and its surroundings led by a professional guide ...</p>
         </div>
         
         <div class="themed-card">
           <img src="assets/images/Festive-season.jpg" alt="Festive Season Deals" class="themed-image" />
-          <h3 class="themed-card-title">Festive Season Deals</h3>
-          <div class="themed-price-row">
-            <span class="price-from">from</span>
-            <span class="price-amount">150k</span>
-          </div>
-          <div class="themed-details">
-            <div class="detail-item">
-              <img src="assets/images/calender.png" alt="Calendar" class="detail-icon" />
-              <span class="detail-text">MONDAY</span>
+          <div class="themed-card-content">
+            <h3 class="themed-card-title">Festive Season Deals</h3>
+            <div class="themed-price-row">
+              <span class="price-from">from</span>
+              <span class="price-amount">150k</span>
             </div>
-            <div class="detail-item">
-              <img src="assets/images/group.png" alt="Group" class="detail-icon" />
-              <span class="detail-text">10-30 PP</span>
+            <div class="themed-details">
+              <div class="detail-item">
+                <img src="assets/images/calender.png" alt="Calendar" class="detail-icon" />
+                <span class="detail-text">MONDAY</span>
+              </div>
+              <div class="detail-item">
+                <img src="assets/images/group.png" alt="Group" class="detail-icon" />
+                <span class="detail-text">10-30 PP</span>
+              </div>
             </div>
+            <p class="themed-description">The real magic is here where you can enjoy the best Tuscan wine and eat ...</p>
           </div>
-          <p class="themed-description">The real magic is here where you can enjoy the best Tuscan wine and eat ...</p>
         </div>
         
         <div class="themed-card">
           <img src="assets/images/team-building.jpg" alt="Corporate & Team Building" class="themed-image" />
-          <h3 class="themed-card-title">Corporate & Team Building</h3>
-          <div class="themed-price-row">
-            <span class="price-from">from</span>
-            <span class="price-amount">200k</span>
-          </div>
-          <div class="themed-details">
-            <div class="detail-item">
-              <img src="assets/images/calender.png" alt="Calendar" class="detail-icon" />
-              <span class="detail-text">TO BE DECIDED</span>
+          <div class="themed-card-content">
+            <h3 class="themed-card-title">Corporate & Team Building</h3>
+            <div class="themed-price-row">
+              <span class="price-from">from</span>
+              <span class="price-amount">200k</span>
             </div>
-            <div class="detail-item">
-              <img src="assets/images/group.png" alt="Group" class="detail-icon" />
-              <span class="detail-text">10-50 PP</span>
+            <div class="themed-details">
+              <div class="detail-item">
+                <img src="assets/images/calender.png" alt="Calendar" class="detail-icon" />
+                <span class="detail-text">TO BE DECIDED</span>
+              </div>
+              <div class="detail-item">
+                <img src="assets/images/group.png" alt="Group" class="detail-icon" />
+                <span class="detail-text">10-50 PP</span>
+              </div>
             </div>
+            <p class="themed-description">Visiting the 5 Terre is a must, and you can never go there enough ...</p>
           </div>
-          <p class="themed-description">Visiting the 5 Terre is a must, and you can never go there enough ...</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services-section">
-    <div class="services-intro">
-      <p class="services-subtitle">Where do you want to go</p>
-      <h2 class="services-title">Lets us worry about your plans,<br />Just get packed</h2>
-      <a href="#trip" class="btn-cta">
-        Take a Trip
-        <img src="assets/images/arrow-right.png" alt="Arrow" class="btn-icon" />
-      </a>
-    </div>
-    
-    <div class="services-content">
-      <img src="assets/images/Travel-Services.jpg" alt="Travel services" class="services-image" />
+  <!-- Lead Capture / Inquiry Section -->
+  <section class="lead-capture-section">
+    <div class="container">
+      <div class="lead-capture-intro">
+        <h2 class="lead-capture-title">Where Do You Want to Go?</h2>
+        <p class="lead-capture-subtitle">Let us worry about the details. Just get packed, and we'll handle the rest.</p>
+        <a href="#plan-trip" class="btn-plan-trip">
+          Plan My Trip
+        </a>
+      </div>
       
-      <div class="services-info">
-        <div class="service-item">
-          <img src="assets/images/passport_icon.png" alt="Passport" class="service-icon" />
-          <h3 class="service-title">Apply for Passport</h3>
-          <p class="service-description">Lorem ipsum dolor sit amet consecteur fin dren</p>
-          <a href="#passport" class="service-link">
-            Lets Go
-            <img src="assets/images/arrow-right.png" alt="Arrow" class="service-arrow" />
-          </a>
-        </div>
-        
-        <div class="service-item">
-          <img src="assets/images/car_icon.png" alt="Car hire" class="service-icon" />
-          <h3 class="service-title">Hire a Car</h3>
-          <p class="service-description">Lorem ipsum dolor sit amet consecteur fin dren</p>
-          <a href="#car-hire" class="service-link">
-            Lets Go
-            <img src="assets/images/arrow-right.png" alt="Arrow" class="service-arrow" />
-          </a>
+      <div class="services-grid">
+        <div class="services-content">
+          <img src="assets/images/Travel-Services.jpg" alt="Travel services" class="services-image" />
+          
+          <div class="services-info">
+            <!-- Apply for Passport Service -->
+            <div class="service-item">
+              <div class="service-content">
+                <img src="assets/images/passport_icon.png" alt="Passport" class="service-icon" />
+                <div class="service-details">
+                  <h3 class="service-title">Apply for Passport</h3>
+                  <p class="service-description">Fast, reliable application assistance with clear guidance at every step.</p>
+                </div>
+              </div>
+              <a href="pages/visa-services.html" class="service-link">
+                Lets Go
+                <img src="assets/images/arrow-right.png" alt="Arrow" class="service-arrow" />
+              </a>
+            </div>
+            
+            <!-- Car Hire Service -->
+            <div class="service-item">
+              <div class="service-content">
+                <img src="assets/images/car_icon.png" alt="Car hire" class="service-icon" />
+                <div class="service-details">
+                  <h3 class="service-title">Hire a Car</h3>
+                  <p class="service-description">Affordable, well-maintained vehicles for safaris, city rides, or long trips.</p>
+                </div>
+              </div>
+              <a href="pages/car-hire.html" class="service-link">
+                Lets Go
+                <img src="assets/images/arrow-right.png" alt="Arrow" class="service-arrow" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Statistics Section -->
+  <!-- Trust & Numbers Section (Social Proof) -->
   <section class="stats-section">
-    <div class="stats-container">
+    <div class="container">
       <div class="stats-intro">
-        <h2 class="stats-title">A Unique Story in<br />Every Number</h2>
+        <h2 class="stats-title">Trust & Numbers</h2>
+        <p class="stats-subtitle">Social Proof That Speaks for Itself</p>
       </div>
       
-      <div class="stats-items">
+      <div class="stats-grid">
         <div class="stat-item">
-          <div class="stat-number">100+</div>
-          <p class="stat-label">VISA Issued</p>
+          <div class="stat-checkmark">✅</div>
+          <div class="stat-content">
+            <div class="stat-number">100+</div>
+            <p class="stat-label">Visas Issued</p>
+          </div>
         </div>
         
         <div class="stat-item">
-          <div class="stat-number">200+</div>
-          <p class="stat-label">People we have helped get jobs<br />domestically & internationally</p>
+          <div class="stat-checkmark">✅</div>
+          <div class="stat-content">
+            <div class="stat-number">200+</div>
+            <p class="stat-label">Clients Placed Overseas</p>
+          </div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-checkmark">✅</div>
+          <div class="stat-content">
+            <div class="stat-number">Thousands</div>
+            <p class="stat-label">of Happy Safari Travelers</p>
+          </div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-checkmark">✅</div>
+          <div class="stat-content">
+            <div class="stat-number">Licensed</div>
+            <p class="stat-label">by Ministry of Labour & Tourism</p>
+          </div>
         </div>
       </div>
     </div>
@@ -433,7 +542,7 @@
           <h3>Services</h3>
           <ul>
             <li><a href="#tours">Tours & Safaris</a></li>
-            <li><a href="visa-services.html">Passport & VISA Processing</a></li>
+            <li><a href="pages/visa-services.html">Passport & VISA Processing</a></li>
             <li><a href="#car-hire">Car-hire services</a></li>
             <li><a href="#recruitment">Recruitment & Job Placements</a></li>
             <li><a href="#airline">Airline Bookings</a></li>
@@ -445,7 +554,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#tours">Tours & Safaris</a></li>
-            <li><a href="visa-services.html">VISA Processing</a></li>
+            <li><a href="pages/visa-services.html">VISA Processing</a></li>
           </ul>
         </div>
         
@@ -532,6 +641,29 @@
           dropdown.classList.remove('active');
         });
       });
+
+      // Themed deals navigation functionality
+      const themedGrid = document.querySelector('.themed-grid');
+      const prevBtn = document.querySelector('.themed-prev-btn');
+      const nextBtn = document.querySelector('.themed-next-btn');
+      
+      if (themedGrid && prevBtn && nextBtn) {
+        const cardWidth = 300; // Approximate card width including gap
+        let currentPosition = 0;
+        
+        prevBtn.addEventListener('click', () => {
+          currentPosition += cardWidth;
+          if (currentPosition > 0) currentPosition = 0;
+          themedGrid.style.transform = `translateX(${currentPosition}px)`;
+        });
+        
+        nextBtn.addEventListener('click', () => {
+          const maxScroll = -(themedGrid.scrollWidth - themedGrid.parentElement.clientWidth);
+          currentPosition -= cardWidth;
+          if (currentPosition < maxScroll) currentPosition = maxScroll;
+          themedGrid.style.transform = `translateX(${currentPosition}px)`;
+        });
+      }
     });
   </script>
   
@@ -543,7 +675,9 @@
     // Initialize the website functionality when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
       // Initialize Jetwide Website features
-      const website = new JetwideWebsite();
+      if (window.jetwideContent) {
+        console.log('✅ Jetwide Content Manager already initialized');
+      }
     });
   </script>
 </body>
