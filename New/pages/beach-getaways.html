@@ -78,7 +78,7 @@
             <div class="dropdown-menu">
               <a href="themed-packages.html" class="dropdown-item">Themed Packages</a>
               <a href="beach-getaways.html" class="dropdown-item active">Beach Getaways</a>
-              <a href="../index.html#exclusive-kenyan-safaris" class="dropdown-item">Exclusive Kenyan Safaris</a>
+              <a href="kenyan-safaris.html" class="dropdown-item">Exclusive Kenyan Safaris</a>
             </div>
           </div>
           <div class="dropdown">
@@ -277,8 +277,36 @@
   </footer>
 
   <script>
-    // Dropdown functionality
+    // Mobile Menu and Dropdown functionality
     document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenuToggle.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.header-main')) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
+        });
+        
+        // Close mobile menu when window is resized to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
+        });
+      }
+      
+      // Dropdown functionality
       const dropdowns = document.querySelectorAll('.dropdown');
       
       dropdowns.forEach(dropdown => {
@@ -317,6 +345,12 @@
           // Close dropdown after selection
           const dropdown = this.closest('.dropdown');
           dropdown.classList.remove('active');
+          
+          // Also close mobile menu if open
+          if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
         });
       });
 
