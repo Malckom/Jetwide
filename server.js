@@ -32,7 +32,7 @@ app.use(express.static('.', {
 
 // Root redirect
 app.get('/', (req, res) => {
-  res.redirect('/public/homepage.html');
+  res.redirect('/index.html');
 });
 
 app.listen(PORT, () => {
