@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <!-- iOS specific meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
   <title>Car Hire & Airport Transfers | Jetwide Travel & Safari</title>
   <meta name="description" content="Reliable car hire and airport transfer services in Kenya. Choose from economy to luxury vehicles. Flexible booking options with or without driver." />
   <meta name="keywords" content="car hire Kenya, airport transfers, vehicle rental, car booking, luxury cars, economy cars, Nairobi car hire" />
@@ -12,7 +16,7 @@
   <meta property="og:title" content="Car Hire & Airport Transfers | Jetwide Travel & Safari" />
   <meta property="og:description" content="Reliable car hire and airport transfer services in Kenya. Book your perfect vehicle today." />
   
-    <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
   <!-- Header -->
@@ -57,9 +61,15 @@
     <!-- Main header -->
     <div class="header-main">
       <div class="container">
-        <a href="../index.html">
-          <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
-        </a>
+        <img src="../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
         <nav class="nav-menu">
           <a href="../index.html">Home</a>
           <a href="visa-services.html">VISA Processing</a>
@@ -86,14 +96,21 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+            <a href="../index.html#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-menu">
-              <a href="car-hire.html" class="dropdown-item active">Car Hire Services</a>
+              <a href="car-hire.html" class="dropdown-item">Car Hire Services</a>
               <a href="../index.html#job-placement" class="dropdown-item">Job Placement Services</a>
               <a href="../index.html#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
             </div>
           </div>
-          <a href="../index.html#about">About Us</a>
+          <div class="dropdown">
+            <a href="about-us.html" class="dropdown-toggle">About Jetwide <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="about-us.html" class="dropdown-item">About Us</a>
+              <a href="blogs.html" class="dropdown-item">Blogs</a>
+              <a href="contact.html" class="dropdown-item">Contact Us</a>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -315,15 +332,15 @@
           <h3>Contacts</h3>
           <div class="contact-item">
             <img src="../assets/images/location.png" alt="Location" class="contact-icon" />
-            <span class="contact-text">Westlands Square<br />2nd Floor</span>
+            <span class="contact-text">Westlands Square, 2nd Floor</span>
           </div>
           <div class="contact-item">
             <img src="../assets/images/phone-call.png" alt="Phone" class="contact-icon" />
-            <span class="contact-text">0700 368 676 | 0714 534 677| 0748 538 311</span>
+            <span class="contact-text">0700 368 676 | 0714 534 677 | 0748 538 311</span>
           </div>
           <div class="contact-item">
             <img src="../assets/images/email.png" alt="Email" class="contact-icon" />
-            <span class="contact-text">info@jetwide.org<br />safaris@jetwide.org</span>
+            <span class="contact-text">info@jetwide.org | safaris@jetwide.org</span>
           </div>
           
           <h3 style="margin-top: 20px;">Social Media</h3>
@@ -464,6 +481,27 @@
         };
       });
     });
+
+    // Auto-hide header on scroll down, show on scroll up
+    let lastScrollTop = 0;
+    let scrollThreshold = 100;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > scrollThreshold) {
+        if (scrollTop > lastScrollTop) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+      } else {
+        header.classList.remove('header-hidden');
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, false);
   </script>
 </body>
 </html>

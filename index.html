@@ -103,7 +103,14 @@
               <a href="#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
             </div>
           </div>
-          <a href="#about">About Us</a>
+          <div class="dropdown">
+            <a href="pages/about-us.html" class="dropdown-toggle">About Jetwide <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="pages/about-us.html" class="dropdown-item">About Us</a>
+              <a href="pages/blogs.html" class="dropdown-item">Blogs</a>
+              <a href="pages/contact.html" class="dropdown-item">Contact Us</a>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -252,11 +259,6 @@
           </div>
         </div>
       </div>
-
-      <!-- CTA Button -->
-      <div class="specials-cta">
-        <a href="#offers" class="btn-view-offers">View All Offers →</a>
-      </div>
     </div>
   </section>
 
@@ -313,6 +315,11 @@
             </div>
           </div>
         </div>
+        
+        <!-- CTA Button for Kenya Safaris -->
+        <div class="kenya-safaris-cta" style="text-align: center; margin-top: 30px;">
+          <a href="pages/kenyan-safaris.html" class="btn-view-offers">View All Offers →</a>
+        </div>
       </div>
 
       <!-- International Packages Section -->
@@ -348,10 +355,10 @@
     </div>
   </section>
 
-  <!-- Special Offers & Themed Holidays -->
+  <!-- Themed Holidays -->
   <section class="themed-holidays">
     <div class="flex-row justify-between items-center" style="margin-bottom: 38px;">
-      <h2 class="themed-title">Special Offers & Themed Holidays</h2>
+      <h2 class="themed-title">Themed Holidays</h2>
       <div class="themed-nav-buttons" style="gap: 20px;">
         <button class="themed-nav-btn themed-prev-btn" aria-label="Previous themed deal">
           <img src="assets/images/arrow-left.png" alt="Previous" width="50" height="50" />
@@ -430,6 +437,11 @@
           </div>
         </div>
       </div>
+    </div>
+    
+    <!-- CTA Button for Themed Holidays -->
+    <div class="themed-cta" style="text-align: center; margin-top: 40px; padding-bottom: 40px;">
+      <a href="pages/themed-packages.html" class="btn-view-offers">Explore Themed Packages →</a>
     </div>
   </section>
 
@@ -591,15 +603,15 @@
           <h3>Contacts</h3>
           <div class="contact-item">
             <img src="assets/images/location.png" alt="Location" class="contact-icon" />
-            <span class="contact-text">Westlands Square<br />2nd Floor</span>
+            <span class="contact-text">Westlands Square, 2nd Floor</span>
           </div>
           <div class="contact-item">
             <img src="assets/images/phone-call.png" alt="Phone" class="contact-icon" />
-            <span class="contact-text">0700 368 676 | 0714 534 677| 0748 538 311</span>
+            <span class="contact-text">0700 368 676 | 0714 534 677 | 0748 538 311</span>
           </div>
           <div class="contact-item">
             <img src="assets/images/email.png" alt="Email" class="contact-icon" />
-            <span class="contact-text">info@jetwide.org<br />safaris@jetwide.org</span>
+            <span class="contact-text">info@jetwide.org | safaris@jetwide.org</span>
           </div>
           
           <h3 style="margin-top: 20px;">Social Media</h3>
@@ -719,6 +731,30 @@
           themedGrid.style.transform = `translateX(${currentPosition}px)`;
         });
       }
+
+      // Auto-hide header on scroll down, show on scroll up
+      let lastScrollTop = 0;
+      let scrollThreshold = 100; // Start hiding after scrolling 100px
+      const header = document.querySelector('header');
+      
+      window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > scrollThreshold) {
+          if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            header.classList.add('header-hidden');
+          } else {
+            // Scrolling up
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          // At the top of the page, always show header
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }, false);
     });
   </script>
   

@@ -103,7 +103,14 @@
               <a href="../index.html#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
             </div>
           </div>
-          <a href="../index.html#about">About Us</a>
+          <div class="dropdown">
+            <a href="about-us.html" class="dropdown-toggle">About Jetwide <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="about-us.html" class="dropdown-item">About Us</a>
+              <a href="blogs.html" class="dropdown-item">Blogs</a>
+              <a href="contact.html" class="dropdown-item">Contact Us</a>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -288,15 +295,15 @@
           <h3>Contacts</h3>
           <div class="contact-item">
             <img src="../assets/images/location.png" alt="Location" class="contact-icon" />
-            <span class="contact-text">Westlands Square<br />2nd Floor</span>
+            <span class="contact-text">Westlands Square, 2nd Floor</span>
           </div>
           <div class="contact-item">
             <img src="../assets/images/phone-call.png" alt="Phone" class="contact-icon" />
-            <span class="contact-text">0700 368 676 | 0714 534 677| 0748 538 311</span>
+            <span class="contact-text">0700 368 676 | 0714 534 677 | 0748 538 311</span>
           </div>
           <div class="contact-item">
             <img src="../assets/images/email.png" alt="Email" class="contact-icon" />
-            <span class="contact-text">info@jetwide.org<br />safaris@jetwide.org</span>
+            <span class="contact-text">info@jetwide.org | safaris@jetwide.org</span>
           </div>
           
           <h3 style="margin-top: 20px;">Social Media</h3>
@@ -416,6 +423,27 @@
           themedGrid.style.transform = `translateX(${currentPosition}px)`;
         });
       }
+
+      // Auto-hide header on scroll down, show on scroll up
+      let lastScrollTop = 0;
+      let scrollThreshold = 100;
+      const header = document.querySelector('header');
+      
+      window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > scrollThreshold) {
+          if (scrollTop > lastScrollTop) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }, false);
     });
   </script>
   
