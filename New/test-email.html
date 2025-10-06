@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Contact Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 50px auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #d4af37; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #b8941f; }
+        .message { padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+    <h2>Quick Email Test Form</h2>
+    <form id="testForm">
+        <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="destination">Destination *</label>
+            <select id="destination" name="destination" required>
+                <option value="">Select destination</option>
+                <option value="Maasai Mara">Maasai Mara</option>
+                <option value="Amboseli">Amboseli</option>
+                <option value="Dubai">Dubai</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="tripType">Trip Type *</label>
+            <select id="tripType" name="tripType" required>
+                <option value="">Select trip type</option>
+                <option value="Safari">Safari</option>
+                <option value="Beach Holiday">Beach Holiday</option>
+                <option value="Adventure">Adventure</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="startDate">Start Date *</label>
+            <input type="date" id="startDate" name="startDate" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="duration">Duration *</label>
+            <select id="duration" name="duration" required>
+                <option value="">Select duration</option>
+                <option value="3 Days">3 Days</option>
+                <option value="5 Days">5 Days</option>
+                <option value="7 Days">7 Days</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="groupSize">Group Size *</label>
+            <select id="groupSize" name="groupSize" required>
+                <option value="">Select group size</option>
+                <option value="1-2 people">1-2 people</option>
+                <option value="3-5 people">3-5 people</option>
+                <option value="6+ people">6+ people</option>
+            </select>
+        </div>
+        
+        <button type="submit">🚀 Test Send Email</button>
+    </form>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const button = e.target.querySelector('button');
+            const originalText = button.textContent;
+            button.textContent = '📧 Sending...';
+            button.disabled = true;
+            
+            try {
+                const formData = new FormData(this);
+                const data = {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phone: '',
+                    country: '',
+                    destination: formData.get('destination'),
+                    tripType: formData.get('tripType'),
+                    startDate: formData.get('startDate'),
+                    duration: formData.get('duration'),
+                    groupSize: formData.get('groupSize'),
+                    budget: '',
+                    accommodation: '',
+                    services: [],
+                    specialRequests: 'This is a test email from the contact form.'
+                };
+
+                const response = await fetch('send-contact-form.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                
+                // Remove any existing messages
+                const existingMessage = document.querySelector('.message');
+                if (existingMessage) {
+                    existingMessage.remove();
+                }
+
+                // Show result message
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${result.success ? 'success' : 'error'}`;
+                messageDiv.textContent = result.message;
+                
+                this.parentNode.insertBefore(messageDiv, this);
+                
+                if (result.success) {
+                    this.reset();
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                
+                // Remove any existing messages
+                const existingMessage = document.querySelector('.message');
+                if (existingMessage) {
+                    existingMessage.remove();
+                }
+
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message error';
+                messageDiv.textContent = 'Failed to send email. Check console for details.';
+                this.parentNode.insertBefore(messageDiv, this);
+                
+            } finally {
+                button.textContent = originalText;
+                button.disabled = false;
+            }
+        });
+
+        // Set minimum date to today
+        document.getElementById('startDate').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
