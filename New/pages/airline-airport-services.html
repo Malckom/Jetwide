@@ -116,91 +116,399 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="airline-hero">
+  <!-- Hero Section with Search -->
+  <section class="flight-booking-hero">
     <div class="hero-overlay">
       <div class="container">
-        <div class="airline-hero-content">
-          <h1 class="airline-hero-title">AIRLINE BOOKING & AIRPORT TRANSFER SERVICES</h1>
+        <div class="flight-hero-content">
+          <button class="book-now-btn">Book Now ✈</button>
+          <h1 class="flight-hero-title">Flight starting $129</h1>
+          <h2 class="flight-hero-subtitle">Meet the beauty of the World</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Form -->
+    <div class="flight-search-container">
+      <div class="container">
+        <div class="search-form-wrapper">
+          <h3 class="search-title">Where would you like to go?</h3>
+          
+          <!-- Trip Type Options -->
+          <div class="trip-options">
+            <label class="radio-option">
+              <input type="radio" name="tripType" value="round" checked />
+              <span>Round Trip</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="tripType" value="oneway" />
+              <span>One-Way</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="tripType" value="direct" />
+              <span>Direct Preferred</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="tripType" value="nearby" />
+              <span>Include Nearby</span>
+            </label>
+          </div>
+
+          <!-- Search Form Fields -->
+          <form class="flight-search-form" id="flightSearchForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label>From</label>
+                <select name="from" required>
+                  <option value="">Select departure city</option>
+                  <option value="NBO">Nairobi (NBO)</option>
+                  <option value="MBA">Mombasa (MBA)</option>
+                  <option value="KIS">Kisumu (KIS)</option>
+                  <option value="ELD">Eldoret (ELD)</option>
+                  <option value="JFK">New York (JFK)</option>
+                  <option value="LHR">London (LHR)</option>
+                  <option value="DXB">Dubai (DXB)</option>
+                  <option value="JNB">Johannesburg (JNB)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label>To</label>
+                <select name="to" required>
+                  <option value="">Select destination city</option>
+                  <option value="DXB">Dubai (DXB)</option>
+                  <option value="ZNZ">Zanzibar (ZNZ)</option>
+                  <option value="SIN">Singapore (SIN)</option>
+                  <option value="LHR">London (LHR)</option>
+                  <option value="JFK">New York (JFK)</option>
+                  <option value="PAR">Paris (CDG)</option>
+                  <option value="IST">Istanbul (IST)</option>
+                  <option value="BKK">Bangkok (BKK)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label>Depart</label>
+                <input type="date" name="depart" required />
+              </div>
+
+              <div class="form-field">
+                <label>Return</label>
+                <input type="date" name="return" required />
+              </div>
+
+              <div class="form-field people-field">
+                <label>No of People</label>
+                <div class="people-dropdown">
+                  <button type="button" class="people-selector" id="peopleSelector">
+                    <span id="peopleDisplay">1 Adult, 0 Children</span>
+                    <span class="dropdown-arrow">▼</span>
+                  </button>
+                  <div class="people-dropdown-menu" id="peopleDropdown">
+                    <div class="people-counter">
+                      <label>Adults</label>
+                      <div class="counter-controls">
+                        <button type="button" class="counter-btn" onclick="updateCount('adults', -1)">-</button>
+                        <span id="adultsCount">1</span>
+                        <button type="button" class="counter-btn" onclick="updateCount('adults', 1)">+</button>
+                      </div>
+                    </div>
+                    <div class="people-counter">
+                      <label>Children</label>
+                      <div class="counter-controls">
+                        <button type="button" class="counter-btn" onclick="updateCount('children', -1)">-</button>
+                        <span id="childrenCount">0</span>
+                        <button type="button" class="counter-btn" onclick="updateCount('children', 1)">+</button>
+                      </div>
+                    </div>
+                    <button type="button" class="done-btn" onclick="closePeopleDropdown()">Done</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-field submit-field">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Content Section -->
-  <section class="airline-services-content">
+  <!-- Destinations Section -->
+  <section class="destinations-section">
     <div class="container">
-      <div class="services-two-column">
-        <!-- Airline Booking Column -->
-        <div class="service-column">
-          <h2 class="service-column-title">AIRLINE BOOKING</h2>
-          <div class="service-description">
-            <p>At Jetwide Travel & Safari, we specialize in providing comprehensive airline booking services tailored to meet your travel needs. Whether you're planning a domestic trip or an international journey, our experienced team is here to help you find the best flight options at competitive prices.</p>
+      <h2 class="destinations-title">Destination for your holiday from Kenya <span class="toggle-arrow">▼</span></h2>
+      
+      <div class="destinations-grid">
+        <!-- Destination Card 1 -->
+        <div class="destination-card">
+          <div class="destination-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/Travel-Services.jpg') center/cover;">
+            <span class="special-badge">✈</span>
           </div>
-          
-          <h3 class="service-subtitle">Our Services Include:</h3>
-          <ul class="service-list">
-            <li>Domestic Flight Bookings</li>
-            <li>International Flight Reservations</li>
-            <li>Group Travel Arrangements</li>
-            <li>Corporate Travel Solutions</li>
-            <li>Multi-City Flight Bookings</li>
-            <li>Flight Changes and Cancellations</li>
-            <li>Special Requests (meals, seating, etc.)</li>
-            <li>24/7 Customer Support</li>
-          </ul>
-
-          <div class="service-info-box">
-            <h4>Why Book With Us?</h4>
-            <ul class="info-list">
-              <li>Access to multiple airlines and routes</li>
-              <li>Competitive pricing and special deals</li>
-              <li>Expert travel consultants</li>
-              <li>Hassle-free booking process</li>
-              <li>Real-time flight updates</li>
-            </ul>
+          <div class="destination-info">
+            <h3>Dubai</h3>
+            <p class="destination-class">Economy</p>
+            <p class="destination-price">From $149.00</p>
           </div>
         </div>
 
-        <!-- Airport Transfer Services Column -->
-        <div class="service-column">
-          <h2 class="service-column-title">AIRPORT TRANSFER SERVICES</h2>
-          <div class="service-description">
-            <p>Experience seamless and comfortable airport transfers with Jetwide Travel & Safari. We provide reliable transportation services to and from Jomo Kenyatta International Airport (JKIA) and Wilson Airport, ensuring you arrive at your destination on time and in comfort.</p>
+        <!-- Destination Card 2 -->
+        <div class="destination-card">
+          <div class="destination-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/Safari_sunset.jpg') center/cover;">
+            <span class="special-badge">✈</span>
           </div>
-          
-          <h3 class="service-subtitle">Our Transfer Services Include:</h3>
-          <ul class="service-list">
-            <li>Airport Pick-up and Drop-off</li>
-            <li>Hotel to Airport Transfers</li>
-            <li>JKIA and Wilson Airport Coverage</li>
-            <li>Private Car Services</li>
-            <li>Shared Shuttle Options</li>
-            <li>VIP and Executive Transfers</li>
-            <li>Group Transportation</li>
-            <li>Meet and Greet Services</li>
-          </ul>
+          <div class="destination-info">
+            <h3>Zanzibar</h3>
+            <p class="destination-class">Economy</p>
+            <p class="destination-price">From $99.00</p>
+          </div>
+        </div>
 
-          <div class="service-info-box">
-            <h4>Our Fleet Includes:</h4>
-            <ul class="info-list">
-              <li>Luxury sedans</li>
-              <li>SUVs and minivans</li>
-              <li>Buses for large groups</li>
-              <li>Well-maintained vehicles</li>
-              <li>Professional, licensed drivers</li>
-            </ul>
+        <!-- Destination Card 3 -->
+        <div class="destination-card">
+          <div class="destination-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/tropical_beaches.jpg') center/cover;">
+            <span class="special-badge">✈</span>
+          </div>
+          <div class="destination-info">
+            <h3>Singapore</h3>
+            <p class="destination-class">Economy</p>
+            <p class="destination-price">From $129.00</p>
           </div>
         </div>
       </div>
 
-      <!-- Contact CTA -->
-      <div class="airline-cta-box">
-        <h3>Ready to Book?</h3>
-        <p>Contact us today to book your flights or arrange your airport transfer</p>
-        <div class="cta-buttons">
-          <a href="contact.html" class="btn-book">Contact Us</a>
-          <a href="tel:+254748538311" class="btn-call">Call: 0748 538 311</a>
+      <div class="discover-more">
+        <button class="discover-btn">Discover All Destination</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discover The World Section -->
+  <section class="discover-world-section">
+    <div class="container">
+      <h2 class="section-heading">Discover The World</h2>
+      
+      <div class="discover-grid">
+        <!-- Discover Card 1 -->
+        <div class="discover-card">
+          <div class="discover-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/Mt.Kenya.jpg') center/cover;">
+            <div class="discover-content">
+              <h3>Paro</h3>
+              <p>Take in the sights and sounds of this dramatic hillside town</p>
+              <span class="discover-arrow">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discover Card 2 -->
+        <div class="discover-card">
+          <div class="discover-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/tropical_beaches.jpg') center/cover;">
+            <div class="discover-content">
+              <h3>Thimphu</h3>
+              <p>Bhutan's capital is the ideal starting point for your Himalayan adventure</p>
+              <span class="discover-arrow">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discover Card 3 -->
+        <div class="discover-card">
+          <div class="discover-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/Safari_sunset.jpg') center/cover;">
+            <div class="discover-content">
+              <h3>Paro</h3>
+              <p>Home of Bhutan's first and only international airport</p>
+              <span class="discover-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="discover-more-btn">
+        <button class="discover-btn">Discover More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfect Deals Section -->
+  <section class="perfect-deals-section">
+    <div class="container">
+      <h2 class="section-heading-white">Perfect deals for you</h2>
+      
+      <div class="deals-carousel">
+        <button class="carousel-btn prev-btn" onclick="scrollDeals(-1)">
+          <span>‹</span>
+        </button>
+        
+        <div class="deals-slider" id="dealsSlider">
+          <!-- Deal Card 1 -->
+          <div class="deal-card current-offer">
+            <div class="deal-badge">Current Offer</div>
+            <h3 class="deal-title">FLY TO BANGKOK<br>GET 20% OFF</h3>
+            <p class="deal-validity">valid until 01 Dec, 25</p>
+            <button class="deal-book-btn">Book Now</button>
+          </div>
+
+          <!-- Deal Card 2 -->
+          <div class="deal-card special-month">
+            <div class="deal-badge">Special This Month</div>
+            <h3 class="deal-title">GET 4% OFF<br>on all round-trip flight</h3>
+            <p class="deal-validity">valid until 01 Dec, 25</p>
+            <button class="deal-book-btn">Book Now</button>
+          </div>
+
+          <!-- Deal Card 3 -->
+          <div class="deal-card weekly-trip">
+            <div class="deal-badge">Weekly Trips</div>
+            <h3 class="deal-title">FLY TO ZANZIBAR<br>AT JUST $119</h3>
+            <p class="deal-validity">valid until 01 Dec, 25</p>
+            <button class="deal-book-btn">Book Now</button>
+          </div>
+
+          <!-- Deal Card 4 -->
+          <div class="deal-card whats-new">
+            <div class="deal-badge">What's New</div>
+            <h3 class="deal-title">Use coupon code<br>BAIZ31111</h3>
+            <p class="deal-validity">valid until 1 June 25</p>
+            <button class="deal-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" onclick="scrollDeals(1)">
+          <span>›</span>
+        </button>
+      </div>
+
+      <div class="carousel-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-heading">What Our Passengers Say</h2>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-icon">👤</div>
+            <div class="testimonial-author">
+              <h4>Ruth Davey</h4>
+              <p>England • 24/09/2023 06:29:24</p>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"The flight to New was breathtaking with amazing views. The cabin crew was attentive, making the entire experience delightful."</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-icon">👤</div>
+            <div class="testimonial-author">
+              <h4>Michael Chan</h4>
+              <p>Singapore • 24/09/23</p>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"Efficient booking process and smooth flight experience. Will definitely fly with them again for future travels around the world."</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-icon">👤</div>
+            <div class="testimonial-author">
+              <h4>Anand Nagas</h4>
+              <p>Kenya • 24/09/23</p>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"The cultural touches on board gave us a taste of Kenya culture even before we landed. A truly critical airline experience."</p>
+        </div>
+      </div>
+
+      <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ready to Go CTA Section -->
+  <section class="ready-to-go-section">
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Ready to go?</h2>
+          <h3>Give us a quick call</h3>
+        </div>
+        <div class="cta-button">
+          <a href="contact.html" class="contact-us-btn">Contact us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Airport Transfer Services Section -->
+  <section class="airport-transfer-section">
+    <div class="container">
+      <h2 class="section-title">AIRPORT TRANSFER SERVICES</h2>
+      <div class="transfer-content">
+        <p>Experience seamless and comfortable airport transfers with Jetwide Travel & Safari. We provide reliable transportation services to and from Jomo Kenyatta International Airport (JKIA) and Wilson Airport.</p>
+        
+        <div class="transfer-services">
+          <div class="service-column-alt">
+            <h3>Our Services Include:</h3>
+            <ul>
+              <li>Airport Pick-up and Drop-off</li>
+              <li>Hotel to Airport Transfers</li>
+              <li>JKIA and Wilson Airport Coverage</li>
+              <li>Private Car Services</li>
+              <li>VIP and Executive Transfers</li>
+            </ul>
+          </div>
+          <div class="service-column-alt">
+            <h3>Our Fleet:</h3>
+            <ul>
+              <li>Luxury sedans</li>
+              <li>SUVs and minivans</li>
+              <li>Buses for large groups</li>
+              <li>Professional, licensed drivers</li>
+              <li>24/7 availability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="transfer-cta">
+          <a href="contact.html" class="cta-btn-primary">Book Transfer</a>
+          <a href="tel:+254748538311" class="cta-btn-secondary">Call: 0748 538 311</a>
         </div>
       </div>
     </div>
@@ -349,6 +657,106 @@
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
       }, false);
     });
+
+    // Flight Booking Functionality
+    let adultsCount = 1;
+    let childrenCount = 0;
+
+    // Toggle people dropdown
+    document.getElementById('peopleSelector').addEventListener('click', function(e) {
+      e.preventDefault();
+      const dropdown = document.getElementById('peopleDropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      const peopleField = document.querySelector('.people-field');
+      if (!peopleField.contains(e.target)) {
+        document.getElementById('peopleDropdown').style.display = 'none';
+      }
+    });
+
+    // Update count function
+    function updateCount(type, change) {
+      if (type === 'adults') {
+        adultsCount = Math.max(1, adultsCount + change);
+        document.getElementById('adultsCount').textContent = adultsCount;
+      } else if (type === 'children') {
+        childrenCount = Math.max(0, childrenCount + change);
+        document.getElementById('childrenCount').textContent = childrenCount;
+      }
+      updatePeopleDisplay();
+    }
+
+    // Update people display
+    function updatePeopleDisplay() {
+      const adultText = adultsCount === 1 ? '1 Adult' : `${adultsCount} Adults`;
+      const childText = childrenCount === 0 ? '0 Children' : (childrenCount === 1 ? '1 Child' : `${childrenCount} Children`);
+      document.getElementById('peopleDisplay').textContent = `${adultText}, ${childText}`;
+    }
+
+    // Close people dropdown
+    function closePeopleDropdown() {
+      document.getElementById('peopleDropdown').style.display = 'none';
+    }
+
+    // Handle form submission
+    document.getElementById('flightSearchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = {
+        from: formData.get('from'),
+        to: formData.get('to'),
+        depart: formData.get('depart'),
+        return: formData.get('return'),
+        adults: adultsCount,
+        children: childrenCount,
+        tripType: document.querySelector('input[name="tripType"]:checked').value
+      };
+      console.log('Flight Search Data:', data);
+      alert('Flight search submitted! Check console for details.');
+    });
+
+    // Deals Carousel Functionality
+    let currentSlide = 0;
+    const slider = document.getElementById('dealsSlider');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+
+    function scrollDeals(direction) {
+      const cards = document.querySelectorAll('.deal-card');
+      const totalSlides = cards.length;
+      
+      currentSlide += direction;
+      
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      if (currentSlide >= totalSlides) currentSlide = 0;
+      
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const cardWidth = document.querySelector('.deal-card').offsetWidth;
+      const gap = 20;
+      const offset = -(currentSlide * (cardWidth + gap));
+      
+      slider.style.transform = `translateX(${offset}px)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // Auto-scroll deals carousel
+    setInterval(() => {
+      scrollDeals(1);
+    }, 5000);
   </script>
 </body>
 </html>
