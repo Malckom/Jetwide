@@ -4304,6 +4304,52 @@ header.header-hidden {
   letter-spacing: 1px;
 }
 
+/* Car Services Section */
+.car-services-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.services-list {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #d4af37;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.service-icon {
+  color: #d4af37;
+  font-size: 24px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.service-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.service-text strong {
+  color: #000;
+}
+
 /* Customer Testimonials */
 .car-testimonials-section {
   padding: 80px 0;
@@ -4337,6 +4383,45 @@ header.header-hidden {
   font-weight: 600;
   color: #d4af37;
   font-size: 16px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid #d4af37;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tagline {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  margin: 40px 0 30px;
+  font-style: italic;
 }
 
 .contact-cta {
