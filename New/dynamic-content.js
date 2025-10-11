@@ -5,7 +5,7 @@
 class JetwideContentManager {
     constructor() {
         // Use absolute path to WordPress API
-        this.wpApiUrl = '/New/wp/wp-json/wp/v2/';
+        this.wpApiUrl = '/wp/wp-json/wp/v2/';
         console.log('🔗 WordPress API URL:', this.wpApiUrl);
         this.init();
         this.initializeInteractiveFeatures();

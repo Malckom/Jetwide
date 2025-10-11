@@ -835,25 +835,45 @@ header.header-hidden {
   background-attachment: scroll !important;
 }
 
-/* Default fallback backgrounds for placeholders */
-.hero-slide[data-bg*="maasai-mara"] {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/main-header.jpeg');
+/* Default fallback backgrounds for hero slides */
+.hero-slide[data-bg*="hero-section-images%20(1)"],
+.hero-slide[data-bg*="hero-section-images (1)"] {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/Hero-Section/hero-section-images (1).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.hero-slide[data-bg*="coastal-beach"] {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/main-header.jpeg');
+.hero-slide[data-bg*="hero-section-images%20(2)"],
+.hero-slide[data-bg*="hero-section-images (2)"] {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/Hero-Section/hero-section-images (2).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.hero-slide[data-bg*="mount-kenya"] {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/main-header.jpeg');
+.hero-slide[data-bg*="hero-section-images%20(3)"],
+.hero-slide[data-bg*="hero-section-images (3)"] {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/Hero-Section/hero-section-images (3).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.hero-slide[data-bg*="amboseli-elephants"] {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/main-header.jpeg');
+.hero-slide[data-bg*="hero-section-images%20(4)"],
+.hero-slide[data-bg*="hero-section-images (4)"] {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/Hero-Section/hero-section-images (4).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.hero-slide[data-bg*="safari-sunset"] {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/main-header.jpeg');
+.hero-slide[data-bg*="hero-section-images%20(5)"],
+.hero-slide[data-bg*="hero-section-images (5)"] {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/Hero-Section/hero-section-images (5).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Hero Content Overlay */
@@ -5318,7 +5338,7 @@ header.header-hidden {
 /* Themed Packages Styles */
 .themed-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('images/Safari_sunset.jpg') center/cover;
+              url('images/Hero-Section/hero-section-images\ \(12\).jpg') center/cover;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -5924,7 +5944,7 @@ header.header-hidden {
 .beach-hero {
   height: 70vh;
   background: linear-gradient(135deg, rgba(20, 24, 65, 0.8) 0%, rgba(20, 24, 65, 0.6) 100%),
-              url('../assets/images/tropical_beaches.jpg');
+              url('../assets/images/Hero-Section/hero-section-images\ \(3\).jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -6143,7 +6163,7 @@ header.header-hidden {
 .safari-hero {
   height: 70vh;
   background: linear-gradient(135deg, rgba(20, 24, 65, 0.8) 0%, rgba(139, 69, 19, 0.6) 100%),
-              url('../assets/images/Majestic_mara.jpg');
+              url('../assets/images/Hero-Section/hero-section-images\ \(8\).jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -7716,6 +7736,15 @@ header.header-hidden {
   font-family: 'Open Sans', sans-serif;
 }
 
+.flight-hero-description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 15px 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* Search Form Container */
 .flight-search-container {
   background: white;
@@ -7968,6 +7997,18 @@ header.header-hidden {
   font-family: 'Oswald', sans-serif;
 }
 
+.region-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6b35;
+  margin: 40px 0 20px;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .toggle-arrow {
   font-size: 1rem;
   margin-left: 10px;
@@ -8026,9 +8067,17 @@ header.header-hidden {
 }
 
 .destination-class {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b35;
+  margin-bottom: 8px;
+}
+
+.destination-desc {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  line-height: 1.4;
 }
 
 .destination-price {
@@ -8323,6 +8372,59 @@ header.header-hidden {
 .discover-more-btn {
   text-align: center;
   margin-top: 30px;
+}
+
+/* ===================================
+   WHY BOOK WITH JETWIDE SECTION
+   =================================== */
+
+.why-book-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.benefits-list {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 5px solid #ff6b35;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.benefit-icon {
+  color: #ff6b35;
+  font-size: 28px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.benefit-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.benefit-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
 }
 
 /* ===================================
@@ -8700,5 +8802,1348 @@ header.header-hidden {
     width: 35px;
     height: 35px;
     font-size: 1.5rem;
+  }
+}
+
+/* ===================================
+   RECRUITMENT / JOB PLACEMENT PAGE
+   =================================== */
+
+/* Hero Section */
+.recruitment-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/Airport.jpg') center/cover;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-breadcrumb {
+  font-size: 0.9rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.recruitment-hero .hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* About Section */
+.recruitment-about-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.section-main-title {
+  font-size: 2.2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* Professional Jobs Section */
+.professional-jobs-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.professional-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.professional-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.professional-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.professional-text p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Documents & Countries Section */
+.documents-countries-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.docs-countries-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.column-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+}
+
+.title-accent {
+  color: #d4af37;
+}
+
+.documents-list,
+.countries-list {
+  list-style: none;
+  padding: 0;
+}
+
+.documents-list li,
+.countries-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.documents-list li:before,
+.countries-list li:before {
+  content: '';
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.diploma-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diploma-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transform: rotate(-5deg);
+}
+
+/* Available Jobs Section */
+.available-jobs-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.jobs-section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.jobs-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 400px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.job-header {
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+  padding: 20px 25px;
+  grid-column: 1 / -1;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.job-category {
+  font-size: 0.85rem;
+  color: #d4af37;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.job-details {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-details h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.job-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.job-details ul li {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 5px 0;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.job-details ul li:before {
+  content: '';
+  color: #d4af37;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.job-benefits {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.job-benefits h4 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.job-benefits ul {
+  margin-bottom: 10px;
+}
+
+.job-salary {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.apply-btn {
+  background: linear-gradient(135deg, #d4af37, #ffed4e);
+  color: #000;
+  padding: 12px 25px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  margin-top: auto;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(135deg, #ffed4e, #d4af37);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.job-image {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.job-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* CTA Section */
+.recruitment-cta-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #d4af37, #ffed4e);
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 3rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.cta-subtitle {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.cta-contact-btn {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.cta-contact-btn:hover {
+  background: #000;
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 968px) {
+  .professional-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .docs-countries-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .job-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .job-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .recruitment-hero .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Employer Benefits Section */
+.employer-benefits-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.employer-benefits-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.benefit-item p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+
+/* Why Choose Jetwide Section */
+.why-choose-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.why-choose-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-item {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-left: 4px solid #ff6b35;
+}
+
+.why-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-left-color: #d4af37;
+}
+
+.why-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.why-item p {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* Job Info Grid for Professional & Domestic Jobs */
+.jobs-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.job-type-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-type-title {
+  font-size: 1.8rem;
+  color: #ff6b35;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.job-type-intro {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.job-requirements-list,
+.job-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.job-requirements-list li,
+.job-benefits-list li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.job-requirements-list li:before,
+.job-benefits-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.job-roles {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* CTA Buttons for New Design */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cta-apply-btn {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.cta-apply-btn:hover {
+  background: #ff6b35;
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+  .jobs-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-grid,
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-apply-btn,
+  .cta-contact-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* ===================================
+   PACKAGE DETAIL PAGES
+   =================================== */
+
+/* Package Detail Hero */
+.package-detail-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  padding: 40px 20px;
+  margin-top: 0;
+}
+
+.package-detail-header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.package-breadcrumb {
+  color: #d4af37;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.package-breadcrumb a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.package-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.package-detail-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.package-meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.meta-item strong {
+  color: #999;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.meta-item span {
+  color: white;
+  font-size: 1rem;
+}
+
+.package-price {
+  color: #d4af37 !important;
+  font-size: 1.3rem !important;
+  font-weight: 700;
+}
+
+.rating {
+  color: #ffd700;
+}
+
+.tour-type {
+  background: #ff6b35;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem !important;
+  display: inline-block;
+}
+
+/* Gallery Section */
+.package-gallery {
+  margin-bottom: 30px;
+}
+
+.gallery-main {
+  max-width: 100%;
+  margin: 0;
+}
+
+.main-image-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+  margin-bottom: 15px;
+}
+
+.main-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.gallery-btn:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #ff6b35;
+  transform: scale(1.05);
+}
+
+.see-more-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #ff6b35;
+}
+
+/* Package Content Layout */
+.package-content-section {
+  padding: 60px 20px;
+}
+
+.package-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.package-main-content {
+  background: white;
+}
+
+/* Tabs */
+.package-tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  bottom: -2px;
+}
+
+.tab-btn:hover {
+  color: #ff6b35;
+}
+
+.tab-btn.active {
+  color: #ff6b35;
+  border-bottom-color: #ff6b35;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tab-content h3 {
+  color: #ff6b35;
+  font-size: 1.4rem;
+  margin: 30px 0 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tab-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.tab-content ul {
+  margin: 15px 0 15px 20px;
+}
+
+.tab-content ul li {
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.view-more-btn {
+  background: none;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background: #ff6b35;
+  color: white;
+}
+
+.hidden-content {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Hotels List */
+.hotels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hotel-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #ff6b35;
+}
+
+.hotel-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.hotel-rating {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.hotel-card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.hotel-card ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hotel-card ul li {
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+}
+
+.hotel-card ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Itinerary */
+.itinerary-day {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #d4af37;
+}
+
+.itinerary-day h3 {
+  color: #333 !important;
+  font-size: 1.3rem;
+  margin-bottom: 15px !important;
+}
+
+.itinerary-day p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.itinerary-day ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.itinerary-day ul li {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Flight Options */
+.flight-options h3 {
+  color: #333 !important;
+  margin-bottom: 20px !important;
+}
+
+.flight-options ul {
+  background: #f9f9f9;
+  padding: 20px 20px 20px 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.flight-note {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.flight-note p {
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+/* Booking Sidebar */
+.booking-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.booking-form-card {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.booking-title {
+  color: #7fb935;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.package-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-row input[type="date"],
+.form-row select,
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.form-row:has(input[type="date"]:only-child),
+.form-row:has(select:only-child),
+.form-row:has(textarea) {
+  grid-template-columns: 1fr;
+}
+
+.submit-booking-btn {
+  background: linear-gradient(135deg, #d4af37, #ffed4e);
+  color: #333;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.submit-booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Sidebar Ad */
+.sidebar-ad {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.sidebar-ad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ad-btn {
+  background: white;
+  color: #333;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.ad-btn:hover {
+  background: #ff6b35;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Similar Tours Section */
+.similar-tours-section {
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.similar-tours-section .section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.tour-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tour-card:hover .tour-image img {
+  transform: scale(1.1);
+}
+
+.tour-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ff6b35;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tour-content {
+  padding: 25px;
+}
+
+.tour-content h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tour-price {
+  color: #ff6b35;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tour-desc {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tour-link {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.tour-link:hover {
+  color: #ff6b35;
+  transform: translateX(5px);
+}
+
+.package-link {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.package-link:hover {
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.package-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.package-card-link:hover .package-card {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .package-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-form-card {
+    position: static;
+  }
+  
+  .tours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .package-detail-title {
+    font-size: 2rem;
+  }
+  
+  .package-meta {
+    gap: 20px;
+  }
+  
+  .gallery-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-image-wrapper {
+    height: 300px;
+  }
+  
+  .gallery-thumbnails {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .thumbnail {
+    min-width: 100px;
+    height: 70px;
+  }
+  
+  .package-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tab-btn {
+    white-space: nowrap;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .tab-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hotel-card ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .package-detail-title {
+    font-size: 1.6rem;
+  }
+  
+  .tab-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .tab-content h3 {
+    font-size: 1.2rem;
   }
 }
