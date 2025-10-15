@@ -3512,7 +3512,7 @@ section[class*="-hero"] > * {
 
 /* ---- VISA PAGE HERO SECTION ---- */
 .visa-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../images/main-header.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/Visa-Page/Visa-Application-Heros section-min.jpg') no-repeat center center;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -4028,10 +4028,9 @@ section[class*="-hero"] > * {
 
 /* Car Hire Hero Section */
 .car-hire-hero {
-  background: linear-gradient(135deg, rgba(0, 20, 40, 0.85), rgba(0, 40, 80, 0.75)), 
-              radial-gradient(circle at center, rgba(0, 150, 255, 0.3), transparent),
-              #001529;
-  min-height: 60vh;
+  min-height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('images/Car-Hire-Page/Car-hire-heros-section.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
@@ -7821,7 +7820,7 @@ section[class*="-hero"] > * {
   position: relative;
   min-height: 70vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('images/Safari_sunset.jpg') center/cover no-repeat;
+              url('images/Airline-Booking/Dallas\,\ USA-min.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
