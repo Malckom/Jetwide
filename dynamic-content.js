@@ -300,6 +300,31 @@ class JetwideContentManager {
             });
         }
         
+        // Auto-hide header on scroll down, show on scroll up
+        let lastScrollTop = 0;
+        const scrollThreshold = 100;
+        const header = document.querySelector('header');
+        
+        if (header) {
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
+                    return;
+                }
+                
+                if (scrollTop > lastScrollTop && scrollTop > 200) {
+                    // Scrolling down - hide header
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scrolling up - show header
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        }
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

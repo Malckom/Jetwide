@@ -99,15 +99,31 @@
     <!-- Package Detail Hero -->
     <section class="package-detail-hero">
         <div class="container">
-            <div class="breadcrumbs">
-                <a href="../../index.html">Home</a> > <a href="../themed-packages.html">Themed Packages</a> > <span>South Africa Honeymoon</span>
-            </div>
-            <h1>08-Days South Africa Honeymoon - Cape Town & Safari</h1>
-            <div class="package-meta">
-                <span class="duration">8 Days / 7 Nights</span>
-                <span class="price">From KSh 175,000 per couple</span>
-                <span class="rating">★★★★★ (5.0)</span>
-                <span class="type">Themed - Honeymoon</span>
+            <div class="package-detail-header">
+                <div class="package-breadcrumb">
+                    <a href="../../index.html">Home</a> > 
+                    <a href="../themed-packages.html">Themed Packages</a> > 
+                    <span>South Africa Honeymoon</span>
+                </div>
+                <h1 class="package-detail-title">08-Days South Africa Honeymoon - Cape Town & Safari</h1>
+                <div class="package-meta">
+                    <div class="meta-item">
+                        <strong>FROM</strong>
+                        <span class="package-price">KSh 175,000</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>HOTEL RATING</strong>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="meta-item">
+                        <strong>TOUR TYPE</strong>
+                        <span class="tour-type">Themed</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>DESTINATION</strong>
+                        <span>South Africa</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -679,6 +695,91 @@
                 btn.textContent = 'View More Details ▼';
             }
         }
+
+        // Booking Form Submission Handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookingForm = document.querySelector('.booking-form');
+            
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.style.opacity = '0.7';
+                    
+                    try {
+                        const formData = new FormData(this);
+                        
+                        // Get fullname and split it properly
+                        const fullname = formData.get('fullname') || '';
+                        const nameParts = fullname.trim().split(' ');
+                        const firstName = nameParts[0] || '';
+                        const lastName = nameParts.slice(1).join(' ') || nameParts[0] || '';
+                        
+                        const data = {
+                            firstName: firstName,
+                            lastName: lastName,
+                            email: formData.get('email') || '',
+                            phone: formData.get('phone') || '',
+                            citizenship: formData.get('citizenship') || '',
+                            destination: formData.get('package_name') || '08-Days South Africa Honeymoon',
+                            tripType: 'Package Booking',
+                            startDate: formData.get('travel_date') || '',
+                            groupSize: `${formData.get('adults') || 2} Adults, ${formData.get('children') || 0} Children`,
+                            budget: formData.get('package_option') || '',
+                            specialRequests: formData.get('special_requests') || '',
+                            duration: formData.get('package_name') || '08-Days South Africa Honeymoon'
+                        };
+                        
+                        console.log('Sending booking data:', data);
+                        
+                        const response = await fetch('../../send-contact-simple.php', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify(data)
+                        });
+                        
+                        console.log('Response status:', response.status, response.statusText);
+                        
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        }
+                        
+                        const responseText = await response.text();
+                        console.log('Response text:', responseText);
+                        
+                        let result;
+                        try {
+                            result = JSON.parse(responseText);
+                        } catch (parseError) {
+                            console.error('Failed to parse JSON:', parseError);
+                            throw new Error('Invalid response from server. Please check browser console for details.');
+                        }
+                        
+                        console.log('Parsed result:', result);
+                        
+                        if (result.success) {
+                            alert('✅ ' + result.message);
+                            this.reset();
+                        } else {
+                            throw new Error(result.message || 'Failed to send booking request');
+                        }
+                        
+                    } catch (error) {
+                        alert('❌ Error: ' + error.message + '\\n\\nPlease contact us at:\\n📧 tours@jetwide.org\\n📞 +254 748 538 311');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.opacity = '1';
+                    }
+                });
+            }
+        });
     </script>
+    <script src="../../dynamic-content.js"></script>
 </body>
 </html>

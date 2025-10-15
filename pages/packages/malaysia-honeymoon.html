@@ -111,19 +111,19 @@
         <h1 class="package-detail-title">07-Days Malaysia Honeymoon Itinerary</h1>
         <div class="package-meta">
           <div class="meta-item">
-            <strong>From</strong>
+            <strong>FROM</strong>
             <span class="package-price">KSh 210,000</span>
           </div>
           <div class="meta-item">
-            <strong>Hotel Rating</strong>
+            <strong>HOTEL RATING</strong>
             <div class="rating">⭐⭐⭐⭐</div>
           </div>
           <div class="meta-item">
-            <strong>Tour Type</strong>
+            <strong>TOUR TYPE</strong>
             <span class="tour-type">Themed</span>
           </div>
           <div class="meta-item">
-            <strong>Destination</strong>
+            <strong>DESTINATION</strong>
             <span>Malaysia</span>
           </div>
         </div>
@@ -369,57 +369,79 @@
         <!-- Booking Sidebar -->
         <div class="booking-sidebar">
           <div class="booking-form-card">
-            <h3 class="booking-title">Booking Request</h3>
+            <h3>Book This Package</h3>
             <form class="package-booking-form" action="../../send-contact-simple.php" method="POST">
-              <input type="hidden" name="package" value="Malaysia Honeymoon - 7 Days">
+              <input type="hidden" name="package_name" value="07-Days Malaysia Honeymoon Package">
               
               <div class="form-row">
-                <input type="text" name="first_name" placeholder="First Name" required />
-                <input type="text" name="last_name" placeholder="Last Name" required />
+                <div class="form-group">
+                  <label for="fullname">Full Name *</label>
+                  <input type="text" id="fullname" name="fullname" required>
+                </div>
               </div>
 
               <div class="form-row">
-                <input type="email" name="email" placeholder="Email Address" required />
-                <input type="tel" name="phone" placeholder="Phone" required />
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
               </div>
 
               <div class="form-row">
-                <input type="date" name="checkin" placeholder="Check in date" required />
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
               </div>
 
               <div class="form-row">
-                <input type="date" name="checkout" placeholder="Check out date" required />
+                <div class="form-group">
+                  <label for="travel_date">Preferred Travel Date *</label>
+                  <input type="date" id="travel_date" name="travel_date" required>
+                </div>
               </div>
 
               <div class="form-row">
-                <input type="number" name="adults" placeholder="Adults #" min="1" value="2" required />
-                <input type="number" name="children" placeholder="Children #" min="0" value="0" />
+                <div class="form-group">
+                  <label for="adults">Number of Adults *</label>
+                  <input type="number" id="adults" name="adults" min="2" value="2" required>
+                </div>
               </div>
 
               <div class="form-row">
-                <select name="citizenship" required>
-                  <option value="">Citizenship</option>
-                  <option value="Kenyan">Kenyan</option>
-                  <option value="Other">Other</option>
-                </select>
+                <div class="form-group">
+                  <label for="children">Number of Children</label>
+                  <input type="number" id="children" name="children" min="0" value="0">
+                </div>
               </div>
 
               <div class="form-row">
-                <select name="package_option" required>
-                  <option value="">Which Package Works for You? *</option>
-                  <option value="Standard Package">Standard Package - KSh 210,000</option>
-                  <option value="Deluxe Package">Deluxe Package - KSh 280,000</option>
-                  <option value="Premium Package">Premium Package - KSh 350,000</option>
-                </select>
+                <div class="form-group">
+                  <label for="citizenship">Citizenship *</label>
+                  <input type="text" id="citizenship" name="citizenship" placeholder="e.g., Kenya" required>
+                </div>
               </div>
 
               <div class="form-row">
-                <label style="display: block; margin-bottom: 5px; color: #666; font-size: 0.9rem;">Extra Details</label>
-                <textarea name="message" rows="4" placeholder="Provide more details if any" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
-                <small style="color: #999;">0 of 300 max words.</small>
+                <div class="form-group">
+                  <label for="package_option">Package Option *</label>
+                  <select id="package_option" name="package_option" required>
+                    <option value="">Select Option</option>
+                    <option value="Standard - KSh 210,000">Standard Package - KSh 210,000</option>
+                    <option value="Deluxe - KSh 280,000">Deluxe Package - KSh 280,000</option>
+                    <option value="Premium - KSh 350,000">Premium Package - KSh 350,000</option>
+                  </select>
+                </div>
               </div>
 
-              <button type="submit" class="submit-booking-btn">Submit Booking</button>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="message">Special Requests</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Any special requirements or requests..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="submit-booking-btn">Submit Booking Request</button>
             </form>
           </div>
 
@@ -643,6 +665,91 @@
         }
       });
     });
+
+    // Booking Form Submission Handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const bookingForm = document.querySelector('.package-booking-form');
+      
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const submitBtn = this.querySelector('.submit-booking-btn');
+          const originalText = submitBtn.textContent;
+          
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.style.opacity = '0.7';
+          
+          try {
+            const formData = new FormData(this);
+            
+            // Get fullname and split it properly
+            const fullname = formData.get('fullname') || '';
+            const nameParts = fullname.trim().split(' ');
+            const firstName = nameParts[0] || '';
+            const lastName = nameParts.slice(1).join(' ') || nameParts[0] || '';
+            
+            const data = {
+              firstName: firstName,
+              lastName: lastName,
+              email: formData.get('email') || '',
+              phone: formData.get('phone') || '',
+              citizenship: formData.get('citizenship') || '',
+              destination: formData.get('package_name') || '07-Days Malaysia Honeymoon Package',
+              tripType: 'Package Booking',
+              startDate: formData.get('travel_date') || '',
+              groupSize: `${formData.get('adults') || 2} Adults, ${formData.get('children') || 0} Children`,
+              budget: formData.get('package_option') || '',
+              specialRequests: formData.get('message') || '',
+              duration: formData.get('package_name') || '07-Days Malaysia Honeymoon Package'
+            };
+            
+            console.log('Sending booking data:', data);
+            
+            const response = await fetch('../../send-contact-simple.php', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(data)
+            });
+            
+            console.log('Response status:', response.status, response.statusText);
+            
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const responseText = await response.text();
+            console.log('Response text:', responseText);
+            
+            let result;
+            try {
+              result = JSON.parse(responseText);
+            } catch (parseError) {
+              console.error('Failed to parse JSON:', parseError);
+              throw new Error('Invalid response from server. Please check browser console for details.');
+            }
+            
+            console.log('Parsed result:', result);
+            
+            if (result.success) {
+              alert('✅ ' + result.message);
+              this.reset();
+            } else {
+              throw new Error(result.message || 'Failed to send booking');
+            }
+            
+          } catch (error) {
+            alert('❌ Error: ' + error.message + '\\n\\nContact us at:\\n📧 tours@jetwide.org\\n📞 +254 748 538 311');
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            submitBtn.style.opacity = '1';
+          }
+        });
+      }
+    });
   </script>
+  <script src="../../dynamic-content.js"></script>
 </body>
 </html>
