@@ -36,6 +36,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* Center alignment for content areas */
@@ -510,10 +512,10 @@ header.header-hidden {
 }
 
 .nav-menu a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   transition: color 0.3s ease;
   padding: 8px 4px;
   min-height: 40px;
@@ -523,6 +525,11 @@ header.header-hidden {
 
 .nav-menu a:hover {
   color: #d4af37;
+}
+
+.nav-menu a.active {
+  color: #000000;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -1370,25 +1377,6 @@ section[class*="-hero"] > * {
 .contact-hero,
 .beach-hero,
 .blog-hero,
-.kenyan-safari-hero,
-.about-hero {
-  margin-top: 0 !important;
-  padding-top: 140px;
-}
-
-@media (min-width: 768px) {
-  .visa-hero,
-  .car-hire-hero,
-  .themed-hero,
-  .contact-hero,
-  .beach-hero,
-  .blog-hero,
-  .kenyan-safari-hero,
-  .about-hero {
-    padding-top: 160px;
-  }
-}
-
 /* ---- ANIMATED DESTINATIONS SCROLL ---- */
 .destinations-scroll {
   overflow: hidden;
@@ -3512,7 +3500,7 @@ section[class*="-hero"] > * {
 
 /* ---- VISA PAGE HERO SECTION ---- */
 .visa-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/Visa-Page/Visa-Application-Heros section-min.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../images/Visa-Application-Heros-section-min.jpg') no-repeat center center;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -4028,33 +4016,35 @@ section[class*="-hero"] > * {
 
 /* Car Hire Hero Section */
 .car-hire-hero {
-  min-height: 70vh;
+  min-height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('images/Car-Hire-Page/Car-hire-heros-section.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 40px 16px;
+  padding: 120px 16px 40px;
+  margin-top: 0;
 }
 
 @media (min-width: 480px) {
   .car-hire-hero {
-    min-height: 65vh;
-    padding: 50px 24px;
+    min-height: 450px;
+    padding: 140px 24px 50px;
   }
 }
 
 @media (min-width: 768px) {
   .car-hire-hero {
-    min-height: 70vh;
-    padding: 60px 32px;
+    min-height: 500px;
+    padding: 160px 32px 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .car-hire-hero {
-    padding: 80px 48px;
+    min-height: 500px;
+    padding: 180px 48px 80px;
   }
 }
 
@@ -4749,41 +4739,46 @@ section[class*="-hero"] > * {
 
 /* New Visa Page Styles - Modern Professional Design */
 .visa-hero {
-  position: relative;
-  min-height: 70vh;
+  min-height: 500px;
+  background: linear-gradient(rgba(26, 95, 122, 0.7), rgba(212, 175, 55, 0.6)), 
+              url('../assets/images/Visa-Page/Visa-Application-Heros\ section-min.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
+  position: relative;
   overflow: hidden;
+  padding: 120px 16px 40px;
+  margin-top: 0;
 }
 
-.visa-hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+@media (min-width: 480px) {
+  .visa-hero {
+    min-height: 450px;
+    padding: 140px 24px 50px;
+  }
 }
 
-.visa-hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (min-width: 768px) {
+  .visa-hero {
+    min-height: 500px;
+    padding: 160px 32px 60px;
+  }
 }
 
-.visa-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 95, 122, 0.9) 0%, rgba(212, 175, 55, 0.8) 100%);
+@media (min-width: 1024px) {
+  .visa-hero {
+    padding: 180px 48px 80px;
+  }
+}
+
+.visa-hero .hero-overlay {
+  position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .visa-hero .container {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .visa-hero-content {
@@ -4799,6 +4794,7 @@ section[class*="-hero"] > * {
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
+  color: white;
 }
 
 .visa-hero-subtitle {
@@ -5402,15 +5398,35 @@ section[class*="-hero"] > * {
 .themed-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
               url('images/Hero-Section/hero-section-images\ \(12\).jpg') center/cover;
-  height: 60vh;
-  min-height: 400px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
   position: relative;
-  margin-top: 120px;
+  padding: 120px 16px 40px;
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .themed-hero {
+    min-height: 450px;
+    padding: 140px 24px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .themed-hero {
+    min-height: 500px;
+    padding: 160px 32px 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .themed-hero {
+    padding: 180px 48px 80px;
+  }
 }
 
 .themed-hero .hero-overlay {
@@ -5775,8 +5791,7 @@ section[class*="-hero"] > * {
 
 /* Contact Form Styles */
 .contact-hero {
-  height: 50vh;
-  min-height: 400px;
+  min-height: 500px;
   background: linear-gradient(135deg, rgba(20, 24, 65, 0.75) 0%, rgba(20, 24, 65, 0.65) 100%),
               url('../assets/images/main-header.jpeg');
   background-size: cover;
@@ -5785,6 +5800,28 @@ section[class*="-hero"] > * {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 120px 16px 40px;
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .contact-hero {
+    min-height: 450px;
+    padding: 140px 24px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-hero {
+    min-height: 500px;
+    padding: 160px 32px 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-hero {
+    padding: 180px 48px 80px;
+  }
 }
 
 .contact-hero .hero-overlay {
@@ -6065,8 +6102,7 @@ section[class*="-hero"] > * {
 
 /* Beach Getaways Hero */
 .beach-hero {
-  height: 70vh;
-  min-height: 400px;
+  min-height: 500px;
   background: linear-gradient(135deg, rgba(20, 24, 65, 0.75) 0%, rgba(20, 24, 65, 0.65) 100%),
               url('../assets/images/Hero-Section/hero-section-images\ \(3\).jpg');
   background-size: cover;
@@ -6076,7 +6112,28 @@ section[class*="-hero"] > * {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 120px;
+  padding: 120px 16px 40px;
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .beach-hero {
+    min-height: 450px;
+    padding: 140px 24px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .beach-hero {
+    min-height: 500px;
+    padding: 160px 32px 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .beach-hero {
+    padding: 180px 48px 80px;
+  }
 }
 
 .beach-hero .hero-overlay {
@@ -6302,7 +6359,6 @@ section[class*="-hero"] > * {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 120px;
 }
 
 .safari-hero .hero-overlay {
@@ -6631,6 +6687,66 @@ section[class*="-hero"] > * {
 .contact-btn:hover {
   background: #333;
   color: white;
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+}
+
+.mission-content,
+.vision-content {
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-content:hover,
+.vision-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.mission-content h3,
+.vision-content h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a5f7a;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 10px;
+}
+
+.mission-content p,
+.vision-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.mission-content p:last-child,
+.vision-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 968px) {
+  .mission-vision-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+  }
 }
 
 /* Compass Section */
@@ -7016,19 +7132,165 @@ section[class*="-hero"] > * {
 
 /* Blog Hero Section */
 .blog-hero {
-  width: 100%;
-  height: 300px;
-  min-height: 300px;
-  overflow: hidden;
+  min-height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('images/about-us/about-us.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  overflow: hidden;
+  padding: 120px 16px 30px;
+  margin-top: 0;
 }
 
-.blog-hero-image {
+@media (min-width: 480px) {
+  .blog-hero {
+    min-height: 380px;
+    padding: 140px 24px 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-hero {
+    min-height: 400px;
+    padding: 160px 32px 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-hero {
+    min-height: 400px;
+    padding: 180px 48px 60px;
+  }
+}
+
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../assets/images/blog_icon.png') no-repeat center;
+  background-size: 800px;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.blog-hero .hero-overlay {
+  position: relative;
+  z-index: 2;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.85);
+}
+
+.blog-hero-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-hero-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ffffff, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .blog-hero-title {
+    font-size: 30px;
+    margin-bottom: 14px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-hero-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-hero-title {
+    font-size: 40px;
+    margin-bottom: 18px;
+  }
+}
+
+.blog-hero-subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .blog-hero-subtitle {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.blog-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4af37 0%, #1a5f7a 100%);
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .blog-cta {
+    padding: 14px 36px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-cta {
+    padding: 16px 40px;
+    font-size: 16px;
+  }
+}
+
+.blog-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, #e0bb4a 0%, #217089 100%);
 }
 
 /* Blog Section */
@@ -7818,12 +8080,33 @@ section[class*="-hero"] > * {
 /* Hero Section with Forest Background */
 .flight-booking-hero {
   position: relative;
-  min-height: 70vh;
+  min-height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('images/Airline-Booking/Dallas\,\ USA-min.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding: 120px 20px 20px;
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .flight-booking-hero {
+    min-height: 450px;
+    padding: 140px 24px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .flight-booking-hero {
+    min-height: 500px;
+    padding: 160px 32px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flight-booking-hero {
+    padding: 180px 48px 40px;
+  }
 }
 
 .flight-booking-hero .hero-overlay {
@@ -8955,13 +9238,35 @@ section[class*="-hero"] > * {
 /* Hero Section */
 .recruitment-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/Airport.jpg') center/cover;
-  min-height: 400px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
   position: relative;
+  padding: 120px 16px 40px;
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .recruitment-hero {
+    min-height: 450px;
+    padding: 140px 24px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .recruitment-hero {
+    min-height: 500px;
+    padding: 160px 32px 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recruitment-hero {
+    padding: 180px 48px 80px;
+  }
 }
 
 .recruitment-hero .hero-overlay {
@@ -10771,5 +11076,510 @@ button[type="submit"]:disabled {
   
   .tab-content h3 {
     font-size: 1.2rem;
+  }
+}
+
+/* ========================================
+   BLOG POST PAGE STYLES
+   ======================================== */
+
+.blog-post-hero {
+  min-height: 400px;
+  background: linear-gradient(135deg, rgba(26, 95, 122, 0.9) 0%, rgba(212, 175, 55, 0.8) 100%),
+              url('../assets/images/Hero-Section/hero-section-images (1).jpg') center/cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 140px 20px 60px;
+  margin-top: 0;
+}
+
+.blog-post-hero-overlay {
+  width: 100%;
+}
+
+.blog-post-breadcrumb {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.blog-post-breadcrumb a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.blog-post-breadcrumb a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.blog-post-hero-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 900px;
+}
+
+.blog-post-meta {
+  display: flex;
+  gap: 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.blog-post-meta span {
+  opacity: 0.9;
+}
+
+.blog-post-article {
+  background: white;
+  padding: 60px 0;
+}
+
+.blog-post-container {
+  max-width: 900px;
+}
+
+.blog-post-featured-image {
+  margin-bottom: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-post-content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blog-post-content h2 {
+  font-size: 2rem;
+  color: #1a5f7a;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.blog-post-content h3 {
+  font-size: 1.5rem;
+  color: #1a5f7a;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.blog-post-content p {
+  margin-bottom: 20px;
+}
+
+.blog-post-content blockquote {
+  border-left: 4px solid #d4af37;
+  padding-left: 30px;
+  margin: 30px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.blog-post-content ul,
+.blog-post-content ol {
+  margin: 20px 0 20px 30px;
+}
+
+.blog-post-content li {
+  margin-bottom: 10px;
+}
+
+.blog-post-share {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.blog-post-share h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn.facebook {
+  background: #1877f2;
+}
+
+.share-btn.twitter {
+  background: #1da1f2;
+}
+
+.share-btn.linkedin {
+  background: #0077b5;
+}
+
+.share-btn.whatsapp {
+  background: #25d366;
+}
+
+.share-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.related-posts {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.related-posts h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a5f7a;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.related-post-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.related-post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.related-post-card h3 {
+  font-size: 1.1rem;
+  padding: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.related-post-link {
+  display: block;
+  padding: 0 20px 20px;
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.related-post-link:hover {
+  color: #1a5f7a;
+}
+
+@media (max-width: 768px) {
+  .blog-post-hero {
+    padding: 120px 20px 40px;
+    min-height: 350px;
+  }
+
+  .blog-post-hero-title {
+    font-size: 2rem;
+  }
+
+  .blog-post-content {
+    font-size: 16px;
+  }
+
+  .blog-post-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .share-buttons {
+    flex-direction: column;
+  }
+
+  .share-btn {
+    justify-content: center;
+  }
+}
+
+/* Blog Post Layout with Sidebar */
+.blog-post-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.blog-post-main {
+  min-width: 0;
+}
+
+.post-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #666;
+}
+
+.post-category {
+  background: #d4af37;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.post-author-meta {
+  color: #666;
+}
+
+/* Sidebar Styles */
+.blog-post-sidebar {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+.sidebar-widget {
+  background: #f8f9fa;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.widget-title {
+  font-size: 1.3rem;
+  color: #1a5f7a;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 10px;
+}
+
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1a5f7a;
+}
+
+.search-btn {
+  background: #1a5f7a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #145166;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 12px;
+}
+
+.category-list a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.category-list a:hover {
+  color: #d4af37;
+}
+
+.recent-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recent-post-item {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recent-post-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recent-post-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.recent-post-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.recent-post-info a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.recent-post-info a:hover {
+  color: #d4af37;
+}
+
+.recent-post-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: white;
+  color: #1a5f7a;
+  padding: 6px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #1a5f7a;
+  color: white;
+  border-color: #1a5f7a;
+}
+
+.sidebar-cta {
+  background: linear-gradient(135deg, #1a5f7a 0%, #d4af37 100%);
+  color: white;
+}
+
+.sidebar-cta .widget-title {
+  color: white;
+  border-bottom-color: white;
+}
+
+.sidebar-cta p {
+  color: white;
+  opacity: 0.95;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.cta-btn-sidebar {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: white;
+  color: #1a5f7a;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn-sidebar:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Sidebar */
+@media (max-width: 1024px) {
+  .blog-post-layout {
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .blog-post-sidebar {
+    position: static;
+  }
+
+  .post-meta-bar {
+    font-size: 13px;
   }
 }

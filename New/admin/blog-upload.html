@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Upload Blog Post | Jetwide Travel & Safari</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a5f7a 0%, #d4af37 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .admin-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .admin-header {
+      background: #1a5f7a;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .admin-header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .admin-header p {
+      opacity: 0.9;
+    }
+
+    .admin-form {
+      padding: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .form-group label .required {
+      color: #e74c3c;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #1a5f7a;
+    }
+
+    textarea.form-control {
+      min-height: 200px;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .editor-toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .editor-btn {
+      padding: 8px 15px;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+
+    .editor-btn:hover {
+      background: #e0e0e0;
+      border-color: #1a5f7a;
+    }
+
+    .image-preview {
+      margin-top: 15px;
+      max-width: 100%;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .image-preview.active {
+      display: block;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      flex: 1;
+    }
+
+    .btn-primary {
+      background: #1a5f7a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #145166;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(26, 95, 122, 0.3);
+    }
+
+    .btn-secondary {
+      background: #d4af37;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #b8961f;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-danger {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #c0392b;
+    }
+
+    .success-message {
+      background: #2ecc71;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .success-message.active {
+      display: block;
+    }
+
+    .char-count {
+      font-size: 12px;
+      color: #777;
+      margin-top: 5px;
+      text-align: right;
+    }
+
+    .help-text {
+      font-size: 12px;
+      color: #777;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-form {
+        padding: 20px;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>📝 Blog Post Manager</h1>
+      <p>Create and publish travel stories and insights</p>
+    </div>
+
+    <div class="admin-form">
+      <div class="success-message" id="successMessage">
+        ✅ Blog post published successfully!
+      </div>
+
+      <form id="blogUploadForm" enctype="multipart/form-data">
+        <!-- Title -->
+        <div class="form-group">
+          <label for="postTitle">Post Title <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="postTitle" 
+            name="title" 
+            class="form-control" 
+            placeholder="Enter an engaging title for your blog post" 
+            required 
+            maxlength="150"
+          />
+          <div class="char-count">
+            <span id="titleCount">0</span> / 150 characters
+          </div>
+        </div>
+
+        <!-- Excerpt/Summary -->
+        <div class="form-group">
+          <label for="postExcerpt">Excerpt / Summary <span class="required">*</span></label>
+          <textarea 
+            id="postExcerpt" 
+            name="excerpt" 
+            class="form-control" 
+            placeholder="Write a brief summary (shown on blog listing page)" 
+            required 
+            rows="3"
+            maxlength="300"
+          ></textarea>
+          <div class="char-count">
+            <span id="excerptCount">0</span> / 300 characters
+          </div>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="form-group">
+          <label for="featuredImage">Featured Image <span class="required">*</span></label>
+          <input 
+            type="file" 
+            id="featuredImage" 
+            name="featured_image" 
+            class="form-control" 
+            accept="image/*" 
+            required 
+          />
+          <div class="help-text">Recommended size: 1200 x 600 pixels (JPG, PNG)</div>
+          <div class="image-preview" id="imagePreview">
+            <img id="previewImg" src="" alt="Preview" />
+          </div>
+        </div>
+
+        <!-- Row: Category and Date -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="postCategory">Category <span class="required">*</span></label>
+            <select id="postCategory" name="category" class="form-control" required>
+              <option value="">Select Category</option>
+              <option value="Travel Tips">Travel Tips</option>
+              <option value="Destinations">Destinations</option>
+              <option value="Safari Adventures">Safari Adventures</option>
+              <option value="Cultural Experiences">Cultural Experiences</option>
+              <option value="Visa & Travel Guide">Visa & Travel Guide</option>
+              <option value="Beach Holidays">Beach Holidays</option>
+              <option value="Adventure Sports">Adventure Sports</option>
+              <option value="Budget Travel">Budget Travel</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="postDate">Publish Date <span class="required">*</span></label>
+            <input 
+              type="date" 
+              id="postDate" 
+              name="publish_date" 
+              class="form-control" 
+              required 
+            />
+          </div>
+        </div>
+
+        <!-- Row: Author and Read Time -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="postAuthor">Author Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="postAuthor" 
+              name="author" 
+              class="form-control" 
+              placeholder="e.g., Jetwide Travel Team" 
+              value="Jetwide Travel" 
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="readTime">Estimated Read Time (minutes)</label>
+            <input 
+              type="number" 
+              id="readTime" 
+              name="read_time" 
+              class="form-control" 
+              placeholder="e.g., 5" 
+              min="1" 
+              max="60" 
+              value="5"
+            />
+          </div>
+        </div>
+
+        <!-- Content Editor -->
+        <div class="form-group">
+          <label for="postContent">Blog Content <span class="required">*</span></label>
+          <div class="editor-toolbar">
+            <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
+            <button type="button" class="editor-btn" onclick="formatText('italic')"><em>I</em></button>
+            <button type="button" class="editor-btn" onclick="formatText('h2')">H2</button>
+            <button type="button" class="editor-btn" onclick="formatText('h3')">H3</button>
+            <button type="button" class="editor-btn" onclick="formatText('ul')">• List</button>
+            <button type="button" class="editor-btn" onclick="formatText('quote')">❝ Quote</button>
+            <button type="button" class="editor-btn" onclick="formatText('link')">🔗 Link</button>
+          </div>
+          <textarea 
+            id="postContent" 
+            name="content" 
+            class="form-control" 
+            placeholder="Write your blog content here. Use HTML tags for formatting: <p>, <h2>, <h3>, <strong>, <em>, <ul>, <li>, <blockquote>" 
+            required
+          ></textarea>
+          <div class="help-text">
+            You can use HTML formatting. Press the buttons above to insert common tags.
+          </div>
+        </div>
+
+        <!-- Tags (for sidebar tag cloud) -->
+        <div class="form-group">
+          <label for="postTags">Post Tags (comma-separated) <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="postTags" 
+            name="tags" 
+            class="form-control" 
+            placeholder="e.g., visa, kenya travel, safari tips, tourism" 
+            required
+          />
+          <div class="help-text">These will appear in the sidebar tag cloud. Enter 3-8 relevant tags.</div>
+        </div>
+
+        <!-- SEO Meta Tags -->
+        <h3 style="margin-top: 30px; margin-bottom: 15px; color: #1a5f7a; font-size: 18px;">SEO Optimization</h3>
+        
+        <div class="form-group">
+          <label for="seoTitle">SEO Title</label>
+          <input 
+            type="text" 
+            id="seoTitle" 
+            name="seo_title" 
+            class="form-control" 
+            placeholder="Leave blank to use post title" 
+            maxlength="60"
+          />
+          <div class="char-count">
+            <span id="seoTitleCount">0</span> / 60 characters (optimal for search engines)
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="seoDescription">SEO Meta Description</label>
+          <textarea 
+            id="seoDescription" 
+            name="seo_description" 
+            class="form-control" 
+            placeholder="Leave blank to use excerpt" 
+            rows="2"
+            maxlength="160"
+          ></textarea>
+          <div class="char-count">
+            <span id="seoDescCount">0</span> / 160 characters (optimal for search engines)
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger" onclick="clearForm()">Clear Form</button>
+          <button type="button" class="btn btn-secondary" onclick="saveAsDraft()">Save as Draft</button>
+          <button type="submit" class="btn btn-primary">Publish Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Set today's date as default
+    document.getElementById('postDate').valueAsDate = new Date();
+
+    // Character counters
+    document.getElementById('postTitle').addEventListener('input', function() {
+      document.getElementById('titleCount').textContent = this.value.length;
+    });
+
+    document.getElementById('postExcerpt').addEventListener('input', function() {
+      document.getElementById('excerptCount').textContent = this.value.length;
+    });
+
+    document.getElementById('seoTitle').addEventListener('input', function() {
+      document.getElementById('seoTitleCount').textContent = this.value.length;
+    });
+
+    document.getElementById('seoDescription').addEventListener('input', function() {
+      document.getElementById('seoDescCount').textContent = this.value.length;
+    });
+
+    // Image preview
+    document.getElementById('featuredImage').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('previewImg').src = e.target.result;
+          document.getElementById('imagePreview').classList.add('active');
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Text formatting functions
+    function formatText(type) {
+      const textarea = document.getElementById('postContent');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const selectedText = textarea.value.substring(start, end);
+      let formattedText = '';
+
+      switch(type) {
+        case 'bold':
+          formattedText = `<strong>${selectedText || 'bold text'}</strong>`;
+          break;
+        case 'italic':
+          formattedText = `<em>${selectedText || 'italic text'}</em>`;
+          break;
+        case 'h2':
+          formattedText = `<h2>${selectedText || 'Heading 2'}</h2>`;
+          break;
+        case 'h3':
+          formattedText = `<h3>${selectedText || 'Heading 3'}</h3>`;
+          break;
+        case 'ul':
+          formattedText = `<ul>\n  <li>${selectedText || 'List item'}</li>\n  <li>List item</li>\n</ul>`;
+          break;
+        case 'quote':
+          formattedText = `<blockquote>${selectedText || 'Quote text'}</blockquote>`;
+          break;
+        case 'link':
+          const url = prompt('Enter URL:');
+          formattedText = `<a href="${url || '#'}">${selectedText || 'Link text'}</a>`;
+          break;
+      }
+
+      textarea.value = textarea.value.substring(0, start) + formattedText + textarea.value.substring(end);
+      textarea.focus();
+    }
+
+    // Form submission
+    document.getElementById('blogUploadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Publishing...';
+      submitBtn.disabled = true;
+      
+      // Create FormData object
+      const formData = new FormData(this);
+      
+      // Send to backend
+      fetch('upload-blog.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          showSuccess();
+          localStorage.removeItem('blogDraft'); // Clear saved draft
+          
+          // Optionally redirect to the new post
+          if (confirm('Post published successfully! Would you like to view it?')) {
+            window.open('../pages/' + data.post_url, '_blank');
+          }
+          
+          clearFormAfterSuccess();
+        } else {
+          alert('Error: ' + data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to publish post. Please check your connection and try again.');
+      })
+      .finally(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
+    });
+
+    function showSuccess() {
+      const message = document.getElementById('successMessage');
+      message.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        message.classList.remove('active');
+      }, 5000);
+    }
+
+    function clearForm() {
+      if (confirm('Are you sure you want to clear the form? All data will be lost.')) {
+        clearFormAfterSuccess();
+      }
+    }
+
+    function clearFormAfterSuccess() {
+      document.getElementById('blogUploadForm').reset();
+      document.getElementById('imagePreview').classList.remove('active');
+      document.getElementById('titleCount').textContent = '0';
+      document.getElementById('excerptCount').textContent = '0';
+      document.getElementById('postDate').valueAsDate = new Date();
+    }
+
+    function saveAsDraft() {
+      const formData = new FormData(document.getElementById('blogUploadForm'));
+      formData.append('status', 'draft');
+      
+      // Save to localStorage as backup
+      const draftData = {};
+      for (let [key, value] of formData.entries()) {
+        if (key !== 'featured_image') {
+          draftData[key] = value;
+        }
+      }
+      localStorage.setItem('blogDraft', JSON.stringify(draftData));
+      
+      alert('Draft saved successfully! You can continue editing later.');
+      
+      // Here you would also send to your backend with status='draft'
+      console.log('Saved as draft:', draftData);
+    }
+
+    // Load draft on page load if exists
+    window.addEventListener('DOMContentLoaded', function() {
+      const draft = localStorage.getItem('blogDraft');
+      if (draft && confirm('A draft was found. Would you like to load it?')) {
+        const draftData = JSON.parse(draft);
+        for (let key in draftData) {
+          const element = document.querySelector(`[name="${key}"]`);
+          if (element) {
+            element.value = draftData[key];
+          }
+        }
+        // Trigger character counters
+        document.getElementById('postTitle').dispatchEvent(new Event('input'));
+        document.getElementById('postExcerpt').dispatchEvent(new Event('input'));
+      }
+    });
+  </script>
+</body>
+</html>
