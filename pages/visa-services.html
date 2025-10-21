@@ -116,7 +116,7 @@
         <div class="visa-hero-content">
           <h1 class="visa-hero-title">Visa Services — Simple, Guided, Reliable</h1>
           <p class="visa-hero-subtitle">Travel stress-free with Jetwide! We simplify visa and passport applications for tourism, study, business, and family travel — trusted by Kenyan travelers worldwide.</p>
-          <a href="contact.html" class="btn btn-primary">Start Your Application</a>
+          <a href="#visa-application-form" class="btn btn-primary">Start Your Application</a>
         </div>
       </div>
     </div>
@@ -231,7 +231,7 @@
           <!-- UAE/Dubai -->
           <div class="visa-country-card">
             <div class="visa-country-header">
-              <img src="../assets/images/UAE-visa.jpg" alt="UAE Visa" class="visa-country-image" />
+              <img src="../assets/images/Dubai-Images/ATV-Quad-Biking-Adventures.jpg" alt="UAE Visa" class="visa-country-image" />
               <div class="visa-country-overlay">
                 <h3 class="visa-country-title">UAE / Dubai</h3>
                 <p class="visa-country-types">Tourist | Visit | Business</p>
@@ -431,6 +431,174 @@
 
     </div>
   </main>
+
+  <!-- Visa Application Form Section -->
+  <section class="visa-application-section" id="visa-application-form">
+    <div class="container">
+      <div class="visa-form-header">
+        <h2>Visa Application Form</h2>
+        <p class="visa-form-subtitle">Please complete this form to begin your application. You will be required to bring the original documents to our office for verification.</p>
+      </div>
+
+      <form id="visaApplicationForm" class="visa-application-form" enctype="multipart/form-data">
+        
+        <!-- Section 1: Personal Details -->
+        <div class="visa-form-section">
+          <h3 class="visa-form-section-title">Section 1: Personal Details</h3>
+          <div class="visa-form-grid">
+            <div class="visa-form-group">
+              <label for="firstName">First Name <span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="visa-form-group">
+              <label for="lastName">Last Name <span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div class="visa-form-group">
+              <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
+              <input type="date" id="dateOfBirth" name="dateOfBirth" required />
+            </div>
+            <div class="visa-form-group">
+              <label for="nationality">Nationality <span class="required">*</span></label>
+              <select id="nationality" name="nationality" required>
+                <option value="">Select Nationality</option>
+                <option value="Kenyan">Kenyan</option>
+                <option value="Ugandan">Ugandan</option>
+                <option value="Tanzanian">Tanzanian</option>
+                <option value="Rwandan">Rwandan</option>
+                <option value="Burundian">Burundian</option>
+                <option value="Ethiopian">Ethiopian</option>
+                <option value="Somali">Somali</option>
+                <option value="South Sudanese">South Sudanese</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="visa-form-group">
+              <label for="gender">Gender <span class="required">*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Passport Information -->
+        <div class="visa-form-section">
+          <h3 class="visa-form-section-title">Section 2: Passport Information</h3>
+          <div class="visa-form-grid">
+            <div class="visa-form-group">
+              <label for="passportNumber">Passport Number <span class="required">*</span></label>
+              <input type="text" id="passportNumber" name="passportNumber" required />
+            </div>
+            <div class="visa-form-group">
+              <label for="passportCountry">Passport Country <span class="required">*</span></label>
+              <select id="passportCountry" name="passportCountry" required>
+                <option value="">Select Country</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="visa-form-group">
+              <label for="passportExpiry">Passport Expiry Date <span class="required">*</span></label>
+              <input type="date" id="passportExpiry" name="passportExpiry" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Contact Information -->
+        <div class="visa-form-section">
+          <h3 class="visa-form-section-title">Section 3: Contact Information</h3>
+          <div class="visa-form-grid">
+            <div class="visa-form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="visa-form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="visa-form-group full-width">
+              <label for="address">Current Residential Address <span class="required">*</span></label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Travel Information -->
+        <div class="visa-form-section">
+          <h3 class="visa-form-section-title">Section 4: Travel Information</h3>
+          <div class="visa-form-grid">
+            <div class="visa-form-group">
+              <label for="purposeOfTravel">Purpose of Travel <span class="required">*</span></label>
+              <select id="purposeOfTravel" name="purposeOfTravel" required>
+                <option value="">Select Purpose</option>
+                <option value="Tourism">Tourism</option>
+                <option value="Business">Business</option>
+                <option value="Visit Family">Visit Family</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="visa-form-group">
+              <label for="arrivalDate">Intended Date of Arrival <span class="required">*</span></label>
+              <input type="date" id="arrivalDate" name="arrivalDate" required />
+            </div>
+            <div class="visa-form-group">
+              <label for="durationOfStay">Intended Duration of Stay <span class="required">*</span></label>
+              <select id="durationOfStay" name="durationOfStay" required>
+                <option value="">Select Duration</option>
+                <option value="Less than 2 weeks">Less than 2 weeks</option>
+                <option value="2-4 weeks">2-4 weeks</option>
+                <option value="1-3 months">1-3 months</option>
+                <option value="More than 3 months">More than 3 months</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5: Document Upload -->
+        <div class="visa-form-section">
+          <h3 class="visa-form-section-title">Section 5: Minimal Document Upload</h3>
+          <p class="visa-form-note"><small>Please provide a clear scan or photo of your passport. Other documents can be verified in person.</small></p>
+          <div class="visa-form-grid">
+            <div class="visa-form-group full-width">
+              <label for="passportCopy">Passport Bio-Page Copy <span class="required">*</span></label>
+              <input type="file" id="passportCopy" name="passportCopy" accept=".jpg,.jpeg,.png,.pdf" required />
+              <small class="visa-form-help">Accepted: JPG, PNG, PDF. Max 2MB.</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 6: Declaration & Submission -->
+        <div class="visa-form-section">
+          <h3 class="visa-form-section-title">Section 6: Declaration & Submission</h3>
+          <div class="visa-form-declaration">
+            <label class="visa-checkbox-label">
+              <input type="checkbox" id="declaration" name="declaration" required />
+              <span>I confirm that the information provided is true and correct. I understand that I must present all original documents for verification at your office to complete my application. <span class="required">*</span></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="visa-form-submit">
+          <button type="submit" class="btn-primary visa-submit-btn">Submit Application</button>
+        </div>
+
+        <!-- Response Message -->
+        <div id="visaFormResponse" class="visa-form-response"></div>
+      </form>
+    </div>
+  </section>
 
   <!-- Contact CTA Section -->
   <section class="cta-section">
@@ -644,6 +812,53 @@
       
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }, false);
+
+    // Visa Application Form submission
+    document.getElementById('visaApplicationForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const submitButton = this.querySelector('.visa-submit-btn');
+      const responseDiv = document.getElementById('visaFormResponse');
+      
+      // Validate file size
+      const passportFile = document.getElementById('passportCopy').files[0];
+      if (passportFile && passportFile.size > 2 * 1024 * 1024) {
+        responseDiv.innerHTML = '<div class="error-message">File size must be less than 2MB</div>';
+        responseDiv.style.display = 'block';
+        return;
+      }
+      
+      // Disable submit button
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+      responseDiv.style.display = 'none';
+      
+      try {
+        const response = await fetch('../send-visa-application.php', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          responseDiv.innerHTML = '<div class="success-message">' + result.message + '</div>';
+          this.reset();
+        } else {
+          responseDiv.innerHTML = '<div class="error-message">' + result.message + '</div>';
+        }
+      } catch (error) {
+        responseDiv.innerHTML = '<div class="error-message">An error occurred. Please try again or contact us directly.</div>';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit Application';
+        responseDiv.style.display = 'block';
+        
+        // Scroll to response message
+        responseDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
   </script>
 </body>
 </html>

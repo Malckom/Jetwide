@@ -74,7 +74,7 @@
           <a href="../index.html">Home</a>
           <a href="visa-services.html">VISA Processing</a>
           <div class="dropdown">
-            <a href="#tours" class="dropdown-toggle">Tours & Safaris <span class="dropdown-arrow">▼</span></a>
+            <a href="../index.html#tours" class="dropdown-toggle">Tours & Safaris <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-menu">
               <div class="dropdown-section">
                 <h4 class="dropdown-header">Local Tours</h4>
@@ -89,11 +89,11 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+            <a href="../index.html#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-menu">
               <a href="car-hire.html" class="dropdown-item">Car Hire Services</a>
-              <a href="#job-placement" class="dropdown-item">Job Placement Services</a>
-              <a href="#airport-transfers" class="dropdown-item">Airport Transfer Services</a>
+              <a href="job-placement.html" class="dropdown-item">Job Placement Services</a>
+              <a href="airline-airport-services.html" class="dropdown-item">Airline Booking & Airport Transfer Services</a>
             </div>
           </div>
           <div class="dropdown">
@@ -130,94 +130,20 @@
       <!-- Blog Title -->
       <h1 class="blog-main-title">Learn Something More From<br>Our Latest Blogs.</h1>
 
-      <!-- Blog Grid Row 1 -->
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/Visa-Page/visa-hero.jpg" alt="Kenya Visa Guide" />
-            <div class="blog-date-badge">
-              <span class="date-day">15</span>
-              <span class="date-month">JAN</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <h3>Essential Visa Guide for Kenya Travel - Everything You Need to Know</h3>
-            <a href="blog-post.html?id=visa-guide-kenya-2024" class="blog-read-more">Read More →</a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/tropical_beaches.jpg" alt="Summer Vacation" />
-            <div class="blog-date-badge">
-              <span class="date-day">24</span>
-              <span class="date-month">JUN</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <h3>Exploring new vacations 2021: What traveler need to know</h3>
-            <a href="#" class="blog-read-more">Read More →</a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/Romantic.jpg" alt="Cultural Encounters" />
-            <div class="blog-date-badge">
-              <span class="date-day">25</span>
-              <span class="date-month">JUN</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <h3>Cultural encounters: Immersing yourself in local traditions.</h3>
-            <a href="#" class="blog-read-more">Read More →</a>
-          </div>
-        </article>
+      <!-- Loading Message -->
+      <div id="loadingMessage" style="text-align: center; padding: 40px; font-size: 18px; color: #666;">
+        Loading blog posts...
       </div>
 
-      <!-- Blog Grid Row 2 -->
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/Girrafe.jpg" alt="Memorable Adventure" />
-            <div class="blog-date-badge">
-              <span class="date-day">21</span>
-              <span class="date-month">JUN</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <h3>Our Journey Memorable Adventure Worldwide</h3>
-            <a href="#" class="blog-read-more">Read More →</a>
-          </div>
-        </article>
+      <!-- Dynamic Blog Grid (populated by JavaScript) -->
+      <div id="blogContainer">
+        <!-- Blog posts will be loaded here dynamically -->
+      </div>
 
-        <article class="blog-card">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/tropical_beaches.jpg" alt="Summer Vacation" />
-            <div class="blog-date-badge">
-              <span class="date-day">24</span>
-              <span class="date-month">JUN</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <h3>Exploring new vacations 2021: What traveler need to know</h3>
-            <a href="#" class="blog-read-more">Read More →</a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/Romantic.jpg" alt="Cultural Encounters" />
-            <div class="blog-date-badge">
-              <span class="date-day">25</span>
-              <span class="date-month">JUN</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <h3>Cultural encounters: Immersing yourself in local traditions.</h3>
-            <a href="#" class="blog-read-more">Read More →</a>
-          </div>
-        </article>
+      <!-- No Posts Message -->
+      <div id="noPostsMessage" style="display: none; text-align: center; padding: 40px;">
+        <h3 style="color: #14132A;">No blog posts available yet.</h3>
+        <p style="color: #666;">Check back soon for exciting travel stories and tips!</p>
       </div>
 
       <!-- Call to Action -->
@@ -388,7 +314,84 @@
         
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
       }, false);
+
+      // Load blog posts dynamically
+      loadBlogPosts();
     });
+
+    // Function to load and display blog posts
+    async function loadBlogPosts() {
+      const container = document.getElementById('blogContainer');
+      const loadingMessage = document.getElementById('loadingMessage');
+      const noPostsMessage = document.getElementById('noPostsMessage');
+
+      try {
+        const response = await fetch('../data/blog-posts.json');
+        
+        if (!response.ok) {
+          throw new Error('Failed to load blog posts');
+        }
+
+        const posts = await response.json();
+        
+        // Hide loading message
+        loadingMessage.style.display = 'none';
+
+        if (!posts || posts.length === 0) {
+          noPostsMessage.style.display = 'block';
+          return;
+        }
+
+        // Group posts into rows of 3
+        let blogHTML = '';
+        for (let i = 0; i < posts.length; i += 3) {
+          blogHTML += '<div class="blog-grid">';
+          
+          // Get up to 3 posts for this row
+          const rowPosts = posts.slice(i, i + 3);
+          
+          rowPosts.forEach(post => {
+            const date = new Date(post.publish_date);
+            const day = date.getDate().toString().padStart(2, '0');
+            const month = date.toLocaleString('default', { month: 'short' }).toUpperCase();
+            
+            blogHTML += `
+              <article class="blog-card">
+                <div class="blog-image-wrapper">
+                  <img src="../${post.featured_image}" alt="${escapeHtml(post.title)}" />
+                  <div class="blog-date-badge">
+                    <span class="date-day">${day}</span>
+                    <span class="date-month">${month}</span>
+                  </div>
+                </div>
+                <div class="blog-content">
+                  <h3>${escapeHtml(post.title)}</h3>
+                  <a href="blog-post.html?id=${post.id}" class="blog-read-more">Read More →</a>
+                </div>
+              </article>
+            `;
+          });
+          
+          blogHTML += '</div>';
+        }
+
+        container.innerHTML = blogHTML;
+
+      } catch (error) {
+        console.error('Error loading blog posts:', error);
+        loadingMessage.innerHTML = `
+          <p style="color: #e74c3c;">Failed to load blog posts. Please try again later.</p>
+          <p style="font-size: 14px; color: #999;">Error: ${error.message}</p>
+        `;
+      }
+    }
+
+    // Helper function to escape HTML
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
   </script>
 </body>
 </html>

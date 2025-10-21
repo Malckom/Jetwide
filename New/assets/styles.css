@@ -815,7 +815,7 @@ section[class*="-hero"] > * {
 /* ---- HERO SECTION WITH SLIDESHOW ---- */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 65vh;
   overflow: hidden;
   margin-top: 0;
   display: flex;
@@ -832,31 +832,31 @@ section[class*="-hero"] > * {
 /* iPhone specific fixes */
 @media screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
   .hero-section {
-    min-height: 100vh;
+    min-height: 60vh;
   }
 }
 
 @media (min-width: 375px) and (max-width: 430px) {
   .hero-section {
-    min-height: 100vh;
+    min-height: 60vh;
   }
 }
 
 @media (min-width: 480px) {
   .hero-section {
-    min-height: 100vh;
+    min-height: 65vh;
   }
 }
 
 @media (min-width: 768px) {
   .hero-section {
-    min-height: 100vh;
+    min-height: 70vh;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-section {
-    min-height: 100vh;
+    min-height: 70vh;
   }
 }
 
@@ -958,19 +958,19 @@ section[class*="-hero"] > * {
 
 @media (min-width: 480px) {
   .hero-overlay {
-    padding: 140px 24px 100px;
+    padding: 140px 24px 80px;
   }
 }
 
 @media (min-width: 768px) {
   .hero-overlay {
-    padding: 160px 48px 120px;
+    padding: 160px 48px 100px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-overlay {
-    padding: 196px 56px;
+    padding: 196px 56px 120px;
   }
 }
 
@@ -4088,35 +4088,35 @@ section[class*="-hero"] > * {
 
 /* Car Hire Hero Section */
 .car-hire-hero {
-  min-height: 500px;
+  min-height: 350px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('images/Car-Hire-Page/Car-hire-heros-section.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 16px 40px;
+  padding: 90px 16px 40px;
   margin-top: 0;
 }
 
 @media (min-width: 480px) {
   .car-hire-hero {
-    min-height: 450px;
-    padding: 140px 24px 50px;
+    min-height: 350px;
+    padding: 95px 24px 50px;
   }
 }
 
 @media (min-width: 768px) {
   .car-hire-hero {
-    min-height: 500px;
-    padding: 160px 32px 60px;
+    min-height: 400px;
+    padding: 100px 32px 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .car-hire-hero {
-    min-height: 500px;
-    padding: 180px 48px 80px;
+    min-height: 400px;
+    padding: 110px 48px 60px;
   }
 }
 
@@ -4818,27 +4818,27 @@ section[class*="-hero"] > * {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 16px 40px;
+  padding: 90px 16px 40px;
   margin-top: 0;
 }
 
 @media (min-width: 480px) {
   .visa-hero {
     min-height: 450px;
-    padding: 140px 24px 50px;
+    padding: 95px 24px 50px;
   }
 }
 
 @media (min-width: 768px) {
   .visa-hero {
     min-height: 500px;
-    padding: 160px 32px 60px;
+    padding: 100px 32px 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .visa-hero {
-    padding: 180px 48px 80px;
+    padding: 110px 48px 80px;
   }
 }
 
@@ -5466,6 +5466,297 @@ section[class*="-hero"] > * {
   }
 }
 
+/* =====================================================
+   VISA APPLICATION FORM STYLES
+   ===================================================== */
+
+.visa-application-section {
+  background: #f9f9f9;
+  padding: 80px 0;
+  margin: 0;
+}
+
+.visa-form-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.visa-form-header h2 {
+  font-size: 2.5rem;
+  color: #14132A;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.visa-form-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.visa-application-form {
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.visa-form-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.visa-form-section:last-of-type {
+  border-bottom: none;
+}
+
+.visa-form-section-title {
+  font-size: 1.5rem;
+  color: #14132A;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.visa-form-note {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.visa-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.visa-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.visa-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.visa-form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.visa-form-group input[type="text"],
+.visa-form-group input[type="email"],
+.visa-form-group input[type="tel"],
+.visa-form-group input[type="date"],
+.visa-form-group select,
+.visa-form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.visa-form-group input:focus,
+.visa-form-group select:focus,
+.visa-form-group textarea:focus {
+  outline: none;
+  border-color: #FE9900;
+  box-shadow: 0 0 0 3px rgba(254, 153, 0, 0.1);
+}
+
+.visa-form-group input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.visa-form-group input[type="file"]:hover {
+  border-color: #FE9900;
+  background: #fff8f0;
+}
+
+.visa-form-help {
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.visa-form-declaration {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #FE9900;
+}
+
+.visa-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.visa-checkbox-label input[type="checkbox"] {
+  margin-right: 12px;
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.visa-form-submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.visa-submit-btn {
+  background: linear-gradient(135deg, #FE9900 0%, #ff8800 100%);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(254, 153, 0, 0.3);
+}
+
+.visa-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254, 153, 0, 0.4);
+}
+
+.visa-submit-btn:active {
+  transform: translateY(0);
+}
+
+.visa-submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.visa-form-response {
+  margin-top: 25px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: none;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Responsive Styles for Visa Application Form */
+@media (max-width: 768px) {
+  .visa-application-section {
+    padding: 60px 0;
+  }
+
+  .visa-form-header h2 {
+    font-size: 2rem;
+  }
+
+  .visa-form-subtitle {
+    font-size: 1rem;
+  }
+
+  .visa-application-form {
+    padding: 30px 20px;
+  }
+
+  .visa-form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .visa-form-section-title {
+    font-size: 1.3rem;
+  }
+
+  .visa-submit-btn {
+    padding: 12px 35px;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .visa-form-header {
+    margin-bottom: 30px;
+  }
+
+  .visa-form-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .visa-application-form {
+    padding: 25px 15px;
+  }
+
+  .visa-form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .visa-form-group input,
+  .visa-form-group select,
+  .visa-form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
 /* Themed Packages Styles */
 .themed-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -5477,27 +5768,27 @@ section[class*="-hero"] > * {
   color: white;
   text-align: center;
   position: relative;
-  padding: 120px 16px 40px;
+  padding: 90px 16px 40px;
   margin-top: 0;
 }
 
 @media (min-width: 480px) {
   .themed-hero {
     min-height: 450px;
-    padding: 140px 24px 50px;
+    padding: 95px 24px 50px;
   }
 }
 
 @media (min-width: 768px) {
   .themed-hero {
     min-height: 500px;
-    padding: 160px 32px 60px;
+    padding: 100px 32px 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .themed-hero {
-    padding: 180px 48px 80px;
+    padding: 110px 48px 80px;
   }
 }
 
@@ -5863,7 +6154,7 @@ section[class*="-hero"] > * {
 
 /* Contact Form Styles */
 .contact-hero {
-  min-height: 500px;
+  min-height: 350px;
   background: linear-gradient(135deg, rgba(20, 24, 65, 0.75) 0%, rgba(20, 24, 65, 0.65) 100%),
               url('../assets/images/main-header.jpeg');
   background-size: cover;
@@ -5872,27 +6163,28 @@ section[class*="-hero"] > * {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 120px 16px 40px;
+  padding: 90px 16px 40px;
   margin-top: 0;
 }
 
 @media (min-width: 480px) {
   .contact-hero {
-    min-height: 450px;
-    padding: 140px 24px 50px;
+    min-height: 350px;
+    padding: 95px 24px 50px;
   }
 }
 
 @media (min-width: 768px) {
   .contact-hero {
-    min-height: 500px;
-    padding: 160px 32px 60px;
+    min-height: 400px;
+    padding: 100px 32px 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .contact-hero {
-    padding: 180px 48px 80px;
+    min-height: 400px;
+    padding: 110px 48px 60px;
   }
 }
 
@@ -5999,6 +6291,7 @@ section[class*="-hero"] > * {
   font-weight: 600;
   color: #333;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .form-group input,
@@ -6011,6 +6304,7 @@ section[class*="-hero"] > * {
   font-size: 16px;
   transition: border-color 0.3s ease;
   background-color: #fff;
+  text-align: center;
 }
 
 .form-group input:focus,
@@ -7928,6 +8222,7 @@ section[class*="-hero"] > * {
   color: #666;
   margin-bottom: 8px;
   font-weight: 500;
+  text-align: center;
 }
 
 .simple-form-group input,
@@ -7939,6 +8234,7 @@ section[class*="-hero"] > * {
   font-family: inherit;
   border-radius: 0;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .simple-form-group input:focus,
@@ -8058,6 +8354,136 @@ section[class*="-hero"] > * {
 @media (max-width: 768px) {
   .contact-map-container {
     height: 350px;
+  }
+}
+
+/* Car Hire Enquiry Section */
+.car-hire-enquiry-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.car-hire-enquiry-section .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #14132A;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.car-hire-enquiry-section .section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.car-hire-form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.car-hire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FE9900;
+  background: #fffbf5;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: #c41e3a;
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.submit-btn:hover {
+  background: #a01829;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .car-hire-enquiry-section {
+    padding: 60px 20px;
+  }
+
+  .car-hire-form-wrapper {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
   }
 }
 

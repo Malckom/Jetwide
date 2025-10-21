@@ -119,7 +119,6 @@
             <strong>Reliable</strong>, Flexible, On Time. Big or small, With or<br>
             without a driver? we have them all!
           </p>
-          <a href="#cars" class="btn-primary car-hire-cta">Book Now!</a>
         </div>
       </div>
     </div>
@@ -133,7 +132,7 @@
         Looking for car hire in Nairobi, Mombasa, Kisumu, or across Kenya? Jetwide offers a wide range of economy cars, SUVs, luxury sedans, and safari-ready 4x4s — all at transparent daily rates with no hidden costs. Whether it's a quick city run, airport pickup, coast holiday, or safari trip, we provide short-term and long-term car rental in Kenya tailored to your needs.
       </p>
       <div class="car-selection-cta">
-        <a href="#available-cars" class="btn-secondary">Hire a Car</a>
+        <a href="#car-hire-enquiry" class="btn-secondary">Hire a Car</a>
       </div>
     </div>
   </section>
@@ -302,9 +301,129 @@
         </div>
       </div>
       <p class="tagline">Drive Kenya your way with Jetwide Car Hire & Airport Transfers.</p>
-      <div class="contact-cta">
-        <a href="tel:+254748538311" class="btn-primary">Call Now: 0748 538 311</a>
+    </div>
+  </section>
+
+  <!-- Car Hire Enquiry Form -->
+  <section class="car-hire-enquiry-section" id="car-hire-enquiry">
+    <div class="container">
+      <h2 class="section-title">Request Your Car Hire Quote</h2>
+      <p class="section-subtitle">For any car rent enquiries or requests please fill out the following form and we'll get back to you as soon as possible.<br>Alternatively contact us directly via telephone or mobile.</p>
+      
+      <div class="car-hire-form-wrapper">
+        <form class="car-hire-form" id="carHireForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name*</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="lastName">Last Name*</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input type="text" id="companyName" name="companyName" />
+            </div>
+            
+            <div class="form-group">
+              <label for="branch">Branch*</label>
+              <select id="branch" name="branch" required>
+                <option value="">Select Branch</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Mombasa">Mombasa</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vehicleRequired">Vehicle Required*</label>
+              <select id="vehicleRequired" name="vehicleRequired" required>
+                <option value="">Please Select</option>
+                <option value="7-Seater Minivan">7-Seater Minivan</option>
+                <option value="SUV Family Car">SUV Family Car</option>
+                <option value="Executive Sedan">Executive Sedan</option>
+                <option value="Compact City Car">Compact City Car</option>
+                <option value="4WD Safari Vehicle">4WD Safari Vehicle</option>
+                <option value="Premium Luxury Car">Premium Luxury Car</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="startDate" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="duration">Duration</label>
+              <input type="text" id="duration" name="duration" placeholder="e.g. 1 Day, 1 Week, 1 Month, 1 Year" />
+            </div>
+            
+            <div class="form-group">
+              <label for="serviceType">Service Type*</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="">Please Select</option>
+                <option value="Airport Transfer">Airport Transfer</option>
+                <option value="City Transfer">City Transfer</option>
+                <option value="Safari Trip">Safari Trip</option>
+                <option value="Corporate Lease">Corporate Lease</option>
+                <option value="Long-term Rental">Long-term Rental</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hireType">Hire Type*</label>
+              <select id="hireType" name="hireType" required>
+                <option value="">Please Select</option>
+                <option value="Self Drive">Self Drive</option>
+                <option value="Chauffeur Driven">Chauffeur Driven</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="additionalInfo">Additional Information</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="6" placeholder="e.g Location of use"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">SUBMIT</button>
+        </form>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="simple-cta-section">
+    <div class="simple-cta-content">
+      <div class="simple-cta-text">
+        <h2>Ready to go?</h2>
+        <p>Give us a quick call</p>
+      </div>
+      <a href="tel:+254748538311" class="simple-cta-btn">
+        Contact us →
+      </a>
     </div>
   </section>
 
@@ -488,6 +607,60 @@
           if (email) {
             alert('Thank you for subscribing! We\'ll keep you updated with our latest offers.');
             this.querySelector('.newsletter-input').value = '';
+          }
+        });
+      }
+
+      // Car Hire Form Submission
+      const carHireForm = document.getElementById('carHireForm');
+      if (carHireForm) {
+        carHireForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const submitBtn = this.querySelector('.submit-btn');
+          const originalBtnText = submitBtn.textContent;
+          submitBtn.textContent = 'SENDING...';
+          submitBtn.disabled = true;
+          
+          // Collect form data
+          const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            companyName: document.getElementById('companyName').value,
+            branch: document.getElementById('branch').value,
+            vehicleRequired: document.getElementById('vehicleRequired').value,
+            startDate: document.getElementById('startDate').value,
+            duration: document.getElementById('duration').value,
+            serviceType: document.getElementById('serviceType').value,
+            hireType: document.getElementById('hireType').value,
+            additionalInfo: document.getElementById('additionalInfo').value
+          };
+          
+          try {
+            const response = await fetch('../send-car-hire-enquiry.php', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+              alert(result.message);
+              this.reset();
+            } else {
+              alert('Error: ' + result.message);
+            }
+          } catch (error) {
+            alert('An error occurred. Please try again or contact us directly at tours@jetwide.org');
+            console.error('Error:', error);
+          } finally {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
           }
         });
       }
