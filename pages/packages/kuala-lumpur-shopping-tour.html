@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuala Lumpur Shopping Tour | Jetwide Consortium</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    
+    <style>
+      /* White overlay navigation menu */
+      .header-main {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-menu a {
+        color: #14132A;
+        font-weight: 500;
+      }
+      
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #FE9900;
+      }
+      
+      .dropdown-arrow {
+        color: #14132A;
+      }
+      
+      .dropdown-menu {
+        background: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .dropdown-header {
+        color: #14132A;
+      }
+      
+      .dropdown-item {
+        color: #333;
+      }
+      
+      .dropdown-item:hover {
+        background: #f8f8f8;
+        color: #FE9900;
+      }
+      
+      .mobile-menu-toggle span {
+        background: #14132A;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-menu {
+          background: white;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+      
+      /* Quick Information Card Styling */
+      .package-info-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+      }
+      
+      .package-info-card h3 {
+        color: #14132A;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #FE9900;
+        font-weight: 700;
+      }
+      
+      .package-info-card .info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #FE9900;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      
+      .package-info-card .info-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(254, 153, 0, 0.15);
+        border-left-width: 6px;
+      }
+      
+      .info-item-label {
+        font-weight: 600;
+        color: #555;
+        font-size: 0.95rem;
+      }
+      
+      .info-item-value {
+        font-weight: 700;
+        color: #14132A;
+        font-size: 1.05rem;
+      }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <!-- Contact Info -->
+                    <div class="header-contact">
+                        <div class="contact-item">
+                            <img src="../../assets/images/phone-call.png?v=5" alt="Phone" width="16" height="16" />
+                            <a href="tel:+254748538311">0748 538 311</a>
+                        </div>
+                        <div class="contact-item">
+                            <img src="../../assets/images/email.png?v=5" alt="Email" width="16" height="16" />
+                            <a href="mailto:safaris@jetwide.org">safaris@jetwide.org</a>
+                        </div>
+                        <div class="contact-item desktop-only">
+                            <img src="../../assets/images/location.png?v=5" alt="Location" width="16" height="16" />
+                            <a href="https://maps.google.com/?q=Westlands+Square+2nd+Floor+Nairobi" target="_blank">Westlands Square 2nd Floor</a>
+                        </div>
+                        <div class="contact-item desktop-only">
+                            <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="header-social">
+                        <a href="https://wa.me/254748538311" target="_blank"><img src="../../assets/images/whatsapp.png?v=5" alt="WhatsApp" width="18" height="18" /></a>
+                        <a href="https://www.facebook.com/jetwideconsortium/" target="_blank"><img src="../../assets/images/facebook.png?v=5" alt="Facebook" width="18" height="18" /></a>
+                        <a href="https://www.instagram.com/jetwidesafaris/" target="_blank"><img src="../../assets/images/instagram.png?v=5" alt="Instagram" width="18" height="18" /></a>
+                        <a href="https://www.x.com/JetWideC" target="_blank"><img src="../../assets/images/twitter.png?v=5" alt="Twitter" width="18" height="18" /></a>
+                        <a href="https://www.linkedin.com/company/jetwideconsortium" target="_blank"><img src="../../assets/images/linkedin.png?v=5" alt="LinkedIn" width="18" height="18" /></a>
+                        <a href="https://www.pinterest.com/jetwide/" target="_blank"><img src="../../assets/images/pinterest.png?v=5" alt="Pinterest" width="18" height="18" /></a>
+                        <a href="https://www.youtube.com/@JetwideConsortium" target="_blank"><img src="../../assets/images/youtube.png?v=5" alt="YouTube" width="18" height="18" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main header -->
+        <div class="header-main">
+            <div class="container">
+                <img src="../../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav-menu">
+                    <a href="../../index.html">Home</a>
+                    <a href="../visa-services.html">VISA Processing</a>
+                    <div class="dropdown">
+                        <a href="../../index.html#tours" class="dropdown-toggle">Tours & Safaris <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-section">
+                                <h4 class="dropdown-header">Local Tours</h4>
+                                <a href="../themed-packages.html" class="dropdown-item">Themed Packages</a>
+                                <a href="../beach-getaways.html" class="dropdown-item">Beach Getaways</a>
+                                <a href="../kenyan-safaris.html" class="dropdown-item">Exclusive Kenyan Safaris</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h4 class="dropdown-header">International Destinations</h4>
+                                <a href="../international-destinations.html" class="dropdown-item">International Destinations</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="../../index.html#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../car-hire.html" class="dropdown-item">Car Hire Services</a>
+                            <a href="../job-placement.html" class="dropdown-item">Job Placement Services</a>
+                            <a href="../airline-airport-services.html" class="dropdown-item">Airline Booking & Airport Transfer Services</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="../about-us.html" class="dropdown-toggle">About Jetwide <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../about-us.html" class="dropdown-item">About Us</a>
+                            <a href="../blogs.html" class="dropdown-item">Blogs</a>
+                            <a href="../contact.html" class="dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Package Detail Hero -->
+    <section class="package-detail-hero">
+        <div class="container">
+            <div class="package-detail-header">
+                <div class="package-breadcrumb">
+                    <a href="../../index.html">Home</a> > 
+                    <a href="../international-destinations.html">International Destinations</a> > 
+                    <span>KL Shopping Tour</span>
+                </div>
+                <h1 class="package-detail-title">5-Day Kuala Lumpur Shopping Paradise</h1>
+                <div class="package-meta">
+                    <div class="meta-item">
+                        <strong>FROM</strong>
+                        <span class="package-price">USD 1,265</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>DURATION</strong>
+                        <span>5 Days / 4 Nights</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>TOUR TYPE</strong>
+                        <span class="tour-type">International</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>DESTINATION</strong>
+                        <span>Kuala Lumpur, Malaysia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Content -->
+    <section class="package-content">
+        <div class="container">
+            <div class="package-layout">
+                <!-- Main Content -->
+                <div class="package-main">
+                    <!-- Gallery -->
+                    <div class="package-gallery">
+                        <div class="gallery-main">
+                            <div class="main-image-wrapper">
+                                <img src="../../assets/images/International-Packages/kuala-lumpur.jpg" alt="Kuala Lumpur Shopping" id="mainImage" class="main-gallery-image">
+                                <button class="gallery-btn" onclick="openLightbox()">📷 GALLERY</button>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                    <img src="../../assets/images/International-Packages/kuala-lumpur.jpg" alt="Kuala Lumpur" onclick="changeMainImage(this)" class="thumbnail">
+                    <img src="../../assets/images/International-Packages/petronas-towers.jpg" alt="Petronas Towers" onclick="changeMainImage(this.src)">
+                    <img src="../../assets/images/International-Packages/batu-caves.jpg" alt="Batu Caves" onclick="changeMainImage(this.src)">
+                    <img src="../../assets/images/International-Packages/genting-highlands.jpg" alt="Genting Highlands" onclick="changeMainImage(this.src)">
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="package-main-content">
+                <!-- Tabs -->
+                <div class="package-tabs">
+                    <button class="tab-button active" onclick="openTab(event, 'overview')">Overview</button>
+                    <button class="tab-button" onclick="openTab(event, 'accommodation')">Accommodation</button>
+                    <button class="tab-button" onclick="openTab(event, 'itinerary')">Itinerary</button>
+                    <button class="tab-button" onclick="openTab(event, 'inclusions')">Inclusions & Exclusions</button>
+                </div>
+
+                <!-- Tab Content: Overview -->
+                <div id="overview" class="tab-content active">
+                    <h2>Package Overview</h2>
+                    <p>Discover the ultimate shopping paradise in Kuala Lumpur! This specially curated 5-day package is designed for shopping enthusiasts, featuring exclusive visits to Malaysia's premier shopping destinations including Genting Premium Outlet, Mitsui Outlet Park KLIA, and a comprehensive KL shopping tour with special discount vouchers.</p>
+                    
+                    <h3>Package Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Genting Premium Outlet (GPO):</strong> Shop international brands at discounted prices</li>
+                        <li><strong>5-Hour KL Shopping Tour:</strong> Explore the best shopping districts with exclusive discount vouchers</li>
+                        <li><strong>Mitsui Outlet Park KLIA:</strong> Airport shopping experience enroute to departure</li>
+                        <li><strong>Genting Highlands Experience:</strong> Scenic cable car ride with panoramic views</li>
+                        <li><strong>Batu Caves Visit:</strong> Iconic cultural landmark and Hindu shrine</li>
+                        <li><strong>Shopping Discount Vouchers:</strong> Save more on your purchases at select stores</li>
+                        <li><strong>Qatar Airways:</strong> Quality airline service with comfortable travel</li>
+                        <li><strong>Strategic Hotel Location:</strong> The Pearl Kuala Lumpur Hotel - perfect for shoppers</li>
+                    </ul>
+                    
+                    <h3>Important Information</h3>
+                    <ul class="info-list">
+                        <li>Valid passport required (minimum 6 months validity)</li>
+                        <li>Comfortable walking shoes recommended for shopping tours</li>
+                        <li>Shopping vouchers provided upon arrival</li>
+                        <li>Additional baggage allowance can be arranged for purchases</li>
+                        <li>Most shops accept major credit cards and international currencies</li>
+                        <li>GST refund available for tourists at participating outlets</li>
+                        <li>Free time allows for personal exploration and additional shopping</li>
+                        <li>Hotel location provides easy access to nearby shopping areas</li>
+                    </ul>
+                </div>
+
+                <!-- Tab Content: Accommodation -->
+                <div id="accommodation" class="tab-content">
+                    <h2>Accommodation</h2>
+                    
+                    <div class="hotel-card featured">
+                        <div class="hotel-header">
+                            <h3>The Pearl Kuala Lumpur Hotel</h3>
+                            <div class="hotel-price">
+                                <span class="price-label">From</span>
+                                <span class="price-amount">USD 1,265</span>
+                                <span class="price-note">per person sharing</span>
+                                <span class="single-occ">Single: USD 1,485</span>
+                            </div>
+                        </div>
+                        <p class="hotel-description">A comfortable and strategically located hotel in the heart of Kuala Lumpur, offering easy access to major shopping districts and attractions. Perfect for shoppers looking for convenience and quality accommodation.</p>
+                        <ul class="hotel-features">
+                            <li>✓ <strong>Prime Location:</strong> Walking distance to shopping areas</li>
+                            <li>✓ <strong>Daily Breakfast:</strong> International buffet included</li>
+                            <li>✓ <strong>Modern Amenities:</strong> Well-appointed rooms with contemporary facilities</li>
+                            <li>✓ <strong>Free Wi-Fi:</strong> Stay connected throughout your stay</li>
+                            <li>✓ <strong>Fitness Center:</strong> Keep up with your workout routine</li>
+                            <li>✓ <strong>Restaurant & Café:</strong> On-site dining options</li>
+                            <li>✓ <strong>24/7 Front Desk:</strong> Assistance whenever you need it</li>
+                            <li>✓ <strong>Luggage Storage:</strong> Convenient for shopping sprees</li>
+                            <li>✓ <strong>Currency Exchange:</strong> Available at reception</li>
+                            <li>✓ <strong>Easy Access:</strong> Near public transportation and taxi stands</li>
+                        </ul>
+                        
+                        <div class="hotel-location-info">
+                            <h4>Nearby Shopping Destinations:</h4>
+                            <ul>
+                                <li>Pavilion KL - 10 minutes</li>
+                                <li>Suria KLCC - 15 minutes</li>
+                                <li>Bukit Bintang Shopping District - Walking distance</li>
+                                <li>Central Market - 10 minutes</li>
+                                <li>Lot 10 Shopping Centre - 5 minutes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div id="itinerary" class="tab-content">
+                    <h2>Detailed Itinerary</h2>
+                    
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day1')">
+                            <div class="day-number">Day 1</div>
+                            <div class="day-title">Arrival in Kuala Lumpur</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day1" class="day-content">
+                            <p><strong>Highlights:</strong> Airport Arrival | Hotel Check-in | Leisure Time</p>
+                            <ul>
+                                <li>Arrive at Kuala Lumpur International Airport (KLIA)</li>
+                                <li>Meet and greet by our representative</li>
+                                <li>Transfer to The Pearl Kuala Lumpur Hotel</li>
+                                <li>Check-in and room allocation</li>
+                                <li>Receive your shopping discount vouchers at reception</li>
+                                <li>Rest of the day at leisure to relax or explore nearby areas</li>
+                                <li><strong>Optional:</strong> Evening stroll to Bukit Bintang shopping area</li>
+                                <li><strong>Shopping Tip:</strong> Most malls open until 10:00 PM</li>
+                                <li>Overnight stay at The Pearl Kuala Lumpur Hotel</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> None (arrival day)</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day2')">
+                            <div class="day-number">Day 2</div>
+                            <div class="day-title">Genting Highlands Tour with Batu Caves</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day2" class="day-content">
+                            <p><strong>Highlights:</strong> Batu Caves | Genting Highlands | Cable Car Ride | Genting Premium Outlet</p>
+                            <ul>
+                                <li><strong>8:30 AM:</strong> Breakfast at hotel</li>
+                                <li><strong>9:00 AM:</strong> Departure for full-day Genting Highlands Tour</li>
+                                <li><strong>First Stop - Batu Caves:</strong>
+                                    <ul>
+                                        <li>Visit the famous Batu Caves Hindu shrine</li>
+                                        <li>Climb the 272 colorful steps to the main cave temple</li>
+                                        <li>Admire the 140-foot golden Lord Murugan statue</li>
+                                        <li>Explore the limestone cave formations</li>
+                                        <li>Photo opportunities with monkeys and pigeons</li>
+                                        <li>Duration: approximately 1 hour</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Journey to Genting Highlands:</strong>
+                                    <ul>
+                                        <li>Scenic drive through lush rainforest</li>
+                                        <li>Ascend to 6,000 feet above sea level</li>
+                                        <li>Experience cooler mountain climate</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Genting Highlands Experience:</strong>
+                                    <ul>
+                                        <li><strong>Two-Way Cable Car Ride:</strong> Enjoy panoramic views of tropical rainforest</li>
+                                        <li>Arrive at Awana SkyCentral station</li>
+                                        <li>Experience the longest and fastest cable car in Southeast Asia</li>
+                                        <li>Photo stops at scenic viewpoints</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Genting Premium Outlet (GPO) Shopping:</strong>
+                                    <ul>
+                                        <li>Transfer to Genting Premium Outlet</li>
+                                        <li>Shop at over 150 international and local brands</li>
+                                        <li>Enjoy discounts from 25% to 65% off retail prices</li>
+                                        <li>Brands include: Nike, Adidas, Coach, Michael Kors, Polo Ralph Lauren, and more</li>
+                                        <li>Complimentary shopping tote bag at selected stores</li>
+                                        <li>Duration: approximately 3 hours</li>
+                                    </ul>
+                                </li>
+                                <li><strong>6:00 PM:</strong> Return journey to Kuala Lumpur</li>
+                                <li><strong>7:30 PM:</strong> Arrive at hotel</li>
+                                <li>Evening at leisure - rest or continue shopping at nearby malls</li>
+                                <li>Overnight stay at The Pearl Kuala Lumpur Hotel</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="shopping-note"><strong>Shopping Note:</strong> Bring comfortable shoes and extra bags for purchases. Currency exchange available at outlet.</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day3')">
+                            <div class="day-number">Day 3</div>
+                            <div class="day-title">Kuala Lumpur Shopping Tour (5 Hours)</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day3" class="day-content">
+                            <p><strong>Highlights:</strong> City Shopping Districts | Discount Vouchers | Major Malls | Local Markets</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li><strong>10:00 AM:</strong> Departure for 5-hour Kuala Lumpur Shopping Tour</li>
+                                <li><strong>Tour Includes:</strong>
+                                    <ul>
+                                        <li><strong>Pavilion KL:</strong> 
+                                            <ul>
+                                                <li>Premium shopping mall with luxury brands</li>
+                                                <li>Over 450 retail outlets</li>
+                                                <li>International fashion houses and local designers</li>
+                                                <li>Use your discount vouchers at participating stores</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Suria KLCC:</strong>
+                                            <ul>
+                                                <li>Located at base of Petronas Twin Towers</li>
+                                                <li>High-end brands and electronics</li>
+                                                <li>Kinokuniya bookstore - largest in Malaysia</li>
+                                                <li>Photo opportunity at KLCC Park</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Bukit Bintang Shopping Belt:</strong>
+                                            <ul>
+                                                <li>Visit Lot 10, Fahrenheit 88, and Starhill Gallery</li>
+                                                <li>Street shopping at Jalan Alor area</li>
+                                                <li>Local and international brands</li>
+                                                <li>Souvenir shops and handicraft stores</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Central Market:</strong>
+                                            <ul>
+                                                <li>Traditional Malaysian handicrafts</li>
+                                                <li>Batik fabrics and local artwork</li>
+                                                <li>Souvenirs and gifts</li>
+                                                <li>Cultural performances (weekend)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Shopping Discount Vouchers Included:</strong>
+                                    <ul>
+                                        <li>Fashion and apparel stores</li>
+                                        <li>Electronics and gadgets</li>
+                                        <li>Beauty and cosmetics</li>
+                                        <li>Sports and lifestyle brands</li>
+                                        <li>Terms and conditions apply - voucher booklet provided</li>
+                                    </ul>
+                                </li>
+                                <li><strong>3:00 PM:</strong> Return to hotel</li>
+                                <li><strong>Afternoon/Evening:</strong> Free time for:
+                                    <ul>
+                                        <li>Rest and organize your purchases</li>
+                                        <li>Additional personal shopping</li>
+                                        <li>Visit nearby Petronas Towers fountain show (evening)</li>
+                                        <li>Explore local street food at Jalan Alor</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight stay at The Pearl Kuala Lumpur Hotel</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="shopping-tip"><strong>Pro Shopping Tips:</strong></p>
+                            <ul class="pro-tips">
+                                <li>💡 Most stores offer GST tourist refund - keep receipts</li>
+                                <li>💡 Bargaining accepted at Central Market and street vendors</li>
+                                <li>💡 Fixed prices at major malls</li>
+                                <li>💡 Credit cards widely accepted</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day4')">
+                            <div class="day-number">Day 4</div>
+                            <div class="day-title">Free Day / Optional Activities</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day4" class="day-content">
+                            <p><strong>Highlights:</strong> Leisure Day | Personal Exploration | Optional Tours</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li><strong>Full Day Free:</strong> Enjoy the day at your own pace</li>
+                                <li><strong>Suggested Activities (Optional - at own expense):</strong>
+                                    <ul>
+                                        <li><strong>Sunway Lagoon Theme Park:</strong> Asia's best theme park experience</li>
+                                        <li><strong>Kuala Lumpur Tower (Menara KL):</strong> 
+                                            <ul>
+                                                <li>Observation deck with 360° city views</li>
+                                                <li>Sky Box glass floor experience</li>
+                                                <li>Revolving restaurant option</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Petronas Twin Towers:</strong>
+                                            <ul>
+                                                <li>Skybridge and observation deck visit</li>
+                                                <li>Advance booking required</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Half-Day Kuala Lumpur City Tour:</strong>
+                                            <ul>
+                                                <li>National Palace</li>
+                                                <li>Independence Square</li>
+                                                <li>National Museum</li>
+                                                <li>King's Palace</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>More Shopping:</strong>
+                                            <ul>
+                                                <li>Mid Valley Megamall - largest mall in Malaysia</li>
+                                                <li>Bangsar Village - trendy boutiques</li>
+                                                <li>1 Utama Shopping Centre</li>
+                                                <li>Petaling Street (Chinatown) - bargain hunting</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Spa & Wellness:</strong> Indulge in traditional Malaysian massage</li>
+                                        <li><strong>Food Tours:</strong> Explore local cuisine and street food</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Evening Suggestions:</strong>
+                                    <ul>
+                                        <li>Visit Jalan Alor food street</li>
+                                        <li>Watch KLCC fountain show (8:00 PM & 9:00 PM)</li>
+                                        <li>Explore Changkat Bukit Bintang nightlife</li>
+                                        <li>Shop at night markets (pasar malam)</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight stay at The Pearl Kuala Lumpur Hotel</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="info-note"><strong>Note:</strong> Optional activities can be arranged through hotel concierge or tour desk. Our representative can assist with bookings.</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day5')">
+                            <div class="day-number">Day 5</div>
+                            <div class="day-title">Departure via Mitsui Outlet Park KLIA</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day5" class="day-content">
+                            <p><strong>Highlights:</strong> Final Shopping | Mitsui Outlet Park | Airport Transfer | Departure</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li>Check-out from hotel (standard time: 12:00 PM)</li>
+                                <li><strong>Last Minute Shopping:</strong> Time permitting before departure</li>
+                                <li><strong>Transfer to Airport via Mitsui Outlet Park KLIA:</strong>
+                                    <ul>
+                                        <li>Strategic stop at Malaysia's first international premium outlet</li>
+                                        <li>Located just 15 minutes from KLIA</li>
+                                        <li><strong>Shopping Duration:</strong> 2-3 hours (depending on flight time)</li>
+                                        <li><strong>Outlet Features:</strong>
+                                            <ul>
+                                                <li>Over 130 designer and brand-name shops</li>
+                                                <li>Discounts from 25% to 65% off</li>
+                                                <li>Brands: Armani, Brooks Brothers, Calvin Klein, Kate Spade, and more</li>
+                                                <li>Luggage and travel bags available for purchases</li>
+                                                <li>GST refund counter available</li>
+                                            </ul>
+                                        </li>
+                                        <li>Convenient location allows stress-free last-minute shopping</li>
+                                        <li>Luggage storage facilities available</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Continue to Airport:</strong>
+                                    <ul>
+                                        <li>15-minute drive to KLIA</li>
+                                        <li>Check-in for Qatar Airways flight</li>
+                                        <li>Recommended arrival: 3 hours before departure</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Departure:</strong> Board your Qatar Airways flight home</li>
+                                <li>End of unforgettable Kuala Lumpur shopping experience!</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="packing-tip"><strong>Packing Tip:</strong> Remember to pack purchases in checked luggage. Additional baggage allowance can be purchased if needed. Keep receipts for GST refund at airport.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div id="inclusions" class="tab-content">
+                    <h2>What's Included</h2>
+                    <ul class="inclusions-list">
+                        <li>✓ <strong>Return Flight Ticket</strong> on Qatar Airways (economy class)</li>
+                        <li>✓ <strong>4 Nights Accommodation</strong> at The Pearl Kuala Lumpur Hotel</li>
+                        <li>✓ <strong>Daily Breakfast</strong> at hotel</li>
+                        <li>✓ <strong>Return Airport Transfers</strong> (private vehicle)</li>
+                        <li>✓ <strong>Genting Highland Tour</strong> with two-way cable car ride</li>
+                        <li>✓ <strong>Batu Caves Visit</strong> enroute to Genting</li>
+                        <li>✓ <strong>Transfer to Genting Premium Outlet (GPO)</strong> for shopping</li>
+                        <li>✓ <strong>5-Hour Kuala Lumpur Shopping Tour</strong></li>
+                        <li>✓ <strong>Shopping Discount Vouchers</strong> for participating stores</li>
+                        <li>✓ <strong>Mitsui Outlet Park KLIA Shopping</strong> enroute to airport on departure day</li>
+                        <li>✓ All entrance fees mentioned in itinerary</li>
+                        <li>✓ English-speaking driver/guide during tours</li>
+                        <li>✓ All applicable government taxes and service charges</li>
+                    </ul>
+
+                    <h2>What's Not Included</h2>
+                    <ul class="exclusions-list">
+                        <li>✗ Meals not mentioned (lunch, dinner)</li>
+                        <li>✗ Personal expenses and shopping purchases</li>
+                        <li>✗ Beverages and mini-bar charges</li>
+                        <li>✗ Optional tours and activities</li>
+                        <li>✗ Travel insurance (highly recommended)</li>
+                        <li>✗ Tips and gratuities for guides and drivers</li>
+                        <li>✗ Additional baggage fees for extra purchases</li>
+                        <li>✗ Early check-in or late check-out charges</li>
+                        <li>✗ Visa fees (if applicable based on nationality)</li>
+                        <li>✗ Spa treatments and personal services</li>
+                        <li>✗ Theme park tickets (Sunway Lagoon, etc.)</li>
+                        <li>✗ Petronas Twin Towers or KL Tower tickets</li>
+                        <li>✗ Any items not specifically mentioned in inclusions</li>
+                    </ul>
+
+                    <div class="shopping-benefits">
+                        <h3>🛍️ Shopping Benefits</h3>
+                        <ul>
+                            <li><strong>Discount Voucher Booklet</strong> - Additional savings at participating stores</li>
+                            <li><strong>GST Tourist Refund</strong> - Get tax refund on purchases over RM300</li>
+                            <li><strong>Three Major Shopping Stops</strong> - Genting Premium Outlet, KL Shopping Tour, Mitsui Outlet Park</li>
+                            <li><strong>Shopping Guide</strong> - Information booklet with store directory and tips</li>
+                            <li><strong>Extended Shopping Hours</strong> - Strategically planned timing for maximum shopping time</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-notice">
+                        <h3>Terms & Conditions</h3>
+                        <ul>
+                            <li>Prices subject to availability at time of booking</li>
+                            <li>Passport must be valid for minimum 6 months from travel date</li>
+                            <li>Hotel check-in: 3:00 PM | Check-out: 12:00 PM</li>
+                            <li>Shopping vouchers valid for duration of stay only</li>
+                            <li>Outlet operating hours may vary - typically 10:00 AM to 10:00 PM</li>
+                            <li>GST refund subject to minimum purchase requirements</li>
+                            <li>Cable car operations weather dependent</li>
+                            <li>Shopping tour timings may be adjusted based on traffic</li>
+                            <li>Additional baggage can be purchased through airline directly</li>
+                            <li>Cancellation policy applies as per booking terms</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Booking Sidebar -->
+                <aside class="package-sidebar">
+                <!-- Quick Information -->
+                <div class="package-info-card">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-item-label">📅 Duration</span>
+                        <span class="info-item-value">5D / 4N</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">💰 Price From</span>
+                        <span class="info-item-value">USD 1,265</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🏨 Hotel</span>
+                        <span class="info-item-value">The Pearl KL</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">✈️ Airline</span>
+                        <span class="info-item-value">Qatar Airways</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🍽️ Meal Plan</span>
+                        <span class="info-item-value">Breakfast</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🛍️ Shopping Stops</span>
+                        <span class="info-item-value">3 Major Outlets</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🎫 Vouchers</span>
+                        <span class="info-item-value">Included</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🚐 Transfers</span>
+                        <span class="info-item-value">All Included</span>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-card">
+                    <h3>Book This Package</h3>
+                    <form action="../../send-contact-simple.php" method="POST" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+254 XXX XXX XXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers *</label>
+                            <input type="number" id="travelers" name="travelers" required min="1" max="20" placeholder="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel_date">Preferred Travel Date *</label>
+                            <input type="date" id="travel_date" name="travel_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requirements or shopping preferences..."></textarea>
+                        </div>
+
+                        <input type="hidden" name="package" value="Kuala Lumpur Shopping Tour - 5D/4N">
+                        
+                        <button type="submit" class="btn-submit">📨 Request Quote</button>
+                    </form>
+
+                    <div class="contact-options">
+                        <p style="text-align: center; margin: 15px 0; font-weight: 600; color: #666;">Or reach us directly:</p>
+                        <a href="https://wa.me/254746691113" class="contact-btn whatsapp-btn" target="_blank">
+                            📱 WhatsApp
+                        </a>
+                        <a href="tel:+254746691113" class="contact-btn phone-btn">
+                            📞 Call Us
+                        </a>
+                        <a href="mailto:info@jetwideconsortium.com" class="contact-btn email-btn">
+                            ✉️ Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Jetwide Consortium</h3>
+                    <p>Your trusted partner for travel, visa services, and unforgettable experiences across Kenya and beyond.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../visa-services.html">Visa Services</a></li>
+                        <li><a href="../kenyan-safaris.html">Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📧 info@jetwideconsortium.com</p>
+                    <p>📱 +254 746 691 113</p>
+                    <p>📍 Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jetwide Consortium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Tab Switching
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Gallery Image Switching
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+            
+            // Update active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        function openLightbox() {
+            alert('Lightbox gallery would open here with all package images');
+        }
+
+        // Toggle Day Content
+        function toggleContent(dayId) {
+            const content = document.getElementById(dayId);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "−";
+            }
+        }
+    </script>
+    <script src="../../dynamic-content.js"></script>
+</body>
+</html>

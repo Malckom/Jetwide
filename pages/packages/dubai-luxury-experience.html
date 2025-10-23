@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Luxury Experience | Jetwide Consortium</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    
+    <style>
+      /* White overlay navigation menu */
+      .header-main {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-menu a {
+        color: #14132A;
+        font-weight: 500;
+      }
+      
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #FE9900;
+      }
+      
+      .dropdown-arrow {
+        color: #14132A;
+      }
+      
+      .dropdown-menu {
+        background: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .dropdown-header {
+        color: #14132A;
+      }
+      
+      .dropdown-item {
+        color: #333;
+      }
+      
+      .dropdown-item:hover {
+        background: #f8f8f8;
+        color: #FE9900;
+      }
+      
+      .mobile-menu-toggle span {
+        background: #14132A;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-menu {
+          background: white;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+      
+      /* Quick Information Card Styling */
+      .package-info-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+      }
+      
+      .package-info-card h3 {
+        color: #14132A;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #FE9900;
+        font-weight: 700;
+      }
+      
+      .package-info-card .info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #FE9900;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      
+      .package-info-card .info-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(254, 153, 0, 0.15);
+        border-left-width: 6px;
+      }
+      
+      .package-info-card .info-item:last-child {
+        margin-bottom: 0;
+      }
+      
+      .package-info-card .info-item strong {
+        color: #14132A;
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .package-info-card .info-item span {
+        color: #FE9900;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top header bar -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <!-- Contact Info -->
+                    <div class="header-contact">
+                        <div class="contact-item">
+                            <img src="../../assets/images/phone-call.png?v=5" alt="Phone" width="16" height="16" />
+                            <a href="tel:+254748538311">0748 538 311</a>
+                        </div>
+                        <div class="contact-item">
+                            <img src="../../assets/images/email.png?v=5" alt="Email" width="16" height="16" />
+                            <a href="mailto:safaris@jetwide.org">safaris@jetwide.org</a>
+                        </div>
+                        <div class="contact-item desktop-only">
+                            <img src="../../assets/images/location.png?v=5" alt="Location" width="16" height="16" />
+                            <a href="https://maps.google.com/?q=Westlands+Square+2nd+Floor+Nairobi" target="_blank">Westlands Square 2nd Floor</a>
+                        </div>
+                        <div class="contact-item desktop-only">
+                            <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="header-social">
+                        <a href="https://wa.me/254748538311" target="_blank"><img src="../../assets/images/whatsapp.png?v=5" alt="WhatsApp" width="18" height="18" /></a>
+                        <a href="https://www.facebook.com/jetwideconsortium/" target="_blank"><img src="../../assets/images/facebook.png?v=5" alt="Facebook" width="18" height="18" /></a>
+                        <a href="https://www.instagram.com/jetwidesafaris/" target="_blank"><img src="../../assets/images/instagram.png?v=5" alt="Instagram" width="18" height="18" /></a>
+                        <a href="https://www.x.com/JetWideC" target="_blank"><img src="../../assets/images/twitter.png?v=5" alt="Twitter" width="18" height="18" /></a>
+                        <a href="https://www.linkedin.com/company/jetwideconsortium" target="_blank"><img src="../../assets/images/linkedin.png?v=5" alt="LinkedIn" width="18" height="18" /></a>
+                        <a href="https://www.pinterest.com/jetwide/" target="_blank"><img src="../../assets/images/pinterest.png?v=5" alt="Pinterest" width="18" height="18" /></a>
+                        <a href="https://www.youtube.com/@JetwideConsortium" target="_blank"><img src="../../assets/images/youtube.png?v=5" alt="YouTube" width="18" height="18" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main header -->
+        <div class="header-main">
+            <div class="container">
+                <img src="../../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav-menu">
+                    <a href="../../index.html">Home</a>
+                    <a href="../visa-services.html">VISA Processing</a>
+                    <div class="dropdown">
+                        <a href="../../index.html#tours" class="dropdown-toggle">Tours & Safaris <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-section">
+                                <h4 class="dropdown-header">Local Tours</h4>
+                                <a href="../themed-packages.html" class="dropdown-item">Themed Packages</a>
+                                <a href="../beach-getaways.html" class="dropdown-item">Beach Getaways</a>
+                                <a href="../kenyan-safaris.html" class="dropdown-item">Exclusive Kenyan Safaris</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h4 class="dropdown-header">International Destinations</h4>
+                                <a href="../international-destinations.html" class="dropdown-item active">International Destinations</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="../../index.html#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../car-hire.html" class="dropdown-item">Car Hire Services</a>
+                            <a href="../job-placement.html" class="dropdown-item">Job Placement Services</a>
+                            <a href="../airline-airport-services.html" class="dropdown-item">Airline Booking & Airport Transfer Services</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="../about-us.html" class="dropdown-toggle">About Jetwide <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../about-us.html" class="dropdown-item">About Us</a>
+                            <a href="../blogs.html" class="dropdown-item">Blogs</a>
+                            <a href="../contact.html" class="dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Package Detail Hero -->
+    <section class="package-detail-hero">
+        <div class="container">
+            <div class="package-detail-header">
+                <div class="package-breadcrumb">
+                    <a href="../../index.html">Home</a> > 
+                    <a href="../international-destinations.html">International Destinations</a> > 
+                    <span>Dubai Luxury Experience</span>
+                </div>
+                <h1 class="package-detail-title">Dubai Luxury Experience</h1>
+                <div class="package-meta">
+                    <div class="meta-item">
+                        <strong>PRICE</strong>
+                        <span class="package-price">On Request</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>DURATION</strong>
+                        <span>Customizable</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>TOUR TYPE</strong>
+                        <span class="tour-type">City & Desert</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>DESTINATION</strong>
+                        <span>Dubai, UAE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Content -->
+    <section class="package-content">
+        <div class="container">
+            <div class="package-layout">
+                <!-- Main Content -->
+                <div class="package-main">
+                    <!-- Gallery -->
+                    <div class="package-gallery">
+                        <div class="gallery-main">
+                            <div class="main-image-wrapper">
+                                <img src="../../assets/images/International-Packages/intl-packages (1).jpg" alt="Dubai Skyline" id="mainImage" class="main-gallery-image">
+                                <button class="gallery-btn" onclick="openLightbox()">📷 GALLERY</button>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="../../assets/images/International-Packages/intl-packages (1).jpg" alt="Burj Khalifa" onclick="changeMainImage(this)" class="thumbnail active">
+                            <img src="../../assets/images/International-Packages/intl-packages (2).jpg" alt="Dubai Marina" onclick="changeMainImage(this)" class="thumbnail">
+                            <img src="../../assets/images/International-Packages/Mahe-island.jpg" alt="Palm Jumeirah" onclick="changeMainImage(this)" class="thumbnail">
+                            <img src="../../assets/images/International-Packages/egypy-nile-cruise.jpg" alt="Desert Safari" onclick="changeMainImage(this)" class="thumbnail">
+                        </div>
+                    </div>
+
+                    <!-- Package Tabs -->
+                    <div class="package-tabs">
+                        <button class="tab-link active" onclick="openTab(event, 'overview')">Overview</button>
+                        <button class="tab-link" onclick="openTab(event, 'hotels')">Accommodation</button>
+                        <button class="tab-link" onclick="openTab(event, 'itinerary')">Suggested Itinerary</button>
+                        <button class="tab-link" onclick="openTab(event, 'inclusions')">Inclusions & Exclusions</button>
+                    </div>
+
+                    <!-- Overview Tab -->
+                    <div id="overview" class="tab-content active">
+                        <div class="overview-details">
+                            <h2>Experience Dubai - Where Innovation Meets Tradition</h2>
+                            <p>Discover the dazzling city of Dubai, where futuristic skyscrapers stand alongside traditional souks, and golden deserts meet pristine beaches. This customizable Dubai experience offers the perfect blend of luxury, adventure, culture, and entertainment.</p>
+                            <p>From the world's tallest building to man-made islands and record-breaking attractions, Dubai pushes the boundaries of what's possible. Shop in world-class malls, dine at Michelin-starred restaurants, explore ancient heritage sites, and experience thrilling desert adventures. Whether you're seeking luxury, family fun, shopping, or cultural experiences, Dubai delivers it all in spectacular style.</p>
+                        </div>
+
+                        <div class="safari-highlights">
+                            <h3>Dubai Experience Highlights</h3>
+                            <ul class="highlight-list">
+                                <li>Visit Burj Khalifa - ascend to the 124th & 125th floor observation decks for panoramic views</li>
+                                <li>Experience Dubai Mall - one of the world's largest shopping and entertainment destinations</li>
+                                <li>Desert Safari adventure with dune bashing, camel riding, and BBQ dinner under the stars</li>
+                                <li>Explore Dubai Marina and take a traditional dhow cruise</li>
+                                <li>Visit the iconic Burj Al Arab and Palm Jumeirah</li>
+                                <li>Discover Old Dubai - Gold Souk, Spice Souk, and Al Fahidi Historical District</li>
+                                <li>Experience Dubai Fountain shows and The Beach at JBR</li>
+                                <li>Optional: IMG Worlds of Adventure, Ski Dubai, Aquaventure Waterpark, Global Village</li>
+                            </ul>
+                        </div>
+
+                        <div class="important-notes">
+                            <h3>Important Notes</h3>
+                            <div class="expandable-content">
+                                <button class="expand-btn" onclick="toggleContent(this)">Read More ▼</button>
+                                <div class="expandable-text" style="display: none;">
+                                    <ul>
+                                        <li><strong>Climate:</strong> Dubai is extremely hot in summer (May-September, 40-50°C). Best time to visit: November to March (pleasant 20-30°C).</li>
+                                        <li><strong>Visa:</strong> Tourist visa required. Can be arranged on arrival for many nationalities or through hotels. We assist with visa processing.</li>
+                                        <li><strong>Currency:</strong> UAE Dirham (AED). Credit cards widely accepted. ATMs available everywhere.</li>
+                                        <li><strong>Dress Code:</strong> Modest dress appreciated in public places. Swimwear only at beaches/pools. Cover shoulders and knees in malls and traditional areas.</li>
+                                        <li><strong>Alcohol:</strong> Available only in licensed restaurants, bars, and hotels. Not sold in regular stores. Drinking in public is prohibited.</li>
+                                        <li><strong>Transportation:</strong> Excellent metro system, taxis widely available, ride-hailing apps (Uber, Careem) operate. Car rentals available.</li>
+                                        <li><strong>Language:</strong> Arabic is official language, but English is widely spoken everywhere.</li>
+                                        <li><strong>Ramadan:</strong> During the holy month, restaurants are closed during daylight hours. Eating/drinking in public during fasting hours is prohibited.</li>
+                                        <li><strong>Safety:</strong> Dubai is extremely safe with very low crime rates. Women can travel alone safely.</li>
+                                        <li><strong>Tipping:</strong> 10-15% service charge often included in bills. Additional tips appreciated for exceptional service.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accommodation Tab -->
+                    <div id="hotels" class="tab-content">
+                        <h2>Dubai Accommodation Options</h2>
+                        <p class="hotels-intro">Choose from our range of carefully selected hotels across Dubai, from budget-friendly options to ultra-luxury 5-star properties. All hotels offer excellent locations and quality service.</p>
+
+                        <div class="hotel-card">
+                            <h3>3-Star Hotels - Budget Comfort</h3>
+                            <p class="hotel-price"><strong>Budget-Friendly</strong> options available</p>
+                            <p class="hotel-location">Various locations: Deira, Bur Dubai, Al Barsha</p>
+                            <p class="hotel-description">Clean, comfortable 3-star hotels offering excellent value. Perfect for travelers who plan to spend most time exploring the city. Good access to metro stations and major attractions.</p>
+                            <h4>Typical Features:</h4>
+                            <ul class="hotel-amenities">
+                                <li>Air-conditioned rooms with private bathrooms</li>
+                                <li>Daily breakfast (international buffet)</li>
+                                <li>Swimming pool</li>
+                                <li>Free Wi-Fi</li>
+                                <li>24-hour reception</li>
+                                <li>Near metro stations for easy city access</li>
+                                <li>Tour desk for excursion bookings</li>
+                            </ul>
+                        </div>
+
+                        <div class="hotel-card">
+                            <h3>4-Star Hotels - Superior Comfort</h3>
+                            <p class="hotel-price"><strong>Mid-Range</strong> excellent value</p>
+                            <p class="hotel-location">Prime locations: Downtown, Dubai Marina, Jumeirah Beach</p>
+                            <p class="hotel-description">Well-appointed 4-star properties in prime locations offering spacious rooms, multiple dining options, and enhanced facilities. Ideal balance of comfort and value.</p>
+                            <h4>Enhanced Amenities:</h4>
+                            <ul class="hotel-amenities">
+                                <li>Spacious rooms with modern amenities</li>
+                                <li>Breakfast buffet with international cuisine</li>
+                                <li>Multiple restaurants and bars</li>
+                                <li>Fitness center and spa</li>
+                                <li>Large swimming pool with sun deck</li>
+                                <li>Business center and meeting rooms</li>
+                                <li>Concierge services</li>
+                                <li>Close to major attractions and shopping malls</li>
+                            </ul>
+                        </div>
+
+                        <div class="hotel-card">
+                            <h3>5-Star Luxury Hotels</h3>
+                            <p class="hotel-price"><strong>Premium Luxury</strong> experience</p>
+                            <p class="hotel-location">Iconic locations: Burj Khalifa area, Palm Jumeirah, Dubai Marina</p>
+                            <p class="hotel-description">World-renowned 5-star hotels offering unparalleled luxury, exceptional service, and iconic locations. Perfect for special occasions and travelers seeking the ultimate Dubai experience.</p>
+                            <h4>Luxury Features:</h4>
+                            <ul class="hotel-amenities">
+                                <li>Luxurious rooms and suites with stunning views</li>
+                                <li>Multiple award-winning restaurants</li>
+                                <li>Full-service spa and wellness centers</li>
+                                <li>Private beach access (beach hotels)</li>
+                                <li>Infinity pools and beach clubs</li>
+                                <li>Butler and concierge services</li>
+                                <li>Limousine services available</li>
+                                <li>Kids' clubs and family facilities</li>
+                                <li>Direct access to shopping malls or attractions</li>
+                            </ul>
+                        </div>
+
+                        <div class="hotel-card">
+                            <h3>Ultra-Luxury & Iconic Properties</h3>
+                            <p class="hotel-price"><strong>Exceptional</strong> once-in-a-lifetime experience</p>
+                            <p class="hotel-location">Burj Al Arab, Atlantis The Palm, Palace Downtown</p>
+                            <p class="hotel-description">Stay at Dubai's most iconic hotels - from the sail-shaped Burj Al Arab (the world's only 7-star hotel) to Atlantis The Palm with its waterpark and aquarium. These properties define ultra-luxury.</p>
+                            <h4>Iconic Features:</h4>
+                            <ul class="hotel-amenities">
+                                <li>World-famous architecture and design</li>
+                                <li>Personal butler service 24/7</li>
+                                <li>Michelin-starred restaurants</li>
+                                <li>Complimentary access to attractions (Aquaventure, Lost Chambers at Atlantis)</li>
+                                <li>Private beach with cabanas</li>
+                                <li>Chauffeur-driven luxury car transfers</li>
+                                <li>Exclusive lounges and facilities</li>
+                                <li>In-suite check-in and personalized service</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary Tab -->
+                    <div id="itinerary" class="tab-content">
+                        <h2>Suggested 5-Day Dubai Itinerary</h2>
+                        <p class="itinerary-intro">This is a suggested itinerary that can be fully customized based on your interests, duration, and budget. Dubai offers endless possibilities!</p>
+                        
+                        <div class="itinerary-day">
+                            <div class="day-header">
+                                <span class="day-number">Day 1</span>
+                                <h3>Arrival & Dubai Marina</h3>
+                            </div>
+                            <div class="day-content">
+                                <p><strong>Welcome to Dubai!</strong> Upon arrival at Dubai International Airport, you'll be greeted by our representative and transferred to your hotel.</p>
+                                <p>After checking in and freshening up, spend your first afternoon/evening exploring <strong>Dubai Marina</strong>:</p>
+                                <ul>
+                                    <li>Walk along the stunning Marina Walk - a 7km promenade with cafes, restaurants, and yacht views</li>
+                                    <li>Visit <strong>The Beach at JBR (Jumeirah Beach Residence)</strong> - beach clubs, restaurants, and shopping</li>
+                                    <li>Take photos at the Marina's impressive skyscrapers</li>
+                                    <li>Optional: Book a <strong>Dubai Marina Dhow Cruise</strong> (evening dinner cruise on traditional boat with buffet dinner and entertainment)</li>
+                                </ul>
+                                <p>Enjoy dinner at one of Marina's many restaurants offering cuisines from around the world.</p>
+                                <p><strong>Accommodation:</strong> Selected hotel</p>
+                                <p><strong>Meals:</strong> Dinner (optional)</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="day-header">
+                                <span class="day-number">Day 2</span>
+                                <h3>Burj Khalifa, Dubai Mall & Downtown Dubai</h3>
+                            </div>
+                            <div class="day-content">
+                                <p>After breakfast, head to Downtown Dubai for a day of iconic experiences:</p>
+                                <p><strong>Morning/Afternoon - Burj Khalifa:</strong></p>
+                                <ul>
+                                    <li>Ascend to the <strong>124th & 125th floor observation decks</strong> (At The Top) of the world's tallest building</li>
+                                    <li>Enjoy breathtaking 360-degree views of Dubai's skyline, desert, and ocean</li>
+                                    <li>Interactive displays about Dubai's development and Burj Khalifa construction</li>
+                                    <li>Upgrade option: 148th floor SKY lounge for highest observation deck</li>
+                                </ul>
+                                <p><strong>Afternoon - Dubai Mall:</strong></p>
+                                <ul>
+                                    <li>Explore the world's largest shopping mall with 1,200+ stores</li>
+                                    <li>Visit the <strong>Dubai Aquarium & Underwater Zoo</strong> - walk through a 48-meter tunnel surrounded by sharks and rays</li>
+                                    <li>See the <strong>Dubai Fountain</strong> - world's largest choreographed fountain (shows every 30 minutes in evening)</li>
+                                    <li>Shop international brands, dine at dozens of restaurants, visit VR Park or Kidzania</li>
+                                </ul>
+                                <p><strong>Evening:</strong> Watch the spectacular Dubai Fountain show (6:00 PM onwards, every 30 minutes). The water, music, and light show is mesmerizing!</p>
+                                <p>Dinner at Dubai Mall or nearby Souk Al Bahar with fountain views.</p>
+                                <p><strong>Accommodation:</strong> Selected hotel</p>
+                                <p><strong>Meals:</strong> Breakfast</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="day-header">
+                                <span class="day-number">Day 3</span>
+                                <h3>Desert Safari Adventure</h3>
+                            </div>
+                            <div class="day-content">
+                                <p>Morning at leisure - relax by the hotel pool or explore nearby attractions.</p>
+                                <p><strong>Afternoon/Evening - Desert Safari Experience:</strong></p>
+                                <p>Around 3:00 PM, you'll be picked up from your hotel for an unforgettable <strong>Desert Safari Adventure</strong>:</p>
+                                <ul>
+                                    <li><strong>Dune Bashing</strong> - Thrilling 4x4 ride over red sand dunes with an experienced driver (30-45 minutes of adrenaline!)</li>
+                                    <li><strong>Camel Riding</strong> - Experience traditional desert transport</li>
+                                    <li><strong>Sandboarding</strong> - Surf down the dunes</li>
+                                    <li><strong>Sunset Photography</strong> - Capture stunning desert sunset views</li>
+                                    <li><strong>Traditional Bedouin Camp</strong> - Arrive at an authentic desert camp</li>
+                                </ul>
+                                <p><strong>At the Desert Camp:</strong></p>
+                                <ul>
+                                    <li>Henna painting for ladies</li>
+                                    <li>Shisha (water pipe) smoking experience</li>
+                                    <li>Try traditional Arabic coffee and dates</li>
+                                    <li>Watch <strong>Tanoura dance</strong> and <strong>belly dancing</strong> performances</li>
+                                    <li>Delicious <strong>BBQ buffet dinner</strong> with Arabic and international dishes</li>
+                                    <li>Grilled meats, salads, Arabic mezze, desserts</li>
+                                    <li>Vegetarian options available</li>
+                                </ul>
+                                <p>Stargazing in the desert before returning to hotel around 9:30 PM.</p>
+                                <p><strong>Accommodation:</strong> Selected hotel</p>
+                                <p><strong>Meals:</strong> Breakfast, Desert BBQ Dinner</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="day-header">
+                                <span class="day-number">Day 4</span>
+                                <h3>Old Dubai Heritage & Palm Jumeirah</h3>
+                            </div>
+                            <div class="day-content">
+                                <p><strong>Morning - Old Dubai Heritage Tour:</strong></p>
+                                <p>Discover Dubai's rich history and traditions:</p>
+                                <ul>
+                                    <li><strong>Al Fahidi Historical District</strong> - Wander through narrow lanes of restored traditional buildings, art galleries, and cafes</li>
+                                    <li><strong>Dubai Museum</strong> - Located in Al Fahidi Fort (built 1787), learn about Dubai's transformation from fishing village to global metropolis</li>
+                                    <li><strong>Gold Souk</strong> - Browse hundreds of shops displaying dazzling gold jewelry (Dubai is known as "City of Gold")</li>
+                                    <li><strong>Spice Souk</strong> - Colorful market with aromatic spices, dried fruits, nuts, and traditional remedies</li>
+                                    <li><strong>Abra Ride</strong> - Cross Dubai Creek on a traditional water taxi (just 1 AED!)</li>
+                                </ul>
+                                <p><strong>Afternoon - Palm Jumeirah:</strong></p>
+                                <ul>
+                                    <li>Take the Palm Monorail for views of the iconic palm-shaped island</li>
+                                    <li>Visit <strong>The Pointe</strong> - waterfront dining and entertainment destination with Atlantis views</li>
+                                    <li>Photo stop at <strong>Atlantis The Palm</strong> resort</li>
+                                    <li>Drive along the Palm's crescent for stunning views</li>
+                                    <li>Optional: Visit <strong>Aquaventure Waterpark</strong> or <strong>Lost Chambers Aquarium</strong> at Atlantis</li>
+                                </ul>
+                                <p><strong>Evening:</strong></p>
+                                <ul>
+                                    <li>Photo stop at the iconic <strong>Burj Al Arab</strong> (world's most luxurious hotel)</li>
+                                    <li>Visit <strong>Madinat Jumeirah</strong> - recreated traditional souk with boutiques, restaurants, and Burj Al Arab views</li>
+                                    <li>Optional: Dinner at one of Madinat's waterfront restaurants</li>
+                                </ul>
+                                <p><strong>Accommodation:</strong> Selected hotel</p>
+                                <p><strong>Meals:</strong> Breakfast</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="day-header">
+                                <span class="day-number">Day 5</span>
+                                <h3>Shopping & Leisure / Departure</h3>
+                            </div>
+                            <div class="day-content">
+                                <p>Your final day in Dubai - morning at leisure based on your departure time.</p>
+                                <p><strong>Morning Shopping & Activities (if time permits):</strong></p>
+                                <ul>
+                                    <li><strong>Mall of the Emirates</strong> - Shop at 630+ stores, visit Ski Dubai (indoor ski slope in the desert!)</li>
+                                    <li><strong>Ibn Battuta Mall</strong> - Themed mall celebrating the travels of Arab explorer Ibn Battuta</li>
+                                    <li><strong>Global Village</strong> (seasonal Oct-Apr) - Cultural and entertainment destination with pavilions from 75+ countries</li>
+                                    <li><strong>Dubai Frame</strong> - Architectural landmark offering old and new Dubai views</li>
+                                </ul>
+                                <p><strong>Optional Additional Activities:</strong></p>
+                                <ul>
+                                    <li>IMG Worlds of Adventure - world's largest indoor theme park</li>
+                                    <li>Dubai Miracle Garden - world's largest flower garden (seasonal)</li>
+                                    <li>La Mer Beach - Trendy beach destination with street art and dining</li>
+                                    <li>Last-minute souvenir shopping at Dubai Mall</li>
+                                </ul>
+                                <p>Check out from hotel and transfer to Dubai International Airport for your departure flight.</p>
+                                <p>Leave with incredible memories of this futuristic city where anything is possible!</p>
+                                <p><strong>Meals:</strong> Breakfast</p>
+                                <p><strong>Transfers:</strong> Hotel to airport included</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions & Exclusions Tab -->
+                    <div id="inclusions" class="tab-content">
+                        <div class="inclusions-grid">
+                            <div class="inclusions-column">
+                                <h3>✅ What Can Be Included</h3>
+                                <p style="font-style: italic; color: #666; margin-bottom: 15px;">Customizable based on your preferences:</p>
+                                <ul class="styled-list included">
+                                    <li>✅ Return flights from Nairobi to Dubai (economy, business, or first class)</li>
+                                    <li>✅ Hotel accommodation (3-star to ultra-luxury, customizable duration)</li>
+                                    <li>✅ Daily breakfast at hotel</li>
+                                    <li>✅ Airport transfers (private car or shared shuttle)</li>
+                                    <li>✅ Desert Safari with BBQ dinner</li>
+                                    <li>✅ Burj Khalifa tickets (124th/125th or 148th floor)</li>
+                                    <li>✅ Dubai city tour with guide</li>
+                                    <li>✅ Dubai Marina Dhow Cruise dinner</li>
+                                    <li>✅ Theme park tickets (IMG, Aquaventure, Ski Dubai, etc.)</li>
+                                    <li>✅ Tourist visa assistance</li>
+                                </ul>
+                            </div>
+
+                            <div class="exclusions-column">
+                                <h3>❌ Typically Not Included</h3>
+                                <p style="font-style: italic; color: #666; margin-bottom: 15px;">Unless specifically requested:</p>
+                                <ul class="styled-list excluded">
+                                    <li>❌ Lunch and dinner (except desert safari BBQ if included)</li>
+                                    <li>❌ Dubai tourist visa fee (approximately USD 60-100)</li>
+                                    <li>❌ Attraction entrance fees not mentioned</li>
+                                    <li>❌ Shopping expenses</li>
+                                    <li>❌ Travel insurance (highly recommended)</li>
+                                    <li>❌ Optional activities and excursions</li>
+                                    <li>❌ Tips and gratuities</li>
+                                    <li>❌ Personal expenses</li>
+                                    <li>❌ Items not specifically mentioned as included</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pricing-note" style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-left: 4px solid #FE9900; border-radius: 8px;">
+                            <h4 style="color: #14132A; margin-bottom: 15px;">Customizable Package:</h4>
+                            <p style="margin-bottom: 10px;">Dubai packages are fully customizable based on:</p>
+                            <ul style="list-style: none; padding-left: 20px;">
+                                <li style="padding: 5px 0;">• Duration (3-10 days typical)</li>
+                                <li style="padding: 5px 0;">• Hotel category (3-star to ultra-luxury)</li>
+                                <li style="padding: 5px 0;">• Activities and excursions</li>
+                                <li style="padding: 5px 0;">• Meal plans (breakfast only, half board, full board)</li>
+                                <li style="padding: 5px 0;">• Flight class (economy, business, first class)</li>
+                                <li style="padding: 5px 0;">• Travel dates and season</li>
+                            </ul>
+                            <p style="margin-top: 15px; font-weight: 600; color: #FE9900;">Contact us for a personalized quote tailored to your preferences and budget!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="package-sidebar">
+                    <!-- Booking Form -->
+                    <div class="booking-form-card">
+                        <h3>Request Custom Quote</h3>
+                        <form class="booking-form" action="../../send-contact-simple.php" method="POST">
+                            <input type="hidden" name="package_name" value="Dubai Luxury Experience">
+                            <input type="hidden" name="package_price" value="Price on Request - Customizable">
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers *</label>
+                                <input type="number" id="travelers" name="travelers" min="1" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date">Preferred Travel Date *</label>
+                                <input type="date" id="date" name="travel_date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="duration">Preferred Duration</label>
+                                <select id="duration" name="duration">
+                                    <option value="3-4">3-4 Days</option>
+                                    <option value="5-6" selected>5-6 Days</option>
+                                    <option value="7+">7+ Days</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="hotel_category">Hotel Preference</label>
+                                <select id="hotel_category" name="hotel_category">
+                                    <option value="3star">3-Star</option>
+                                    <option value="4star" selected>4-Star</option>
+                                    <option value="5star">5-Star Luxury</option>
+                                    <option value="ultra">Ultra-Luxury</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn-book">Request Quote</button>
+                        </form>
+                        
+                        <div class="booking-contact">
+                            <p><strong>Or Contact Us Directly:</strong></p>
+                            <a href="tel:+254748538311" class="contact-link">📞 0748 538 311</a>
+                            <a href="https://wa.me/254748538311?text=Hi! I'm interested in the Dubai Luxury Experience Package" class="contact-link whatsapp">💬 WhatsApp Us</a>
+                            <a href="mailto:safaris@jetwide.org" class="contact-link">✉️ safaris@jetwide.org</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Information Card -->
+                    <div class="package-info-card">
+                        <h3>Quick Information</h3>
+                        <div class="info-item">
+                            <strong>Price</strong>
+                            <span>On Request</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Duration</strong>
+                            <span>Customizable</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Flights</strong>
+                            <span>Included</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Visa</strong>
+                            <span>Assistance Provided</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Hotels</strong>
+                            <span>3★ to Ultra-Luxury</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Meals</strong>
+                            <span>Breakfast + Options</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Activities</strong>
+                            <span>Fully Customizable</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Best Season</strong>
+                            <span>Nov-Mar</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-logo-section">
+                <img src="../../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
+            </div>
+            
+            <div class="newsletter-section">
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input" />
+                    <button type="submit" class="newsletter-button">
+                        <img src="../../assets/images/paperplane_icon.png" alt="Subscribe" class="newsletter-icon" />
+                        <span class="newsletter-text">Send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../../index.html#tours">Tours & Safaris</a></li>
+                        <li><a href="../visa-services.html">Passport & VISA Processing</a></li>
+                        <li><a href="../car-hire.html">Car-hire services</a></li>
+                        <li><a href="../job-placement.html">Recruitment & Job Placements</a></li>
+                        <li><a href="../airline-airport-services.html">Airline Bookings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Home</h3>
+                    <ul>
+                        <li><a href="../themed-packages.html">Themed Packages</a></li>
+                        <li><a href="../beach-getaways.html">Beach Getaways</a></li>
+                        <li><a href="../kenyan-safaris.html">Exclusive Kenyan Safaris</a></li>
+                        <li><a href="../international-destinations.html">International Destinations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../blogs.html">Travel Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Powered By Malckom</p>
+        </div>
+    </footer>
+
+    <script src="../../dynamic-content.js"></script>
+    <script>
+        // Tab switching functionality
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            const tabLinks = document.getElementsByClassName('tab-link');
+            for (let i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove('active');
+            }
+            
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+            
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+        }
+
+        function openLightbox() {
+            alert('Gallery lightbox feature coming soon!');
+        }
+
+        function toggleContent(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                button.textContent = 'Read Less ▲';
+            } else {
+                content.style.display = 'none';
+                button.textContent = 'Read More ▼';
+            }
+        }
+    </script>
+</body>
+</html>

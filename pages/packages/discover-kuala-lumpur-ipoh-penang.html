@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Kuala Lumpur, Ipoh & Penang | Jetwide Consortium</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    
+    <style>
+      /* White overlay navigation menu */
+      .header-main {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-menu a {
+        color: #14132A;
+        font-weight: 500;
+      }
+      
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #FE9900;
+      }
+      
+      .dropdown-arrow {
+        color: #14132A;
+      }
+      
+      .dropdown-menu {
+        background: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .dropdown-header {
+        color: #14132A;
+      }
+      
+      .dropdown-item {
+        color: #333;
+      }
+      
+      .dropdown-item:hover {
+        background: #f8f8f8;
+        color: #FE9900;
+      }
+      
+      .mobile-menu-toggle span {
+        background: #14132A;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-menu {
+          background: white;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+      
+      /* Quick Information Card Styling */
+      .package-info-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+      }
+      
+      .package-info-card h3 {
+        color: #14132A;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #FE9900;
+        font-weight: 700;
+      }
+      
+      .package-info-card .info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #FE9900;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      
+      .package-info-card .info-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(254, 153, 0, 0.15);
+        border-left-width: 6px;
+      }
+      
+      .info-item-label {
+        font-weight: 600;
+        color: #555;
+        font-size: 0.95rem;
+      }
+      
+      .info-item-value {
+        font-weight: 700;
+        color: #14132A;
+        font-size: 1.05rem;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <a href="tel:+254746691113">📞 +254 746 691 113</a>
+                    <a href="mailto:info@jetwideconsortium.com">✉️ info@jetwideconsortium.com</a>
+                </div>
+                <div class="header-top-right">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="header-main">
+            <div class="container">
+                <div class="logo-container">
+                    <a href="../../index.html">
+                        <img src="../../assets/images/Hero-Section/Jetwide logo.png" alt="Jetwide Consortium Logo" class="logo">
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="../../index.html">Home</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Visa Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Get Your Visa Assistance</div>
+                            <a href="../visa-services.html" class="dropdown-item">All Visa Services</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Destinations <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Popular Destinations</div>
+                            <a href="../kenyan-safaris.html" class="dropdown-item">Kenyan Safaris</a>
+                            <a href="../beach-getaways.html" class="dropdown-item">Beach Getaways</a>
+                            <a href="../international-destinations.html" class="dropdown-item">International Packages</a>
+                            <a href="../themed-packages.html" class="dropdown-item">Themed Holidays</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Our Services</div>
+                            <a href="../airline-airport-services.html" class="dropdown-item">Airline & Airport Services</a>
+                            <a href="../car-hire.html" class="dropdown-item">Car Hire Services</a>
+                        <a href="../job-placement.html" class="dropdown-item">Job Placement</a>
+                    </div>
+                </div>
+                <a href="../about-us.html">About</a>
+                <a href="../blogs.html">Blog</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <!-- Package Detail Hero -->
+    <section class="package-detail-hero">
+        <div class="container">
+            <div class="package-detail-header">
+                <div class="package-breadcrumb">
+                    <a href="../../index.html">Home</a> > 
+                    <a href="../international-destinations.html">International Destinations</a> > 
+                    <span>Discover KL, Ipoh & Penang</span>
+                </div>
+                <h1>Discover Kuala Lumpur, Ipoh & Penang</h1>
+                <div class="package-meta">
+                <div class="meta-item">
+                    <strong>From USD 1,885</strong>
+                    <span>Per Person Sharing</span>
+                </div>
+                <div class="meta-item">
+                    <strong>8 Days / 7 Nights</strong>
+                    <span>Duration</span>
+                </div>
+                <div class="meta-item">
+                    <strong>International</strong>
+                    <span>Package Type</span>
+                </div>
+                <div class="meta-item">
+                    <strong>KL, Ipoh & Penang</strong>
+                    <span>3 Cities</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Details Content -->
+    <section class="package-content">
+        <div class="container">
+            <div class="package-layout">
+                <div class="package-main">
+                    <!-- Gallery Section -->
+                    <div class="package-gallery">
+                        <div class="gallery-main">
+                            <div class="main-image-wrapper">
+                                <img src="../../assets/images/International-Packages/kuala-lumpur.jpg" alt="Malaysia Multi-City" id="mainImage">
+                                <button class="gallery-btn" onclick="openLightbox()">View Gallery</button>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="../../assets/images/International-Packages/kuala-lumpur.jpg" alt="Kuala Lumpur" onclick="changeMainImage(this)" class="thumbnail active">
+                            <img src="../../assets/images/International-Packages/ipoh.jpg" alt="Ipoh" onclick="changeMainImage(this)" class="thumbnail">
+                            <img src="../../assets/images/International-Packages/penang.jpg" alt="Penang" onclick="changeMainImage(this)" class="thumbnail">
+                            <img src="../../assets/images/International-Packages/sunway-lagoon.jpg" alt="Sunway Lagoon" onclick="changeMainImage(this)" class="thumbnail">
+                        </div>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="package-tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+                        <button class="tab-btn" onclick="openTab(event, 'accommodation')">Accommodation</button>
+                        <button class="tab-btn" onclick="openTab(event, 'itinerary')">Itinerary</button>
+                        <button class="tab-btn" onclick="openTab(event, 'inclusions')">Inclusions & Exclusions</button>
+                    </div>
+
+                <!-- Tab Content: Overview -->
+                <div id="overview" class="tab-content active">
+                    <h2>Package Overview</h2>
+                    <p>Embark on an unforgettable 8-day journey through three of Malaysia's most captivating destinations. From the modern metropolis of Kuala Lumpur to the heritage charm of Ipoh and the cultural richness of Penang, this comprehensive multi-city tour showcases the best of Malaysia's diversity.</p>
+                    
+                    <h3>Package Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><strong>3 Iconic Cities:</strong> Experience Kuala Lumpur, Ipoh, and Penang in one journey</li>
+                        <li><strong>Sunway Lagoon Theme Park:</strong> Full-day 6-in-1 park admission with water rides and attractions</li>
+                        <li><strong>Lost World of Tambun Night Park:</strong> Unique evening adventure in Ipoh's natural hot springs resort</li>
+                        <li><strong>Penang Hill Funicular Train:</strong> Historic railway journey to panoramic island views</li>
+                        <li><strong>Comprehensive City Tours:</strong> 4-hour KL tour, 4-hour Ipoh tour, 8-hour Penang tour</li>
+                        <li><strong>Private Transfers Throughout:</strong> Comfortable air-conditioned vehicle with English driver/guide</li>
+                        <li><strong>Strategic Inter-City Travel:</strong> KL → Ipoh → Penang → KL circuit</li>
+                        <li><strong>7 Nights Quality Accommodation:</strong> IBIS KLCC (4 nights), Sunway Lost World Tambun (1 night), Flamingo Beach Penang (2 nights)</li>
+                    </ul>
+                    
+                    <h3>City Highlights</h3>
+                    <div class="city-sections">
+                        <div class="city-highlight">
+                            <h4>🏙️ Kuala Lumpur</h4>
+                            <ul>
+                                <li>Modern skyscrapers and colonial architecture</li>
+                                <li>Petronas Twin Towers and KLCC Park</li>
+                                <li>Sunway Lagoon mega theme park</li>
+                                <li>Shopping and entertainment districts</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="city-highlight">
+                            <h4>🏛️ Ipoh</h4>
+                            <ul>
+                                <li>Heritage buildings and colonial charm</li>
+                                <li>Famous limestone caves and temples</li>
+                                <li>Lost World of Tambun Night Park</li>
+                                <li>Renowned local cuisine and white coffee</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="city-highlight">
+                            <h4>🏝️ Penang</h4>
+                            <ul>
+                                <li>UNESCO World Heritage George Town</li>
+                                <li>Penang Hill panoramic views</li>
+                                <li>Street art and cultural diversity</li>
+                                <li>World-famous street food scene</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Important Information</h3>
+                    <ul class="info-list">
+                        <li>Valid passport required (minimum 6 months validity)</li>
+                        <li>All transfers on private basis with English-speaking driver/guide</li>
+                        <li>Total driving time KL to Ipoh: approximately 2.5 hours</li>
+                        <li>Ipoh to Penang: approximately 2 hours</li>
+                        <li>Penang to KL return: approximately 5-6 hours</li>
+                        <li>Sunway Lagoon: Bring swimwear, towel, and sunscreen</li>
+                        <li>Lost World Tambun: Evening visit with natural hot springs</li>
+                        <li>Penang Hill: Funicular train operates weather permitting</li>
+                        <li>Comfortable walking shoes recommended for city tours</li>
+                    </ul>
+                </div>
+
+                <!-- Tab Content: Accommodation -->
+                <div id="accommodation" class="tab-content">
+                    <h2>Multi-City Accommodation</h2>
+                    <p><strong>Package Price: USD 1,885 per person sharing | USD 2,490 single occupancy</strong></p>
+                    <p>Stay in quality hotels across three cities with strategic locations for maximum convenience.</p>
+                    
+                    <div class="hotel-card featured">
+                        <div class="hotel-header">
+                            <h3>IBIS Kuala Lumpur City Centre (KLCC)</h3>
+                            <div class="hotel-badge">4 Nights Total (Night 1 + Nights 6-8)</div>
+                        </div>
+                        <p class="hotel-description">Modern economy hotel in the heart of KLCC, walking distance to Petronas Towers and major shopping malls.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Prime KLCC location</li>
+                            <li>✓ Daily breakfast buffet</li>
+                            <li>✓ Walking distance to Petronas Twin Towers</li>
+                            <li>✓ Near Suria KLCC shopping complex</li>
+                            <li>✓ Modern comfortable rooms</li>
+                            <li>✓ Free Wi-Fi throughout</li>
+                            <li>✓ 24-hour reception</li>
+                            <li>✓ Easy access to public transport</li>
+                        </ul>
+                        <p class="accommodation-note"><strong>Stay Pattern:</strong> Night 1 (arrival), check-out Day 4, return Night 6-8 (final nights)</p>
+                    </div>
+
+                    <div class="hotel-card featured">
+                        <div class="hotel-header">
+                            <h3>Sunway Lost World of Tambun Hotel</h3>
+                            <div class="hotel-badge">1 Night (Ipoh)</div>
+                        </div>
+                        <p class="hotel-description">Unique resort hotel integrated with Lost World theme park and natural hot springs in Ipoh.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Integrated with Lost World theme park</li>
+                            <li>✓ Natural hot springs access</li>
+                            <li>✓ Breakfast included</li>
+                            <li>✓ Surrounded by limestone hills</li>
+                            <li>✓ Night park access included</li>
+                            <li>✓ Swimming pool facilities</li>
+                            <li>✓ Family-friendly amenities</li>
+                            <li>✓ Restaurant and cafe on-site</li>
+                        </ul>
+                        <p class="accommodation-note"><strong>Special Feature:</strong> Evening visit to Lost World of Tambun Night Park included during your stay</p>
+                    </div>
+
+                    <div class="hotel-card featured">
+                        <div class="hotel-header">
+                            <h3>Flamingo by the Beach Hotel</h3>
+                            <div class="hotel-badge">2 Nights (Penang)</div>
+                        </div>
+                        <p class="hotel-description">Beachfront hotel in Penang offering stunning sea views and easy access to George Town heritage sites.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Beachfront location</li>
+                            <li>✓ Daily breakfast with sea views</li>
+                            <li>✓ Swimming pool overlooking beach</li>
+                            <li>✓ Near Penang attractions</li>
+                            <li>✓ Modern comfortable rooms</li>
+                            <li>✓ Free Wi-Fi and parking</li>
+                            <li>✓ Walking distance to restaurants</li>
+                            <li>✓ Easy access to George Town (15 mins drive)</li>
+                        </ul>
+                        <p class="accommodation-note"><strong>Location Advantage:</strong> Perfect base for exploring Penang's beaches and UNESCO heritage sites</p>
+                    </div>
+
+                    <div class="multi-city-timeline">
+                        <h3>Accommodation Timeline</h3>
+                        <ul class="timeline-list">
+                            <li><strong>Night 1:</strong> IBIS KLCC (Kuala Lumpur)</li>
+                            <li><strong>Nights 2-3:</strong> IBIS KLCC (Kuala Lumpur)</li>
+                            <li><strong>Night 4:</strong> Sunway Lost World Tambun (Ipoh)</li>
+                            <li><strong>Nights 5-6:</strong> Flamingo by the Beach (Penang)</li>
+                            <li><strong>Night 7:</strong> IBIS KLCC (Kuala Lumpur - final night)</li>
+                        </ul>
+                        <p class="note">Check-in: 3:00 PM | Check-out: 12:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Itinerary -->
+                <div id="itinerary" class="tab-content">
+                    <h2>Detailed 8-Day Itinerary</h2>
+                    
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day1')">
+                            <div class="day-number">Day 1</div>
+                            <div class="day-title">Arrival in Kuala Lumpur</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day1" class="day-content">
+                            <p><strong>Highlights:</strong> Airport Arrival | Private Transfer | KLCC Area</p>
+                            <ul>
+                                <li>Arrive at Kuala Lumpur International Airport (KLIA)</li>
+                                <li>Meet and greet by English-speaking driver/guide</li>
+                                <li><strong>Private transfer</strong> to IBIS KLCC Hotel</li>
+                                <li>Check-in at hotel (standard check-in: 3:00 PM)</li>
+                                <li>Room allocation and welcome briefing</li>
+                                <li>Receive multi-city tour information pack</li>
+                                <li>Rest of day at leisure to:
+                                    <ul>
+                                        <li>Walk to Petronas Twin Towers (5 minutes walk)</li>
+                                        <li>Explore KLCC Park and fountain show</li>
+                                        <li>Visit Suria KLCC shopping mall</li>
+                                        <li>Dine at nearby restaurants</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight at IBIS KLCC, Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> None (arrival day)</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day2')">
+                            <div class="day-number">Day 2</div>
+                            <div class="day-title">Kuala Lumpur City Tour</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day2" class="day-content">
+                            <p><strong>Highlights:</strong> 4-Hour Private City Tour | Major Landmarks | Cultural Sites</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li><strong>9:00 AM:</strong> Meet guide for 4-hour Kuala Lumpur City Tour</li>
+                                <li><strong>Tour Highlights:</strong>
+                                    <ul>
+                                        <li><strong>Independence Square (Dataran Merdeka):</strong>
+                                            <ul>
+                                                <li>Historic site of Malaysian independence declaration</li>
+                                                <li>View the world's tallest free-standing flagpole (100m)</li>
+                                                <li>Sultan Abdul Samad Building (colonial Moorish architecture)</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>National Mosque (Masjid Negara):</strong>
+                                            <ul>
+                                                <li>Modern Islamic architecture with blue roof</li>
+                                                <li>73-meter high minaret</li>
+                                                <li>Capacity for 15,000 worshippers</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>National Monument:</strong>
+                                            <ul>
+                                                <li>Bronze sculpture commemorating fallen heroes</li>
+                                                <li>Set in beautiful Lake Gardens</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>King's Palace (Istana Negara):</strong>
+                                            <ul>
+                                                <li>Official residence of Yang di-Pertuan Agong</li>
+                                                <li>Photo opportunity at grand entrance</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Petronas Twin Towers Photo Stop:</strong>
+                                            <ul>
+                                                <li>World's tallest twin towers (451.9 meters)</li>
+                                                <li>88 floors of architectural marvel</li>
+                                                <li>Best photo spots from KLCC Park</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Thean Hou Temple:</strong>
+                                            <ul>
+                                                <li>Six-tiered Chinese temple on Robson Heights</li>
+                                                <li>Dedicated to Goddess Thean Hou</li>
+                                                <li>Panoramic city views</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>1:00 PM:</strong> Return to hotel</li>
+                                <li>Afternoon free for:
+                                    <ul>
+                                        <li>Shopping at Bukit Bintang</li>
+                                        <li>Visit Berjaya Times Square</li>
+                                        <li>Explore Chinatown and Little India</li>
+                                        <li>Relaxation at hotel</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight at IBIS KLCC, Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day3')">
+                            <div class="day-number">Day 3</div>
+                            <div class="day-title">Sunway Lagoon Theme Park Full Day</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day3" class="day-content">
+                            <p><strong>Highlights:</strong> Sunway Lagoon 6-in-1 Park | Water Rides | Theme Adventures</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li><strong>9:00 AM:</strong> Depart for Sunway Lagoon (30 minutes drive)</li>
+                                <li><strong>Sunway Lagoon Theme Park - 6 Parks in 1:</strong>
+                                    <ul>
+                                        <li><strong>1. Water Park:</strong>
+                                            <ul>
+                                                <li>Malaysia's longest Vuvuzela water slide</li>
+                                                <li>FlowRider surfing simulator</li>
+                                                <li>Wave pool with artificial waves</li>
+                                                <li>Multiple water slides and attractions</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>2. Amusement Park:</strong>
+                                            <ul>
+                                                <li>Pirate's Revenge pendulum ride</li>
+                                                <li>Grand Canyon River Rapids</li>
+                                                <li>Colorado Splash log flume</li>
+                                                <li>Various thrill rides</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>3. Wildlife Park:</strong>
+                                            <ul>
+                                                <li>Over 150 species of animals</li>
+                                                <li>Interactive animal encounters</li>
+                                                <li>Birds, reptiles, and mammals</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>4. Extreme Park:</strong>
+                                            <ul>
+                                                <li>Bungee jumping</li>
+                                                <li>Go-kart racing</li>
+                                                <li>Paintball arena</li>
+                                                <li>ATV rides</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>5. Scream Park:</strong>
+                                            <ul>
+                                                <li>Horror-themed attractions</li>
+                                                <li>Haunted houses</li>
+                                                <li>Spooky experiences</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>6. Nickelodeon Lost Lagoon:</strong>
+                                            <ul>
+                                                <li>Kid-friendly water attractions</li>
+                                                <li>Meet Nickelodeon characters</li>
+                                                <li>Interactive water play areas</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Full day</strong> to explore all parks at your own pace</li>
+                                <li>Lunch and refreshments available at park restaurants (own expense)</li>
+                                <li>Lockers and changing facilities available</li>
+                                <li><strong>6:00 PM:</strong> Depart Sunway Lagoon</li>
+                                <li><strong>7:00 PM:</strong> Return to hotel</li>
+                                <li>Overnight at IBIS KLCC, Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="important-note"><strong>What to Bring:</strong> Swimwear, towel, extra clothes, sunscreen, waterproof bag for valuables, comfortable footwear</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day4')">
+                            <div class="day-number">Day 4</div>
+                            <div class="day-title">Transfer to Ipoh + Lost World of Tambun Night Park</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day4" class="day-content">
+                            <p><strong>Highlights:</strong> Scenic Drive to Ipoh | Lost World of Tambun Night Park | Natural Hot Springs</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li>Check-out from IBIS KLCC</li>
+                                <li><strong>10:00 AM:</strong> Begin private transfer from Kuala Lumpur to Ipoh</li>
+                                <li><strong>Journey Details:</strong>
+                                    <ul>
+                                        <li>Approximately 2.5 hours scenic drive (210 km)</li>
+                                        <li>Travel along North-South Expressway</li>
+                                        <li>Pass through Perak state countryside</li>
+                                        <li>Rest stop at highway service area</li>
+                                    </ul>
+                                </li>
+                                <li><strong>12:30 PM:</strong> Arrive in Ipoh, heritage capital of Perak</li>
+                                <li>Check-in at Sunway Lost World of Tambun Hotel</li>
+                                <li>Lunch at hotel or nearby (own expense)</li>
+                                <li><strong>Afternoon:</strong> Free time to enjoy hotel facilities:
+                                    <ul>
+                                        <li>Swimming pool</li>
+                                        <li>Natural hot springs pools</li>
+                                        <li>Relaxation areas</li>
+                                        <li>Explore hotel surroundings</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Evening - Lost World of Tambun Night Park:</strong>
+                                    <ul>
+                                        <li>Access to themed night park adjacent to hotel</li>
+                                        <li><strong>Night Park Features:</strong>
+                                            <ul>
+                                                <li>Luminous Forest with glowing installations</li>
+                                                <li>Natural hot springs pools (bring swimwear)</li>
+                                                <li>Hot springs spa (7 therapeutic pools)</li>
+                                                <li>Water park attractions illuminated at night</li>
+                                                <li>Petting zoo with nocturnal animals</li>
+                                                <li>Cooling limestone cave exploration</li>
+                                                <li>Unique evening atmosphere under stars</li>
+                                            </ul>
+                                        </li>
+                                        <li>Duration: 3-4 hours at leisure</li>
+                                    </ul>
+                                </li>
+                                <li>Dinner at hotel or park restaurants (own expense)</li>
+                                <li>Overnight at Sunway Lost World of Tambun Hotel, Ipoh</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="note"><strong>Special Experience:</strong> The hot springs water is naturally heated by underground geothermal activity - perfect for evening relaxation!</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day5')">
+                            <div class="day-number">Day 5</div>
+                            <div class="day-title">Ipoh City Tour + Transfer to Penang</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day5" class="day-content">
+                            <p><strong>Highlights:</strong> 4-Hour Ipoh City Tour | Heritage Buildings | Transfer to Penang Island</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li>Check-out from Sunway Lost World of Tambun Hotel</li>
+                                <li><strong>9:00 AM:</strong> Begin 4-hour Ipoh City Tour</li>
+                                <li><strong>Ipoh City Tour Highlights:</strong>
+                                    <ul>
+                                        <li><strong>Ipoh Railway Station:</strong>
+                                            <ul>
+                                                <li>Nicknamed "Taj Mahal of Ipoh"</li>
+                                                <li>Beautiful colonial architecture</li>
+                                                <li>Built in 1917, stunning white building</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Ipoh Old Town Heritage Walk:</strong>
+                                            <ul>
+                                                <li>Colonial-era shophouses</li>
+                                                <li>Street art murals</li>
+                                                <li>Traditional coffee shops</li>
+                                                <li>Historic Birch Memorial Clock Tower</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Sam Poh Tong Cave Temple:</strong>
+                                            <ul>
+                                                <li>Buddhist temple inside natural limestone cave</li>
+                                                <li>Stalactites and stalagmites formations</li>
+                                                <li>Koi pond and beautiful gardens</li>
+                                                <li>Peaceful meditation sanctuary</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Perak Cave Temple (Kek Lok Tong):</strong>
+                                            <ul>
+                                                <li>Another stunning cave temple</li>
+                                                <li>Zen garden with lake views</li>
+                                                <li>Buddhist shrines and statues</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Concubine Lane (Lorong Panglima):</strong>
+                                            <ul>
+                                                <li>Historic narrow alley</li>
+                                                <li>Souvenir shops and cafes</li>
+                                                <li>Street food vendors</li>
+                                                <li>Perfect for photos</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Photo opportunities:</strong>
+                                            <ul>
+                                                <li>Ipoh Town Hall</li>
+                                                <li>High Court building</li>
+                                                <li>St. Michael's Institution</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>1:00 PM:</strong> Complete Ipoh tour</li>
+                                <li>Lunch stop (optional - own expense) to try famous Ipoh white coffee and local delicacies</li>
+                                <li><strong>2:00 PM:</strong> Depart Ipoh for Penang</li>
+                                <li><strong>Journey to Penang:</strong>
+                                    <ul>
+                                        <li>Approximately 2-hour drive (130 km)</li>
+                                        <li>Cross the iconic 13.5 km Penang Bridge</li>
+                                        <li>Second longest bridge in Southeast Asia</li>
+                                        <li>Spectacular views of the Straits of Malacca</li>
+                                    </ul>
+                                </li>
+                                <li><strong>4:00 PM:</strong> Arrive in Penang</li>
+                                <li>Check-in at Flamingo by the Beach Hotel</li>
+                                <li>Rest of evening at leisure:
+                                    <ul>
+                                        <li>Enjoy beachfront location</li>
+                                        <li>Swim in hotel pool</li>
+                                        <li>Walk along the beach</li>
+                                        <li>Explore nearby restaurants</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight at Flamingo by the Beach, Penang</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="food-tip"><strong>Ipoh Specialties to Try:</strong> Ipoh white coffee, chicken rice, tau fu fa (soy pudding), salted chicken, curry mee</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day6')">
+                            <div class="day-number">Day 6</div>
+                            <div class="day-title">Penang City Tour with Penang Hill</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day6" class="day-content">
+                            <p><strong>Highlights:</strong> 8-Hour Penang Tour | George Town UNESCO Site | Penang Hill Funicular Train</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel with sea views</li>
+                                <li><strong>9:00 AM:</strong> Meet guide for comprehensive 8-hour Penang City Tour</li>
+                                <li><strong>George Town UNESCO Heritage Site:</strong>
+                                    <ul>
+                                        <li>Inscribed as UNESCO World Heritage Site in 2008</li>
+                                        <li>Unique blend of British, Chinese, Malay, and Indian influences</li>
+                                        <li><strong>Street Art Trail:</strong>
+                                            <ul>
+                                                <li>"Little Children on a Bicycle" by Ernest Zacharevic</li>
+                                                <li>"Brother and Sister on a Swing"</li>
+                                                <li>Interactive wire art installations</li>
+                                                <li>Marking George Town Heritage areas</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Clan Jetties:</strong>
+                                            <ul>
+                                                <li>Traditional Chinese water villages on stilts</li>
+                                                <li>Chew Jetty (most famous)</li>
+                                                <li>Over 100 years of history</li>
+                                                <li>Unique kampung lifestyle</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Heritage Buildings:</strong>
+                                            <ul>
+                                                <li>Fort Cornwallis (oldest British fort)</li>
+                                                <li>Penang City Hall</li>
+                                                <li>Colonial mansions along Jalan Penang</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Religious & Cultural Sites:</strong>
+                                    <ul>
+                                        <li><strong>Kek Lok Si Temple:</strong>
+                                            <ul>
+                                                <li>Largest Buddhist temple in Southeast Asia</li>
+                                                <li>Seven-tier Pagoda of Rama VI</li>
+                                                <li>Giant bronze Kuan Yin statue (36.5 meters)</li>
+                                                <li>Beautiful hillside location</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Khoo Kongsi:</strong>
+                                            <ul>
+                                                <li>Ornate Chinese clan house</li>
+                                                <li>Intricate architecture and carvings</li>
+                                                <li>One of finest in Malaysia</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Little India:</strong>
+                                            <ul>
+                                                <li>Vibrant Indian quarter</li>
+                                                <li>Spice shops and textile stores</li>
+                                                <li>Authentic Indian cuisine</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Penang Hill Funicular Train Experience:</strong>
+                                    <ul>
+                                        <li>Board historic funicular railway (opened 1923)</li>
+                                        <li>Asia's earliest funicular train service</li>
+                                        <li>Ascend 833 meters above sea level</li>
+                                        <li>30-minute ride through tropical rainforest</li>
+                                        <li><strong>At the Summit:</strong>
+                                            <ul>
+                                                <li>Panoramic 360° views of Penang Island</li>
+                                                <li>View George Town cityscape</li>
+                                                <li>See Penang Bridge from above</li>
+                                                <li>Cooler temperature (5-7°C lower than below)</li>
+                                                <li>The Habitat nature area (optional)</li>
+                                                <li>Colonial bungalows and gardens</li>
+                                                <li>Restaurants and viewing decks</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Additional Stops:</strong>
+                                    <ul>
+                                        <li>Penang Peranakan Mansion (optional entrance)</li>
+                                        <li>Chew Jetty waterfront</li>
+                                        <li>Armenian Street heritage area</li>
+                                    </ul>
+                                </li>
+                                <li><strong>5:00 PM:</strong> Return to hotel</li>
+                                <li>Evening at leisure - explore Penang's famous street food scene</li>
+                                <li>Overnight at Flamingo by the Beach, Penang</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="food-tip"><strong>Penang Street Food Must-Try:</strong> Char kway teow, assam laksa, nasi kandar, cendol, rojak, apom manis</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day7')">
+                            <div class="day-number">Day 7</div>
+                            <div class="day-title">Transfer Back to Kuala Lumpur</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day7" class="day-content">
+                            <p><strong>Highlights:</strong> Scenic Return Journey | Free Evening in KL</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li>Final moments enjoying beach and hotel facilities</li>
+                                <li>Check-out from Flamingo by the Beach Hotel</li>
+                                <li><strong>10:00 AM:</strong> Begin return journey to Kuala Lumpur</li>
+                                <li><strong>Journey Details:</strong>
+                                    <ul>
+                                        <li>Approximately 5-6 hours drive (350 km)</li>
+                                        <li>Travel back across Penang Bridge</li>
+                                        <li>Scenic drive through Malaysian countryside</li>
+                                        <li>Comfort stops along North-South Expressway</li>
+                                        <li>Lunch stop at highway rest area (own expense)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>4:00 PM:</strong> Arrive back in Kuala Lumpur</li>
+                                <li>Check-in at IBIS KLCC Hotel (return to same hotel)</li>
+                                <li><strong>Evening at leisure:</strong>
+                                    <ul>
+                                        <li>Last-minute shopping at Bukit Bintang</li>
+                                        <li>Visit Pavilion KL or Suria KLCC</li>
+                                        <li>Enjoy night view of Petronas Towers</li>
+                                        <li>Farewell dinner at favorite restaurant (own expense)</li>
+                                        <li>Jalan Alor food street experience</li>
+                                        <li>Pack and prepare for departure</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight at IBIS KLCC, Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="note"><strong>Tip:</strong> Use this evening to purchase last-minute souvenirs - batik, pewter items, local snacks, white coffee</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day8')">
+                            <div class="day-number">Day 8</div>
+                            <div class="day-title">Departure from Kuala Lumpur</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day8" class="day-content">
+                            <p><strong>Highlights:</strong> Final Moments | Airport Transfer | Homeward Journey</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li>Check-out from IBIS KLCC (standard check-out: 12:00 PM)</li>
+                                <li><strong>Time permitting before departure:</strong>
+                                    <ul>
+                                        <li>Last walk around KLCC Park</li>
+                                        <li>Final photos with Petronas Towers</li>
+                                        <li>Quick souvenir shopping at Suria KLCC</li>
+                                        <li>Coffee at local cafe</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Private transfer</strong> to Kuala Lumpur International Airport (KLIA)</li>
+                                <li>Recommended arrival: 3 hours before international flight</li>
+                                <li>Check-in for Qatar Airways return flight</li>
+                                <li>Duty-free shopping at KLIA (world-class airport facilities)</li>
+                                <li>Departure on Qatar Airways flight home</li>
+                                <li><strong>End of unforgettable 3-city Malaysian adventure!</strong></li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="farewell-note"><strong>Terima Kasih & Selamat Jalan!</strong> Thank you for choosing Jetwide Consortium. Your journey through Kuala Lumpur, Ipoh, and Penang has showcased the incredible diversity of Malaysia. We hope you return soon!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Inclusions & Exclusions -->
+                <div id="inclusions" class="tab-content">
+                    <h2>What's Included</h2>
+                    <ul class="inclusions-list">
+                        <li>✓ <strong>Return Flight Ticket</strong> on Qatar Airways (economy class)</li>
+                        <li>✓ <strong>7 Nights Accommodation</strong> with daily breakfast:
+                            <ul style="margin-left: 25px; margin-top: 8px;">
+                                <li>• 4 nights at IBIS KLCC, Kuala Lumpur</li>
+                                <li>• 1 night at Sunway Lost World Tambun, Ipoh</li>
+                                <li>• 2 nights at Flamingo by the Beach, Penang</li>
+                            </ul>
+                        </li>
+                        <li>✓ <strong>Daily Breakfast</strong> at all hotels</li>
+                        <li>✓ <strong>All Inter-City Transfers</strong> on private basis with air-conditioned vehicle</li>
+                        <li>✓ <strong>Airport Transfers</strong> (arrival and departure) - private basis</li>
+                        <li>✓ <strong>English-Speaking Driver/Guide</strong> throughout the tour</li>
+                        <li>✓ <strong>4-Hour Kuala Lumpur City Tour</strong> (private)</li>
+                        <li>✓ <strong>Sunway Lagoon Theme Park</strong> full-day 6-in-1 admission ticket</li>
+                        <li>✓ <strong>Lost World of Tambun Night Park</strong> admission</li>
+                        <li>✓ <strong>4-Hour Ipoh City Tour</strong> (private)</li>
+                        <li>✓ <strong>8-Hour Penang City Tour</strong> (private)</li>
+                        <li>✓ <strong>Penang Hill Funicular Train</strong> return ticket</li>
+                        <li>✓ <strong>All entrance fees</strong> mentioned in itinerary</li>
+                        <li>✓ All applicable government taxes and service charges</li>
+                        <li>✓ Tourism tax and hotel service charges</li>
+                    </ul>
+
+                    <h2>What's Not Included</h2>
+                    <ul class="exclusions-list">
+                        <li>✗ Meals not mentioned (lunch, dinner throughout the tour)</li>
+                        <li>✗ Personal expenses (laundry, telephone, minibar)</li>
+                        <li>✗ Beverages and drinks with meals</li>
+                        <li>✗ Optional activities and attractions not mentioned</li>
+                        <li>✗ Travel insurance (highly recommended for multi-city tour)</li>
+                        <li>✗ Tips and gratuities for driver/guide</li>
+                        <li>✗ Entrance to optional museums and galleries</li>
+                        <li>✗ Sunway Lagoon lockers and additional services</li>
+                        <li>✗ Lost World Tambun day park access (only night park included)</li>
+                        <li>✗ The Habitat Penang Hill entrance (optional)</li>
+                        <li>✗ Shopping purchases and souvenirs</li>
+                        <li>✗ Visa fees (if applicable based on nationality)</li>
+                        <li>✗ Early check-in or late check-out charges</li>
+                        <li>✗ Anything not specifically mentioned in inclusions</li>
+                    </ul>
+
+                    <div class="terms-notice">
+                        <h3>Terms & Conditions</h3>
+                        <ul>
+                            <li>Prices subject to availability at time of booking</li>
+                            <li>Passport must be valid for minimum 6 months from travel date</li>
+                            <li>Hotel check-in: 3:00 PM | Check-out: 12:00 PM</li>
+                            <li>All tours and transfers conducted on private basis</li>
+                            <li>Inter-city travel times are approximate and subject to traffic</li>
+                            <li>Funicular train operations are weather dependent</li>
+                            <li>Bring swimwear for Sunway Lagoon and Lost World Tambun</li>
+                            <li>Theme park hours may vary - check schedule upon arrival</li>
+                            <li>Lost World Tambun Night Park timings: typically 6:00 PM - 11:00 PM</li>
+                            <li>Comfortable walking shoes essential for city tours</li>
+                            <li>Tour sequence may be adjusted based on local conditions</li>
+                            <li>Company reserves right to modify itinerary due to unforeseen circumstances</li>
+                            <li>Cancellation policy applies as per booking terms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="package-sidebar">
+                    <!-- Quick Information -->
+                    <div class="package-info-card">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-item-label">📅 Duration</span>
+                        <span class="info-item-value">8D / 7N</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">💰 Price From</span>
+                        <span class="info-item-value">USD 1,885</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🏨 Hotels</span>
+                        <span class="info-item-value">3 Cities</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">✈️ Airline</span>
+                        <span class="info-item-value">Qatar Airways</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🍽️ Meal Plan</span>
+                        <span class="info-item-value">Breakfast</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🎢 Theme Parks</span>
+                        <span class="info-item-value">2 Parks</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🚂 Penang Hill</span>
+                        <span class="info-item-value">Train Included</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🚐 Transfers</span>
+                        <span class="info-item-value">All Private</span>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-card">
+                    <h3>Book This Package</h3>
+                    <form action="../../send-contact-simple.php" method="POST" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+254 XXX XXX XXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers *</label>
+                            <input type="number" id="travelers" name="travelers" required min="1" max="20" placeholder="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel_date">Preferred Travel Date *</label>
+                            <input type="date" id="travel_date" name="travel_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requirements or questions about this multi-city tour..."></textarea>
+                        </div>
+
+                        <input type="hidden" name="package" value="Discover Kuala Lumpur, Ipoh & Penang - 8D/7N - USD 1,885">
+                        
+                        <button type="submit" class="btn-submit">📨 Request Quote</button>
+                    </form>
+
+                    <div class="contact-options">
+                        <p style="text-align: center; margin: 15px 0; font-weight: 600; color: #666;">Or reach us directly:</p>
+                        <a href="https://wa.me/254746691113" class="contact-btn whatsapp-btn" target="_blank">
+                            📱 WhatsApp
+                        </a>
+                        <a href="tel:+254746691113" class="contact-btn phone-btn">
+                            📞 Call Us
+                        </a>
+                        <a href="mailto:info@jetwideconsortium.com" class="contact-btn email-btn">
+                            ✉️ Email
+                        </a>
+                    </div>
+                </div>
+            </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Jetwide Consortium</h3>
+                    <p>Your trusted partner for travel, visa services, and unforgettable experiences across Kenya and beyond.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../visa-services.html">Visa Services</a></li>
+                        <li><a href="../kenyan-safaris.html">Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📧 info@jetwideconsortium.com</p>
+                    <p>📱 +254 746 691 113</p>
+                    <p>📍 Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jetwide Consortium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Tab Switching
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            tabButtons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Gallery Image Switching
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+            
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // Open Lightbox (placeholder function)
+        function openLightbox() {
+            alert('Gallery lightbox feature coming soon!');
+        }
+
+        // Toggle Day Content
+        function toggleContent(dayId) {
+            const content = document.getElementById(dayId);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "−";
+            }
+        }
+    </script>
+    <script src="../../dynamic-content.js"></script>
+</body>
+</html>
