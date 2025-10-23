@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Day Tsavo East & West Safari | Jetwide Travel</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <style>
+    /* White overlay navigation menu */
+    .header-main {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu a {
+      color: #14132A;
+      font-weight: 500;
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: #FE9900;
+    }
+    
+    .dropdown-arrow {
+      color: #14132A;
+    }
+    
+    .dropdown-menu {
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .dropdown-header {
+      color: #14132A;
+    }
+    
+    .dropdown-item {
+      color: #333;
+    }
+    
+    .dropdown-item:hover {
+      background: #f8f8f8;
+      color: #FE9900;
+    }
+    
+    .mobile-menu-toggle span {
+      background: #14132A;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-menu {
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .package-detail-page {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .package-hero {
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .breadcrumb a {
+      color: #ffa500;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .package-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .package-meta {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .meta-item strong {
+      color: #ffa500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .main-content {
+      background: white;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .gallery-main {
+      grid-column: 1 / -1;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .gallery-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-thumb {
+      height: 120px;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery-thumb:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .view-all-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(255, 165, 0, 0.9);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .view-all-btn:hover {
+      background: rgba(255, 140, 0, 1);
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #1a472a;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ffa500;
+      padding-bottom: 10px;
+    }
+
+    .section h3 {
+      color: #2d5a3d;
+      font-size: 1.3rem;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .hotel-options {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 30px 0;
+      border-left: 4px solid #ffa500;
+    }
+
+    .hotel-options h3 {
+      color: #1a472a;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .hotel-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .hotel-table thead {
+      background: #1a472a;
+      color: white;
+    }
+
+    .hotel-table th {
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .hotel-table td {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hotel-table tbody tr:hover {
+      background: #f5f5f5;
+    }
+
+    .hotel-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .hotel-table .price {
+      color: #ffa500;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .itinerary-day {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      border-left: 4px solid #ffa500;
+    }
+
+    .itinerary-day h3 {
+      color: #1a472a;
+      margin-top: 0;
+    }
+
+    .itinerary-day .accommodation {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 15px;
+      border-left: 3px solid #2d5a3d;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .highlight-box {
+      background: #fff8e7;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #ffa500;
+    }
+
+    .highlight-box h4 {
+      color: #1a472a;
+      margin-top: 0;
+    }
+
+    .highlight-box ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .highlight-box li {
+      margin-bottom: 8px;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+
+    .booking-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .booking-card h3 {
+      color: #1a472a;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .price-display {
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .price-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 5px;
+    }
+
+    .price-amount {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffa500;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+
+    .booking-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .booking-form button {
+      width: 100%;
+      padding: 15px;
+      background: #ffa500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .booking-form button:hover {
+      background: #ff8c00;
+    }
+
+    .contact-options {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid #eee;
+    }
+
+    .contact-options h4 {
+      color: #1a472a;
+      margin-bottom: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    .quick-info {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .quick-info h4 {
+      color: #1a472a;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .info-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+    }
+
+    .info-item strong {
+      color: #2d5a3d;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* Quick Information Card Styling */
+    .package-info-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-top: 20px;
+    }
+
+    .package-info-card h3 {
+      color: #14132A;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #FE9900;
+      font-weight: 700;
+    }
+
+    .package-info-card .info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 15px;
+      margin-bottom: 12px;
+      background: white;
+      border-radius: 8px;
+      border-left: 4px solid #FE9900;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .package-info-card .info-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 10px rgba(254, 153, 0, 0.15);
+      border-left-width: 6px;
+    }
+
+    .package-info-card .info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .package-info-card .info-item strong {
+      color: #14132A;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline;
+      margin-bottom: 0;
+    }
+
+    .package-info-card .info-item span {
+      color: #FE9900;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 968px) {
+      .content-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .package-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .gallery-main {
+        height: 250px;
+      }
+
+      .hotel-table th,
+      .hotel-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <!-- Contact Info -->
+          <div class="header-contact">
+            <div class="contact-item">
+              <img src="../../assets/images/phone-call.png?v=5" alt="Phone" width="16" height="16" />
+              <a href="tel:+254748538311">0748 538 311</a>
+            </div>
+            <div class="contact-item">
+              <img src="../../assets/images/email.png?v=5" alt="Email" width="16" height="16" />
+              <a href="mailto:safaris@jetwide.org">safaris@jetwide.org</a>
+            </div>
+            <div class="contact-item desktop-only">
+              <img src="../../assets/images/location.png?v=5" alt="Location" width="16" height="16" />
+              <a href="https://maps.google.com/?q=Westlands+Square+2nd+Floor+Nairobi" target="_blank">Westlands Square 2nd Floor</a>
+            </div>
+            <div class="contact-item desktop-only">
+              <span><strong>Monday - Friday:</strong> 9 AM - 5 PM</span>
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="header-social">
+            <a href="https://wa.me/254748538311" target="_blank"><img src="../../assets/images/whatsapp.png?v=5" alt="WhatsApp" width="18" height="18" /></a>
+            <a href="https://www.facebook.com/jetwideconsortium/" target="_blank"><img src="../../assets/images/facebook.png?v=5" alt="Facebook" width="18" height="18" /></a>
+            <a href="https://www.instagram.com/jetwidesafaris/" target="_blank"><img src="../../assets/images/instagram.png?v=5" alt="Instagram" width="18" height="18" /></a>
+            <a href="https://www.x.com/JetWideC" target="_blank"><img src="../../assets/images/twitter.png?v=5" alt="Twitter" width="18" height="18" /></a>
+            <a href="https://www.linkedin.com/company/jetwideconsortium" target="_blank"><img src="../../assets/images/linkedin.png?v=5" alt="LinkedIn" width="18" height="18" /></a>
+            <a href="https://www.pinterest.com/jetwide/" target="_blank"><img src="../../assets/images/pinterest.png?v=5" alt="Pinterest" width="18" height="18" /></a>
+            <a href="https://www.youtube.com/@JetwideConsortium" target="_blank"><img src="../../assets/images/youtube.png?v=5" alt="YouTube" width="18" height="18" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main header -->
+    <div class="header-main">
+      <div class="container">
+        <img src="../../assets/images/logo_small.webp" alt="Jetwide Logo" class="logo" />
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav-menu">
+          <a href="../../index.html">Home</a>
+          <a href="../visa-services.html">VISA Processing</a>
+          <div class="dropdown">
+            <a href="../../index.html#tours" class="dropdown-toggle">Tours & Safaris <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4 class="dropdown-header">Local Tours</h4>
+                <a href="../themed-packages.html" class="dropdown-item">Themed Packages</a>
+                <a href="../beach-getaways.html" class="dropdown-item">Beach Getaways</a>
+                <a href="../kenyan-safaris.html" class="dropdown-item active">Exclusive Kenyan Safaris</a>
+              </div>
+              <div class="dropdown-section">
+                <h4 class="dropdown-header">International Destinations</h4>
+                <a href="../international-destinations.html" class="dropdown-item">International Destinations</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="../../index.html#services" class="dropdown-toggle">Other Services <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="../car-hire.html" class="dropdown-item">Car Hire Services</a>
+              <a href="../job-placement.html" class="dropdown-item">Job Placement Services</a>
+              <a href="../airline-airport-services.html" class="dropdown-item">Airline Booking & Airport Transfer Services</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="../about-us.html" class="dropdown-toggle">About Jetwide <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="../about-us.html" class="dropdown-item">About Us</a>
+              <a href="../blogs.html" class="dropdown-item">Blogs</a>
+              <a href="../contact.html" class="dropdown-item">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Package Detail Hero -->
+  <section class="package-detail-hero">
+    <div class="container">
+      <div class="package-detail-header">
+        <div class="package-breadcrumb">
+          <a href="../../index.html">Home</a> > 
+          <a href="../kenyan-safaris.html">Exclusive Kenyan Safaris</a> > 
+          <span>Tsavo East & West Safari</span>
+        </div>
+        <h1 class="package-detail-title">3-Day Tsavo East & West Safari</h1>
+        <div class="package-meta">
+          <div class="meta-item">
+            <strong>PRICE</strong>
+            <span class="package-price">USD 775</span>
+            <small>per person</small>
+          </div>
+          <div class="meta-item">
+            <strong>DURATION</strong>
+            <span>3 Days / 2 Nights</span>
+          </div>
+          <div class="meta-item">
+            <strong>TOUR TYPE</strong>
+            <span class="tour-type">Safari</span>
+          </div>
+          <div class="meta-item">
+            <strong>DESTINATIONS</strong>
+            <span>Tsavo East & West</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Package Content -->
+  <section class="package-content">
+    <div class="container">
+      <div class="package-layout">
+        <!-- Main Content -->
+        <div class="package-main">
+          <!-- Gallery Section -->
+          <div class="package-gallery">
+            <div class="gallery-main">
+              <div class="main-image-wrapper">
+                <img src="../../assets/images/Exclusive-Kenyan-Safaris/tsavo-safari.jpg" alt="Tsavo Safari" id="mainImage" class="main-gallery-image">
+                <button class="gallery-btn" onclick="openLightbox()">📷 GALLERY</button>
+              </div>
+            </div>
+            <div class="gallery-thumbnails">
+              <img src="../../assets/images/Exclusive-Kenyan-Safaris/tsavo-safari.jpg" alt="Tsavo Safari" onclick="changeMainImage(this)" class="thumbnail active">
+              <img src="../../assets/images/Exclusive-Kenyan-Safaris/red-elephants.jpg" alt="Red Elephants" onclick="changeMainImage(this)" class="thumbnail">
+              <img src="../../assets/images/Exclusive-Kenyan-Safaris/mzima-springs.jpg" alt="Mzima Springs" onclick="changeMainImage(this)" class="thumbnail">
+              <img src="../../assets/images/Exclusive-Kenyan-Safaris/tsavo-landscape.jpg" alt="Tsavo Landscape" onclick="changeMainImage(this)" class="thumbnail">
+            </div>
+          </div>
+
+          <!-- Package Tabs -->
+          <div class="package-tabs">
+            <button class="tab-link active" onclick="openTab(event, 'overview')">Overview</button>
+            <button class="tab-link" onclick="openTab(event, 'hotels')">Available Hotels</button>
+            <button class="tab-link" onclick="openTab(event, 'itinerary')">Itinerary</button>
+            <button class="tab-link" onclick="openTab(event, 'inclusions')">Inclusions & Exclusions</button>
+          </div>
+
+          <!-- Overview Tab -->
+          <div id="overview" class="tab-content active">
+            <div class="overview-details">
+              <h2>Safari Overview</h2>
+              <p>Explore Kenya's oldest and largest national park on this captivating 3-day safari through Tsavo East and Tsavo West. Together forming one of the world's largest national parks, Tsavo offers an authentic wilderness experience with diverse landscapes ranging from endless plains to volcanic hills and natural springs.</p>
+              
+              <p>Famous for its iconic <strong>"red elephants"</strong> that dust themselves with red soil, Tsavo is home to massive elephant herds, lions (including the legendary man-eaters of Tsavo), buffaloes, and diverse wildlife. Discover Mzima Springs' crystal-clear waters teeming with hippos and crocodiles, explore the dramatic Shetani Lava Flows, and visit the Ngulia Rhino Sanctuary in your quest to spot the Big Five in their natural habitat.</p>
+            </div>
+
+            <div class="safari-highlights">
+              <h3>Safari Highlights</h3>
+              <ul class="highlight-list">
+                <li>See Tsavo's famous "red elephants" - massive herds dust-bathing in red soil</li>
+                <li>Learn about the legendary man-eaters of Tsavo - historical lion attacks of 1898</li>
+                <li>Visit Mzima Springs with underwater viewing chamber for hippos and crocodiles</li>
+                <li>Explore Shetani Lava Flows - dramatic volcanic landscapes from ancient eruptions</li>
+                <li>Visit Ngulia Rhino Sanctuary - protected area for endangered black rhinos</li>
+                <li>Spot diverse wildlife: giraffes, zebras, buffaloes, gazelles, and abundant birdlife</li>
+                <li>Experience varied terrain: open savannahs, rocky outcrops, volcanic hills, and riverine forests</li>
+                <li>Endless photography opportunities in Kenya's largest wilderness area</li>
+              </ul>
+            </div>
+
+            <div class="important-notes">
+              <h3>Important Notes</h3>
+              <div class="expandable-content">
+                <button class="expand-btn" onclick="toggleContent(this)">Read More ▼</button>
+                <div class="expandable-text" style="display: none;">
+                  <ul>
+                    <li><strong>Climate:</strong> Tsavo is hot and dry. Temperatures can exceed 35°C. Bring sunscreen, hat, and light clothing.</li>
+                    <li><strong>Hydration:</strong> Drink plenty of water. Bottled water is provided during game drives.</li>
+                    <li><strong>Travel Time:</strong> Nairobi to Tsavo East is approximately 4-5 hours. Expect scenic drives with wildlife sightings.</li>
+                    <li><strong>Connectivity:</strong> Limited mobile network in the parks. Embrace the wilderness disconnection!</li>
+                    <li><strong>Dress Code:</strong> Neutral colors (khaki, brown, green) for game drives. Avoid bright colors and white.</li>
+                    <li><strong>Malaria:</strong> Tsavo is a malaria zone. Consult your doctor about prophylaxis before travel.</li>
+                    <li><strong>What to Pack:</strong> Binoculars, camera with telephoto lens, sunglasses, insect repellent, light jacket for early mornings.</li>
+                    <li><strong>Tipping:</strong> Budget USD 10-15 per day for guide, USD 5-10 per day for lodge staff.</li>
+                    <li><strong>Best Time:</strong> Year-round destination. Dry seasons (June-October, January-February) offer best wildlife viewing.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Available Hotels Tab -->
+          <div id="hotels" class="tab-content">
+            <h2>Choose Your Accommodation</h2>
+            <p class="hotels-intro">Select from three carefully curated accommodation options to match your comfort preferences and budget. All packages include 1 night in Tsavo East and 1 night in Tsavo West with full board meals.</p>
+
+            <div class="hotel-card">
+              <h3>Voi Wildlife Lodge & Ngulia Lodge - Comfort Category</h3>
+              <p class="hotel-price"><strong>USD 775</strong> per person</p>
+              <p class="hotel-location">Tsavo East & Tsavo West National Parks</p>
+              <p class="hotel-nights">2 Nights Full Board (1 night each park)</p>
+              <p class="hotel-description">Classic mid-range lodges offering excellent value with comfortable rooms, stunning views, and essential amenities. Voi Wildlife Lodge overlooks a waterhole attracting diverse wildlife, while Ngulia Lodge offers panoramic views of the Tsavo West wilderness.</p>
+              <h4>Amenities:</h4>
+              <ul class="hotel-amenities">
+                <li>En-suite rooms with balconies/terraces</li>
+                <li>Restaurant serving buffet meals</li>
+                <li>Bar and lounge areas</li>
+                <li>Swimming pools at both lodges</li>
+                <li>Waterhole viewpoints for wildlife watching</li>
+                <li>24-hour electricity and hot water</li>
+                <li>Gift shops with local crafts</li>
+              </ul>
+            </div>
+
+            <div class="hotel-card">
+              <h3>Sentrim Tsavo & Severin Sea Lodge - Superior Category</h3>
+              <p class="hotel-price"><strong>USD 875</strong> per person</p>
+              <p class="hotel-location">Tsavo East & Tsavo West National Parks</p>
+              <p class="hotel-nights">2 Nights Full Board (1 night each park)</p>
+              <p class="hotel-description">Upgraded accommodations featuring enhanced comfort and service. Sentrim Tsavo offers spacious rooms in a serene setting, while Severin Sea Lodge combines safari with coastal luxury, though typically Severin Safari Camp is used for authentic bush experience in Tsavo West.</p>
+              <h4>Amenities:</h4>
+              <ul class="hotel-amenities">
+                <li>Spacious en-suite rooms with modern amenities</li>
+                <li>À la carte and buffet dining options</li>
+                <li>Premium bars with cocktail service</li>
+                <li>Large swimming pools with sun loungers</li>
+                <li>Spa services and wellness facilities</li>
+                <li>Cultural entertainment evenings</li>
+                <li>Guided nature walks available</li>
+                <li>Conference facilities</li>
+              </ul>
+            </div>
+
+            <div class="hotel-card">
+              <h3>Satao Camp & Soroi Cheetah Tented Camp - Luxury Category</h3>
+              <p class="hotel-price"><strong>USD 1,095</strong> per person</p>
+              <p class="hotel-location">Tsavo East & Tsavo West National Parks</p>
+              <p class="hotel-nights">2 Nights Full Board (1 night each park)</p>
+              <p class="hotel-description">Premium tented camps offering an exclusive, intimate safari experience. Satao Camp features luxury tents overlooking waterholes frequented by elephants, while Soroi Cheetah Tented Camp provides an upscale wilderness retreat with stunning views and exceptional service.</p>
+              <h4>Amenities:</h4>
+              <ul class="hotel-amenities">
+                <li>Luxury safari tents with private verandas</li>
+                <li>Four-poster beds with premium linens</li>
+                <li>En-suite bathrooms with hot showers</li>
+                <li>Gourmet dining with international cuisine</li>
+                <li>Premium bar with extensive wine selection</li>
+                <li>Infinity pools with wilderness views</li>
+                <li>Private game drives and bush meals</li>
+                <li>Spa treatments in natural settings</li>
+                <li>Personalized butler service</li>
+                <li>Star-gazing decks and campfire experiences</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Itinerary Tab -->
+          <div id="itinerary" class="tab-content">
+            <h2>Detailed Day-by-Day Itinerary</h2>
+
+            <div class="itinerary-day">
+              <div class="day-header">
+                <span class="day-number">Day 1</span>
+                <h3>Nairobi / JKIA – Tsavo East</h3>
+              </div>
+              <div class="day-content">
+                <p>You will be picked up either from Jomo Kenyatta International Airport or your hotel/residence in Nairobi, then depart by road towards Tsavo East National Park, Kenya's oldest and largest park. The journey takes approximately 4-5 hours through scenic countryside. Arrive at your lodge/camp in time for lunch.</p>
+                
+                <p>In the afternoon, enjoy your first game drive in Tsavo East, famous for its large <strong>"red elephants"</strong> that dust-bathe in the park's distinctive red soil, giving them their unique coloring. The park's vast open savannahs and acacia woodlands provide excellent wildlife viewing opportunities.</p>
+                
+                <p>Watch for lions, buffaloes, giraffes, zebras, and diverse birdlife against the backdrop of endless plains. The late afternoon light creates perfect conditions for photography as animals become more active.</p>
+                
+                <p>Later, return to the lodge for dinner and overnight, often accompanied by the sounds of the African bush.</p>
+                
+                <p><strong>Accommodation:</strong> Selected lodge in Tsavo East (Full Board)</p>
+                <p><strong>Meals:</strong> Lunch & Dinner</p>
+                <p><strong>Highlights:</strong> Red elephants, vast savannahs, first Big Five encounters</p>
+              </div>
+            </div>
+
+            <div class="itinerary-day">
+              <div class="day-header">
+                <span class="day-number">Day 2</span>
+                <h3>Tsavo East – Tsavo West</h3>
+              </div>
+              <div class="day-content">
+                <p>After breakfast, check out and enjoy a morning game drive en route as you head to Tsavo West National Park. This transfer game drive offers excellent opportunities to spot wildlife while traveling between the two parks, maximizing your safari experience.</p>
+                
+                <p>Arrive at your Tsavo West lodge in time for lunch and some relaxation. In the afternoon, embark on a game drive exploring the park's stunning and diverse landscapes, including:</p>
+                
+                <ul>
+                  <li><strong>Mzima Springs</strong> – Crystal-clear natural springs fed by underground rivers from the Chyulu Hills. Home to hippos and crocodiles, featuring an underwater viewing chamber where you can observe aquatic life.</li>
+                  <li><strong>Shetani Lava Flows</strong> – Dramatic black volcanic landscapes formed by eruptions just 200-500 years ago. The name "Shetani" means "devil" in Swahili, reflecting local legends.</li>
+                  <li><strong>Ngulia Rhino Sanctuary</strong> – A 90 sq km fenced sanctuary protecting Kenya's critically endangered black rhinos. One of Kenya's most successful rhino breeding programs.</li>
+                </ul>
+                
+                <p>Tsavo West's varied terrain includes volcanic hills, rocky outcrops, and riverine forests, creating diverse habitats for wildlife. The park offers more dramatic scenery compared to the open plains of Tsavo East.</p>
+                
+                <p>Return to the lodge for dinner and overnight stay.</p>
+                
+                <p><strong>Accommodation:</strong> Selected lodge in Tsavo West (Full Board)</p>
+                <p><strong>Meals:</strong> Breakfast, Lunch & Dinner</p>
+                <p><strong>Highlights:</strong> Mzima Springs, Shetani Lava, Ngulia Rhino Sanctuary, volcanic landscapes</p>
+              </div>
+            </div>
+
+            <div class="itinerary-day">
+              <div class="day-header">
+                <span class="day-number">Day 3</span>
+                <h3>Tsavo West – Nairobi / JKIA</h3>
+              </div>
+              <div class="day-content">
+                <p>Rise early for a final morning game drive to catch wildlife at their most active during the cooler morning hours. This is an excellent time to spot predators returning from nocturnal hunts and herbivores grazing in the dawn light.</p>
+                
+                <p>Return to the lodge for a hearty breakfast, then check out and depart for Nairobi or JKIA. Enjoy scenic views along the journey as you leave the wilderness behind, with opportunities to stop for refreshments en route.</p>
+                
+                <p>You will be dropped off at your hotel, residence, or the airport in time for your onward travel, carrying unforgettable memories of Kenya's largest wilderness area and the iconic red elephants of Tsavo.</p>
+                
+                <p><strong>Meals:</strong> Breakfast</p>
+                <p><strong>Drop-off:</strong> Nairobi or JKIA (timing coordinated with your onward plans)</p>
+                <p><strong>Highlights:</strong> Final wildlife viewing, scenic return journey</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inclusions & Exclusions Tab -->
+          <div id="inclusions" class="tab-content">
+            <div class="inclusions-grid">
+              <div class="inclusions-column">
+                <h3>✅ What's Included</h3>
+                <ul class="styled-list included">
+                  <li>✅ 1 night Tsavo East & 1 night Tsavo West accommodation (Full Board)</li>
+                  <li>✅ Return airport transfers from JKIA/Nairobi</li>
+                  <li>✅ Services of a professional English-speaking driver-guide</li>
+                  <li>✅ Bottled water during safari</li>
+                  <li>✅ Transport in a 4x4 pop-up Land Cruiser</li>
+                  <li>✅ Game drives in both Tsavo East and West</li>
+                  <li>✅ All park fees and conservancy fees</li>
+                  <li>✅ Full board meals (breakfast, lunch, dinner)</li>
+                  <li>✅ Visit to Mzima Springs underwater viewing chamber</li>
+                  <li>✅ Shetani Lava Flows exploration</li>
+                  <li>✅ Ngulia Rhino Sanctuary visit</li>
+                </ul>
+              </div>
+
+              <div class="exclusions-column">
+                <h3>❌ What's Not Included</h3>
+                <ul class="styled-list excluded">
+                  <li>❌ International flights</li>
+                  <li>❌ Kenya visa fees (USD 50 for most nationalities)</li>
+                  <li>❌ Travel insurance</li>
+                  <li>❌ Optional activities not mentioned in itinerary</li>
+                  <li>❌ Alcoholic and premium beverages at lodges</li>
+                  <li>❌ Tips and gratuities for guide and lodge staff</li>
+                  <li>❌ Personal expenses (laundry, telephone, souvenirs)</li>
+                  <li>❌ Medical expenses and vaccinations</li>
+                  <li>❌ Anything not specifically mentioned in inclusions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Safari Highlights -->
+          <div class="section">
+            <h2>Safari Highlights</h2>
+            <div class="overview-grid">
+              <div class="highlight-box">
+                <h4>🐘 Wildlife</h4>
+                <ul>
+                  <li>Famous "red elephants"</li>
+                  <li>Lions, including Tsavo's man-eaters descendants</li>
+                  <li>Large buffalo herds</li>
+                  <li>Black rhinos (Ngulia Sanctuary)</li>
+                  <li>Leopards and cheetahs</li>
+                  <li>Hippos and crocodiles at Mzima Springs</li>
+                </ul>
+              </div>
+
+              <div class="highlight-box">
+                <h4>🏞️ Landscapes</h4>
+                <ul>
+                  <li>Endless savannah plains</li>
+                  <li>Shetani Lava Flows</li>
+                  <li>Mzima Springs crystal waters</li>
+                  <li>Volcanic hills and rocky outcrops</li>
+                  <li>Acacia woodlands</li>
+                  <li>Riverine forests</li>
+                </ul>
+              </div>
+
+              <div class="highlight-box">
+                <h4>📸 Experiences</h4>
+                <ul>
+                  <li>Multiple game drives in 4x4 Land Cruiser</li>
+                  <li>Underwater hippo viewing chamber</li>
+                  <li>Visit to Ngulia Rhino Sanctuary</li>
+                  <li>Explore ancient lava formations</li>
+                  <li>Professional photography opportunities</li>
+                  <li>Kenya's largest protected wilderness</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best Time to Visit -->
+          <div class="section">
+            <h2>Best Time to Visit</h2>
+            <div class="highlight-box">
+              <p><strong>Dry Season (June to October & January to February):</strong> Best for game viewing as animals congregate around water sources. Roads are more accessible and wildlife easier to spot in thinner vegetation.</p>
+              
+              <p><strong>Wet Season (March to May & November to December):</strong> Lush green landscapes, migratory birds, and fewer tourists. The park is beautiful but some tracks may be challenging. Great for photography with dramatic skies.</p>
+              
+              <p><strong>Year-Round Destination:</strong> Tsavo's vast size means excellent wildlife viewing throughout the year, with each season offering unique experiences.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="package-sidebar">
+          <!-- Booking Card -->
+          <div class="booking-form-card">
+            <h3>Book This Safari</h3>
+            
+            <form class="booking-form" action="../../send-contact-simple.php" method="POST">
+              <input type="hidden" name="package_name" value="3-Day Tsavo East & West Safari">
+              <input type="hidden" name="package_price" value="From USD 775 per person">
+              
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+
+              <div class="form-group">
+                <label for="hotel">Preferred Hotel *</label>
+                <select id="hotel" name="hotel_choice" required>
+                  <option value="">Select Hotel</option>
+                  <option value="Voi Wildlife & Ngulia Lodge - USD 775">Voi Wildlife & Ngulia Lodge - USD 775</option>
+                  <option value="Sentrim Tsavo & Severin Sea Lodge - USD 875">Sentrim Tsavo & Severin Sea Lodge - USD 875</option>
+                  <option value="Satao Camp & Soroi Cheetah - USD 1,095">Satao Camp & Soroi Cheetah - USD 1,095</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="travelers">Number of Travelers *</label>
+                <input type="number" id="travelers" name="travelers" min="1" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="date">Preferred Date *</label>
+                <input type="date" id="date" name="travel_date" required>
+              </div>
+              
+              <button type="submit" class="btn-book">Send Inquiry</button>
+            </form>
+            
+            <div class="booking-contact">
+              <p><strong>Or Contact Us Directly:</strong></p>
+              <a href="tel:+254748538311" class="contact-link">📞 0748 538 311</a>
+              <a href="https://wa.me/254748538311?text=Hi! I'm interested in the Tsavo Safari Package" class="contact-link whatsapp">💬 WhatsApp Us</a>
+              <a href="mailto:safaris@jetwide.org" class="contact-link">✉️ safaris@jetwide.org</a>
+            </div>
+          </div>
+
+          <!-- Quick Information Card -->
+          <div class="package-info-card">
+            <h3>Quick Information</h3>
+            <div class="info-item">
+              <strong>Price</strong>
+              <span>From USD 775</span>
+            </div>
+            <div class="info-item">
+              <strong>Duration</strong>
+              <span>3 Days / 2 Nights</span>
+            </div>
+            <div class="info-item">
+              <strong>Transport</strong>
+              <span>4x4 Pop-up Land Cruiser</span>
+            </div>
+            <div class="info-item">
+              <strong>Accommodation</strong>
+              <span>Full Board Lodges</span>
+            </div>
+            <div class="info-item">
+              <strong>Meals</strong>
+              <span>All Meals Included</span>
+            </div>
+            <div class="info-item">
+              <strong>Group Size</strong>
+              <span>2-6 Persons per Vehicle</span>
+            </div>
+            <div class="info-item">
+              <strong>Availability</strong>
+              <span>Year-round</span>
+            </div>
+            <div class="info-item">
+              <strong>Best Season</strong>
+              <span>Jun-Oct, Jan-Feb</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../dynamic-content.js"></script>
+  <script>
+    // Tab switching functionality
+    function openTab(evt, tabName) {
+      // Hide all tab content
+      const tabContents = document.getElementsByClassName('tab-content');
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove('active');
+      }
+      
+      // Remove active class from all tab links
+      const tabLinks = document.getElementsByClassName('tab-link');
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove('active');
+      }
+      
+      // Show current tab and mark button as active
+      document.getElementById(tabName).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    function changeMainImage(thumbnail) {
+      const mainImage = document.getElementById('mainImage');
+      mainImage.src = thumbnail.src;
+      
+      // Update active thumbnail
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+      thumbnail.classList.add('active');
+    }
+
+    function openLightbox() {
+      // Lightbox functionality can be added here
+      alert('Gallery lightbox feature coming soon!');
+    }
+
+    // Expandable content toggle
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        button.textContent = 'Read Less ▲';
+      } else {
+        content.style.display = 'none';
+        button.textContent = 'Read More ▼';
+      }
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content-wrapper">
+      <div class="footer-logo-section">
+        <img src="../../assets/images/logo_small.webp" alt="Jetwide Logo" class="footer-logo" />
+      </div>
+      
+      <div class="newsletter-section">
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input" />
+          <button type="submit" class="newsletter-button">
+            <img src="../../assets/images/paperplane_icon.png" alt="Subscribe" class="newsletter-icon" />
+            <span class="newsletter-text">Send</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="../../index.html#tours">Tours & Safaris</a></li>
+            <li><a href="../visa-services.html">Passport & VISA Processing</a></li>
+            <li><a href="../car-hire.html">Car-hire services</a></li>
+            <li><a href="../job-placement.html">Recruitment & Job Placements</a></li>
+            <li><a href="../airline-airport-services.html">Airline Bookings</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#tours">Tours & Safaris</a></li>
+            <li><a href="../visa-services.html">VISA Processing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="#terms">Terms of Use</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contacts</h3>
+          <div class="contact-item">
+            <img src="../../assets/images/location.png" alt="Location" class="contact-icon" />
+            <span class="contact-text">Westlands Square, 2nd Floor</span>
+          </div>
+          <div class="contact-item">
+            <img src="../../assets/images/phone-call.png" alt="Phone" class="contact-icon" />
+            <span class="contact-text">0700 368 676 | 0714 534 677 | 0748 538 311</span>
+          </div>
+          <div class="contact-item">
+            <img src="../../assets/images/email.png" alt="Email" class="contact-icon" />
+            <span class="contact-text">info@jetwide.org | safaris@jetwide.org</span>
+          </div>
+          
+          <h3 style="margin-top: 20px;">Social Media</h3>
+          <div class="social-links">
+            <a href="https://www.x.com/JetWideC" target="_blank"><img src="../../assets/images/twitter.png" alt="Twitter" class="social-icon" /></a>
+            <a href="https://www.facebook.com/jetwideconsortium/" target="_blank"><img src="../../assets/images/facebook.png" alt="Facebook" class="social-icon" /></a>
+            <a href="https://www.instagram.com/jetwidesafaris/" target="_blank"><img src="../../assets/images/instagram.png" alt="Instagram" class="social-icon" /></a>
+            <a href="https://www.linkedin.com/company/jetwideconsortium" target="_blank"><img src="../../assets/images/linkedin.png" alt="LinkedIn" class="social-icon" /></a>
+            <a href="https://www.youtube.com/@JetwideConsortium" target="_blank"><img src="../../assets/images/youtube.png" alt="YouTube" class="social-icon" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Powered By Malckom</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu and Dropdown functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenuToggle.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.header-main')) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
+        });
+      }
+      
+      // Dropdown functionality
+      const dropdowns = document.querySelectorAll('.dropdown');
+      
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        
+        // Toggle dropdown on click
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+          
+          // Close other dropdowns
+          dropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove('active');
+            }
+          });
+        });
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+          });
+        }
+      });
+      
+      // Handle dropdown items click
+      const dropdownItems = document.querySelectorAll('.dropdown-item');
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          // Close dropdown after selection
+          const dropdown = this.closest('.dropdown');
+          dropdown.classList.remove('active');
+          
+          // Also close mobile menu if open
+          if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      // Auto-hide header on scroll down, show on scroll up
+      let lastScrollTop = 0;
+      let scrollThreshold = 100;
+      const header = document.querySelector('header');
+      
+      window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > scrollThreshold) {
+          if (scrollTop > lastScrollTop) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }, false);
+    });
+  </script>
+  
+  <!-- Dynamic Content JavaScript -->
+  <script src="../../dynamic-content.js"></script>
+</body>
+</html>
