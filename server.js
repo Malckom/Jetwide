@@ -51,6 +51,183 @@ const createTransporter = () => {
   });
 };
 
+// Job Application endpoint
+app.post('/send-job-application', async (req, res) => {
+  try {
+    console.log('Received job application:', req.body);
+    
+    const {
+      name, passportNo, issueDate, expiryDate, placeOfBirth, dob,
+      phone, idNo, address, email, education, period, occupation,
+      refusedEntry, countryRefused, reason, position, additionalInfo
+    } = req.body;
+
+    if (!name || !passportNo || !email || !phone || !position) {
+      return res.status(400).json({
+        success: false,
+        message: 'Missing required fields. Please fill in all required information.'
+      });
+    }
+
+    const transporter = createTransporter();
+
+    // Email to recruitment team
+    const recruitmentEmailHTML = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .header { background: linear-gradient(135deg, #FE9900 0%, #e88800 100%); color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; }
+        .section { margin-bottom: 25px; padding: 15px; background: #f8f9fa; border-left: 4px solid #FE9900; }
+        .section h3 { color: #FE9900; margin-top: 0; }
+        .field { margin-bottom: 10px; }
+        .alert { background: #fff8e1; padding: 15px; border-left: 4px solid #d4af37; margin: 10px 0; }
+        .footer { background: #14132A; color: white; padding: 15px; text-align: center; font-size: 12px; }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <h1>🌍 New Job Application - Serbia</h1>
+        <p><strong>Position: ${position}</strong></p>
+      </div>
+      <div class="content">
+        <div class="alert">
+          <strong>⏰ Action Required:</strong> Review and contact applicant within 24 hours
+        </div>
+        <div class="section">
+          <h3>📋 Personal Information</h3>
+          <div class="field"><strong>Name:</strong> ${name}</div>
+          <div class="field"><strong>Email:</strong> ${email}</div>
+          <div class="field"><strong>Phone:</strong> ${phone}</div>
+          <div class="field"><strong>ID No:</strong> ${idNo || 'Not provided'}</div>
+          <div class="field"><strong>Address:</strong> ${address || 'Not provided'}</div>
+          <div class="field"><strong>Date of Birth:</strong> ${dob || 'Not provided'}</div>
+          <div class="field"><strong>Place of Birth:</strong> ${placeOfBirth || 'Not provided'}</div>
+        </div>
+        <div class="section">
+          <h3>🛂 Passport Information</h3>
+          <div class="field"><strong>Passport No:</strong> ${passportNo}</div>
+          <div class="field"><strong>Issue Date:</strong> ${issueDate || 'Not provided'}</div>
+          <div class="field"><strong>Expiry Date:</strong> ${expiryDate || 'Not provided'}</div>
+        </div>
+        <div class="section">
+          <h3>🎓 Education & Experience</h3>
+          <div class="field"><strong>Education:</strong> ${education || 'Not provided'}</div>
+          <div class="field"><strong>Period:</strong> ${period || 'Not provided'}</div>
+          <div class="field"><strong>Current Occupation:</strong> ${occupation || 'Not provided'}</div>
+        </div>
+        <div class="section">
+          <h3>✈️ Travel History</h3>
+          <div class="field"><strong>Ever Refused Entry:</strong> ${refusedEntry || 'Not specified'}</div>
+          ${refusedEntry === 'Yes' ? `
+          <div class="field"><strong>Country:</strong> ${countryRefused || 'N/A'}</div>
+          <div class="field"><strong>Reason:</strong> ${reason || 'N/A'}</div>
+          ` : ''}
+        </div>
+        <div class="section">
+          <h3>💼 Position Details</h3>
+          <div class="field"><strong>Position Applied For:</strong> ${position}</div>
+          ${additionalInfo ? `<div class="field"><strong>Additional Information:</strong><br>${additionalInfo}</div>` : ''}
+        </div>
+      </div>
+      <div class="footer">
+        <p>Application submitted on ${new Date().toLocaleString()}</p>
+        <p>📧 Reply to: ${email} | 📞 ${phone}</p>
+      </div>
+    </body>
+    </html>`;
+
+    const recruitmentMailOptions = {
+      from: { name: 'Jetwide Website', address: process.env.EMAIL_USER || 'your-email@gmail.com' },
+      to: 'recruitment@jetwide.org',
+      cc: process.env.EMAIL_USER || 'your-email@gmail.com',
+      subject: `🌍 New Job Application - ${position} - Serbia (${name})`,
+      html: recruitmentEmailHTML,
+      replyTo: email
+    };
+
+    await transporter.sendMail(recruitmentMailOptions);
+
+    // Confirmation email to applicant
+    const confirmationHTML = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .header { background: linear-gradient(135deg, #FE9900 0%, #e88800 100%); color: white; padding: 30px; text-align: center; }
+        .content { padding: 30px; }
+        .section { margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-left: 4px solid #FE9900; }
+        .highlight { background: #fff8e1; padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .contact { background: #14132A; color: white; padding: 20px; text-align: center; border-radius: 5px; }
+        .checkmark { color: #28a745; font-size: 20px; }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <h1>✅ Application Received!</h1>
+        <p>Your Journey to Serbia Begins Here</p>
+      </div>
+      <div class="content">
+        <p>Dear ${name},</p>
+        <div class="section">
+          <h3>🎉 Thank You for Applying!</h3>
+          <p>We have successfully received your application for the <strong>${position}</strong> position in Serbia through Jetwide Travel & Safari.</p>
+        </div>
+        <div class="highlight">
+          <h3>📋 Application Summary</h3>
+          <p><strong>Position:</strong> ${position}</p>
+          <p><strong>Location:</strong> Serbia</p>
+          <p><strong>Status:</strong> <span style="color: #FE9900; font-weight: bold;">Under Review</span></p>
+        </div>
+        <div class="section">
+          <h3>🔄 What Happens Next?</h3>
+          <p><span class="checkmark">✓</span> <strong>Application Review:</strong> Our recruitment team will carefully review your application within 24 hours.</p>
+          <p><span class="checkmark">✓</span> <strong>Initial Contact:</strong> If your profile matches our requirements, we'll contact you for a preliminary discussion.</p>
+          <p><span class="checkmark">✓</span> <strong>Interview & Assessment:</strong> Qualified candidates will be invited for interviews.</p>
+          <p><span class="checkmark">✓</span> <strong>Documentation:</strong> We'll guide you through all necessary paperwork.</p>
+          <p><span class="checkmark">✓</span> <strong>Deployment:</strong> Final contract signing and travel arrangements to Serbia.</p>
+        </div>
+        <div class="contact">
+          <h3>📞 Need Assistance?</h3>
+          <p><strong>Email:</strong> recruitment@jetwide.org</p>
+          <p><strong>Phone:</strong> +254 748 538 311</p>
+          <p><strong>Office:</strong> Westlands Square, 2nd Floor, Nairobi</p>
+          <p><strong>Hours:</strong> Monday - Friday, 9 AM - 5 PM</p>
+        </div>
+        <p style="text-align: center; margin-top: 30px;">
+          <strong>🌟 Jetwide Travel & Safari</strong><br>
+          Licensed Recruitment Agency | 100% Legal Compliance
+        </p>
+      </div>
+    </body>
+    </html>`;
+
+    const confirmationOptions = {
+      from: { name: 'Jetwide Recruitment', address: process.env.EMAIL_USER || 'your-email@gmail.com' },
+      to: email,
+      subject: `✅ Application Received - ${position} | Jetwide Recruitment`,
+      html: confirmationHTML
+    };
+
+    await transporter.sendMail(confirmationOptions);
+
+    res.json({
+      success: true,
+      message: 'Thank you! Your application has been submitted successfully. We will review it and contact you within 24 hours.'
+    });
+
+  } catch (error) {
+    console.error('Job application error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Sorry, there was an error submitting your application. Please try again or contact us directly at recruitment@jetwide.org'
+    });
+  }
+});
+
 // Email sending endpoint
 app.post('/send-contact-form', async (req, res) => {
   try {
@@ -188,8 +365,9 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Jetwide Email Server running on http://localhost:${PORT}`);
-  console.log(`� Email functionality ready!`);
+  console.log(`📧 Email functionality ready!`);
   console.log(`🌐 Contact form: http://localhost:${PORT}/pages/contact-form.html`);
+  console.log(`💼 Job application: http://localhost:${PORT}/pages/job-application.html`);
   
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
     console.warn('⚠️  EMAIL CONFIGURATION NEEDED:');

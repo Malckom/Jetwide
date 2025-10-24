@@ -10172,58 +10172,6 @@ section[class*="-hero"] > * {
 }
 
 
-/* Employer Benefits Section */
-.employer-benefits-section {
-  padding: 80px 20px;
-  background: #f9f9f9;
-}
-
-.employer-benefits-section .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-family: 'Oswald', sans-serif;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.benefit-item {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.benefit-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.benefit-icon {
-  font-size: 2rem;
-  color: #28a745;
-  font-weight: bold;
-}
-
-.benefit-item p {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 0;
-}
-
-
 /* Why Choose Jetwide Section */
 .why-choose-section {
   padding: 80px 20px;
