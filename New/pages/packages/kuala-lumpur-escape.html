@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuala Lumpur Escape | Jetwide Consortium</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    
+    <style>
+      /* White overlay navigation menu */
+      .header-main {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-menu a {
+        color: #14132A;
+        font-weight: 500;
+      }
+      
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #FE9900;
+      }
+      
+      .dropdown-arrow {
+        color: #14132A;
+      }
+      
+      .dropdown-menu {
+        background: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .dropdown-header {
+        color: #14132A;
+      }
+      
+      .dropdown-item {
+        color: #333;
+      }
+      
+      .dropdown-item:hover {
+        background: #f8f8f8;
+        color: #FE9900;
+      }
+      
+      .mobile-menu-toggle span {
+        background: #14132A;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-menu {
+          background: white;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+      
+      /* Quick Information Card Styling */
+      .package-info-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+      }
+      
+      .package-info-card h3 {
+        color: #14132A;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #FE9900;
+        font-weight: 700;
+      }
+      
+      .package-info-card .info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #FE9900;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      
+      .package-info-card .info-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(254, 153, 0, 0.15);
+        border-left-width: 6px;
+      }
+      
+      .info-item-label {
+        font-weight: 600;
+        color: #555;
+        font-size: 0.95rem;
+      }
+      
+      .info-item-value {
+        font-weight: 700;
+        color: #14132A;
+        font-size: 1.05rem;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <a href="tel:+254746691113">📞 +254 746 691 113</a>
+                    <a href="mailto:info@jetwideconsortium.com">✉️ info@jetwideconsortium.com</a>
+                </div>
+                <div class="header-top-right">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="header-main">
+            <div class="container">
+                <div class="logo-container">
+                    <a href="../../index.html">
+                        <img src="../../assets/images/Hero-Section/Jetwide logo.png" alt="Jetwide Consortium Logo" class="logo">
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="../../index.html">Home</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Visa Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Get Your Visa Assistance</div>
+                            <a href="../visa-services.html" class="dropdown-item">All Visa Services</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Destinations <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Popular Destinations</div>
+                            <a href="../kenyan-safaris.html" class="dropdown-item">Kenyan Safaris</a>
+                            <a href="../beach-getaways.html" class="dropdown-item">Beach Getaways</a>
+                            <a href="../international-destinations.html" class="dropdown-item">International Packages</a>
+                            <a href="../themed-packages.html" class="dropdown-item">Themed Holidays</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Our Services</div>
+                            <a href="../airline-airport-services.html" class="dropdown-item">Airline & Airport Services</a>
+                            <a href="../car-hire.html" class="dropdown-item">Car Hire Services</a>
+                            <a href="../job-placement.html" class="dropdown-item">Job Placement</a>
+                        </div>
+                    </div>
+                    <a href="../about-us.html">About</a>
+                    <a href="../blogs.html">Blog</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Package Detail Hero -->
+    <section class="package-detail-hero">
+        <div class="container">
+            <div class="package-detail-header">
+                <div class="package-breadcrumb">
+                    <a href="../../index.html">Home</a> > 
+                    <a href="../international-destinations.html">International Destinations</a> > 
+                    <span>Kuala Lumpur Escape</span>
+                </div>
+                <h1>Kuala Lumpur Escape</h1>
+                <div class="package-meta">
+                    <div class="meta-item">
+                        <strong>From USD 1,315</strong>
+                        <span>Per Person Sharing</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>5 Days / 4 Nights</strong>
+                        <span>Duration</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>International</strong>
+                        <span>Package Type</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Kuala Lumpur, Malaysia</strong>
+                        <span>Destination</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Details Content -->
+    <section class="package-content">
+        <div class="container">
+            <div class="package-layout">
+                <div class="package-main">
+                    <!-- Gallery Section -->
+                    <div class="package-gallery">
+                        <div class="gallery-main">
+                            <div class="main-image-wrapper">
+                                <img src="../../assets/images/International-Packages/kuala-lumpur.jpg" alt="Kuala Lumpur" id="mainImage">
+                                <button class="gallery-btn" onclick="openLightbox()">View Gallery</button>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="../../assets/images/International-Packages/kuala-lumpur.jpg" alt="KL Skyline" onclick="changeMainImage(this)" class="thumbnail active">
+                            <img src="../../assets/images/International-Packages/kl-tower.jpg" alt="KL Tower" onclick="changeMainImage(this)" class="thumbnail">
+                            <img src="../../assets/images/International-Packages/port-dickson.jpg" alt="Port Dickson" onclick="changeMainImage(this)" class="thumbnail">
+                            <img src="../../assets/images/International-Packages/genting-highlands.jpg" alt="Genting Highlands" onclick="changeMainImage(this)" class="thumbnail">
+                        </div>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="package-tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+                        <button class="tab-btn" onclick="openTab(event, 'accommodation')">Accommodation</button>
+                        <button class="tab-btn" onclick="openTab(event, 'itinerary')">Itinerary</button>
+                        <button class="tab-btn" onclick="openTab(event, 'inclusions')">Inclusions & Exclusions</button>
+                    </div>
+
+                <!-- Tab Content: Overview -->
+                <div id="overview" class="tab-content active">
+                    <h2>Package Overview</h2>
+                    <p>Escape to the vibrant city of Kuala Lumpur with this perfectly balanced 5-day package combining urban exploration, highland adventure, and coastal relaxation. Experience the best of Malaysia with private tours, iconic attractions, and a unique sunset cruise experience in Port Dickson.</p>
+                    
+                    <h3>Package Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><strong>KL Tower Experience:</strong> Visit both Observation Deck and Sky Deck for breathtaking 360° city views</li>
+                        <li><strong>Genting Highlands Adventure:</strong> Scenic cable car ride through tropical rainforest</li>
+                        <li><strong>Batu Caves Cultural Visit:</strong> Iconic Hindu shrine with colorful 272 steps</li>
+                        <li><strong>Private City Tour:</strong> 5-hour personalized exploration of Kuala Lumpur (5 hours)</li>
+                        <li><strong>Port Dickson Coastal Escape:</strong> Beach resort destination with Dickson Dragon Sunset Cruise</li>
+                        <li><strong>Saltwater Jacuzzi Experience:</strong> Unique onboard relaxation during sunset cruise</li>
+                        <li><strong>Private Transfers:</strong> All airport and tour transfers on private basis</li>
+                        <li><strong>Flexible Accommodation:</strong> Choose from 5 quality hotel options</li>
+                    </ul>
+                    
+                    <h3>Important Information</h3>
+                    <ul class="info-list">
+                        <li>Valid passport required (minimum 6 months validity)</li>
+                        <li>All tours conducted on private basis for personalized experience</li>
+                        <li>Cable car operations are weather dependent</li>
+                        <li>Comfortable clothing recommended for Batu Caves (shoulders and knees covered)</li>
+                        <li>Bring swimwear for Port Dickson cruise jacuzzi</li>
+                        <li>Sunset cruise timing subject to weather conditions</li>
+                        <li>KL Tower tickets include both observation levels</li>
+                        <li>Hotel locations provide easy access to city attractions</li>
+                    </ul>
+                </div>
+
+                <!-- Tab Content: Accommodation -->
+                <div id="accommodation" class="tab-content">
+                    <h2>Accommodation Options</h2>
+                    <p>Select from our range of quality hotels in central Kuala Lumpur:</p>
+                    
+                    <div class="hotel-card">
+                        <div class="hotel-header">
+                            <h3>Metro Hotel Bukit Bintang</h3>
+                            <div class="hotel-price">
+                                <span class="price-label">From</span>
+                                <span class="price-amount">USD 1,315</span>
+                                <span class="price-note">per person sharing</span>
+                                <span class="single-occ">Single: USD 1,550</span>
+                            </div>
+                        </div>
+                        <p class="hotel-description">Well-located hotel in the heart of Bukit Bintang shopping and entertainment district.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Prime Bukit Bintang location</li>
+                            <li>✓ Daily breakfast buffet</li>
+                            <li>✓ Walking distance to shopping malls</li>
+                            <li>✓ Modern room amenities</li>
+                        </ul>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-header">
+                            <h3>Ramada Encore By Wyndham Chinatown</h3>
+                            <div class="hotel-price">
+                                <span class="price-label">From</span>
+                                <span class="price-amount">USD 1,320</span>
+                                <span class="price-note">per person sharing</span>
+                                <span class="single-occ">Single: USD 1,560</span>
+                            </div>
+                        </div>
+                        <p class="hotel-description">Contemporary hotel in vibrant Chinatown area, close to cultural attractions and street food.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Chinatown location</li>
+                            <li>✓ International breakfast</li>
+                            <li>✓ Near Petaling Street Market</li>
+                            <li>✓ Free Wi-Fi throughout</li>
+                        </ul>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-header">
+                            <h3>Hotel Grand Continental</h3>
+                            <div class="hotel-price">
+                                <span class="price-label">From</span>
+                                <span class="price-amount">USD 1,325</span>
+                                <span class="price-note">per person sharing</span>
+                                <span class="single-occ">Single: USD 1,565</span>
+                            </div>
+                        </div>
+                        <p class="hotel-description">Established hotel offering comfort and convenience in central location.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Central city location</li>
+                            <li>✓ Breakfast included</li>
+                            <li>✓ Fitness center access</li>
+                            <li>✓ Business facilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-header">
+                            <h3>Cosmos Hotel</h3>
+                            <div class="hotel-price">
+                                <span class="price-label">From</span>
+                                <span class="price-amount">USD 1,330</span>
+                                <span class="price-note">per person sharing</span>
+                                <span class="single-occ">Single: USD 1,580</span>
+                            </div>
+                        </div>
+                        <p class="hotel-description">Quality hotel with excellent facilities and strategic location near major attractions.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Superior room category</li>
+                            <li>✓ Full breakfast buffet</li>
+                            <li>✓ Swimming pool and gym</li>
+                            <li>✓ Multiple dining options</li>
+                        </ul>
+                    </div>
+
+                    <div class="hotel-card featured">
+                        <div class="hotel-header">
+                            <h3>J-Hotel by Dorsett</h3>
+                            <div class="hotel-price">
+                                <span class="price-label">From</span>
+                                <span class="price-amount">USD 1,340</span>
+                                <span class="price-note">per person sharing</span>
+                                <span class="single-occ">Single: USD 1,600</span>
+                            </div>
+                        </div>
+                        <p class="hotel-description">Premium hotel offering modern luxury and exceptional service in prime location.</p>
+                        <ul class="hotel-features">
+                            <li>✓ Premium accommodation</li>
+                            <li>✓ Extensive breakfast selection</li>
+                            <li>✓ Rooftop pool with city views</li>
+                            <li>✓ Close to Petronas Towers</li>
+                            <li>✓ Concierge services</li>
+                            <li>✓ Modern amenities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Itinerary -->
+                <div id="itinerary" class="tab-content">
+                    <h2>Detailed Itinerary</h2>
+                    
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day1')">
+                            <div class="day-number">Day 1</div>
+                            <div class="day-title">Arrival in Kuala Lumpur</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day1" class="day-content">
+                            <p><strong>Highlights:</strong> Airport Arrival | Private Transfer | Hotel Check-in</p>
+                            <ul>
+                                <li>Arrive at Kuala Lumpur International Airport (KLIA)</li>
+                                <li>Meet and greet by our representative</li>
+                                <li><strong>Private transfer</strong> to your selected hotel in Kuala Lumpur</li>
+                                <li>Check-in and room allocation (standard check-in: 3:00 PM)</li>
+                                <li>Receive welcome pack with tour information</li>
+                                <li>Rest of the day at leisure to relax after your journey</li>
+                                <li><strong>Evening Suggestions:</strong>
+                                    <ul>
+                                        <li>Explore nearby Bukit Bintang area</li>
+                                        <li>Visit Pavilion KL shopping mall</li>
+                                        <li>Try local street food at Jalan Alor</li>
+                                        <li>Relax at hotel facilities</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight stay in Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> None (arrival day)</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day2')">
+                            <div class="day-number">Day 2</div>
+                            <div class="day-title">Genting Highlands Tour with Batu Caves Visit</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day2" class="day-content">
+                            <p><strong>Highlights:</strong> Batu Caves | Genting Highlands | Cable Car | Cool Mountain Climate</p>
+                            <ul>
+                                <li><strong>8:00 AM:</strong> Breakfast at hotel</li>
+                                <li><strong>9:00 AM:</strong> Depart for full-day Genting Highlands Tour</li>
+                                <li><strong>First Stop - Batu Caves:</strong>
+                                    <ul>
+                                        <li>Visit the iconic 140-foot golden statue of Lord Murugan</li>
+                                        <li>Climb the famous 272 colorful steps to the main cave temple</li>
+                                        <li>Explore the limestone cave formations and Hindu shrines</li>
+                                        <li>One of Malaysia's most renowned landmarks</li>
+                                        <li>Sacred Hindu site attracting devotees and tourists</li>
+                                        <li>Photo opportunities with resident monkeys</li>
+                                        <li>Duration: approximately 1 hour</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Journey to Genting Highlands:</strong>
+                                    <ul>
+                                        <li>Scenic drive through lush tropical rainforest</li>
+                                        <li>Ascend to 6,000 feet above sea level</li>
+                                        <li>Notice temperature drop as you climb higher</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Genting Highlands Experience:</strong>
+                                    <ul>
+                                        <li><strong>Two-Way Cable Car Ride:</strong></li>
+                                        <li>Board the Awana Skyway cable car</li>
+                                        <li>Enjoy spectacular panoramic views of tropical rainforest</li>
+                                        <li>Experience Southeast Asia's longest and fastest cable car</li>
+                                        <li>10-minute scenic journey with breathtaking vistas</li>
+                                        <li>Arrive at Genting Highlands Resort</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Free Time at Genting Highlands:</strong>
+                                    <ul>
+                                        <li>Enjoy the cool mountain climate (refreshing 18-22°C)</li>
+                                        <li>Explore indoor and outdoor theme parks (optional)</li>
+                                        <li>Visit premium outlet stores for shopping</li>
+                                        <li>Try your luck at entertainment venues</li>
+                                        <li>Dine at various international restaurants</li>
+                                        <li>Take photos with scenic mountain backdrop</li>
+                                        <li>Duration: 2-3 hours free time</li>
+                                    </ul>
+                                </li>
+                                <li><strong>5:30 PM:</strong> Return journey to Kuala Lumpur</li>
+                                <li><strong>7:00 PM:</strong> Arrive at hotel</li>
+                                <li>Evening at leisure</li>
+                                <li>Overnight stay in Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="note"><strong>Note:</strong> Bring a light jacket as Genting Highlands can be cool. Cable car operations are weather dependent.</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day3')">
+                            <div class="day-number">Day 3</div>
+                            <div class="day-title">Kuala Lumpur City Tour + KL Tower Visit</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day3" class="day-content">
+                            <p><strong>Highlights:</strong> Private City Tour | KL Tower Observation Deck & Sky Deck | Major Landmarks</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li><strong>9:00 AM:</strong> Depart for 5-hour Kuala Lumpur City Tour (private basis)</li>
+                                <li><strong>City Tour Highlights:</strong>
+                                    <ul>
+                                        <li><strong>Independence Square (Dataran Merdeka):</strong>
+                                            <ul>
+                                                <li>Historic site where Malaysian flag was first raised</li>
+                                                <li>Colonial architecture and Sultan Abdul Samad Building</li>
+                                                <li>Photo opportunities with iconic buildings</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>National Monument:</strong>
+                                            <ul>
+                                                <li>Impressive bronze sculpture commemorating Malaysian heroes</li>
+                                                <li>Beautiful Lake Gardens setting</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>King's Palace (Istana Negara):</strong>
+                                            <ul>
+                                                <li>Official residence of Malaysian monarch</li>
+                                                <li>Photo stop at grand entrance</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Petronas Twin Towers:</strong>
+                                            <ul>
+                                                <li>Photo stop at world's tallest twin towers</li>
+                                                <li>View from KLCC Park</li>
+                                                <li>Iconic 88-story buildings</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Thean Hou Temple:</strong>
+                                            <ul>
+                                                <li>One of oldest and largest Chinese temples in Southeast Asia</li>
+                                                <li>Beautiful architecture and city views</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Drive through Golden Triangle:</strong>
+                                            <ul>
+                                                <li>View modern Kuala Lumpur skyline</li>
+                                                <li>Shopping and business districts</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Afternoon - KL Tower Visit:</strong>
+                                    <ul>
+                                        <li>Visit iconic Menara Kuala Lumpur (KL Tower)</li>
+                                        <li>7th tallest telecommunications tower in the world</li>
+                                        <li><strong>Observation Deck:</strong>
+                                            <ul>
+                                                <li>Located at 276 meters height</li>
+                                                <li>360-degree panoramic views of Kuala Lumpur</li>
+                                                <li>Interactive displays and binoculars</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Sky Deck (Open-air Platform):</strong>
+                                            <ul>
+                                                <li>Located at 300 meters - even higher views!</li>
+                                                <li>Open-air observation deck</li>
+                                                <li>Feel the breeze while enjoying spectacular vistas</li>
+                                                <li>Perfect for photography enthusiasts</li>
+                                            </ul>
+                                        </li>
+                                        <li>Duration: 1-2 hours</li>
+                                    </ul>
+                                </li>
+                                <li><strong>2:30 PM:</strong> Return to hotel</li>
+                                <li>Rest of day at leisure for:
+                                    <ul>
+                                        <li>Shopping at nearby malls</li>
+                                        <li>Spa treatments</li>
+                                        <li>Exploring local markets</li>
+                                        <li>Relaxation at hotel</li>
+                                    </ul>
+                                </li>
+                                <li>Overnight stay in Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="photo-tip"><strong>Photography Tip:</strong> Both observation levels offer stunning views - bring your camera! Best photos from Sky Deck during golden hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day4')">
+                            <div class="day-number">Day 4</div>
+                            <div class="day-title">Port Dickson Tour with Sunset Cruise</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day4" class="day-content">
+                            <p><strong>Highlights:</strong> Coastal Escape | Dickson Dragon Sunset Cruise | Saltwater Jacuzzi | Beach Relaxation</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li><strong>Free Morning:</strong> Leisure time for:
+                                    <ul>
+                                        <li>Last-minute shopping</li>
+                                        <li>Hotel spa treatments</li>
+                                        <li>Relaxation and packing</li>
+                                        <li>Personal exploration</li>
+                                    </ul>
+                                </li>
+                                <li><strong>12:30 PM:</strong> Check-out and depart for Port Dickson</li>
+                                <li><strong>Journey to Port Dickson:</strong>
+                                    <ul>
+                                        <li>Approximately 1.5-hour scenic drive from Kuala Lumpur</li>
+                                        <li>Head to beautiful coastal resort destination</li>
+                                        <li>Popular beach getaway just 90km from KL</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Arrive at Port Dickson:</strong>
+                                    <ul>
+                                        <li>Short break for refreshments</li>
+                                        <li>Beach walk and relaxation</li>
+                                        <li>Photo opportunities along the coastline</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Dickson Dragon Sunset Cruise Experience:</strong>
+                                    <ul>
+                                        <li><strong>Board the Dickson Dragon cruise boat</strong></li>
+                                        <li>Unique dragon-themed traditional boat</li>
+                                        <li><strong>Saltwater Jacuzzi on Board:</strong>
+                                            <ul>
+                                                <li>Relax in warm bubbling saltwater jacuzzi</li>
+                                                <li>Unique experience - jacuzzi while cruising!</li>
+                                                <li>Perfect for relaxation and photo opportunities</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Sunset Cruise Highlights:</strong>
+                                            <ul>
+                                                <li>Sail along the calm Strait of Malacca waters</li>
+                                                <li>Watch spectacular sunset over the horizon</li>
+                                                <li>Enjoy cool sea breeze and tranquil atmosphere</li>
+                                                <li>Complimentary light refreshments</li>
+                                                <li>Background music creating perfect ambiance</li>
+                                                <li>Duration: approximately 2 hours</li>
+                                            </ul>
+                                        </li>
+                                        <li>Capture beautiful sunset photographs</li>
+                                        <li>Unwind in jacuzzi while viewing coastal scenery</li>
+                                    </ul>
+                                </li>
+                                <li><strong>After Cruise:</strong>
+                                    <ul>
+                                        <li>Brief time at Port Dickson beach</li>
+                                        <li>Dinner at local restaurant (own expense)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Evening:</strong> Return journey to Kuala Lumpur hotel</li>
+                                <li><strong>9:30 PM:</strong> Arrive at hotel</li>
+                                <li>Overnight stay in Kuala Lumpur</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="important-note"><strong>What to Bring:</strong> Swimwear for jacuzzi, towel, camera, sunscreen, and light jacket for evening breeze. Cruise timing may vary based on sunset schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="day-itinerary">
+                        <div class="day-header" onclick="toggleContent('day5')">
+                            <div class="day-number">Day 5</div>
+                            <div class="day-title">Departure</div>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div id="day5" class="day-content">
+                            <p><strong>Highlights:</strong> Final Moments | Airport Transfer | Departure</p>
+                            <ul>
+                                <li><strong>Morning:</strong> Breakfast at hotel</li>
+                                <li>Check-out from hotel (standard check-out: 12:00 PM)</li>
+                                <li><strong>Time permitting before departure:</strong>
+                                    <ul>
+                                        <li>Last-minute souvenir shopping</li>
+                                        <li>Visit nearby attractions</li>
+                                        <li>Enjoy hotel facilities</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Private transfer</strong> to Kuala Lumpur International Airport (KLIA)</li>
+                                <li>Recommended arrival at airport: 3 hours before international flight</li>
+                                <li>Check-in for Qatar Airways flight</li>
+                                <li>Departure on Qatar Airways flight home</li>
+                                <li>End of wonderful Malaysian escape experience!</li>
+                            </ul>
+                            <p class="meal-plan"><strong>Meals:</strong> Breakfast</p>
+                            <p class="farewell-note"><strong>Terima Kasih!</strong> Thank you for choosing Jetwide Consortium. We hope you enjoyed your Kuala Lumpur escape and look forward to welcoming you again!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Inclusions & Exclusions -->
+                <div id="inclusions" class="tab-content">
+                    <h2>What's Included</h2>
+                    <ul class="inclusions-list">
+                        <li>✓ <strong>Return Flight Ticket</strong> on Qatar Airways (economy class)</li>
+                        <li>✓ <strong>4 Nights Accommodation</strong> in selected hotel with breakfast</li>
+                        <li>✓ <strong>Daily Breakfast</strong> at hotel</li>
+                        <li>✓ <strong>Return Airport Transfers</strong> on private basis</li>
+                        <li>✓ <strong>Genting Highland Tour</strong> with two-way cable car ride</li>
+                        <li>✓ <strong>Batu Caves Visit</strong> enroute to Genting</li>
+                        <li>✓ <strong>5-Hour Kuala Lumpur City Tour</strong> on private basis</li>
+                        <li>✓ <strong>KL Tower Tour Ticket</strong> (Observation Deck & Sky Deck)</li>
+                        <li>✓ <strong>Port Dickson Tour</strong> with Dickson Dragon Sunset Cruise</li>
+                        <li>✓ <strong>Saltwater Jacuzzi</strong> experience on cruise boat</li>
+                        <li>✓ All entrance fees and tickets mentioned in itinerary</li>
+                        <li>✓ English-speaking driver/guide during tours</li>
+                        <li>✓ Private air-conditioned vehicle for all tours</li>
+                        <li>✓ All applicable government taxes and service charges</li>
+                    </ul>
+
+                    <h2>What's Not Included</h2>
+                    <ul class="exclusions-list">
+                        <li>✗ Meals not mentioned (lunch, dinner)</li>
+                        <li>✗ Personal expenses (laundry, telephone, etc.)</li>
+                        <li>✗ Beverages and mini-bar charges</li>
+                        <li>✗ Optional activities and attractions</li>
+                        <li>✗ Travel insurance (highly recommended)</li>
+                        <li>✗ Tips and gratuities for guides and drivers</li>
+                        <li>✗ Theme park entrance fees at Genting (optional)</li>
+                        <li>✗ Petronas Twin Towers entrance (optional)</li>
+                        <li>✗ Spa treatments and personal services</li>
+                        <li>✗ Shopping purchases and souvenirs</li>
+                        <li>✗ Visa fees (if applicable based on nationality)</li>
+                        <li>✗ Early check-in or late check-out charges</li>
+                        <li>✗ Additional meals during Port Dickson tour</li>
+                        <li>✗ Anything not specifically mentioned in inclusions</li>
+                    </ul>
+
+                    <div class="terms-notice">
+                        <h3>Terms & Conditions</h3>
+                        <ul>
+                            <li>Prices subject to availability at time of booking</li>
+                            <li>Passport must be valid for minimum 6 months from travel date</li>
+                            <li>Hotel check-in: 3:00 PM | Check-out: 12:00 PM</li>
+                            <li>All tours conducted on private basis</li>
+                            <li>Cable car operations are weather dependent</li>
+                            <li>Sunset cruise timing varies based on sunset schedule</li>
+                            <li>Bring swimwear for jacuzzi experience</li>
+                            <li>Tour timings may be adjusted based on traffic and weather</li>
+                            <li>KL Tower tickets include both observation levels</li>
+                            <li>Company reserves right to modify itinerary due to unforeseen circumstances</li>
+                            <li>Cancellation policy applies as per booking terms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="package-sidebar">
+                    <!-- Quick Information -->
+                    <div class="package-info-card">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-item-label">📅 Duration</span>
+                        <span class="info-item-value">5D / 4N</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">💰 Price From</span>
+                        <span class="info-item-value">USD 1,315</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🏨 Hotels</span>
+                        <span class="info-item-value">5 Options</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">✈️ Airline</span>
+                        <span class="info-item-value">Qatar Airways</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🍽️ Meal Plan</span>
+                        <span class="info-item-value">Breakfast</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🗼 KL Tower</span>
+                        <span class="info-item-value">2 Decks Included</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🛥️ Sunset Cruise</span>
+                        <span class="info-item-value">With Jacuzzi</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-item-label">🚐 Transfers</span>
+                        <span class="info-item-value">Private Basis</span>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-card">
+                    <h3>Book This Package</h3>
+                    <form action="../../send-contact-simple.php" method="POST" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+254 XXX XXX XXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hotel">Preferred Hotel *</label>
+                            <select id="hotel" name="hotel" required>
+                                <option value="">Select Hotel</option>
+                                <option value="Metro Hotel Bukit Bintang - USD 1,315">Metro Hotel Bukit Bintang - USD 1,315</option>
+                                <option value="Ramada Encore Chinatown - USD 1,320">Ramada Encore Chinatown - USD 1,320</option>
+                                <option value="Hotel Grand Continental - USD 1,325">Hotel Grand Continental - USD 1,325</option>
+                                <option value="Cosmos Hotel - USD 1,330">Cosmos Hotel - USD 1,330</option>
+                                <option value="J-Hotel by Dorsett - USD 1,340">J-Hotel by Dorsett - USD 1,340</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers *</label>
+                            <input type="number" id="travelers" name="travelers" required min="1" max="20" placeholder="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel_date">Preferred Travel Date *</label>
+                            <input type="date" id="travel_date" name="travel_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requirements or questions..."></textarea>
+                        </div>
+
+                        <input type="hidden" name="package" value="Kuala Lumpur Escape - 5D/4N">
+                        
+                        <button type="submit" class="btn-submit">📨 Request Quote</button>
+                    </form>
+
+                    <div class="contact-options">
+                        <p style="text-align: center; margin: 15px 0; font-weight: 600; color: #666;">Or reach us directly:</p>
+                        <a href="https://wa.me/254746691113" class="contact-btn whatsapp-btn" target="_blank">
+                            📱 WhatsApp
+                        </a>
+                        <a href="tel:+254746691113" class="contact-btn phone-btn">
+                            📞 Call Us
+                        </a>
+                        <a href="mailto:info@jetwideconsortium.com" class="contact-btn email-btn">
+                            ✉️ Email
+                        </a>
+                    </div>
+                </div>
+            </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Jetwide Consortium</h3>
+                    <p>Your trusted partner for travel, visa services, and unforgettable experiences across Kenya and beyond.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../visa-services.html">Visa Services</a></li>
+                        <li><a href="../kenyan-safaris.html">Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📧 info@jetwideconsortium.com</p>
+                    <p>📱 +254 746 691 113</p>
+                    <p>📍 Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jetwide Consortium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Tab Switching
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            tabButtons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Gallery Image Switching
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+            
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // Open Lightbox (placeholder function)
+        function openLightbox() {
+            alert('Gallery lightbox feature coming soon!');
+        }
+
+        // Toggle Day Content
+        function toggleContent(dayId) {
+            const content = document.getElementById(dayId);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "−";
+            }
+        }
+    </script>
+    <script src="../../dynamic-content.js"></script>
+</body>
+</html>

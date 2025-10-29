@@ -10088,44 +10088,45 @@ section[class*="-hero"] > * {
 
 /* CTA Section */
 .recruitment-cta-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #FE9900, #ffed4e);
-  text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0a1931, #1a3a5f);
+    text-align: center;
 }
 
 .cta-title {
-  font-size: 3rem;
-  color: #333;
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .cta-subtitle {
-  font-size: 2rem;
-  color: #555;
-  margin-bottom: 30px;
-  font-weight: 500;
+    font-size: 2rem;
+    color: #d4edda; /* Light mint green to match your original title color */
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 
 .cta-contact-btn {
-  display: inline-block;
-  background: #333;
-  color: white;
-  padding: 18px 50px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 1px;
+    display: inline-block;
+    background: #FE9900; /* Orange to stand out against navy */
+    color: #0a1931; /* Dark navy text on orange button */
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 .cta-contact-btn:hover {
-  background: #000;
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #ffed4e; /* Yellow on hover */
+    color: #0a1931;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(254, 153, 0, 0.4);
 }
 
 /* Responsive Design */
