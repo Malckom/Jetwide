@@ -68,6 +68,33 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
     }
+    
+    /* Country Group Styling */
+    .country-group {
+      margin-bottom: 40px;
+    }
+    
+    .country-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #14132A;
+      margin: 25px 0 20px 0;
+      padding-left: 10px;
+      border-left: 4px solid #FE9900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .destination-category {
+      margin-bottom: 60px;
+    }
+    
+    @media (max-width: 768px) {
+      .country-subtitle {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -177,197 +204,233 @@
   <!-- International Destinations Packages -->
   <section class="themed-packages-section">
     <div class="container">
-      <div class="themed-packages-grid">
-        
-        <!-- Row 1 - Egypt & Seychelles -->
-        <div class="package-row">
-          <!-- Egypt Nile Cruise -->
-          <a href="packages/egypt-nile-cruise.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/egypy-nile-cruise.jpg');">
-                <div class="package-name-overlay">
-                  <h3>Egypt Nile Cruise</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Egypt — Nile Cruise (Aswan → Luxor)</h3>
-                    <p><strong>Duration:</strong> 7 days / 6 nights</p>
-                    <p><strong>Price:</strong> On request</p>
-                    <p><strong>Description:</strong> Cultural voyage through ancient temples with guided shore excursions between Aswan and Luxor.</p>
-                    <p><strong>Includes:</strong> Cruise accommodation • Guided temple visits as per itinerary • Select meals</p>
-                    <p><strong>Excludes:</strong> International flights • Optional tours • Visa and tips</p>
+      
+      <!-- Egypt -->
+      <div class="destination-category">
+        <div class="country-group">
+          <h3 class="country-subtitle">🇪🇬 Egypt</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Egypt Nile Cruise -->
+              <a href="packages/egypt-nile-cruise.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/egypy-nile-cruise.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Egypt Nile Cruise</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">EGYPT</div>
+                      <div class="package-content">
+                        <h3>Egypt — Nile Cruise (Aswan → Luxor)</h3>
+                        <p><strong>Duration:</strong> 7 days / 6 nights</p>
+                        <p><strong>Price:</strong> On request</p>
+                        <p><strong>Description:</strong> Cultural voyage through ancient temples with guided shore excursions between Aswan and Luxor.</p>
+                        <p><strong>Includes:</strong> Cruise accommodation • Guided temple visits as per itinerary • Select meals</p>
+                        <p><strong>Excludes:</strong> International flights • Optional tours • Visa and tips</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <!-- Seychelles Mahe Wonders -->
-          <a href="packages/seychelles-mahe-wonders.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Mahe-island.jpg');">
-                <div class="package-name-overlay">
-                  <h3>Seychelles Mahe Wonders</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Seychelles — Mahe Wonders</h3>
-                    <p><strong>Duration:</strong> 5 days / 4 nights</p>
-                    <p><strong>Price:</strong> USD 1,500 per person</p>
-                    <p><strong>Description:</strong> Short Seychelles break focused on Mahe's beaches and island culture.</p>
-                    <p><strong>Includes:</strong> Flights • 4 nights accommodation • Transfers • Taxes</p>
-                    <p><strong>Excludes:</strong> Excursions • Tips • Personal expenses</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Seychelles Praslin & Mahe -->
-          <a href="packages/seychelles-praslin-mahe.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/intl-packages\ \(1\).jpg');">
-                <div class="package-name-overlay">
-                  <h3>Seychelles Two-Island Escape</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Seychelles — Praslin & Mahe Extravaganza</h3>
-                    <p><strong>Duration:</strong> 6 days / 4 nights (2N Praslin + 2N Mahe)</p>
-                    <p><strong>Price:</strong> USD 1,745 per person</p>
-                    <p><strong>Description:</strong> Two-island escape combining pristine beaches and Vallée de Mai highlights.</p>
-                    <p><strong>Includes:</strong> Flights • Ferry transfers • 2 nights Praslin • 2 nights Mahe • Transfers</p>
-                    <p><strong>Excludes:</strong> Island activities not listed • Tips</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+          </div>
         </div>
-
-        <!-- Row 2 - Maldives -->
-        <div class="package-row">
-          <!-- Maldives Resort Options -->
-          <a href="packages/maldives-resort-experience.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Maldives\ Resort\ Experience\ 5.jpg');">
-                <div class="package-name-overlay">
-                  <h3>Maldives Resort Experience</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Maldives — Resort Options (Full-Board)</h3>
-                    <p><strong>Duration:</strong> 6 days / 5 nights</p>
-                    <p><strong>Price:</strong> From USD 1,861 to 2,557 per person depending on resort</p>
-                    <p><strong>Description:</strong> Relaxing water-villa stays with full-board dining and marine activities.</p>
-                    <p><strong>Includes:</strong> Flights • 5 nights full board • Airport transfers • Taxes</p>
-                    <p><strong>Excludes:</strong> Special excursions (dolphin cruise/diving) • Spa treatments • Premium beverages</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Row 3 - Dubai & Malaysia Shopping -->
-        <div class="package-row">
-          <!-- Dubai Experience -->
-          <a href="packages/dubai-experience.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Dubai\ Experience\ 4.jpg');">
-                <div class="package-name-overlay">
-                  <h3>Dubai Experience</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Dubai — 5-Day City & Desert Adventure</h3>
-                    <p><strong>Duration:</strong> 5 days / 4 nights</p>
-                    <p><strong>Price:</strong> From USD 1,135 per person (6 hotel options)</p>
-                    <p><strong>Description:</strong> Experience Dubai's best with city tour, desert safari BBQ, and Marina dhow cruise. Choice of 6 hotels.</p>
-                    <p><strong>Includes:</strong> Fly Emirates flights • 4N B&B • 30-day visa • Tourism dirham • 3 tours</p>
-                    <p><strong>Excludes:</strong> Lunch & dinner • Optional activities • Personal expenses</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- KL Shopping Tour -->
-          <a href="packages/kuala-lumpur-shopping-tour.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Kuala Lumpur Shopping Paradise 1.jpg');">
-                <div class="package-name-overlay">
-                  <h3>KL Shopping Tour</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Kuala Lumpur — Shopping Paradise</h3>
-                    <p><strong>Duration:</strong> 5 days / 4 nights</p>
-                    <p><strong>Price:</strong> USD 1,265 per person</p>
-                    <p><strong>Description:</strong> Shopping-focused Malaysia package with Genting Premium Outlet, 5-hour KL shopping tour, and Mitsui Outlet.</p>
-                    <p><strong>Includes:</strong> Qatar Airways flights • 4N breakfast • Cable car • Shopping vouchers • 3 outlets</p>
-                    <p><strong>Excludes:</strong> Lunch & dinner • Shopping purchases • Optional tours</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- KL Escape -->
-          <a href="packages/kuala-lumpur-escape.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Kuala Lumpur Escape 1.jpg');">
-                <div class="package-name-overlay">
-                  <h3>Kuala Lumpur Escape</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Kuala Lumpur — City & Coastal Escape</h3>
-                    <p><strong>Duration:</strong> 5 days / 4 nights</p>
-                    <p><strong>Price:</strong> From USD 1,315 per person (5 hotel options)</p>
-                    <p><strong>Description:</strong> Private KL city tour, KL Tower, Genting Highlands, and Port Dickson sunset cruise with saltwater jacuzzi.</p>
-                    <p><strong>Includes:</strong> Qatar Airways flights • 4N breakfast • KL Tower • Cable car • Sunset cruise</p>
-                    <p><strong>Excludes:</strong> Meals not mentioned • Tips • Personal expenses</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Row 4 - Malaysia Multi-City -->
-        <div class="package-row">
-          <!-- Discover KL, Ipoh & Penang -->
-          <a href="packages/discover-kuala-lumpur-ipoh-penang.html" class="package-card-link">
-            <div class="package-card">
-              <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Kuala-Lumpur-Ipoh-Penang\ \(4\).jpg');">
-                <div class="package-name-overlay">
-                  <h3>Discover KL, Ipoh & Penang</h3>
-                </div>
-                <div class="package-overlay">
-                  <div class="package-badge">INTERNATIONAL DESTINATIONS</div>
-                  <div class="package-content">
-                    <h3>Malaysia — 3-City Adventure</h3>
-                    <p><strong>Duration:</strong> 8 days / 7 nights</p>
-                    <p><strong>Price:</strong> USD 1,885 per person</p>
-                    <p><strong>Description:</strong> Epic multi-city tour with Sunway Lagoon theme park, Lost World Tambun Night Park, and Penang Hill funicular train.</p>
-                    <p><strong>Includes:</strong> Flights • 7N breakfast • 3 city tours • 2 theme parks • Penang Hill train • Private transfers</p>
-                    <p><strong>Excludes:</strong> Lunch & dinner • Optional activities • Tips</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
       </div>
+
+      <!-- Seychelles -->
+      <div class="destination-category">
+        <div class="country-group">
+          <h3 class="country-subtitle">🇸🇨 Seychelles</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Seychelles Mahe Wonders -->
+              <a href="packages/seychelles-mahe-wonders.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Mahe-island.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Seychelles Mahe Wonders</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SEYCHELLES</div>
+                      <div class="package-content">
+                        <h3>Seychelles — Mahe Wonders</h3>
+                        <p><strong>Duration:</strong> 5 days / 4 nights</p>
+                        <p><strong>Price:</strong> USD 1,500 per person</p>
+                        <p><strong>Description:</strong> Short Seychelles break focused on Mahe's beaches and island culture.</p>
+                        <p><strong>Includes:</strong> Flights • 4 nights accommodation • Transfers • Taxes</p>
+                        <p><strong>Excludes:</strong> Excursions • Tips • Personal expenses</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Seychelles Praslin & Mahe -->
+              <a href="packages/seychelles-praslin-mahe.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/intl-packages\ \(1\).jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Seychelles Two-Island Escape</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SEYCHELLES</div>
+                      <div class="package-content">
+                        <h3>Seychelles — Praslin & Mahe Extravaganza</h3>
+                        <p><strong>Duration:</strong> 6 days / 4 nights (2N Praslin + 2N Mahe)</p>
+                        <p><strong>Price:</strong> USD 1,745 per person</p>
+                        <p><strong>Description:</strong> Two-island escape combining pristine beaches and Vallée de Mai highlights.</p>
+                        <p><strong>Includes:</strong> Flights • Ferry transfers • 2 nights Praslin • 2 nights Mahe • Transfers</p>
+                        <p><strong>Excludes:</strong> Island activities not listed • Tips</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maldives -->
+      <div class="destination-category">
+        <div class="country-group">
+          <h3 class="country-subtitle">🇲🇻 Maldives</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Maldives Resort Options -->
+              <a href="packages/maldives-resort-experience.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Maldives\ Resort\ Experience\ 5.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Maldives Resort Experience</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">MALDIVES</div>
+                      <div class="package-content">
+                        <h3>Maldives — Resort Options (Full-Board)</h3>
+                        <p><strong>Duration:</strong> 6 days / 5 nights</p>
+                        <p><strong>Price:</strong> From USD 1,861 to 2,557 per person depending on resort</p>
+                        <p><strong>Description:</strong> Relaxing water-villa stays with full-board dining and marine activities.</p>
+                        <p><strong>Includes:</strong> Flights • 5 nights full board • Airport transfers • Taxes</p>
+                        <p><strong>Excludes:</strong> Special excursions (dolphin cruise/diving) • Spa treatments • Premium beverages</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- United Arab Emirates -->
+      <div class="destination-category">
+        <div class="country-group">
+          <h3 class="country-subtitle">🇦🇪 United Arab Emirates</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Dubai Experience -->
+              <a href="packages/dubai-experience.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Dubai\ Experience\ 4.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Dubai Experience</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">UAE — DUBAI</div>
+                      <div class="package-content">
+                        <h3>Dubai — 5-Day City & Desert Adventure</h3>
+                        <p><strong>Duration:</strong> 5 days / 4 nights</p>
+                        <p><strong>Price:</strong> From USD 1,135 per person (6 hotel options)</p>
+                        <p><strong>Description:</strong> Experience Dubai's best with city tour, desert safari BBQ, and Marina dhow cruise. Choice of 6 hotels.</p>
+                        <p><strong>Includes:</strong> Fly Emirates flights • 4N B&B • 30-day visa • Tourism dirham • 3 tours</p>
+                        <p><strong>Excludes:</strong> Lunch & dinner • Optional activities • Personal expenses</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Malaysia -->
+      <div class="destination-category">
+        <div class="country-group">
+          <h3 class="country-subtitle">🇲🇾 Malaysia</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- KL Shopping Tour -->
+              <a href="packages/kuala-lumpur-shopping-tour.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Kuala Lumpur Shopping Paradise 1.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>KL Shopping Tour</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">MALAYSIA</div>
+                      <div class="package-content">
+                        <h3>Kuala Lumpur — Shopping Paradise</h3>
+                        <p><strong>Duration:</strong> 5 days / 4 nights</p>
+                        <p><strong>Price:</strong> USD 1,265 per person</p>
+                        <p><strong>Description:</strong> Shopping-focused Malaysia package with Genting Premium Outlet, 5-hour KL shopping tour, and Mitsui Outlet.</p>
+                        <p><strong>Includes:</strong> Qatar Airways flights • 4N breakfast • Cable car • Shopping vouchers • 3 outlets</p>
+                        <p><strong>Excludes:</strong> Lunch & dinner • Shopping purchases • Optional tours</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- KL Escape -->
+              <a href="packages/kuala-lumpur-escape.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Kuala Lumpur Escape 1.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Kuala Lumpur Escape</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">MALAYSIA</div>
+                      <div class="package-content">
+                        <h3>Kuala Lumpur — City & Coastal Escape</h3>
+                        <p><strong>Duration:</strong> 5 days / 4 nights</p>
+                        <p><strong>Price:</strong> From USD 1,315 per person (5 hotel options)</p>
+                        <p><strong>Description:</strong> Private KL city tour, KL Tower, Genting Highlands, and Port Dickson sunset cruise with saltwater jacuzzi.</p>
+                        <p><strong>Includes:</strong> Qatar Airways flights • 4N breakfast • KL Tower • Cable car • Sunset cruise</p>
+                        <p><strong>Excludes:</strong> Meals not mentioned • Tips • Personal expenses</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Discover KL, Ipoh & Penang -->
+              <a href="packages/discover-kuala-lumpur-ipoh-penang.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/International-Packages/Kuala-Lumpur-Ipoh-Penang\ \(4\).jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Discover KL, Ipoh & Penang</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">MALAYSIA</div>
+                      <div class="package-content">
+                        <h3>Malaysia — 3-City Adventure</h3>
+                        <p><strong>Duration:</strong> 8 days / 7 nights</p>
+                        <p><strong>Price:</strong> USD 1,885 per person</p>
+                        <p><strong>Description:</strong> Epic multi-city tour with Sunway Lagoon theme park, Lost World Tambun Night Park, and Penang Hill funicular train.</p>
+                        <p><strong>Includes:</strong> Flights • 7N breakfast • 3 city tours • 2 theme parks • Penang Hill train • Private transfers</p>
+                        <p><strong>Excludes:</strong> Lunch & dinner • Optional activities • Tips</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

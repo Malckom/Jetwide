@@ -260,12 +260,12 @@
                         </div>
                     </div>
 
-                    <!-- Package Tabs -->
+                    <!-- Tabs -->
                     <div class="package-tabs">
-                        <button class="tab-link active" onclick="openTab(event, 'overview')">Overview</button>
-                        <button class="tab-link" onclick="openTab(event, 'hotels')">Accommodation</button>
-                        <button class="tab-link" onclick="openTab(event, 'itinerary')">Itinerary</button>
-                        <button class="tab-link" onclick="openTab(event, 'inclusions')">Inclusions & Exclusions</button>
+                        <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+                        <button class="tab-btn" onclick="openTab(event, 'hotels')">Accommodation</button>
+                        <button class="tab-btn" onclick="openTab(event, 'itinerary')">Itinerary</button>
+                        <button class="tab-btn" onclick="openTab(event, 'inclusions')">Inclusions</button>
                     </div>
 
                     <!-- Overview Tab -->
@@ -291,22 +291,20 @@
                         </div>
 
                         <div class="important-notes">
-                            <h3>Important Notes</h3>
-                            <div class="expandable-content">
-                                <button class="expand-btn" onclick="toggleContent(this)">Read More ▼</button>
-                                <div class="expandable-text" style="display: none;">
-                                    <ul>
-                                        <li><strong>Climate:</strong> Seychelles enjoys a tropical climate. Best weather is April-May and October-November. Temperatures range from 24-32°C year-round.</li>
-                                        <li><strong>Visa:</strong> All visitors receive a free visitor's permit on arrival valid for up to 3 months. No pre-arranged visa required.</li>
-                                        <li><strong>Currency:</strong> Seychellois Rupee (SCR). US Dollars and Euros widely accepted. Credit cards accepted at hotels and restaurants.</li>
-                                        <li><strong>Ferry Between Islands:</strong> Cat Cocos ferry operates daily between Mahe and Praslin (1 hour journey). Advance booking recommended during peak season.</li>
-                                        <li><strong>Vallée de Mai:</strong> Entry fee approximately 350 SCR (about USD 25). Guided tours available. Wear comfortable walking shoes and bring water.</li>
-                                        <li><strong>Language:</strong> Creole, English, and French are official languages. English widely spoken in tourist areas.</li>
-                                        <li><strong>Health:</strong> No mandatory vaccinations. Bring reef-safe sunscreen, insect repellent, and stay hydrated. UV index is high year-round.</li>
-                                        <li><strong>Beach Safety:</strong> Some beaches have strong currents during monsoon seasons. Always check local conditions and swim at beaches with lifeguards when possible.</li>
-                                        <li><strong>Coco de Mer:</strong> The famous double coconut is protected. Purchase only from licensed vendors if you wish to take one home (export permit required).</li>
-                                    </ul>
-                                </div>
+                            <button class="view-more-btn" onclick="toggleContent()">View More Details ▼</button>
+                            <div class="expandable-content" id="moreContent" style="display: none;">
+                                <h3>Important Notes</h3>
+                                <ul>
+                                    <li><strong>Climate:</strong> Seychelles enjoys a tropical climate. Best weather is April-May and October-November. Temperatures range from 24-32°C year-round.</li>
+                                    <li><strong>Visa:</strong> All visitors receive a free visitor's permit on arrival valid for up to 3 months. No pre-arranged visa required.</li>
+                                    <li><strong>Currency:</strong> Seychellois Rupee (SCR). US Dollars and Euros widely accepted. Credit cards accepted at hotels and restaurants.</li>
+                                    <li><strong>Ferry Between Islands:</strong> Cat Cocos ferry operates daily between Mahe and Praslin (1 hour journey). Advance booking recommended during peak season.</li>
+                                    <li><strong>Vallée de Mai:</strong> Entry fee approximately 350 SCR (about USD 25). Guided tours available. Wear comfortable walking shoes and bring water.</li>
+                                    <li><strong>Language:</strong> Creole, English, and French are official languages. English widely spoken in tourist areas.</li>
+                                    <li><strong>Health:</strong> No mandatory vaccinations. Bring reef-safe sunscreen, insect repellent, and stay hydrated. UV index is high year-round.</li>
+                                    <li><strong>Beach Safety:</strong> Some beaches have strong currents during monsoon seasons. Always check local conditions and swim at beaches with lifeguards when possible.</li>
+                                    <li><strong>Coco de Mer:</strong> The famous double coconut is protected. Purchase only from licensed vendors if you wish to take one home (export permit required).</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -652,6 +650,53 @@
         </div>
     </section>
 
+    <!-- Similar Tours Section -->
+    <section class="similar-tours-section">
+        <div class="container">
+            <h2 class="section-heading">Other Island Escape Packages</h2>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="../../assets/images/International-Packages/Mahe-island.jpg" alt="Seychelles Mahe" />
+                        <div class="tour-badge">BEACH ESCAPE</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Seychelles Mahe Wonders</h3>
+                        <p class="tour-price">From USD 1,500</p>
+                        <p class="tour-desc">5 Days in tropical paradise</p>
+                        <a href="seychelles-mahe-wonders.html" class="tour-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="../../assets/images/tropical_beaches.jpg" alt="Maldives" />
+                        <div class="tour-badge">HONEYMOON</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Maldives Honeymoon</h3>
+                        <p class="tour-price">From USD 2,500</p>
+                        <p class="tour-desc">7 Days in overwater paradise</p>
+                        <a href="maldives-honeymoon.html" class="tour-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="../../assets/images/International-Packages/intl-packages (1).jpg" alt="Dubai" />
+                        <div class="tour-badge">HONEYMOON</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Dubai Honeymoon</h3>
+                        <p class="tour-price">From KSh 285,000</p>
+                        <p class="tour-desc">5 Days luxury and romance</p>
+                        <a href="dubai-honeymoon.html" class="tour-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content-wrapper">
@@ -709,48 +754,110 @@
         </div>
     </footer>
 
-    <script src="../../dynamic-content.js"></script>
     <script>
-        // Tab switching functionality
+        // Mobile Menu and Dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.header-main')) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+                
+                // Close mobile menu when window is resized to desktop
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth >= 768) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Dropdown functionality
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                
+                // Toggle dropdown on click
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        });
+
+        // Tab functionality
         function openTab(evt, tabName) {
-            const tabContents = document.getElementsByClassName('tab-content');
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove('active');
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
             }
-            
-            const tabLinks = document.getElementsByClassName('tab-link');
-            for (let i = 0; i < tabLinks.length; i++) {
-                tabLinks[i].classList.remove('active');
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
             }
-            
-            document.getElementById(tabName).classList.add('active');
-            evt.currentTarget.classList.add('active');
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
 
+        // Gallery functionality
         function changeMainImage(thumbnail) {
             const mainImage = document.getElementById('mainImage');
             mainImage.src = thumbnail.src;
             
-            document.querySelectorAll('.thumbnail').forEach(thumb => {
-                thumb.classList.remove('active');
-            });
+            // Update active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
             thumbnail.classList.add('active');
         }
 
         function openLightbox() {
-            alert('Gallery lightbox feature coming soon!');
+            alert('Lightbox gallery would open here with all package images');
         }
 
-        function toggleContent(button) {
-            const content = button.nextElementSibling;
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-                button.textContent = 'Read Less ▲';
+        // View More functionality
+        function toggleContent() {
+            const moreContent = document.getElementById('moreContent');
+            const btn = document.querySelector('.view-more-btn');
+            
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+                btn.textContent = 'View Less Details ▲';
             } else {
-                content.style.display = 'none';
-                button.textContent = 'Read More ▼';
+                moreContent.style.display = 'none';
+                btn.textContent = 'View More Details ▼';
             }
         }
     </script>
+    <script src="../../dynamic-content.js"></script>
 </body>
 </html>

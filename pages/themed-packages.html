@@ -68,6 +68,47 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
     }
+    
+    /* Country Group Styling */
+    .country-group {
+      margin-bottom: 40px;
+    }
+    
+    .country-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #14132A;
+      margin: 25px 0 20px 0;
+      padding-left: 10px;
+      border-left: 4px solid #FE9900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .theme-category {
+      margin-bottom: 60px;
+    }
+    
+    .category-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #14132A;
+      margin-bottom: 30px;
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #FE9900;
+    }
+    
+    @media (max-width: 768px) {
+      .country-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .category-title {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,258 +222,303 @@
       
       <!-- Honeymoons Section -->
       <div class="theme-category">
-        <h2 class="category-title">THEMED — HONEYMOONS</h2>
+        <h2 class="category-title">🌹 THEMED — HONEYMOONS</h2>
         
-        <div class="themed-packages-grid">
-          <!-- Row 1 - Honeymoons -->
-          <div class="package-row">
-            <!-- Dubai Romantic Escape -->
-            <!-- Dubai Romantic Escape -->
-            <a href="packages/dubai-honeymoon.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/Dubai\ Romantic\ Escape\ 4.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Dubai Romantic Escape</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — HONEYMOONS</div>
-                    <div class="package-content">
+        <!-- United Arab Emirates -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇦🇪 United Arab Emirates</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Dubai Romantic Escape -->
+              <a href="packages/dubai-honeymoon.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/Dubai\ Romantic\ Escape\ 4.jpg');">
+                    <div class="package-name-overlay">
                       <h3>Dubai Romantic Escape</h3>
-                      <p><strong>5 days</strong> • From USD 2,040 per couple</p>
-                      <p>Desert safari, dhow cruise, private city tour</p>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">HONEYMOON — UAE</div>
+                      <div class="package-content">
+                        <h3>Dubai Romantic Escape</h3>
+                        <p><strong>5 days</strong> • From USD 2,040 per couple</p>
+                        <p>Desert safari, dhow cruise, private city tour</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-
-            <!-- Maldives Water-Villa Retreat -->
-            <a href="packages/maldives-honeymoon.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/themed-packages\ \(2\).jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Maldives Water-Villa Retreat</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — HONEYMOONS</div>
-                    <div class="package-content">
-                      <h3>Maldives Water-Villa Retreat</h3>
-                      <p><strong>6 days</strong> • From USD 3,722 per couple</p>
-                      <p>Overwater villas, snorkeling, full-board dining</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Malaysia Honeymoon -->
-            <a href="packages/malaysia-honeymoon.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/malaysia-honeymoon.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Malaysia Honeymoon</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — HONEYMOONS</div>
-                    <div class="package-content">
-                      <h3>Malaysia Honeymoon</h3>
-                      <p><strong>5 days</strong> • From USD 3,320 per couple</p>
-                      <p>Kuala Lumpur, Genting Highlands, spa & dinner</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
+        </div>
 
-          <!-- Row 2 - Honeymoons -->
-          <div class="package-row">
-            <!-- South Africa Honeymoon -->
-            <a href="packages/south-africa-honeymoon.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/S-A-themed.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>South Africa Honeymoon</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — HONEYMOONS</div>
-                    <div class="package-content">
-                      <h3>South Africa Honeymoon</h3>
-                      <p><strong>5 days</strong> • USD 3,540 per couple</p>
-                      <p>Cape Town luxury, sunset catamaran, private tours</p>
+        <!-- Maldives -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇲🇻 Maldives</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Maldives Water-Villa Retreat -->
+              <a href="packages/maldives-honeymoon.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/themed-packages\ \(2\).jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Maldives Water-Villa Retreat</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">HONEYMOON — MALDIVES</div>
+                      <div class="package-content">
+                        <h3>Maldives Water-Villa Retreat</h3>
+                        <p><strong>6 days</strong> • From USD 3,722 per couple</p>
+                        <p>Overwater villas, snorkeling, full-board dining</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Malaysia -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇲🇾 Malaysia</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Malaysia Honeymoon -->
+              <a href="packages/malaysia-honeymoon.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/malaysia-honeymoon.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Malaysia Honeymoon</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">HONEYMOON — MALAYSIA</div>
+                      <div class="package-content">
+                        <h3>Malaysia Honeymoon</h3>
+                        <p><strong>5 days</strong> • From USD 3,320 per couple</p>
+                        <p>Kuala Lumpur, Genting Highlands, spa & dinner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- South Africa -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇿🇦 South Africa</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- South Africa Honeymoon -->
+              <a href="packages/south-africa-honeymoon.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/Honeymoon/S-A-themed.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>South Africa Honeymoon</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">HONEYMOON — SOUTH AFRICA</div>
+                      <div class="package-content">
+                        <h3>South Africa Honeymoon</h3>
+                        <p><strong>5 days</strong> • USD 3,540 per couple</p>
+                        <p>Cape Town luxury, sunset catamaran, private tours</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- School Trips Section -->
       <div class="theme-category">
-        <h2 class="category-title">THEMED — SCHOOL TRIPS</h2>
+        <h2 class="category-title">📚 THEMED — SCHOOL TRIPS</h2>
         
-        <div class="themed-packages-grid">
-          <!-- Row 1 - School Trips -->
-          <div class="package-row">
-            <!-- South Africa School Trip -->
-            <a href="packages/south-africa-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/South\ Africa\ School\ Trip\ 1.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>South Africa School Trip</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                    <div class="package-content">
-                      <h3>South Africa — Cape Town</h3>
-                      <p><strong>7 days</strong> • From USD 2,095</p>
-                      <p>Table Mountain, Cape Peninsula, cultural heritage sites</p>
+        <!-- South Africa -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇿🇦 South Africa</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- South Africa School Trip -->
+              <a href="packages/south-africa-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/South\ Africa\ School\ Trip\ 1.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>South Africa School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — SOUTH AFRICA</div>
+                      <div class="package-content">
+                        <h3>South Africa — Cape Town</h3>
+                        <p><strong>7 days</strong> • From USD 2,095</p>
+                        <p>Table Mountain, Cape Peninsula, cultural heritage sites</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-
-            <!-- Bali School Trip -->
-            <a href="packages/bali-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Bali\ School\ Trip\ 5.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Bali School Trip</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                    <div class="package-content">
-                      <h3>Bali — Indonesia</h3>
-                      <p><strong>7 days</strong> • From USD 1,925</p>
-                      <p>Ubud workshops, temples, cooking class, island tours</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Egypt School Trip - Cairo & Sharm El Sheikh -->
-            <a href="packages/egypt-cairo-sharm-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Egypt\ School\ Trip\ 4.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Egypt School Trip</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                    <div class="package-content">
-                      <h3>Cairo – Sharm El Sheikh</h3>
-                      <p><strong>7 days</strong> • From USD 1,725</p>
-                      <p>Pyramids, Sphinx, Egyptian Museum, Red Sea snorkeling</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
+        </div>
 
-          <!-- Row 2 - School Trips -->
-          <div class="package-row">
-            <!-- Mombasa School Trip -->
-            <a href="packages/mombasa-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Mombasa\ School\ Trip\ 2.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Mombasa School Trip</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                    <div class="package-content">
-                      <h3>Mombasa Educational Tour</h3>
-                      <p><strong>4 days</strong> • From Ksh 21,850</p>
-                      <p>Fort Jesus, Haller Park, Marine Park boat tour</p>
+        <!-- Indonesia -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇮🇩 Indonesia</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Bali School Trip -->
+              <a href="packages/bali-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Bali\ School\ Trip\ 5.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Bali School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — INDONESIA</div>
+                      <div class="package-content">
+                        <h3>Bali — Indonesia</h3>
+                        <p><strong>7 days</strong> • From USD 1,925</p>
+                        <p>Ubud workshops, temples, cooking class, island tours</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-
-            <!-- Maasai Mara School Trip -->
-            <a href="packages/maasai-mara-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Maasai-mara1.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Maasai Mara School Trip</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                    <div class="package-content">
-                      <h3>Maasai Mara Wildlife Safari</h3>
-                      <p><strong>3 days</strong> • From Ksh 21,350</p>
-                      <p>Big Five, game drives, Maasai village visit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>            
-            
-            <!-- Amboseli School Trip -->
-            <a href="packages/amboseli-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Amboseli\ Eco-Safari\ 3.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Amboseli School Trip</h3>
-                  </div>
-                <div class="package-overlay">
-                  <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                  <div class="package-content">
-                    <h3>Amboseli Eco-Safari</h3>
-                    <p><strong>3 days</strong> • From Ksh 21,250</p>
-                    <p>Elephants, Mt. Kilimanjaro views, conservation talks</p>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
+        </div>
 
-          <!-- Row 3 - School Trips -->
-          <div class="package-row">
-            <!-- Rift Valley School Trip -->
-            <a href="packages/rift-valley-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/RiftValley\ School\ Trip\ 3.png');">
-                  <div class="package-name-overlay">
-                    <h3>Rift Valley School Trip</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                  <div class="package-content">
-                      <h3>Rift Valley Lakes Explorer</h3>
-                    <p><strong>4 days</strong> • Ksh 38,450</p>
-                    <p>Lake Bogoria, Lake Naivasha, Hell's Gate cycling</p>
+        <!-- Egypt -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇪🇬 Egypt</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Egypt School Trip - Cairo & Sharm El Sheikh -->
+              <a href="packages/egypt-cairo-sharm-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Egypt\ School\ Trip\ 4.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Egypt School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — EGYPT</div>
+                      <div class="package-content">
+                        <h3>Cairo – Sharm El Sheikh</h3>
+                        <p><strong>7 days</strong> • From USD 1,725</p>
+                        <p>Pyramids, Sphinx, Egyptian Museum, Red Sea snorkeling</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>            
-            
-            <!-- Egypt Full Experience School Trip -->
-            <a href="packages/egypt-nile-cruise-school-trip.html" class="package-card-link">
-              <div class="package-card">
-                <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Egypt\ Full\ Experience\ 3.jpg');">
-                  <div class="package-name-overlay">
-                    <h3>Egypt Full Experience</h3>
-                  </div>
-                  <div class="package-overlay">
-                    <div class="package-badge">THEMED — SCHOOL TRIPS</div>
-                    <div class="package-content">
-                      <h3>Egypt Nile Cruise Experience</h3>
-                    <p><strong>7 days</strong> • From USD 2,260</p>
-                    <p>Cairo Pyramids, Nile cruise, Valley of the Kings</p>
+              </a>
+              
+              <!-- Egypt Full Experience School Trip -->
+              <a href="packages/egypt-nile-cruise-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Egypt\ Full\ Experience\ 3.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Egypt Full Experience</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — EGYPT</div>
+                      <div class="package-content">
+                        <h3>Egypt Nile Cruise Experience</h3>
+                        <p><strong>7 days</strong> • From USD 2,260</p>
+                        <p>Cairo Pyramids, Nile cruise, Valley of the Kings</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kenya -->
+        <div class="country-group">
+          <h3 class="country-subtitle">🇰🇪 Kenya</h3>
+          <div class="themed-packages-grid">
+            <div class="package-row">
+              <!-- Mombasa School Trip -->
+              <a href="packages/mombasa-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Mombasa\ School\ Trip\ 2.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Mombasa School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — KENYA</div>
+                      <div class="package-content">
+                        <h3>Mombasa Educational Tour</h3>
+                        <p><strong>4 days</strong> • From Ksh 21,850</p>
+                        <p>Fort Jesus, Haller Park, Marine Park boat tour</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Maasai Mara School Trip -->
+              <a href="packages/maasai-mara-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Maasai-mara1.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Maasai Mara School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — KENYA</div>
+                      <div class="package-content">
+                        <h3>Maasai Mara Wildlife Safari</h3>
+                        <p><strong>3 days</strong> • From Ksh 21,350</p>
+                        <p>Big Five, game drives, Maasai village visit</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>            
+              
+              <!-- Amboseli School Trip -->
+              <a href="packages/amboseli-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/Amboseli\ Eco-Safari\ 3.jpg');">
+                    <div class="package-name-overlay">
+                      <h3>Amboseli School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — KENYA</div>
+                      <div class="package-content">
+                        <h3>Amboseli Eco-Safari</h3>
+                        <p><strong>3 days</strong> • From Ksh 21,250</p>
+                        <p>Elephants, Mt. Kilimanjaro views, conservation talks</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="package-row">
+              <!-- Rift Valley School Trip -->
+              <a href="packages/rift-valley-school-trip.html" class="package-card-link">
+                <div class="package-card">
+                  <div class="package-bg" style="background-image: url('../assets/images/Themed-Packages/schools/RiftValley\ School\ Trip\ 3.png');">
+                    <div class="package-name-overlay">
+                      <h3>Rift Valley School Trip</h3>
+                    </div>
+                    <div class="package-overlay">
+                      <div class="package-badge">SCHOOL TRIP — KENYA</div>
+                      <div class="package-content">
+                        <h3>Rift Valley Lakes Explorer</h3>
+                        <p><strong>4 days</strong> • Ksh 38,450</p>
+                        <p>Lake Bogoria, Lake Naivasha, Hell's Gate cycling</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
