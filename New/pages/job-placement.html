@@ -68,6 +68,33 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
     }
+    
+    /* Enlarged Job Images */
+    .job-image {
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .job-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .job-card:hover .job-image img {
+      transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+      .job-image {
+        height: 250px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -287,7 +314,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Cook Assistant 1.png" alt="Cook's Assistant" />
+            <img src="../assets/images/Jobs/Cook Assistant 1.jpg" alt="Cook's Assistant" />
           </div>
         </div>
 
@@ -313,7 +340,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Warehouse Operator 2.png" alt="Warehouse Operator" />
+            <img src="../assets/images/Jobs/Warehouse Operator 2.jpg" alt="Warehouse Operator" />
           </div>
         </div>
 
@@ -337,7 +364,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Production Worker 1.png" alt="Production Worker" />
+            <img src="../assets/images/Jobs/Production Worker 1.jpg" alt="Production Worker" />
           </div>
         </div>
 
@@ -361,7 +388,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Hotel Housekeeping 2.png" alt="Hotel Housekeeping" />
+            <img src="../assets/images/Jobs/Hotel Housekeeping 2.jpg" alt="Hotel Housekeeping" />
           </div>
         </div>
 
@@ -387,7 +414,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Cleaners.png" alt="Cleaners" />
+            <img src="../assets/images/Jobs/Cleaners.jpg" alt="Cleaners" />
           </div>
         </div>
 
@@ -413,7 +440,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Delivery Drivers.png" alt="Delivery Drivers" />
+            <img src="../assets/images/Jobs/Delivery Drivers.jpg" alt="Delivery Drivers" />
           </div>
         </div>
 
@@ -438,7 +465,7 @@
           </div>
           
           <div class="job-image">
-            <img src="../assets/images/Jobs/Warehouse Operator 2.png" alt="Warehouse Packers" />
+            <img src="../assets/images/Jobs/Warehouse Operator 2.jpg" alt="Warehouse Packers" />
           </div>
         </div>
 
